@@ -15,3 +15,7 @@ vllm_idefics3_8b/
 vllm_phi3_5_vision/
 vllm_granite_vision/
 vllm_moondream2/
+vllm_internvl3_8b/
+merged_qwen3vl8b/
+merged_loss_runs/
+verification/
