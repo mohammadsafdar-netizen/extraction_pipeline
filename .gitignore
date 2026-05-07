@@ -4,3 +4,15 @@ __pycache__/
 templates/*.pdf
 verification/
 *.png
+
+# Unzipped source PDFs (use ALL_Docs.zip)
+pdfs/
+
+# Per-model raw JSON output dirs — committed via the *_extractions.zip files
+vllm_qwen3vl8b/
+vllm_qwen2_5vl_32b/
+vllm_qwen2_5vl_7b/
+vllm_idefics3_8b/
+vllm_phi3_5_vision/
+vllm_granite_vision/
+vllm_moondream2/
