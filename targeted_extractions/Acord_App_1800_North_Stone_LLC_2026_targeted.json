@@ -1,0 +1,1928 @@
+{
+  "source_file": "Acord App (1800 North Stone LLC) 2026.pdf",
+  "document_type": "acord_application",
+  "total_pages": 25,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "targeted",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency_name": "Crest Insurance Group, LLC",
+          "agency_address": "5285 E. Williams Circle Suite 4500",
+          "agency_city_state_zip": "Tucson, AZ 85711",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "company_policy_or_program_name": "",
+          "program_code": "",
+          "policy_number": "",
+          "contact_name": "",
+          "contact_phone": "(888) 881-5765",
+          "contact_fax": "(520) 325-3757",
+          "contact_email": "info@crestins.com",
+          "underwriter": "",
+          "underwriter_office": "",
+          "code": "",
+          "subcode": "",
+          "agency_customer_id": "1800NOR-02"
+        },
+        "STATUS_OF_TRANSACTION": {
+          "quote": false,
+          "issue_policy": false,
+          "renew": false,
+          "bound": false,
+          "change": false,
+          "cancel": false,
+          "bound_date": "",
+          "change_date": "",
+          "change_time": ""
+        },
+        "LINES_OF_BUSINESS": [
+          {
+            "name": "BOILER & MACHINERY",
+            "premium": 0
+          },
+          {
+            "name": "BUSINESS AUTO",
+            "premium": 0
+          },
+          {
+            "name": "BUSINESS OWNERS",
+            "premium": 0
+          },
+          {
+            "name": "COMMERCIAL GENERAL LIABILITY",
+            "premium": 0
+          },
+          {
+            "name": "COMMERCIAL INLAND MARINE",
+            "premium": 0
+          },
+          {
+            "name": "COMMERCIAL PROPERTY",
+            "premium": 0
+          },
+          {
+            "name": "CRIME",
+            "premium": 0
+          },
+          {
+            "name": "CYBER AND PRIVACY",
+            "premium": 0
+          },
+          {
+            "name": "FIDUCIARY LIABILITY",
+            "premium": 0
+          },
+          {
+            "name": "GARAGE AND DEALERS",
+            "premium": 0
+          },
+          {
+            "name": "LIQUOR LIABILITY",
+            "premium": 0
+          },
+          {
+            "name": "MOTOR CARRIER",
+            "premium": 0
+          },
+          {
+            "name": "TRUCKERS",
+            "premium": 0
+          },
+          {
+            "name": "UMBRELLA",
+            "premium": 0
+          },
+          {
+            "name": "YACHT",
+            "premium": 0
+          }
+        ],
+        "POLICY_INFORMATION": {
+          "proposed_eff_date": "05/01/2026",
+          "proposed_exp_date": "05/01/2027",
+          "billing_plan": "AGENCY",
+          "payment_plan": "",
+          "method_of_payment": "",
+          "audit": 0,
+          "deposit": 0,
+          "minimum_premium": 0,
+          "policy_premium": 0
+        },
+        "APPLICANT_INFORMATION": [
+          {
+            "full_name": "1800 North Stone LLC",
+            "address_line1": "1800 N Stone Ave",
+            "address_line2": "",
+            "city_state_zip": "Tucson, AZ 85705-5761",
+            "gl_code": "6513",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "(520) 415-3022",
+            "website_address": "stoneavenuestandard.com",
+            "entity_type": "INDIVIDUAL",
+            "number_of_members_and_managers": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "CONTACT_INFORMATION": [
+          {
+            "contact_type": "HOME",
+            "contact_name": "LBAKER",
+            "primary_phone": "1800NOR-02",
+            "primary_phone_type": "HOME",
+            "secondary_phone": "",
+            "secondary_phone_type": "",
+            "primary_email": "",
+            "secondary_email": ""
+          }
+        ],
+        "PREMISES_INFORMATION": [
+          {
+            "loc_number": 1,
+            "bld_number": 1,
+            "street": "1800 N Stone Ave",
+            "city": "Tucson",
+            "state": "AZ",
+            "zip": "85705-5761",
+            "county": "Pima",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_employees": "",
+            "part_time_employees": "",
+            "annual_revenues": "",
+            "occupied_area_sqft": "",
+            "open_to_public_area_sqft": "",
+            "total_building_area_sqft": "",
+            "area_leased_to_others": "",
+            "description_of_operations": ""
+          },
+          {
+            "loc_number": 1,
+            "bld_number": 2,
+            "street": "1800 N Stone Ave",
+            "city": "Tucson",
+            "state": "AZ",
+            "zip": "85705-5761",
+            "county": "Pima",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_employees": "",
+            "part_time_employees": "",
+            "annual_revenues": "",
+            "occupied_area_sqft": "",
+            "open_to_public_area_sqft": "",
+            "total_building_area_sqft": "",
+            "area_leased_to_others": "",
+            "description_of_operations": ""
+          },
+          {
+            "loc_number": 1,
+            "bld_number": 3,
+            "street": "1800 N Stone Ave",
+            "city": "Tucson",
+            "state": "AZ",
+            "zip": "85705-5761",
+            "county": "Pima",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_employees": "",
+            "part_time_employees": "",
+            "annual_revenues": "",
+            "occupied_area_sqft": "",
+            "open_to_public_area_sqft": "",
+            "total_building_area_sqft": "",
+            "area_leased_to_others": "",
+            "description_of_operations": ""
+          },
+          {
+            "loc_number": 1,
+            "bld_number": 4,
+            "street": "1800 N Stone Ave",
+            "city": "Tucson",
+            "state": "AZ",
+            "zip": "85705-5761",
+            "county": "Pima",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_employees": "",
+            "part_time_employees": "",
+            "annual_revenues": "",
+            "occupied_area_sqft": "",
+            "open_to_public_area_sqft": "",
+            "total_building_area_sqft": "",
+            "area_leased_to_others": "",
+            "description_of_operations": ""
+          }
+        ],
+        "NATURE_OF_BUSINESS": {
+          "apartments": false,
+          "condominiums": false,
+          "contractor": false,
+          "institutional": false,
+          "manufacturing": false,
+          "office": false,
+          "restaurant": false,
+          "retail": false,
+          "service": true,
+          "wholesale": false,
+          "other": "68 Unit Student Housing Apartment Complex",
+          "date_business_started": ""
+        },
+        "DESCRIPTION_OF_PRIMARY_OPERATIONS": ""
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "GENERAL_INFORMATION": {
+          "q1a_subsidiary_of_another": {
+            "Y/N": null,
+            "parent_company_name": null,
+            "relationship": null,
+            "percent_owned": null
+          },
+          "q1b_has_subsidiaries": {
+            "Y/N": null,
+            "subsidiary_name": null,
+            "relationship": null,
+            "percent_owned": null
+          },
+          "q2_safety_program": {
+            "Y/N": null,
+            "safety_manual": null,
+            "safety_position": null,
+            "monthly_meetings": null,
+            "osha": null
+          },
+          "q3_flammables_exposure": {
+            "Y/N": null,
+            "explanation": null
+          },
+          "q4_other_insurance": {
+            "Y/N": null,
+            "lines_of_business_and_policy_numbers": []
+          },
+          "q5_policy_declined_cancelled": {
+            "Y/N": null,
+            "non_payment": null,
+            "agent_no_longer": null,
+            "non_renewal": null,
+            "underwriting": null,
+            "condition_corrected": null
+          },
+          "q6_sexual_abuse_claims": {
+            "Y/N": null,
+            "explanation": null
+          },
+          "q7_crime_conviction": {
+            "Y/N": null,
+            "explanation": null
+          },
+          "q8_fire_safety_violations": {
+            "Y/N": null,
+            "occur_date": null,
+            "explanation": null,
+            "resolution": null,
+            "resolve_date": null
+          },
+          "q9_foreclosure_bankruptcy": {
+            "Y/N": null,
+            "occur_date": null,
+            "explanation": null,
+            "resolution": null,
+            "resolve_date": null
+          },
+          "q10_judgement_or_lien": {
+            "Y/N": null,
+            "occur_date": null,
+            "explanation": null,
+            "resolution": null,
+            "resolve_date": null
+          },
+          "q11_business_in_trust": {
+            "Y/N": null,
+            "name_of_trust": null
+          },
+          "q12_foreign_operations": {
+            "Y/N": null
+          },
+          "q13_other_business_ventures": {
+            "Y/N": null
+          },
+          "q14_own_drones": {
+            "Y/N": null,
+            "description": null
+          },
+          "q15_hire_drone_operators": {
+            "Y/N": null,
+            "description": null
+          }
+        },
+        "REMARKS": null,
+        "PRIOR_CARRIER_INFORMATION": {
+          "year": null,
+          "category": null,
+          "general_liability": null,
+          "automobile": null,
+          "property": null,
+          "other": null
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "PRIOR_CARRIER_INFORMATION_CONTINUED": {
+          "YEAR": "",
+          "CATEGORY": "",
+          "GENERAL_LIABILITY": {
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": 0,
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          },
+          "AUTOMOBILE": {
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": 0,
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          },
+          "PROPERTY": {
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": 0,
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          },
+          "OTHER": {
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": 0,
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          }
+        },
+        "LOSS_HISTORY": {
+          "check_if_none": false,
+          "for_the_last_years": 0,
+          "total_losses": 0,
+          "claims": []
+        },
+        "SIGNATURE": {
+          "producer_name": "",
+          "applicant_signature_date": "",
+          "national_producer_number": "",
+          "state_producer_license_no": ""
+        }
+      }
+    },
+    {
+      "page": 5,
+      "data": {
+        "header": {
+          "agency": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "LBAKER",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "premises": [
+          {
+            "loc_number": "1",
+            "bld_number": "5",
+            "street": "1800 N Stone Ave",
+            "city": "Tucson",
+            "state": "AZ",
+            "zip": "85705-5761",
+            "county": "Pima",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_employees": "",
+            "part_time_employees": "",
+            "annual_revenues": "",
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": "",
+            "area_leased_to_others": "",
+            "description_of_operations": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 6,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency_name": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "BLANKET_SUMMARY": [],
+        "PREMISES_INFORMATION": {
+          "premises_number": 0,
+          "building_number": 0,
+          "street_address": "",
+          "bldg_description": ""
+        },
+        "COVERAGES": [
+          {
+            "subject_of_insurance": "Building",
+            "amount": 12591761,
+            "coins_percent": "",
+            "valuation_code": "R",
+            "cause_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "deductible_amount": 5000,
+            "deductible_type": "",
+            "blanket_number": "",
+            "forms_and_conditions": ""
+          },
+          {
+            "subject_of_insurance": "Business Personal Property",
+            "amount": 1413213,
+            "coins_percent": "",
+            "valuation_code": "R",
+            "cause_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "deductible_amount": 5000,
+            "deductible_type": "",
+            "blanket_number": "",
+            "forms_and_conditions": ""
+          },
+          {
+            "subject_of_insurance": "Business Income with Extra Expense",
+            "amount": 0,
+            "coins_percent": "",
+            "valuation_code": "L",
+            "cause_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "deductible_amount": 72,
+            "deductible_type": "Hours",
+            "blanket_number": "",
+            "forms_and_conditions": ""
+          }
+        ],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": {
+            "Y_N": "",
+            "description": "",
+            "limit": "",
+            "deductible": ""
+          },
+          "sinkhole": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": ""
+          },
+          "mine_subsidence": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": ""
+          },
+          "historical_landmark": false,
+          "open_sides_count": ""
+        },
+        "CONSTRUCTION": {
+          "construction_type": "",
+          "distance_to_hydrant_ft": "",
+          "distance_to_fire_station_mi": "",
+          "fire_district": "",
+          "code_number": "",
+          "protection_class": "",
+          "num_stories": "",
+          "num_basements": "",
+          "year_built": "",
+          "total_area_sqft": ""
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": false,
+            "year": ""
+          },
+          "plumbing": {
+            "checked": false,
+            "year": ""
+          },
+          "roofing": {
+            "checked": false,
+            "year": ""
+          },
+          "heating": {
+            "checked": false,
+            "year": ""
+          },
+          "other": {
+            "checked": false,
+            "description": "",
+            "year": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "",
+          "other_occupancies": "",
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "other": false
+          },
+          "secondary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "other": false
+          },
+          "boiler_insured_elsewhere": false
+        },
+        "EXPOSURE": {
+          "right_description": "",
+          "right_distance": "",
+          "left_description": "",
+          "left_distance": "",
+          "front_description": "",
+          "front_distance": "",
+          "rear_description": "",
+          "rear_distance": ""
+        },
+        "BURGLAR_ALARM": {
+          "type": "",
+          "certificate_number": "",
+          "expiration_date": "",
+          "central_station": false,
+          "local_gong": false,
+          "with_keys": false,
+          "installed_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen_count": "",
+          "clock_hourly": false
+        },
+        "FIRE_PROTECTION": {
+          "description": "",
+          "sprinkler_percent": "",
+          "fire_alarm_manufacturer": "",
+          "central_station": false,
+          "local_gong": false
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest_type": "MORTGAGEE",
+          "name": "Berkadia Commercial Mortgage, LLC",
+          "address_line1": "332 Norristown Road, Suite 300",
+          "address_line2": "Ambler, PA 19002",
+          "city": "Montgomery",
+          "state": "",
+          "zip": "",
+          "country": "",
+          "rank": "",
+          "certificate_required": false,
+          "reference_loan_number": "",
+          "location_number": 0,
+          "building_number": 0,
+          "item_class": "",
+          "item_number": "",
+          "item_description": ""
+        }
+      }
+    },
+    {
+      "page": 7,
+      "data": {
+        "PREMISES": {
+          "premises_number": "1",
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "building_number": "1",
+          "bldg_description": "14 Units"
+        },
+        "COVERAGES": [],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": "N",
+          "sinkhole": "ACCEPT COVERAGE",
+          "mine_subsidence": "ACCEPT COVERAGE",
+          "historical_landmark": "Y",
+          "open_sides": ""
+        },
+        "CONSTRUCTION": {
+          "construction_type": "Frame",
+          "distance_to_hydrant_ft": "",
+          "distance_to_fire_station_mi": "",
+          "fire_district": "",
+          "code_number": "",
+          "protection_class": "3",
+          "num_stories": "3",
+          "num_basements": "",
+          "year_built": "2003",
+          "total_area_sqft": "21,836"
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": "X",
+            "year": ""
+          },
+          "plumbing": {
+            "checked": "",
+            "year": ""
+          },
+          "roofing": {
+            "checked": "X",
+            "year": "2025"
+          },
+          "heating": {
+            "checked": "",
+            "year": ""
+          },
+          "other": {
+            "checked": "X",
+            "description": "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT",
+            "year": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "SEMI-RESISTIVE",
+          "other_occupancies": "",
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": {
+            "boiler": "",
+            "solid_fuel": "",
+            "if_boiler_is_insurance_placed_elsewhere": "Y/N"
+          },
+          "secondary_heat": {
+            "boiler": "",
+            "solid_fuel": "",
+            "if_boiler_is_insurance_placed_elsewhere": "Y/N"
+          }
+        },
+        "EXPOSURE": {
+          "right_exposure": "",
+          "left_exposure": "",
+          "front_exposure": "",
+          "rear_exposure": ""
+        },
+        "BURGLAR_ALARM": {
+          "type": "",
+          "certificate": "",
+          "expiration_date": "",
+          "central_station": "",
+          "local_gong": "",
+          "installed_and_serviced_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen": "",
+          "clock_hourly": ""
+        },
+        "FIRE_PROTECTION": {
+          "sprinklers": "",
+          "fire_alarm_manufacturer": "",
+          "central_station": "",
+          "local_gong": ""
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest": {
+            "loss_payee": "",
+            "mortgagee": ""
+          },
+          "name_and_address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "interest_in_item_number": {
+            "location": "",
+            "building": "",
+            "item_class": "",
+            "item": "",
+            "item_description": ""
+          },
+          "reference_loan": ""
+        },
+        "REMARKS": ""
+      }
+    },
+    {
+      "page": 8,
+      "data": {
+        "producer_signature": "SIGNATURE",
+        "producer_name": "PRODUCER'S NAME (Please Print)",
+        "state_producer_license_no": "STATE PRODUCER LICENSE NO (Required in Florida)",
+        "applicant_signature": "APPLICANT'S SIGNATURE",
+        "date": "DATE",
+        "national_producer_number": "NATIONAL PRODUCER NUMBER"
+      }
+    },
+    {
+      "page": 9,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency_name": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "BLANKET_SUMMARY": [],
+        "PREMISES_INFORMATION": {
+          "premises_number": "1",
+          "building_number": "2",
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "bldg_description": "12 Units"
+        },
+        "COVERAGES": [],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": {
+            "Y_N": "N",
+            "description": "",
+            "limit": 0,
+            "deductible": 0
+          },
+          "sinkhole": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": 0
+          },
+          "mine_subsidence": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": 0
+          },
+          "historical_landmark": false,
+          "open_sides_count": ""
+        },
+        "CONSTRUCTION": {
+          "construction_type": "Frame",
+          "distance_to_hydrant_ft": "",
+          "distance_to_fire_station_mi": "",
+          "fire_district": "",
+          "code_number": "",
+          "protection_class": "3",
+          "num_stories": "3",
+          "num_basements": "",
+          "year_built": "2003",
+          "total_area_sqft": "15,612"
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": true,
+            "year": ""
+          },
+          "plumbing": {
+            "checked": false,
+            "year": ""
+          },
+          "roofing": {
+            "checked": true,
+            "year": "2025"
+          },
+          "heating": {
+            "checked": false,
+            "year": ""
+          },
+          "other": {
+            "checked": false,
+            "description": "",
+            "year": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "",
+          "other_occupancies": "",
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "other": false
+          },
+          "secondary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "other": false
+          },
+          "boiler_insured_elsewhere": "N"
+        },
+        "EXPOSURE": {
+          "right_description": "",
+          "right_distance": "",
+          "left_description": "",
+          "left_distance": "",
+          "front_description": "",
+          "front_distance": "",
+          "rear_description": "",
+          "rear_distance": ""
+        },
+        "BURGLAR_ALARM": {
+          "type": "",
+          "certificate_number": "",
+          "expiration_date": "",
+          "central_station": false,
+          "local_gong": false,
+          "with_keys": false,
+          "installed_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen_count": "",
+          "clock_hourly": false
+        },
+        "FIRE_PROTECTION": {
+          "description": "",
+          "sprinkler_percent": 0,
+          "fire_alarm_manufacturer": "",
+          "central_station": false,
+          "local_gong": false
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest_type": "",
+          "name": "",
+          "address_line1": "",
+          "address_line2": "",
+          "city": "",
+          "state": "",
+          "zip": "",
+          "country": "",
+          "rank": "",
+          "certificate_required": false,
+          "reference_loan_number": "",
+          "location_number": "",
+          "building_number": "",
+          "item_class": "",
+          "item_number": "",
+          "item_description": ""
+        }
+      }
+    },
+    {
+      "page": 10,
+      "data": {
+        "PREMISES": {
+          "premises_number": "1",
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "building_number": "3",
+          "bldg_description": "18 Units"
+        },
+        "COVERAGES": [],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": "N",
+          "sinkhole": "ACCEPT COVERAGE",
+          "mine_subsidence": "ACCEPT COVERAGE",
+          "historical_landmark": "Y",
+          "open_sides": ""
+        },
+        "CONSTRUCTION": {
+          "construction_type": "Frame",
+          "distance_to_hydrant_ft": "",
+          "distance_to_fire_station_mi": "",
+          "fire_district": "",
+          "code_number": "",
+          "protection_class": "3",
+          "num_stories": "3",
+          "num_basements": "",
+          "year_built": "2003",
+          "total_area_sqft": "28,932"
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": "X",
+            "year": ""
+          },
+          "plumbing": {
+            "checked": "",
+            "year": ""
+          },
+          "roofing": {
+            "checked": "X",
+            "year": "2025"
+          },
+          "heating": {
+            "checked": "",
+            "year": ""
+          },
+          "other": {
+            "checked": "X",
+            "description": "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT",
+            "year": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "SEMI-RESISTIVE",
+          "other_occupancies": "",
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": {
+            "boiler": "",
+            "solid_fuel": "",
+            "if_boiler_is_insurance_placed_elsewhere": "Y/N"
+          },
+          "secondary_heat": {
+            "boiler": "",
+            "solid_fuel": "",
+            "if_boiler_is_insurance_placed_elsewhere": "Y/N"
+          }
+        },
+        "EXPOSURE": {
+          "right_exposure": "",
+          "left_exposure": "",
+          "front_exposure": "",
+          "rear_exposure": ""
+        },
+        "BURGLAR_ALARM": {
+          "type": "",
+          "certificate": "",
+          "expiration_date": "",
+          "central_station": "",
+          "local_gong": "",
+          "installed_and_serviced_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen": "",
+          "clock_hourly": ""
+        },
+        "FIRE_PROTECTION": {
+          "sprinklers_standpipes_co2_chemical_systems": "",
+          "percent_sprinklers": "",
+          "fire_alarm_manufacturer": "",
+          "central_station": "",
+          "local_gong": ""
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest": {
+            "loss_payee": "",
+            "mortgagee": ""
+          },
+          "name_and_address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "interest_in_item_number": {
+            "location": "",
+            "building": "",
+            "item_class": "",
+            "item": "",
+            "item_description": ""
+          },
+          "reference_loan": ""
+        },
+        "REMARKS": ""
+      }
+    },
+    {
+      "page": 11,
+      "data": {
+        "producer_signature": "SIGNATURE",
+        "producer_name": "PRODUCER'S NAME (Please Print)",
+        "state_producer_license_no": "STATE PRODUCER LICENSE NO (Required in Florida)",
+        "applicant_signature": "APPLICANT'S SIGNATURE",
+        "date": "DATE",
+        "national_producer_number": "NATIONAL PRODUCER NUMBER"
+      }
+    },
+    {
+      "page": 12,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency_name": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "BLANKET_SUMMARY": [],
+        "PREMISES_INFORMATION": {
+          "premises_number": 1,
+          "building_number": 4,
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "bldg_description": "12 Units"
+        },
+        "COVERAGES": [],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": {
+            "Y_N": "N",
+            "description": "",
+            "limit": 0,
+            "deductible": 0
+          },
+          "sinkhole": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": 0
+          },
+          "mine_subsidence": {
+            "accept_reject": "ACCEPT COVERAGE",
+            "limit": 0
+          },
+          "historical_landmark": false,
+          "open_sides_count": ""
+        },
+        "CONSTRUCTION": {
+          "construction_type": "Frame",
+          "distance_to_hydrant_ft": 0,
+          "distance_to_fire_station_mi": 0,
+          "fire_district": "",
+          "code_number": "",
+          "protection_class": 3,
+          "num_stories": 3,
+          "num_basements": 0,
+          "year_built": 2003,
+          "total_area_sqft": 15612
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": true,
+            "year": ""
+          },
+          "plumbing": {
+            "checked": false,
+            "year": ""
+          },
+          "roofing": {
+            "checked": true,
+            "year": "2025"
+          },
+          "heating": {
+            "checked": false,
+            "year": ""
+          },
+          "other": {
+            "checked": false,
+            "description": "",
+            "year": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "",
+          "other_occupancies": "",
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": "BOILER",
+          "secondary_heat": "BOILER",
+          "boiler_insured_elsewhere": "Y/N"
+        },
+        "EXPOSURE": {
+          "right_description": "",
+          "right_distance": "",
+          "left_description": "",
+          "left_distance": "",
+          "front_description": "",
+          "front_distance": "",
+          "rear_description": "",
+          "rear_distance": ""
+        },
+        "BURGLAR_ALARM": {
+          "type": "",
+          "certificate_number": "",
+          "expiration_date": "",
+          "central_station": false,
+          "local_gong": false,
+          "with_keys": false,
+          "installed_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen_count": 0,
+          "clock_hourly": false
+        },
+        "FIRE_PROTECTION": {
+          "description": "",
+          "sprinkler_percent": 0,
+          "fire_alarm_manufacturer": "",
+          "central_station": false,
+          "local_gong": false
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest_type": "",
+          "name": "",
+          "address_line1": "",
+          "address_line2": "",
+          "city": "",
+          "state": "",
+          "zip": "",
+          "country": "",
+          "rank": "",
+          "certificate_required": false,
+          "reference_loan_number": "",
+          "location_number": "",
+          "building_number": "",
+          "item_class": "",
+          "item_number": "",
+          "item_description": ""
+        }
+      }
+    },
+    {
+      "page": 13,
+      "data": {
+        "PREMISES": {
+          "premises_number": "1",
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "building_number": "5",
+          "bldg_description": "12 Units"
+        },
+        "COVERAGES": [],
+        "ADDITIONAL_COVERAGES": {
+          "spoilage": false,
+          "sinkhole": false,
+          "mine_subsidence": false,
+          "historical_landmark": false,
+          "open_sides": null
+        },
+        "CONSTRUCTION": {
+          "construction_type": "Frame",
+          "distance_to_hydrant_ft": null,
+          "distance_to_fire_station_mi": null,
+          "fire_district": null,
+          "code_number": null,
+          "protection_class": "3",
+          "num_stories": null,
+          "num_basements": null,
+          "year_built": "2003",
+          "total_area_sqft": "17100"
+        },
+        "BUILDING_IMPROVEMENTS": {
+          "wiring": {
+            "checked": true,
+            "year": null
+          },
+          "plumbing": {
+            "checked": false,
+            "year": null
+          },
+          "roofing": {
+            "checked": true,
+            "year": "2025"
+          },
+          "heating": {
+            "checked": false,
+            "year": null
+          },
+          "other": {
+            "checked": false,
+            "description": "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT",
+            "year": null
+          },
+          "bldg_code_grade": null,
+          "tax_code": null,
+          "roof_type": "SEMI-RESISTIVE",
+          "other_occupancies": null,
+          "wind_class": "RESISTIVE"
+        },
+        "HEATING": {
+          "primary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "if_boiler_is_insurance_placed_elsewhere": false
+          },
+          "secondary_heat": {
+            "boiler": false,
+            "solid_fuel": false,
+            "if_boiler_is_insurance_placed_elsewhere": false
+          }
+        },
+        "EXPOSURE": {
+          "right_exposure": null,
+          "left_exposure": null,
+          "front_exposure": null,
+          "rear_exposure": null
+        },
+        "BURGLAR_ALARM": {
+          "type": null,
+          "certificate": null,
+          "expiration_date": null,
+          "installed_and_serviced_by": null,
+          "extent": null,
+          "grade": null,
+          "guards_watchmen": null,
+          "clock_hourly": null
+        },
+        "FIRE_PROTECTION": {
+          "sprinklers_standpipes_co2_chemical_systems": null,
+          "percent_sprinklers": null,
+          "fire_alarm_manufacturer": null
+        },
+        "ADDITIONAL_INTEREST": {
+          "interest": null,
+          "loss_payee": null,
+          "mortgagee": null,
+          "name_and_address": null,
+          "rank": null,
+          "evidence": null,
+          "certificate": null,
+          "interest_in_item_number": null,
+          "location": null,
+          "building": null,
+          "item_class": null,
+          "item": null,
+          "item_description": null,
+          "reference_loan": null
+        },
+        "REMARKS": ""
+      }
+    },
+    {
+      "page": 14,
+      "data": {
+        "producer_signature": "SIGNATURE",
+        "producer_name": "PRODUCER'S NAME (Please Print)",
+        "state_producer_license_no": "STATE PRODUCER LICENSE NO (Required in Florida)",
+        "applicant_signature": "APPLICANT'S SIGNATURE",
+        "date": "DATE",
+        "national_producer_number": "NATIONAL PRODUCER NUMBER"
+      }
+    },
+    {
+      "page": 15,
+      "data": {
+        "document_type": "ADDITIONAL COVERAGES OVERFLOW",
+        "form_code": "1800NOR-02",
+        "producer_code": "LBAKER",
+        "page_number": 1,
+        "total_pages": 1,
+        "applied_policy": "APPLIED 98 (2001/01)",
+        "coverages": [
+          {
+            "code": "XTEND",
+            "description": "Property Enhancement Endorsement"
+          },
+          {
+            "code": "EV",
+            "description": "Electric Vehicle Charging Stations"
+          }
+        ]
+      }
+    },
+    {
+      "page": 16,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "COVERAGES": {
+          "commercial_general_liability": true,
+          "claims_made": true,
+          "occurrence": true,
+          "owners_contractors_protective": false,
+          "other_coverage": false,
+          "description": "See attached Additional Coverages overflow."
+        },
+        "LIMITS": {
+          "general_aggregate": 2000000,
+          "products_completed_operations_aggregate": 2000000,
+          "personal_advertising_injury": 2000000,
+          "each_occurrence": 2000000,
+          "damage_to_rented_premises": 100000,
+          "medical_expense": 10000,
+          "employee_benefits": 0
+        },
+        "LIMIT_APPLIES_PER": {
+          "policy": true,
+          "location": true,
+          "project": false,
+          "other": false,
+          "description": ""
+        },
+        "PREMIUMS": {
+          "premises_operations": 0,
+          "products": 0,
+          "other": 0,
+          "total": 0
+        },
+        "DEDUCTIBLES": {
+          "property_damage": {
+            "amount": 0,
+            "per_claim_per_occurrence": "PER CLAIM"
+          },
+          "bodily_injury": {
+            "amount": 0,
+            "per_claim_per_occurrence": "PER OCCURRENCE"
+          }
+        },
+        "OTHER_COVERAGES_NOTE": "See attached Additional Coverages overflow.",
+        "SCHEDULE_OF_HAZARDS": [
+          {
+            "loc_number": 0,
+            "haz_number": 1,
+            "classification": "APARTMENT BUILDINGS - STUDENT HOUSING",
+            "class_code": 60010,
+            "premium_basis": "U",
+            "exposure": 68,
+            "territory": "",
+            "rate_prem_ops": 0,
+            "rate_products": 0,
+            "premium_prem_ops": 0,
+            "premium_products": 0
+          },
+          {
+            "loc_number": 0,
+            "haz_number": 2,
+            "classification": "SWIMMING POOL",
+            "class_code": 48925,
+            "premium_basis": "T",
+            "exposure": 1,
+            "territory": "",
+            "rate_prem_ops": 0,
+            "rate_products": 0,
+            "premium_prem_ops": 0,
+            "premium_products": 0
+          }
+        ],
+        "CLAIMS_MADE": {
+          "proposed_retroactive_date": "",
+          "entry_date": "",
+          "prior_coverage_excluded": {
+            "Y/N": "",
+            "explanation": ""
+          },
+          "tail_coverage_purchased": {
+            "Y/N": "",
+            "explanation": ""
+          }
+        },
+        "EMPLOYEE_BENEFITS": {
+          "deductible_per_claim": 0,
+          "number_of_employees": 0,
+          "employees_covered": 0,
+          "retroactive_date": ""
+        }
+      }
+    },
+    {
+      "page": 17,
+      "data": {
+        "error": "No valid JSON can be generated as the provided image does not contain any Y/N answers or explanations. The image only contains questions and tables without filled-in responses or explanations. Additionally, the image does not contain any actual Y/N answers or explanations for the questions listed."
+      }
+    },
+    {
+      "page": 18,
+      "data": {
+        "additional_interest": {
+          "type": "ADDITIONAL INSURED",
+          "name": "",
+          "address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "reference_loan": "",
+          "location": "",
+          "building": "",
+          "item": ""
+        },
+        "questions": [
+          {
+            "question": "1. ANY MEDICAL FACILITIES PROVIDED OR MEDICAL PROFESSIONALS EMPLOYED OR CONTRACTED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "2. ANY EXPOSURE TO RADIOACTIVE/NUCLEAR MATERIALS?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "3. DO/HAVE PAST, PRESENT OR DISCONTINUED OPERATIONS INVOLVE(D) STORING, TREATING, DISCHARGING, APPLYING, DISPOSING, OR TRANSPORTING OF HAZARDOUS MATERIAL? (e.g. landfills, wastes, fuel tanks, etc)",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "4. ANY OPERATIONS SOLD, ACQUIRED, OR DISCONTINUED IN LAST FIVE (5) YEARS?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "5. DO YOU RENT OR LOAN EQUIPMENT TO OTHERS?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "6. ANY WATERCRAFT, DOCKS, FLOATS OWNED, HIRED OR LEASED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "7. ANY PARKING FACILITIES OWNED/RENTED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "8. IS A FEE CHARGED FOR PARKING?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "9. RECREATION FACILITIES PROVIDED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "10. ARE THERE ANY LODGING OPERATIONS INCLUDING APARTMENTS? (if \"YES\", answer the following):",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "11. IS THERE A SWIMMING POOL ON PREMISES? (Check all that apply)",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "12. ARE SOCIAL EVENTS SPONSORED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "13. ARE ATHLETIC TEAMS SPONSORED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "14. ANY STRUCTURAL ALTERATIONS CONTEMPLATED?",
+            "answer": "Y/N",
+            "explanation": ""
+          },
+          {
+            "question": "15. ANY DEMOLITION EXPOSURE CONTEMPLATED?",
+            "answer": "Y/N",
+            "explanation": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 19,
+      "data": {
+        "questions": [
+          {
+            "question": "16. HAS APPLICANT BEEN ACTIVE IN OR IS CURRENTLY ACTIVE IN JOINT VENTURES?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "17. DO YOU LEASE EMPLOYEES TO OR FROM OTHER EMPLOYERS?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "18. IS THERE A LABOR INTERCHANGE WITH ANY OTHER BUSINESS OR SUBSIDIARIES?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "19. ARE DAY CARE FACILITIES OPERATED OR CONTROLLED?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "20. HAVE ANY CRIMES OCCURRED OR BEEN ATTEMPTED ON YOUR PREMISES WITHIN THE LAST THREE (3) YEARS?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "21. IS THERE A FORMAL, WRITTEN SAFETY AND SECURITY POLICY IN EFFECT?",
+            "answer": "Y/N"
+          },
+          {
+            "question": "22. DOES THE BUSINESSES' PROMOTIONAL LITERATURE MAKE ANY REPRESENTATIONS ABOUT THE SAFETY OR SECURITY OF THE PREMISES?",
+            "answer": "Y/N"
+          }
+        ],
+        "remarks": "REMARKS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+        "signature_fields": [
+          "PRODUCER'S SIGNATURE",
+          "PRODUCER'S NAME (Please Print)",
+          "STATE PRODUCER LICENSE NO (Required in Florida)",
+          "APPLICANT'S SIGNATURE",
+          "DATE",
+          "NATIONAL PRODUCER NUMBER"
+        ]
+      }
+    },
+    {
+      "page": 20,
+      "data": {
+        "document_type": "ADDITIONAL COVERAGES OVERFLOW",
+        "form_code": "1800NOR-02",
+        "producer": "LBAKER",
+        "page": 1,
+        "total_pages": 1,
+        "application_version": "APPLIED 98 (2001/01)",
+        "coverages": [
+          {
+            "code": "XTEND",
+            "description": "GL Enhancement Endt"
+          },
+          {
+            "code": "HNOA",
+            "description": "Hired And Non-Owned Auto",
+            "limit": 1000000
+          }
+        ]
+      }
+    },
+    {
+      "page": 21,
+      "data": {
+        "HEADER": {
+          "date": "04/08/2026",
+          "agency": "Crest Insurance Group, LLC",
+          "carrier": "AmTrust Group",
+          "naic_code": "",
+          "policy_number": "",
+          "effective_date": "05/01/2026",
+          "named_insured": "1800 North Stone LLC"
+        },
+        "POLICY_INFORMATION": {
+          "transaction_type": "new",
+          "policy_type": "umbrella",
+          "coverage_trigger": "occurrence",
+          "retroactive_date_proposed": "05/01/2026",
+          "retroactive_date_current": "05/01/2027",
+          "limit_each_occurrence": 5000000,
+          "limit_aggregate": 5000000,
+          "retained_limit": 0,
+          "first_dollar_defense": "N",
+          "expiring_policy_number": ""
+        },
+        "EMPLOYEE_BENEFITS_LIABILITY": {
+          "limit_per_employee": 0,
+          "aggregate_limit": 0,
+          "retained_limit": 0,
+          "retroactive_date": "",
+          "benefit_program_name": ""
+        },
+        "PRIMARY_LOCATIONS": [],
+        "UNDERLYING_INSURANCE": [
+          {
+            "type": "automobile_liability",
+            "carrier_policy_number": "",
+            "policy_eff_date": "05/01/2026",
+            "policy_exp_date": "05/01/2027",
+            "csl_ea_acc": 0,
+            "bi_ea_acc": 0,
+            "bi_ea_per": 0,
+            "pd_ea_acc": 0,
+            "annual_renewal_premium": 0,
+            "rating_mod": "PREM / OPS"
+          },
+          {
+            "type": "general_liability",
+            "carrier_policy_number": "TBD",
+            "policy_eff_date": "05/01/2026",
+            "policy_exp_date": "05/01/2027",
+            "policy_type": "occur",
+            "each_occurrence": 1000000,
+            "general_aggregate": 2000000,
+            "products_completed_ops_aggregate": 2000000,
+            "personal_advertising_injury": 1000000,
+            "damage_to_rented_premises": 100000,
+            "medical_expense": 10000,
+            "annual_renewal_premium": 0,
+            "rating_mod": "OTHER"
+          },
+          {
+            "type": "employers_liability",
+            "carrier_policy_number": "TBD",
+            "policy_eff_date": "05/01/2026",
+            "policy_exp_date": "05/01/2027",
+            "each_accident": 0,
+            "disease_each_employee": 0,
+            "disease_policy_limit": 0,
+            "annual_renewal_premium": 0,
+            "rating_mod": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 22,
+      "data": {
+        "underlying_GL_information": {
+          "1": {
+            "question": "ARE DEFENSE COSTS:",
+            "options": [
+              "WITHIN AGGREGATE LIMITS?",
+              "A SEPARATE LIMIT?",
+              "UNLIMITED?"
+            ]
+          },
+          "2": {
+            "question": "INDICATE THE EDITION DATE OF THE ISO FORM OR SIMILAR FILING FOR THE UNDERLYING COVERAGE:",
+            "answer": ""
+          },
+          "3": {
+            "question": "HAS ANY PRODUCT, WORK, ACCIDENT, OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF INSURED FROM ANY PREVIOUS COVERAGE? (Y / N)",
+            "answer": ""
+          },
+          "4": {
+            "question": "FOR CLAIMS MADE, INDICATE RETROACTIVE DATE OF CURRENT UNDERLYING POLICY:",
+            "answer": ""
+          },
+          "5": {
+            "question": "FOR CLAIMS MADE, INDICATE ENTRY DATE INTO UNINTERRUPTED CLAIMS MADE COVERAGE:",
+            "answer": ""
+          },
+          "6": {
+            "question": "FOR CLAIMS MADE, WAS \"TAIL\" COVERAGE PURCHASED FOR ANY PREVIOUS PRIMARY OR EXCESS POLICY? (Y / N)",
+            "answer": "",
+            "eff_date": ""
+          }
+        },
+        "coverage_checklist": {
+          "auto": {
+            "symbol_1": "ANY AUTO (SYMBOL 1)",
+            "cgl_claims_made": "CGL - CLAIMS MADE",
+            "cgl_occurrence": "CGL - OCCURRENCE"
+          },
+          "aircraft": {
+            "aircraft_liability": "AIRCRAFT LIABILITY",
+            "aircraft_passenger_liability": "AIRCRAFT PASSENGER LIABILITY",
+            "additional_interests": "ADDITIONAL INTERESTS"
+          },
+          "additional_interests": {
+            "coverage": [
+              "CARE, CUSTODY, CONTROL",
+              "EMPLOYEE BENEFIT LIABILITY",
+              "FOREIGN LIABILITY / TRAVEL",
+              "GARAGEKEEPERS LIABILITY",
+              "INCIDENTAL MEDICAL MALPRACTICE",
+              "LIQUOR LIABILITY",
+              "POLLUTION LIABILITY"
+            ],
+            "exposure": [
+              "PROFESSIONAL LIABILITY (E&O)",
+              "VENDORS LIABILITY",
+              "WATERCRAFT LIABILITY"
+            ]
+          }
+        },
+        "underlying_insurance_coverage_information": {
+          "text": "UNDERLYING INSURANCE COVERAGE INFORMATION (INCLUDE ALL RESTRICTIONS: e.g. LASER ENDORSEMENTS, DISCRIMINATION, SUBROGATION WAIVERS, OR EXTENSIONS OF COVERAGE) Attach ACORD 101, Additional Remarks Schedule, if more space is required."
+        },
+        "previous_experience": {
+          "text": "PREVIOUS EXPERIENCE: (GIVE DETAILS OF ALL LIABILITY CLAIMS EXCEEDING $10,000 OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS, DURING THE PAST FIVE (5) YEARS, WHETHER INSURED OR NOT. SPECIFY DATE, COVERAGE, DESCRIPTION, AMOUNT PAID, AMOUNT OUTSTANDING) Attach ACORD 101, Additional Remarks Schedule, if more space is required.",
+          "no_such_claims": "NO SUCH CLAIMS"
+        },
+        "care_custody_control_table": {
+          "loc": "REAL",
+          "property_type": "PERSONAL",
+          "value": "",
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "",
+          "sq_ft_of_bldg_occ": "",
+          "occupancy_description_of_personal_property": ""
+        },
+        "vehicles_table": {
+          "private_passenger": {
+            "type": "PRIVATE PASSENGER",
+            "owned": "",
+            "non_owned": "",
+            "leased": "",
+            "property_hauled": "",
+            "radius_miles": {
+              "local": "",
+              "intermediate": "",
+              "long_distance": ""
+            }
+          },
+          "trucks": {
+            "type": "TRUCKS",
+            "light": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            },
+            "medium": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            },
+            "heavy": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            },
+            "ex_heavy": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            }
+          },
+          "trucks_tractors": {
+            "type": "TRUCKS / TRACTORS",
+            "heavy": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            },
+            "ex_heavy": {
+              "owned": "",
+              "non_owned": "",
+              "leased": "",
+              "property_hauled": "",
+              "radius_miles": {
+                "local": "",
+                "intermediate": "",
+                "long_distance": ""
+              }
+            }
+          },
+          "buses": {
+            "type": "BUSES",
+            "owned": "",
+            "non_owned": "",
+            "leased": "",
+            "property_hauled": "",
+            "radius_miles": {
+              "local": "",
+              "intermediate": "",
+              "long_distance": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "page": 23,
+      "data": {
+        "Advertisers_Liability": {
+          "1_Media_Used": "N",
+          "2_Are_Services_of_An_Advertising_Agency_Used": "N",
+          "3_Any_Coverage_Provided_Under_Agency_s_Policy": "N"
+        },
+        "Aircraft_Liability": {
+          "4_Does_Applicant_Own_Lease_Operate_Aircraft": "N"
+        },
+        "Auto_Liability": {
+          "5_Are_Explosives_Caustics_Flammables_or_Other_Dangerous_Cargo_Hauled": "N",
+          "6_Are_Passengers_Carried_For_a_Fee": "N",
+          "7_Any_Units_Not_Insured_By_Underlying_Policies": "N",
+          "8_Are_Any_Vehicles_Leased_or_Rented_to_Others": "N",
+          "9_Are_Hired_and_Non-Owned_Coverages_Provided": "N"
+        },
+        "Contractors_Liability": {
+          "10_Is_Bridge_Dam_or_Marine_Work_Performed": "N",
+          "11_Describe_Typical_Jobs_Performed": "N",
+          "12_Describe_Agreement": "N",
+          "13_Does_Applicant_Own_Rent_or_Otherwise_Use_Cranes": "N",
+          "14_Do_Subcontractors_Carry_Coverages_or_Limits_Less_Than_Applicant": "N"
+        },
+        "Employers_Liability": {
+          "15_Is_Applicant_Self_Insured_in_Any_State": "N",
+          "16_Subject_To": "N"
+        },
+        "Incidental_Malpractice_Liability": {
+          "17_Is_A_Hospital_or_First_Aid_Facility_Maintained": "N",
+          "18_Are_Coverages_Provided_For_Doctors_Nurses": "N",
+          "19_Indicate_#_Of_Doctors_Nurses_Beds": "N"
+        }
+      }
+    },
+    {
+      "page": 24,
+      "data": {
+        "pollution_liability": {
+          "epa_number": "N/A",
+          "question_20": "N/A",
+          "question_21": {
+            "gl_with_standard_iso_pollution_exclusion": false,
+            "gl_with_pollution_coverage_endorsement": false,
+            "gl_with_standard_sudden_accidental_only": false,
+            "separate_pollution_coverage": false
+          }
+        },
+        "product_liability": {
+          "question_22": "N/A",
+          "question_23": "N/A",
+          "question_24": "N/A",
+          "question_25": {
+            "gross_sales_last_three_years": [
+              "N/A",
+              "N/A",
+              "N/A"
+            ]
+          }
+        },
+        "protective_liability": {
+          "question_26": "N/A"
+        },
+        "watercraft_liability": {
+          "question_27": {
+            "owned_watercraft": [
+              {
+                "loc": "N/A",
+                "owned": "N/A",
+                "length": "N/A",
+                "horsepower": "N/A"
+              },
+              {
+                "loc": "N/A",
+                "owned": "N/A",
+                "length": "N/A",
+                "horsepower": "N/A"
+              }
+            ]
+          }
+        },
+        "apartments_condominiums_hotels": {
+          "question_28": {
+            "apartments_condominiums_hotels": [
+              {
+                "loc": "N/A",
+                "stories": "N/A",
+                "units": "N/A",
+                "swimming_pools": "N/A",
+                "diving_boards": "N/A"
+              },
+              {
+                "loc": "N/A",
+                "stories": "N/A",
+                "units": "N/A",
+                "swimming_pools": "N/A",
+                "diving_boards": "N/A"
+              }
+            ]
+          }
+        },
+        "remarks": "N/A"
+      }
+    },
+    {
+      "page": 25,
+      "data": {
+        "remarks": "REMARKS (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+        "coverage_selections": {
+          "Louisiana": {
+            "option_1": "I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+            "option_2": "I REJECT UM COVERAGE IN ITS ENTIRETY."
+          },
+          "New_Hampshire": {
+            "option_1": "I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+            "option_2": "I REJECT UM COVERAGE IN ITS ENTIRETY."
+          },
+          "Vermont": {
+            "option_1": "I ACKNOWLEDGE THAT I HAVE BEEN OFFERED UM COVERAGE EQUAL TO MY LIABILITY LIMITS. I HAVE SELECTED THE LIMITS INDICATED IN THIS APPLICATION."
+          },
+          "Wisconsin": {
+            "option_1": "I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+            "option_2": "I REJECT UM COVERAGE IN ITS ENTIRETY.",
+            "option_3": "I SELECT UIM LIMITS INDICATED IN THIS APPLICATION.",
+            "option_4": "I REJECT UIM COVERAGE IN ITS ENTIRETY."
+          }
+        },
+        "signature_fields": {
+          "producer_signature": "PRODUCER'S SIGNATURE",
+          "producer_name": "PRODUCER'S NAME (Please Print)",
+          "producer_license_no": "STATE PRODUCER LICENSE NO (Required in Florida)",
+          "national_producer_number": "NATIONAL PRODUCER NUMBER",
+          "applicant_signature": "APPLICANT'S SIGNATURE",
+          "date": "DATE"
+        }
+      }
+    }
+  ]
+}

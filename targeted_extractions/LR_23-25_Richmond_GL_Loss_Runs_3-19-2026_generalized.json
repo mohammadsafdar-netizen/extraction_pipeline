@@ -1,0 +1,87 @@
+{
+  "source_file": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "carrier_name": "RICHMOND NATIONAL",
+        "policy_information": {
+          "insured": "Prism Broward, LP",
+          "as_of_date": "03/19/2026",
+          "policy_number": "RN-7-0500493",
+          "policy_term": "05/26/2023 - 05/26/2024"
+        },
+        "claims_information": [
+          {
+            "claim_number": "RN-9-0000504",
+            "claimant": "Kerry Brown",
+            "cause_of_loss": "Premises/Slip /Trip/ fall",
+            "policy_type": "General Casualty /Premises Ops",
+            "status": "Open",
+            "reported_date": "09/21/2023",
+            "loss_date": "06/26/2023",
+            "total_reserves": 125905.45,
+            "total_paid": 41578.97,
+            "total_incurred": 167484.42
+          },
+          {
+            "claim_number": "RN-9-0001039",
+            "claimant": "Nikole Machado",
+            "cause_of_loss": "Premises/injury by object",
+            "policy_type": "General Casualty /Premises Ops",
+            "status": "Closed",
+            "reported_date": "06/10/2024",
+            "loss_date": "05/21/2024",
+            "total_reserves": 0.0,
+            "total_paid": 50000.0,
+            "total_incurred": 50000.0
+          }
+        ],
+        "disclaimer": "Richmond National Insurance Company (\"RNIC\") notes that the information contained in this loss run is proprietary, and for the purpose of procuring insurance only. Amounts set forth above are estimates of the exposure for the loss(es), which are subject to change at any time without notice. RNIC makes no representations or warranties as to the completeness of the information set forth above, and disclaims any liability for any inaccuracies, errors or omissions contained therein."
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "carrier_name": "RICHMOND NATIONAL",
+        "policy_information": {
+          "insured": "Prism Broward, LP",
+          "as_of_date": "03/19/2026",
+          "policy_number": "RN-7-0500493-01",
+          "policy_term": "05/26/2024 - 05/26/2025"
+        },
+        "claims_information": [
+          {
+            "claim_number": "RN-9-0001655",
+            "claimant": "Shavoya Braziel",
+            "cause_of_loss": "Premises/injury by object",
+            "policy_type": "General Casualty /Premises Ops",
+            "status": "Closed",
+            "reported_date": "01/07/2025",
+            "loss_date": "10/09/2024",
+            "total_reserves": 0,
+            "total_paid": 4158556,
+            "total_incurred": 4158556
+          },
+          {
+            "claim_number": "RN-9-0002360",
+            "claimant": "Idelmo Lopez, et al.",
+            "cause_of_loss": "Bodily Injury",
+            "policy_type": "General Casualty /Premises Ops",
+            "status": "Open",
+            "reported_date": "07/17/2025",
+            "loss_date": "03/13/2025",
+            "total_reserves": 50041,
+            "total_paid": 6959,
+            "total_incurred": 57000
+          }
+        ],
+        "disclaimer": "Richmond National Insurance Company (\"RNIC\") notes that the information contained in this loss run is proprietary, and for the purpose of procuring insurance only. Amounts set forth above are estimates of the exposure for the loss(es), which are subject to change at any time without notice. RNIC makes no representations or warranties as to the completeness of the information set forth above, and disclaims any liability for any inaccuracies, errors or omissions contained therein."
+      }
+    }
+  ]
+}

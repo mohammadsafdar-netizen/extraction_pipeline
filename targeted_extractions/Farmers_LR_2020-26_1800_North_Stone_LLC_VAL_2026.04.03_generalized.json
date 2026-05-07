@@ -1,0 +1,90 @@
+{
+  "source_file": "Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf",
+  "document_type": "loss_run",
+  "total_pages": 4,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Policy #": "606742147",
+        "Account Name": "1800 NORTH STONE, LLC",
+        "Account Address": "1800 N STONE AVE TUCSON AZ 85705",
+        "Company": "Truck Insurance Exchange",
+        "Agency Name": "Darius M Vasquez",
+        "Valuation Date": "04/03/2026",
+        "Date Range Selection": "01/01/2019 - 04/03/2026",
+        "Line of Business": "Commercial Multi-Peril",
+        "Effective Date": "05/01/2019 - 05/01/2020",
+        "Claim Count": 0,
+        "Losses Paid": 0,
+        "Reserves": 0,
+        "Gross Incurred": 0,
+        "Expenses": 0,
+        "Totals": 0
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "carrier_name": "FARMERS INSURANCE",
+        "report_title": "Claim Detail Report by Policy - P&C",
+        "policy_number": "606742147",
+        "account_name": "1800 NORTH STONE, LLC",
+        "account_address": "1800 N STONE AVE TUCSON AZ 85705",
+        "company": "Truck Insurance Exchange",
+        "agency_name": "Darius M Vasquez",
+        "valuation_date": "04/03/2026",
+        "date_range_selection": "01/01/2019 - 04/03/2026",
+        "line_of_business": "Commercial Multi-Peril",
+        "recoveries": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "net_incurred": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "Policy #": "606742147",
+        "Account Name": "1800 NORTH STONE, LLC",
+        "Account Address": "1800 N STONE AVE TUCSON AZ 85705",
+        "Company": "Truck Insurance Exchange",
+        "Agency Name": "Darius M Vasquez",
+        "Valuation Date": "04/03/2026",
+        "Date Range Selection": "01/01/2019 - 04/03/2026",
+        "Line of Business": "Commercial Multi-Peril"
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Policy #": "606742147",
+        "Account Name": "1800 NORTH STONE, LLC",
+        "Account Address": "1800 N STONE AVE TUCSON AZ 85705",
+        "Company": "Truck Insurance Exchange",
+        "Agency Name": "Darius M Vasquez",
+        "Valuation Date": "04/03/2026",
+        "Date Range Selection": "01/01/2019 - 04/03/2026",
+        "Line of Business": "Commercial Multi-Peril"
+      }
+    }
+  ]
+}

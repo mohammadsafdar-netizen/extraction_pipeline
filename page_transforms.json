@@ -1,0 +1,101 @@
+{
+  "templates/acord_140.pdf_0_5": {
+    "dx": 0.0,
+    "dy": 8.160317041399964,
+    "sx": 1.0,
+    "sy": 0.9999999965618174,
+    "anchors": 6,
+    "max_err": 1.667903575253149e-06,
+    "tmpl_file": "templates/acord_140.pdf",
+    "tmpl_pg": 0,
+    "flat_pg": 5
+  },
+  "templates/acord_140.pdf_1_6": {
+    "dx": 0.0,
+    "dy": 8.160316882799918,
+    "sx": 1.0,
+    "sy": 1.0,
+    "anchors": 3,
+    "max_err": 0,
+    "tmpl_file": "templates/acord_140.pdf",
+    "tmpl_pg": 1,
+    "flat_pg": 6
+  },
+  "templates/acord_140.pdf_2_7": {
+    "dx": 0.0,
+    "dy": 7.559999999999945,
+    "sx": 1.0,
+    "sy": 1.0,
+    "anchors": 1,
+    "max_err": 0,
+    "tmpl_file": "templates/acord_140.pdf",
+    "tmpl_pg": 2,
+    "flat_pg": 7
+  },
+  "templates/acord_125.pdf_0_0": {
+    "dx": 0.0,
+    "dy": 8.700317120699907,
+    "sx": 1.0,
+    "sy": 1.0055551046063689,
+    "anchors": 4,
+    "max_err": 1.6463125420349343,
+    "tmpl_file": "templates/acord_125.pdf",
+    "tmpl_pg": 0,
+    "flat_pg": 0
+  },
+  "templates/acord_125.pdf_1_1": {
+    "dx": 0.0,
+    "dy": 7.7999999999999545,
+    "sx": 1.0,
+    "sy": 1.0,
+    "anchors": 1,
+    "max_err": 0,
+    "tmpl_file": "templates/acord_125.pdf",
+    "tmpl_pg": 1,
+    "flat_pg": 1
+  },
+  "templates/acord_125.pdf_2_2": {
+    "dx": 0.0,
+    "dy": 7.379999999999957,
+    "sx": 1.0,
+    "sy": 0.9975023250365019,
+    "anchors": 3,
+    "max_err": 1.9864292833270838,
+    "tmpl_file": "templates/acord_125.pdf",
+    "tmpl_pg": 2,
+    "flat_pg": 2
+  },
+  "templates/acord_125.pdf_3_3": {
+    "dx": 0.0,
+    "dy": 8.39999999999994,
+    "sx": 1.0,
+    "sy": 0.9938168701819694,
+    "anchors": 3,
+    "max_err": 0.8480086122637118,
+    "tmpl_file": "templates/acord_125.pdf",
+    "tmpl_pg": 3,
+    "flat_pg": 3
+  },
+  "templates/acord_126.pdf_0_15": {
+    "dx": 0.07239999999999291,
+    "dy": 16.91271661379996,
+    "sx": 0.9999979808123954,
+    "sy": 1.556075865054411,
+    "anchors": 6,
+    "max_err": 62.1871279720507,
+    "tmpl_file": "templates/acord_126.pdf",
+    "tmpl_pg": 0,
+    "flat_pg": 15
+  },
+  "templates/acord_131.pdf_0_20": {
+    "dx": 0.07987333333330386,
+    "dy": 7.761166560933361,
+    "sx": 1.0000411378028284,
+    "sy": 1.002338012207669,
+    "anchors": 6,
+    "max_err": 1.4290906774793077,
+    "tmpl_file": "templates/acord_131.pdf",
+    "tmpl_pg": 0,
+    "flat_pg": 20
+  }
+}

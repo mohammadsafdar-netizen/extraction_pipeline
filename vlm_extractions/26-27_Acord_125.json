@@ -1,0 +1,1614 @@
+{
+  "source_file": "26-27 Acord 125.pdf",
+  "document_type": "acord_application",
+  "total_pages": 14,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "date": "02/06/2026",
+          "agency": "The Baldwin Group Northeast LLC",
+          "agency_address": "20 Independence Drive, Hyannis, MA 02601",
+          "carrier": "Ategity Specialty Insurance Company",
+          "policy_number": "01-B-GL-P00072386-2",
+          "named_insured": [
+            {
+              "name": "Urban Southwest Capital LP",
+              "address": "3625 N Hall Street, Suite 610, Dallas, TX 75219",
+              "business_phone": "(214) 521-0284"
+            },
+            {
+              "name": "Urban Trailing Vine, LLC",
+              "address": "N/A"
+            },
+            {
+              "name": "Urban Royalgate Timberwood, LLC",
+              "address": "N/A"
+            }
+          ]
+        },
+        "ApplicantInformation": {
+          "contact_name": "John Gaynier",
+          "contact_phone": "(800) 553-1801",
+          "contact_fax": "(877) 816-2156",
+          "contact_email": "mail@rogersgray.com",
+          "agency_customer_id": "URBASOU-02",
+          "carrier_naic_code": "16427",
+          "policy_status": "QUOTE",
+          "transaction_date": "05/30/2026",
+          "transaction_time": "AM",
+          "policy_effective_date": "05/30/2025",
+          "policy_expiration_date": "05/30/2026",
+          "billing_plan": "AGENCY",
+          "payment_plan": "DIRECT",
+          "audit_deposit": "$",
+          "minimum_premium": "$",
+          "policy_premium": "$"
+        },
+        "LinesOfBusiness": {
+          "coverages": [
+            {
+              "line_of_business": "COMMERCIAL GENERAL LIABILITY",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "COMMERCIAL INLAND MARINE",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "COMMERCIAL PROPERTY",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "CRIME",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "CYBER AND PRIVACY",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "FIDUCIARY LIABILITY",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "GARAGE AND DEALERS",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "LIQUOR LIABILITY",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "MOTOR CARRIER",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "TRUCKERS",
+              "premium": "$"
+            },
+            {
+              "line_of_business": "UMBRELLA",
+              "premium": "$"
+            }
+          ]
+        },
+        "Attachments": {
+          "attachments": [
+            "ACCOUNTS RECEIVABLE / VALUABLE PAPERS",
+            "ADDITIONAL INTEREST SCHEDULE",
+            "ADDITIONAL PREMISES INFORMATION SCHEDULE",
+            "APARTMENT BUILDING SUPPLEMENT",
+            "CONDO ASSN BYLAWS (for D&O Coverage only)",
+            "CONTRACTORS SUPPLEMENT",
+            "COVERAGES SCHEDULE",
+            "DEALERS SECTION",
+            "DRIVER INFORMATION SCHEDULE",
+            "ELECTRONIC DATA PROCESSING SECTION",
+            "GLASS AND SIGN SECTION",
+            "HOTEL / MOTEL SUPPLEMENT",
+            "INSTALLATION / BUILDERS RISK SECTION",
+            "INTERNATIONAL LIABILITY EXPOSURE SUPPLEMENT",
+            "INTERNATIONAL PROPERTY EXPOSURE SUPPLEMENT",
+            "LOSS SUMMARY",
+            "OPEN CARGO SECTION",
+            "PREMIUM PAYMENT SUPPLEMENT",
+            "PROFESSIONAL LIABILITY SUPPLEMENT",
+            "RESTAURANT / TAVERN SUPPLEMENT",
+            "STATEMENT / SCHEDULE OF VALUES",
+            "STATE SUPPLEMENT (if applicable)",
+            "VACANT BUILDING SUPPLEMENT",
+            "VEHICLE SCHEDULE"
+          ]
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "",
+          "named_insured": "Mr. Ben Weil",
+          "address": ""
+        },
+        "ContactInformation": {
+          "AccountingContact": {
+            "contact_type": "Accounting Contact",
+            "contact_name": "Mr. Ben Weil",
+            "primary_phone": "(214) 521-0284",
+            "primary_email_address": "ben@urbansouthwestcapital.com",
+            "secondary_email_address": ""
+          },
+          "AuditContact": {
+            "contact_type": "Audit Contact",
+            "contact_name": "Mr. Ben Weil",
+            "primary_phone": "(214) 521-0284",
+            "primary_email_address": "ben@urbansouthwestcapital.com",
+            "secondary_email_address": ""
+          }
+        },
+        "PremisesInformation": [
+          {
+            "loc": 1,
+            "street": "11107 Northwest Lema Drive AKA 11105 Northwest Jones Drive -",
+            "city": "Parkville",
+            "state": "MO",
+            "zip": "64152",
+            "bld": 1,
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": 2928457,
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": 258499,
+            "description_of_operations": "Apartments - 244 units",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "any_area_leased_to_others": "N"
+          },
+          {
+            "loc": 2,
+            "street": "3101 West Northgate Drive - Stonehill Terr",
+            "city": "Irving",
+            "state": "TX",
+            "zip": "75062",
+            "bld": 1,
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": 3785487,
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": 280532,
+            "description_of_operations": "Apartments - 301 units",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "any_area_leased_to_others": "N"
+          },
+          {
+            "loc": 3,
+            "street": "734 South Mesa Hills Drive - West Town",
+            "city": "El Paso",
+            "state": "TX",
+            "zip": "79912",
+            "bld": 1,
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": 2350481,
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": 224875,
+            "description_of_operations": "Apartments - 192 units",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "any_area_leased_to_others": "N"
+          },
+          {
+            "loc": 4,
+            "street": "4720 Reading Road - Brittany Square",
+            "city": "Rosenberg",
+            "state": "TX",
+            "zip": "77471",
+            "bld": 1,
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": 2354870,
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": 179068,
+            "description_of_operations": "Apartments - 192 units",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "any_area_leased_to_others": "N"
+          }
+        ],
+        "NatureOfBusiness": {
+          "business_type": "APARTMENTS",
+          "description_of_primary_operations": "Owner, Investor, and Manager specializing in value-add multifamily properties",
+          "date_business_started": ""
+        },
+        "AdditionalInterest": {
+          "interest": [
+            {
+              "interest_type": "ADDITIONAL INSURED BREACH OF WARRANTY",
+              "name_and_address": "",
+              "rank": "",
+              "evidence": "",
+              "certificate": "",
+              "policy": "",
+              "send_bill": "",
+              "location": "",
+              "building": "",
+              "vehicle": "",
+              "boat": "",
+              "airport": "",
+              "aircraft": "",
+              "item_class": "",
+              "item": "",
+              "item_description": "",
+              "reference_loan": "",
+              "interest_end_date": "",
+              "lien_amount": "",
+              "phone": "",
+              "fax": "",
+              "email_address": "",
+              "reason_for_interest": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "URBASOU-02",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "GeneralInformation": {
+          "1a": {
+            "IS_THE_APPLICANT_A_SUBSIDIARY_OF_ANOTHER_ENTITY": "N",
+            "PARENT_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "1b": {
+            "DOES_THE_APPLICANT_HAVE_ANY_SUBSIDIARIES": "N",
+            "SUBSIDIARY_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "2": {
+            "IS_A_FORMAL_SAFETY_PROGRAM_IN_OPERATION": "N",
+            "SAFETY_MANUAL": false,
+            "SAFETY_POSITION": false,
+            "MONTHLY_MEETINGS": false,
+            "OSHA": false
+          },
+          "3": {
+            "ANY_EXPOSURE_TO_FLAMMABLES_EXPLOSIVES_CHEMICALS": "N"
+          },
+          "4": {
+            "ANY_OTHER_INSURANCE_WITH_THIS_COMPANY": "N",
+            "LINE_OF_BUSINESS": "",
+            "POLICY_NUMBER": ""
+          },
+          "5": {
+            "ANY_POLICY_OR_COVERAGE_DECLINED_CANCELLED_OR_NON_RENEWED_DURING_THE_PRIOR_THREE_3_YEARS_FOR_ANY_PREMISES_OR_OPERATIONS": "N",
+            "NON_PAYMENT": false,
+            "AGENT_NO_LONGER_REPRESENTS_CARRIER": false,
+            "NON_RENEWAL": false,
+            "UNDERWRITING": false,
+            "CONDITION_CORRECTED": ""
+          },
+          "6": {
+            "ANY_PAST_LOSSES_OR_CLAIMS_RELATING_TO_SEXUAL_ABUSE_OR_MOLESTATION_ALLEGATIONS_DISCRIMINATION_OR_NEGIGENT_HIRING": "N"
+          },
+          "7": {
+            "DURING_THE_LAST_FIVE_YEARS_TEN_IN_RI_HAS_ANY_APPLICANT_BEEN_INDICTED_FOR_OR_CONVICTED_OF_ANY_DEGREE_OF_THE_CRIME_OF_FRAUD_BRIBERY_ARSON_OR_ANY_OTHER_ARSON_RELATED_CRIME_IN_CONNECTION_WITH_THIS_OR_ANY_OTHER_PROPERTY": "N",
+            "EXPLANATION": ""
+          },
+          "8": {
+            "ANY_UNCORRECTED_FIRE_AND_OR_SAFETY_CODE_VIOLATIONS": "N",
+            "OCCUR_DATE": "",
+            "EXPLANATION": "",
+            "RESOLUTION": "",
+            "RESOLVE_DATE": ""
+          },
+          "9": {
+            "HAS_APPLICANT_HAD_A_FORECLOSURE_REPOSSESSION_BANKRUPTCY_OR_FILED_FOR_BANKRUPTCY_DURING_THE_LAST_FIVE_5_YEARS": "N",
+            "OCCUR_DATE": "",
+            "EXPLANATION": "",
+            "RESOLUTION": "",
+            "RESOLVE_DATE": ""
+          },
+          "10": {
+            "HAS_APPLICANT_HAD_A_JUDGEMENT_OR_LIEN_DURING_THE_LAST_FIVE_5_YEARS": "N",
+            "OCCUR_DATE": "",
+            "EXPLANATION": "",
+            "RESOLUTION": "",
+            "RESOLVE_DATE": ""
+          },
+          "11": {
+            "HAS_BUSINESS_BEEN_PLACED_IN_A_TRUST": "N",
+            "NAME_OF_TRUST": ""
+          },
+          "12": {
+            "ANY_FOREIGN_OPERATIONS_FOREIGN_PRODUCTS_DISTRIBUTED_IN_USA_OR_US_PRODUCTS_SOLD_DISTRIBUTED_IN_FOREIGN_COUNTRIES": "N",
+            "EXPLANATION": ""
+          },
+          "13": {
+            "DOES_APPLICANT_HAVE_OTHER_BUSINESS_VENTURES_FOR_WHICH_COVERAGE_IS_NOT_REQUESTED": "N"
+          },
+          "14": {
+            "DOES_APPLICANT_OWN_LEASE_OPERATE_ANY_DRONES": "N",
+            "EXPLANATION": ""
+          },
+          "15": {
+            "DOES_APPLICANT_HIRE_OTHERS_TO_OPERATE_DRONES": "N",
+            "EXPLANATION": ""
+          },
+          "Remarks": "",
+          "PriorCarrierInformation": {
+            "YEAR": "",
+            "CATEGORY": "",
+            "GENERAL_LIABILITY": "",
+            "AUTOMOBILE": "",
+            "PROPERTY": "",
+            "OTHER": "",
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": "",
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "URBASOU-02",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "FilledTextFields": {
+          "PRODUCER'S SIGNATURE": "David J. Robinson",
+          "PRODUCER'S NAME (Please Print)": "John Gaynier",
+          "STATE PRODUCER LICENSE NO (Required in Florida)": "",
+          "NATIONAL PRODUCER NUMBER": "",
+          "APPLICANT'S SIGNATURE": "",
+          "DATE": ""
+        },
+        "Tables": [
+          {
+            "Title": "PRIOR CARRIER INFORMATION (continued)",
+            "Columns": [
+              "YEAR",
+              "CATEGORY",
+              "GENERAL LIABILITY",
+              "AUTOMOBILE",
+              "PROPERTY",
+              "OTHER:"
+            ],
+            "Rows": [
+              {
+                "YEAR": "",
+                "CATEGORY": "CARRIER",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "POLICY NUMBER",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "PREMIUM",
+                "GENERAL LIABILITY": "$",
+                "AUTOMOBILE": "$",
+                "PROPERTY": "$",
+                "OTHER": "$"
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "EFFECTIVE DATE",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "EXPIRATION DATE",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "CARRIER",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "POLICY NUMBER",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "PREMIUM",
+                "GENERAL LIABILITY": "$",
+                "AUTOMOBILE": "$",
+                "PROPERTY": "$",
+                "OTHER": "$"
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "EFFECTIVE DATE",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "EXPIRATION DATE",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              }
+            ]
+          },
+          {
+            "Title": "LOSS HISTORY",
+            "Columns": [
+              "DATE OF OCCURRENCE",
+              "LINE",
+              "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM",
+              "DATE OF CLAIM",
+              "AMOUNT PAID",
+              "AMOUNT RESERVED",
+              "SUBROGATION Y/N",
+              "CLAIM OPEN Y/N"
+            ],
+            "Rows": [
+              {
+                "DATE OF OCCURRENCE": "",
+                "LINE": "",
+                "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM": "",
+                "DATE OF CLAIM": "",
+                "AMOUNT PAID": "",
+                "AMOUNT RESERVED": "",
+                "SUBROGATION Y/N": "",
+                "CLAIM OPEN Y/N": ""
+              }
+            ]
+          }
+        ],
+        "Coverages": [],
+        "Limits": [],
+        "Premiums": [],
+        "Classifications": [],
+        "PremisesBuildingInfo": []
+      }
+    },
+    {
+      "page": 5,
+      "data": {
+        "Header": {
+          "date": "05/30/2025",
+          "agency": "The Baldwin Group Northeast LLC",
+          "carrier": "Aetegrity Specialty Insurance Company",
+          "policy_number": "01-B-GL-P00072386-2",
+          "named_insured": "Urban Southwest Capital LP"
+        },
+        "PremisesInformation": [
+          {
+            "LOC #": 5,
+            "STREET": "2812 Trailing Vine Drive - Trailing Vine",
+            "CITY": "Spring",
+            "STATE": "TX",
+            "ZIP": "77373",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 1184247,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 101088,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartments - 96 units"
+          },
+          {
+            "LOC #": 6,
+            "STREET": "10027 Spice Lane - The Claridge",
+            "CITY": "Houston",
+            "STATE": "TX",
+            "ZIP": "77072",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 2085745,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 201198,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartments - 173 units"
+          },
+          {
+            "LOC #": 7,
+            "STREET": "5902 E. 126th Street - Briarwood Gardens",
+            "CITY": "Grandview",
+            "STATE": "MO",
+            "ZIP": "64030",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 2662729,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 309312,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartment - 360 Units"
+          },
+          {
+            "LOC #": 8,
+            "STREET": "900 South Medalist Circle - Park Springs",
+            "CITY": "Plano",
+            "STATE": "TX",
+            "ZIP": "75023",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 2310482,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 159644,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartment - 148 Units"
+          },
+          {
+            "LOC #": 9,
+            "STREET": "12820 14th Street - Oak Tree Square",
+            "CITY": "Grandview",
+            "STATE": "MO",
+            "ZIP": "64030",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 1463197,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 160425,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartment - 189 Unit s"
+          },
+          {
+            "LOC #": 10,
+            "STREET": "1369 North Hampton Road - Casitas/Adelita",
+            "CITY": "Desoto",
+            "STATE": "TX",
+            "ZIP": "75115",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 1850000,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 125800,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Apartment - 121 Units"
+          },
+          {
+            "LOC #": 11,
+            "STREET": "329 W Mary Street - Lansing Heights",
+            "CITY": "Lansing",
+            "STATE": "KS",
+            "ZIP": "66043",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": 1433527,
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": 160134,
+            "ANY AREA LEASED TO OTHERS": "Y",
+            "DESCRIPTION OF OPERATIONS": "Lansing Heights - Apartment - 16 Buildings"
+          }
+        ]
+      }
+    },
+    {
+      "page": 6,
+      "data": {
+        "Header": {
+          "date": "05/30/2025",
+          "agency": "The Baldwin Group Northeast LLC",
+          "carrier": "Aetgrity Specialty Insurance Company",
+          "policy_number": "01-B-GL-P00072386-2",
+          "named_insured": "Urban Southwest Capital LP"
+        },
+        "PremisesInformation": [
+          {
+            "LOC #": "12",
+            "STREET": "6533 E Medalist Circle - Highpoint Townhomes",
+            "CITY": "Plano",
+            "STATE": "TX",
+            "ZIP": "75023",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$2,310,842",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "149,800 SQ FT",
+            "DESCRIPTION OF OPERATIONS": "Highpoint Townhomes - 140 Units"
+          },
+          {
+            "LOC #": "13",
+            "STREET": "16869 Cottage Circle - Cottages of Belton",
+            "CITY": "Belton",
+            "STATE": "MO",
+            "ZIP": "64012",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$590,000",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "66,944 SQ FT",
+            "DESCRIPTION OF OPERATIONS": "Cottages of Belton - Low Income Housing - 72 Units"
+          },
+          {
+            "LOC #": "14",
+            "STREET": "13944 E 49th Terrace - Cottages of Kansas City",
+            "CITY": "Kansas",
+            "STATE": "MO",
+            "ZIP": "64133",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$870,000",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "100,600 SQ FT",
+            "DESCRIPTION OF OPERATIONS": "Cottages of Kansas City - Low Income Housing - 108 Units"
+          },
+          {
+            "LOC #": "15",
+            "STREET": "8838 Flora Avenue",
+            "CITY": "Kansas City",
+            "STATE": "MO",
+            "ZIP": "64131",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$996,800",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "106,000 SQ FT",
+            "DESCRIPTION OF OPERATIONS": "Apartments- 56 Buildings 112 Units in total, 1 story each"
+          },
+          {
+            "LOC #": "16",
+            "STREET": "1348 Thorpe Lane",
+            "CITY": "San Marcos",
+            "STATE": "TX",
+            "ZIP": "75666",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$76,728",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "76,728 SQ FT",
+            "DESCRIPTION OF OPERATIONS": ""
+          },
+          {
+            "LOC #": "17",
+            "STREET": "2411 Louisiana Street",
+            "CITY": "Lawrence",
+            "STATE": "KS",
+            "ZIP": "66046",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$129,864",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "129,864 SQ FT",
+            "DESCRIPTION OF OPERATIONS": ""
+          },
+          {
+            "LOC #": "18",
+            "STREET": "330 Waymore Drive",
+            "CITY": "El Paso",
+            "STATE": "TX",
+            "ZIP": "79902",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$55,126",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "55,126 SQ FT",
+            "DESCRIPTION OF OPERATIONS": ""
+          }
+        ],
+        "LegalDisclaimers": "ANY PERSON WHO KNOWINGLY AND WITH INTENT TO DEFRAUD ANY INSURANCE COMPANY OR ANOTHER PERSON FILES AN APPLICATION FOR INSURANCE OR STATEMENT OF CLAIM CONTAINING ANY MATERIALLY FALSE INFORMATION, OR CONCEALS FOR THE PURPOSE OF MISLEADING INFORMATION CONCERNING ANY FACT MATERIAL THERETO, COMMITS A FRAUDULENT INSURANCE ACT, WHICH IS A CRIME AND SUBJECTS THE PERSON TO CRIMINAL AND [NY: SUBSTANTIAL] CIVIL PENALTIES. (Not applicable in CO, DC, FL, HI, KS, MA, MN, NE, OH, OK, OR, VT or WA; in LA, ME, TN and VA, insurance benefits may also be denied) IN THE DISTRICT OF COLUMBIA, WARNING: IT IS A CRIME TO PROVIDE FALSE OR MISLEADING INFORMATION TO AN INSURER FOR THE PURPOSE OF DEFRAUDING THE INSURER OR ANY OTHER PERSON. PENALTIES INCLUDE IMPRISONMENT AND/OR FINES. IN ADDITION, AN INSURER MAY DENY INSURANCE BENEFITS, IF FALSE INFORMATION MATERIALLY RELATED TO A CLAIM WAS PROVIDED BY THE APPLICANT. IN FLORIDA, ANY PERSON WHO KNOWINGLY AND WITH INTENT TO INJURE, DEFRAUD, OR DECEIVE ANY INSURER FILES A STATEMENT OF CLAIM OR AN APPLICATION CONTAINING ANY FALSE, INCOMPLETE, OR MISLEADING INFORMATION IS GUILTY OF A FELONY OF THE THIRD DEGREE. IN KANSAS, ANY PERSON WHO, KNOWINGLY AND WITH INTENT TO DEFRAUD, PRESENTS, CAUSES TO BE PRESENTED OR PREPARES WITH KNOWLEDGE OR BELIEF THAT IT WILL BE PRESENTED TO OR BY AN INSURER, PURPORTED INSURER, BROKER OR ANY AGENT THEREOF, ANY WRITTEN STATEMENT AS PART OF, OR IN SUPPORT OF, AN APPLICATION FOR THE ISSUANCE OF, OR THE RATING OF AN INSURANCE POLICY FOR PERSONAL OR COMMERCIAL INSURANCE, OR A CLAIM FOR PAYMENT OF OTHER BENEFIT PURSUANT TO AN INSURANCE POLICY FOR COMMERCIAL OR PERSONAL INSURANCE WHICH SUCH PERSON KNOWS TO CONTAIN MATERIALLY FALSE INFORMATION CONCERNING ANY FACT MATERIAL THERETO; OR CONCEALS, FOR THE PURPOSE OF MISLEADING, INFORMATION CONCERNING ANY FACT MATERIAL THERETO COMMITS A FRAUDULENT INSURANCE ACT. IN MASSACHUSETTS, NEBRASKA, OREGON AND VERMONT, ANY PERSON WHO KNOWINGLY AND WITH INTENT TO DEFRAUD ANY INSURANCE COMPANY OR ANOTHER PERSON FILES AN APPLICATION FOR INSURANCE OR STATEMENT OF CLAIM CONTAINING ANY MATERIALLY FALSE INFORMATION, OR CONCEALS FOR THE PURPOSE OF MISLEADING INFORMATION CONCERNING ANY FACT MATERIAL THERETO, MAY BE COMMITTING A FRAUDULENT INSURANCE ACT, WHICH MAY BE A CRIME AND MAY SUBJECT THE PERSON TO CRIMINAL AND CIVIL PENALTIES. IN WASHINGTON, IT IS A CRIME TO KNOWINGLY PROVIDE FALSE, INCOMPLETE, OR MISLEADING INFORMATION TO AN INSURANCE COMPANY FOR THE PURPOSE OF DEFRAUDING THE COMPANY. PENALTIES INCLUDE IMPRISONMENT, FINES, AND DENIAL OF INSURANCE BENEFITS."
+      }
+    },
+    {
+      "page": 7,
+      "data": [
+        {
+          "LOC #": "18",
+          "STREET": "330 Waymore Drive",
+          "CITY": "El Paso",
+          "STATE": "TX",
+          "ZIP": "79902",
+          "CITY LIMITS": "INSIDE",
+          "INTEREST": "OWNER",
+          "FULL TIME EMPLOYMENT": "",
+          "PART TIME EMPLOYMENT": "",
+          "ANNUAL REVENUES": "$",
+          "OCCUPIED AREA": "SQ FT",
+          "OPEN TO PUBLIC AREA": "SQ FT",
+          "TOTAL BUILDING AREA": "16,160 SQ FT",
+          "ANY AREA LEASED TO OTHERS?": "Y / N"
+        },
+        {
+          "LOC #": "19",
+          "STREET": "5930 Red Bluff Road",
+          "CITY": "Pasadena",
+          "STATE": "TX",
+          "ZIP": "77505",
+          "CITY LIMITS": "INSIDE",
+          "INTEREST": "OWNER",
+          "FULL TIME EMPLOYMENT": "",
+          "PART TIME EMPLOYMENT": "",
+          "ANNUAL REVENUES": "$",
+          "OCCUPIED AREA": "SQ FT",
+          "OPEN TO PUBLIC AREA": "SQ FT",
+          "TOTAL BUILDING AREA": "91,928 SQ FT",
+          "ANY AREA LEASED TO OTHERS?": "Y / N"
+        },
+        {
+          "LOC #": "20",
+          "STREET": "925 Brookside St",
+          "CITY": "Leavenworth",
+          "STATE": "KS",
+          "ZIP": "66048",
+          "CITY LIMITS": "INSIDE",
+          "INTEREST": "OWNER",
+          "FULL TIME EMPLOYMENT": "",
+          "PART TIME EMPLOYMENT": "",
+          "ANNUAL REVENUES": "$",
+          "OCCUPIED AREA": "SQ FT",
+          "OPEN TO PUBLIC AREA": "SQ FT",
+          "TOTAL BUILDING AREA": "125,568 SQ FT",
+          "ANY AREA LEASED TO OTHERS?": "Y / N"
+        },
+        {
+          "LOC #": "21",
+          "STREET": "213 Argonaut Dr",
+          "CITY": "El Paso",
+          "STATE": "TX",
+          "ZIP": "79912",
+          "CITY LIMITS": "INSIDE",
+          "INTEREST": "OWNER",
+          "FULL TIME EMPLOYMENT": "",
+          "PART TIME EMPLOYMENT": "",
+          "ANNUAL REVENUES": "$1,616,993",
+          "OCCUPIED AREA": "SQ FT",
+          "OPEN TO PUBLIC AREA": "SQ FT",
+          "TOTAL BUILDING AREA": "141,295 SQ FT",
+          "ANY AREA LEASED TO OTHERS?": "Y / N"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "APPLIED 125ONI",
+          "named_insured": [
+            {
+              "name": "Urban Stonehill Apartments, LP",
+              "address": "Urban Stonehill Apartments, LP"
+            },
+            {
+              "name": "Urban Independence Meadowbrook LLC",
+              "address": "Urban Independence Meadowbrook LLC"
+            },
+            {
+              "name": "Urban Indepence Winner Place LLC",
+              "address": "Urban Indepence Winner Place LLC"
+            },
+            {
+              "name": "Urban Town Lake Apartments LP",
+              "address": "Urban Town Lake Apartments LP"
+            },
+            {
+              "name": "Urban Northgate Investors LP",
+              "address": "Urban Northgate Investors LP"
+            },
+            {
+              "name": "Urban Southwest Investors, LLC; Villas De Santa Fe",
+              "address": "Urban Southwest Investors, LLC; Villas De Santa Fe"
+            },
+            {
+              "name": "Urban Aspen Ridge Houston, LP",
+              "address": "Urban Aspen Ridge Houston, LP"
+            },
+            {
+              "name": "Park Springs Texas, LLC",
+              "address": "Park Springs Texas, LLC"
+            }
+          ]
+        },
+        "TableRows": [
+          {
+            "name": "Urban Stonehill Apartments, LP",
+            "address": "Urban Stonehill Apartments, LP",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Independence Meadowbrook LLC",
+            "address": "Urban Independence Meadowbrook LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Indepence Winner Place LLC",
+            "address": "Urban Indepence Winner Place LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Town Lake Apartments LP",
+            "address": "Urban Town Lake Apartments LP",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Northgate Investors LP",
+            "address": "Urban Northgate Investors LP",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Southwest Investors, LLC; Villas De Santa Fe",
+            "address": "Urban Southwest Investors, LLC; Villas De Santa Fe",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Urban Aspen Ridge Houston, LP",
+            "address": "Urban Aspen Ridge Houston, LP",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          },
+          {
+            "name": "Park Springs Texas, LLC",
+            "address": "Park Springs Texas, LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC_#": "",
+            "BUSINESS_PHONE_#": "",
+            "WEBSITE_ADDRESS": "",
+            "corporation": true,
+            "joint_venture": false,
+            "llc": false,
+            "not_for_profit_org": false,
+            "partnership": false,
+            "subchapter_s_corporation": false,
+            "trust": false
+          }
+        ]
+      }
+    },
+    {
+      "page": 9,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "APPLIED 125ONI",
+          "named_insured": [
+            {
+              "name": "Parkville Investors LLC",
+              "address": "Parkville Investors LLC"
+            },
+            {
+              "name": "Yaron Finkelstein",
+              "address": "Yaron Finkelstein"
+            },
+            {
+              "name": "Julian Blum",
+              "address": "Julian Blum"
+            },
+            {
+              "name": "Julian Blum Investment Managers LLC",
+              "address": "Julian Blum Investment Managers LLC"
+            },
+            {
+              "name": "Springer Texas Holdings LP",
+              "address": "Springer Texas Holdings LP"
+            },
+            {
+              "name": "Crestview Stonehill, LLC",
+              "address": "Crestview Stonehill, LLC"
+            },
+            {
+              "name": "Crestview Mobile Home Estates, LLC",
+              "address": "Crestview Mobile Home Estates, LLC"
+            },
+            {
+              "name": "Ben Well",
+              "address": "Ben Well"
+            }
+          ]
+        },
+        "TableRows": [
+          {
+            "name": "Parkville Investors LLC",
+            "address": "Parkville Investors LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Yaron Finkelstein",
+            "address": "Yaron Finkelstein",
+            "type": "INDIVIDUAL",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Julian Blum",
+            "address": "Julian Blum",
+            "type": "INDIVIDUAL",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Julian Blum Investment Managers LLC",
+            "address": "Julian Blum Investment Managers LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Springer Texas Holdings LP",
+            "address": "Springer Texas Holdings LP",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Crestview Stonehill, LLC",
+            "address": "Crestview Stonehill, LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Crestview Mobile Home Estates, LLC",
+            "address": "Crestview Mobile Home Estates, LLC",
+            "type": "CORPORATION",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          },
+          {
+            "name": "Ben Well",
+            "address": "Ben Well",
+            "type": "INDIVIDUAL",
+            "GL_CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN_OR_SOC_SEC": "",
+            "business_phone": "",
+            "website_address": "",
+            "subchapter_s_corporation": false
+          }
+        ]
+      }
+    },
+    {
+      "page": 10,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "APPLIED 125ONI",
+          "named_insured": "Urban Stonehill LLC",
+          "address": "Urban Stonehill LLC"
+        },
+        "TableRows": [
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Urban Kansas City LLC",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Parkway Kirby, LTD & Urban West Town Apartments LLC (75-2756507)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Parkway General LLC (75-2738266)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Urban Southwest Township Apartments LP (47-2003113)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Urban Southwest Township Apartments GP LP (47-2016615)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Tidwell Apartments Houston, LP (46-1956976)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          },
+          {
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)": "Urban Tidwell, LLC (46-1966087)",
+            "GL CODE": "",
+            "SIC": "",
+            "NAICS": "",
+            "FEIN OR SOC SEC #": "",
+            "BUSINESS PHONE #": "",
+            "WEBSITE ADDRESS": "",
+            "CORPORATION": "CORPORATION",
+            "JOINT VENTURE": "LLC",
+            "NO. OF MEMBERS AND MANAGERS": "",
+            "NOT FOR PROFIT ORG": "",
+            "SUBCHAPTER 'S' CORPORATION": "",
+            "TRUST": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 11,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "APPLIED 125ONI",
+          "named_insured": [
+            {
+              "name": "Urban Aspen Ridge Houston LP",
+              "address": "Urban Aspen Ridge Houston LP"
+            },
+            {
+              "name": "Urban Aspen Ridge Houston Manager LLC",
+              "address": "Urban Aspen Ridge Houston Manager LLC"
+            },
+            {
+              "name": "Park Springs Family, LLC",
+              "address": "Park Springs Family, LLC"
+            },
+            {
+              "name": "Oak Tree KC LP, a Missouri Limited Partnership",
+              "address": "Oak Tree KC LP, a Missouri Limited Partnership"
+            },
+            {
+              "name": "OakTree KC GP LLC",
+              "address": "OakTree KC GP LLC"
+            },
+            {
+              "name": "Adelita Linnie, LLC",
+              "address": "Adelita Linnie, LLC"
+            },
+            {
+              "name": "Cambridge Arizona LLC (20-1420615)",
+              "address": "Cambridge Arizona LLC (20-1420615)"
+            },
+            {
+              "name": "Urban Capital (20-0245061)",
+              "address": "Urban Capital (20-0245061)"
+            }
+          ]
+        },
+        "TableRows": [
+          {
+            "name": "Urban Aspen Ridge Houston LP",
+            "address": "Urban Aspen Ridge Houston LP",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Urban Aspen Ridge Houston Manager LLC",
+            "address": "Urban Aspen Ridge Houston Manager LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Park Springs Family, LLC",
+            "address": "Park Springs Family, LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Oak Tree KC LP, a Missouri Limited Partnership",
+            "address": "Oak Tree KC LP, a Missouri Limited Partnership",
+            "type": "PARTNERSHIP",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "OakTree KC GP LLC",
+            "address": "OakTree KC GP LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Adelita Linnie, LLC",
+            "address": "Adelita Linnie, LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Cambridge Arizona LLC (20-1420615)",
+            "address": "Cambridge Arizona LLC (20-1420615)",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Urban Capital (20-0245061)",
+            "address": "Urban Capital (20-0245061)",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 12,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "125ONI",
+          "named_insured": "Urban Residential LLC (46-4095007)",
+          "address": ""
+        },
+        "OtherNamedInsureds": [
+          {
+            "name": "Urban High Point, LP",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Cottages of Belton, LLC",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Urban SW Capital, LLC; Cottages of KC East, LLC",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Roseland Court Owner LLC",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Lindens Ada Owner LP",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Buena Park San Marcos, LLC",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          },
+          {
+            "name": "Village 1 Apartments Partners, LLC",
+            "address": "",
+            "type": "CORPORATION",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": "",
+            "business_phone": "",
+            "website_address": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 13,
+      "data": {
+        "Header": {
+          "date": "2009/08",
+          "agency": "URBASOU-02",
+          "carrier": "LMOSS",
+          "policy_number": "APPLIED 125ONI",
+          "named_insured": [
+            {
+              "name": "Urban Brisa El Paso, LP",
+              "address": "Urban Brisa El Paso, LP"
+            },
+            {
+              "name": "Lane Cedar Bluff LLC",
+              "address": "Lane Cedar Bluff LLC"
+            },
+            {
+              "name": "Northgate Overlook, LLC and Overlook Investors DE, LLC",
+              "address": "Northgate Overlook, LLC and Overlook Investors DE, LLC"
+            },
+            {
+              "name": "Parkville Owner, LLC",
+              "address": "Parkville Owner, LLC"
+            }
+          ]
+        },
+        "TableRows": [
+          {
+            "name": "Urban Brisa El Paso, LP",
+            "address": "Urban Brisa El Paso, LP",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Lane Cedar Bluff LLC",
+            "address": "Lane Cedar Bluff LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Northgate Overlook, LLC and Overlook Investors DE, LLC",
+            "address": "Northgate Overlook, LLC and Overlook Investors DE, LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          },
+          {
+            "name": "Parkville Owner, LLC",
+            "address": "Parkville Owner, LLC",
+            "type": "CORPORATION",
+            "business_phone": "",
+            "website_address": "",
+            "gl_code": "",
+            "sic": "",
+            "naics": "",
+            "fein_or_soc_sec": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 14,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "URBASOU-02",
+          "carrier": "LMOS",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "ContactInformation": [
+          {
+            "ContactType": "Claim Contact",
+            "ContactName": "Mr. Ben Weil",
+            "PrimaryPhone": "(214) 521-0284",
+            "PrimaryEmail": "ben@urbansouthwestcapital.com",
+            "SecondaryPhone": "",
+            "SecondaryEmail": ""
+          },
+          {
+            "ContactType": "Inspection Contact",
+            "ContactName": "Mr. Ben Weil",
+            "PrimaryPhone": "(214) 521-0284",
+            "PrimaryEmail": "ben@urbansouthwestcapital.com",
+            "SecondaryPhone": "",
+            "SecondaryEmail": ""
+          }
+        ],
+        "Applied": {
+          "125CIS": "2009/08"
+        }
+      }
+    }
+  ]
+}

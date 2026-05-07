@@ -1,0 +1,27 @@
+{
+  "source_file": "LR_113199144_Rise Campus Quarters Loss Run.pdf",
+  "document_type": "loss_run",
+  "total_pages": 1,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "carrier_name": "Marsh USA, Inc.",
+        "date": "04/16/2026",
+        "recipient_name": "Robert Ferrara",
+        "recipient_company": "Vesper Holdings",
+        "recipient_address": "595 Madison Avenue, 37th Floor, New York, NY 10022",
+        "subject": "Loss information for Campus Quarters, located at 1773 Ennis Joslin Rd, Corpus Christi, TX 78412.",
+        "sender_name": "Amy Green",
+        "sender_title": "Senior Vice President",
+        "sender_company": "Marsh USA, Inc.",
+        "sender_credential": "CRM, CIC",
+        "general_liability_losses": "No known losses reported.",
+        "property_losses": "No known losses reported.",
+        "note": "Please advise if you should have any questions or need anything further."
+      }
+    }
+  ]
+}

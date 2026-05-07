@@ -1,0 +1,1681 @@
+{
+  "source_file": "Acord App (1800 North Stone LLC) 2026.pdf",
+  "document_type": "acord_application",
+  "total_pages": 25,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": []
+    },
+    {
+      "page": 2,
+      "data": {
+        "CONTACT_INFORMATION": {
+          "CONTACT_TYPE": "HOME",
+          "CONTACT_NAME": "LBaker",
+          "PRIMARY_PHONE_#": "HOME",
+          "SECONDARY_PHONE_#": "HOME",
+          "PRIMARY_E_MAIL_ADDRESS": "LBaker@LBaker.com",
+          "SECONDARY_E_MAIL_ADDRESS": "LBaker@LBaker.com"
+        },
+        "PREMISES_INFORMATION": [
+          {
+            "LOC": 1,
+            "STREET": "1800 N Stone Ave",
+            "BLD #": 1,
+            "CITY": "Tucson",
+            "STATE": "AZ",
+            "COUNTY": "Pima",
+            "ZIP": "85705-5761",
+            "CITY_LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "# FULL TIME EMPL": 0,
+            "# PART TIME EMPL": 0,
+            "ANNUAL_REVENUES": 0,
+            "OCCUPIED_AREA": 0,
+            "OPEN_TO_PUBLIC_AREA": 0,
+            "TOTAL_BUILDING_AREA": 0,
+            "ANY_AREA_LEASED_TO_OTHERS? Y/N": "Y"
+          },
+          {
+            "LOC": 2,
+            "STREET": "1800 N Stone Ave",
+            "BLD #": 2,
+            "CITY": "Tucson",
+            "STATE": "AZ",
+            "COUNTY": "Pima",
+            "ZIP": "85705-5761",
+            "CITY_LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "# FULL TIME EMPL": 0,
+            "# PART TIME EMPL": 0,
+            "ANNUAL_REVENUES": 0,
+            "OCCUPIED_AREA": 0,
+            "OPEN_TO_PUBLIC_AREA": 0,
+            "TOTAL_BUILDING_AREA": 0,
+            "ANY_AREA_LEASED_TO_OTHERS? Y/N": "Y"
+          },
+          {
+            "LOC": 3,
+            "STREET": "1800 N Stone Ave",
+            "BLD #": 3,
+            "CITY": "Tucson",
+            "STATE": "AZ",
+            "COUNTY": "Pima",
+            "ZIP": "85705-5761",
+            "CITY_LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "# FULL TIME EMPL": 0,
+            "# PART TIME EMPL": 0,
+            "ANNUAL_REVENUES": 0,
+            "OCCUPIED_AREA": 0,
+            "OPEN_TO_PUBLIC_AREA": 0,
+            "TOTAL_BUILDING_AREA": 0,
+            "ANY_AREA_LEASED_TO_OTHERS? Y/N": "Y"
+          },
+          {
+            "LOC": 4,
+            "STREET": "1800 N Stone Ave",
+            "BLD #": 4,
+            "CITY": "Tucson",
+            "STATE": "AZ",
+            "COUNTY": "Pima",
+            "ZIP": "85705-5761",
+            "CITY_LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "# FULL TIME EMPL": 0,
+            "# PART TIME EMPL": 0,
+            "ANNUAL_REVENUES": 0,
+            "OCCUPIED_AREA": 0,
+            "OPEN_TO_PUBLIC_AREA": 0,
+            "TOTAL_BUILDING_AREA": 0,
+            "ANY_AREA_LEASED_TO_OTHERS? Y/N": "Y"
+          }
+        ],
+        "NATURE_OF_BUSINESS": {
+          "BUSINESS_TYPE": "68 Unit Student Housing Apartment Complex",
+          "DESCRIPTION_OF_PRIMARY_OPERATIONS": "68 Unit Student Housing Apartment Complex",
+          "RETAIL_STORES_OR_SERVICE_OPERATIONS_%_OF_TOTAL_SALES": 0,
+          "INSTALLATION_SERVICE_OR_REPAIR_WORK": 0,
+          "OFF_PREMISES_INSTALLATION_SERVICE_OR_REPAIR_WORK": 0,
+          "DESCRIPTION_OF_OPERATIONS_OF_OTHER_NAMED_INSUREDS": ""
+        },
+        "ADDITIONAL_INTEREST": {
+          "INTEREST": [
+            {
+              "INTEREST_TYPE": "ADDITIONAL INSURED BREACH OF WARRANTY",
+              "NAME_AND_ADDRESS": "LBaker",
+              "RANK": 0,
+              "EVIDENCE": "CERTIFICATE",
+              "POLICY": "SEND BILL",
+              "LOCATION": "BUILDING",
+              "VEHICLE": "BOAT",
+              "AIRPORT": "AIRCRAFT",
+              "ITEM_CLASS": "ITEM",
+              "ITEM_DESCRIPTION": "LBaker"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "GENERAL_INFORMATION": {
+          "AGENCY_CUSTOMER_ID": "1800NOR-02",
+          "LBAKER": "LBAKER",
+          "ACORD_125": "2016/03",
+          "Page": 3,
+          "Page_of": 4,
+          "1a": {
+            "IS_THE_APPLICANT_A_SUBSIDIARY_OF_ANOTHER_ENTITY": "Y/N",
+            "PARENT_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "1b": {
+            "DOES_THE_APPLICANT_HAVE_ANY_SUBSIDIARIES": "Y/N",
+            "SUBSIDIARY_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "2": {
+            "IS_A_FORMAL_SAFETY_PROGRAM_IN_OPERATION": {
+              "SAFETY_MANUAL": false,
+              "SAFETY_POSITION": false,
+              "MONTHLY_MEETINGS": false,
+              "OSHA": false
+            }
+          },
+          "3": {
+            "ANY_EXPOSURE_TO_FLAMMABLES_EXPLOSIVES_CHEMICALS": ""
+          },
+          "4": {
+            "ANY_OTHER_INSURANCE_WITH_THIS_COMPANY": {
+              "LINE_OF_BUSINESS": "",
+              "POLICY_NUMBER": ""
+            }
+          },
+          "5": {
+            "ANY_POLICY_OR_COVERAGE_DECLINED_CANCELLED_OR_NON_RENEWED_DURING_THE_PRIOR_THREE_3_YEARS_FOR_ANY_PREMISES_OR_OPERATIONS": {
+              "NON_PAYMENT": false,
+              "AGENT_NO_LONGER_REPRESENTS_CARRIER": false,
+              "NON_RENEWAL": false,
+              "UNDERWRITING": false,
+              "CONDITION_CORRECTED": ""
+            }
+          },
+          "6": {
+            "ANY_PAST_LOSSES_OR_CLAIMS_RELATING_TO_SEXUAL_ABUSE_OR_MOLESTATION_ALLEGATIONS_DISCRIMINATION_OR_NEGIGENT_HIRING": ""
+          },
+          "7": {
+            "DURING_THE_LAST_FIVE_YEARS_TEN_IN_RI_HAS_ANY_APPLICANT_BEEN_INDICTED_FOR_OR_CONVICTED_OF_ANY_DEGREE_OF_THE_CRIME_OF_FRAUD_BRIBERY_ARSON_OR_ANY_OTHER_ARSON_RELATED_CRIME_IN_CONNECTION_WITH_THIS_OR_ANY_OTHER_PROPERTY": ""
+          },
+          "8": {
+            "ANY_UNCORRECTED_FIRE_AND_OR_SAFETY_CODE_VIOLATIONS": {
+              "OCCUR_DATE": "",
+              "EXPLANATION": "",
+              "RESOLUTION": "",
+              "RESOLVE_DATE": ""
+            }
+          },
+          "9": {
+            "HAS_APPLICANT_HAD_A_FORECLOSURE_REPOSSESSION_BANKRUPTCY_OR_FILED_FOR_BANKRUPTCY_DURING_THE_LAST_FIVE_5_YEARS": {
+              "OCCUR_DATE": "",
+              "EXPLANATION": "",
+              "RESOLUTION": "",
+              "RESOLVE_DATE": ""
+            }
+          },
+          "10": {
+            "HAS_APPLICANT_HAD_A_JUDGEMENT_OR_LIEN_DURING_THE_LAST_FIVE_5_YEARS": {
+              "OCCUR_DATE": "",
+              "EXPLANATION": "",
+              "RESOLUTION": "",
+              "RESOLVE_DATE": ""
+            }
+          },
+          "11": {
+            "HAS_BUSINESS_BEEN_PLACED_IN_A_TRUST": {
+              "NAME_OF_TRUST": ""
+            }
+          },
+          "12": {
+            "ANY_FOREIGN_OPERATIONS_FOREIGN_PRODUCTS_DISTRIBUTED_IN_USA_OR_US_PRODUCTS_SOLD_DISTRIBUTED_IN_FOREIGN_COUNTRIES": ""
+          },
+          "13": {
+            "DOES_APPLICANT_HAVE_OTHER_BUSINESS_VENTURES_FOR_WHICH_COVERAGE_IS_NOT_REQUESTED": ""
+          },
+          "14": {
+            "DOES_APPLICANT_OWN_LEASE_OPERATE_ANY_DRONES": {
+              "DESCRIBE_USE": ""
+            }
+          },
+          "15": {
+            "DOES_APPLICANT_HIRE_OTHERS_TO_OPERATE_DRONES": {
+              "DESCRIBE_USE": ""
+            }
+          },
+          "REMARKS_PROCESSING_INSTRUCTIONS": {
+            "ACORD_101_ADDITIONAL_REMARKS_SCHEDULE_MAY_BE_ATTACHED_IF_MORE_SPACE_IS_REQUIRED": ""
+          },
+          "PRIOR_CARRIER_INFORMATION": {
+            "YEAR": "",
+            "CATEGORY": "",
+            "GENERAL_LIABILITY": "",
+            "AUTOMOBILE": "",
+            "PROPERTY": "",
+            "OTHER": "",
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": "",
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Agency Customer ID": "1800NOR-02",
+        "Carrier Name": "",
+        "Policy Number": "",
+        "Premium": 0,
+        "Effective Date": "",
+        "Expiration Date": "",
+        "Loss History": "Check if none",
+        "Total Losses": 0,
+        "Date of Occurrence": "",
+        "Line": "",
+        "Type / Description of Occurrence or Claim": "",
+        "Date of Claim": "",
+        "Amount Paid": 0,
+        "Amount Reserved": 0,
+        "Subrogation Y/N": "",
+        "Claim Open Y/N": "",
+        "Signature": "",
+        "Notice of Information Practices (Privacy)": false,
+        "Personal Information": "PERSONAL INFORMATION ABOUT YOU, INCLUDING INFORMATION FROM A CREDIT OR OTHER INVESTIGATIVE REPORT, MAY BE COLLECTED FROM PERSONS OTHER THAN YOU IN CONNECTION WITH THIS APPLICATION FOR INSURANCE AND SUBSEQUENT AMENDMENTS AND RENEWALS. SUCH INFORMATION AS WELL AS OTHER PERSONAL AND PRIVILEGED INFORMATION COLLECTED BY US OR OUR AGENTS MAY IN CERTAIN CIRCUMSTANCES BE DISCLOSED TO THIRD PARTIES WITHOUT YOUR AUTHORIZATION. CREDIT SCORING INFORMATION MAY BE USED TO HELP DETERMINE EITHER YOUR ELIGIBILITY FOR INSURANCE OR THE PREMIUM YOU WILL BE CHARGED. WE MAY USE A THIRD PARTY IN CONNECTION WITH THE DEVELOPMENT OF YOUR SCORE. YOU MAY HAVE THE RIGHT TO REVIEW YOUR PERSONAL INFORMATION IN OUR FILES AND REQUEST CORRECTION OF ANY INACCURACIES. YOU MAY ALSO HAVE THE RIGHT TO REQUEST IN WRITING THAT WE CONSIDER EXTRAORDINARY LIFE CIRCUMSTANCES IN CONNECTION WITH THE DEVELOPMENT OF YOUR CREDIT SCORE. THESE RIGHTS MAY BE LIMITED IN SOME STATES. PLEASE CONTACT YOUR AGENT OR BROKER TO LEARN HOW THESE RIGHTS MAY APPLY IN YOUR STATE OR FOR INSTRUCTIONS ON HOW TO SUBMIT A REQUEST TO US FOR A MORE DETAILED DESCRIPTION OF YOUR RIGHTS AND SUBJECTS REGARDING PERSONAL INFORMATION. (Not applicable in AZ, CA, DE, KS, MA, MN, ND, NY, OR, VA, or WV. Specific ACORD 38s are available for applicants in these states.)",
+        "Applicable in AL, AR, DC, LA, MD, NM, RI and WV": "Any person who knowingly (or willfully)* presents a false or fraudulent claim for payment of a loss or benefit or knowingly (or willfully)* presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison. *Applies in MD Only.",
+        "Applicable in CO": "It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory Agencies.",
+        "Applicable in FL and OK": "Any person who knowingly and with intent to defraud, defraud, or otherwise presents a statement of claim or an application containing any false, incomplete, or misleading information is guilty of a felony (of the third degree)*. *Applies in FL Only.",
+        "Applicable in KS": "Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be presented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance of, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for commercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act.",
+        "Applicable in KY, NY, OH and PA": "Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and the stated value of the claim for each such violation)*. *Applies in NY Only.",
+        "Applicable in ME, TN, VA and WA": "It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose of defrauding the company. Penalties (may)* include imprisonment, fines, denial of insurance benefits. *Applies in ME Only.",
+        "Applicable in NJ": "Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil penalties.",
+        "Applicable in OR": "Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a false statement as to any material fact may be violating state law.",
+        "Applicable in PR": "Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps, or causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss, shall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten thousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty thus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2) years.",
+        "Producer's Signature": "",
+        "Producer's Name": "",
+        "State Producer License No": "",
+        "Applicant's Signature": "",
+        "Date": "",
+        "National Producer Number": ""
+      }
+    },
+    {
+      "page": 5,
+      "data": {
+        "AGENCY": "Crest Insurance Group, LLC",
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "CARRIER": "AmTrust Group",
+        "POLICY_NUMBER": "",
+        "EFFECTIVE_DATE": "05/01/2026",
+        "NAMED_INSURED(S)": "1800 North Stone LLC",
+        "PREMISES_INFORMATION": [
+          {
+            "LOC #": "1",
+            "STREET": "1800 N Stone Ave",
+            "BLD #": "5",
+            "CITY": "Tucson",
+            "STATE": "AZ",
+            "COUNTY": "Pima",
+            "ZIP": "85705-5761",
+            "CITY_LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "FULL_TIME_EMP": "",
+            "PART_TIME_EMP": "",
+            "ANNUAL_REVENUES": "",
+            "OCCUPIED_AREA": "",
+            "OPEN_TO_PUBLIC_AREA": "",
+            "TOTAL_BUILDING_AREA": "",
+            "ANY_AREA_LEASED_TO_OTHERS": "",
+            "DESCRIPTION_OF_OPERATIONS": ""
+          }
+        ],
+        "PAGE": 1,
+        "NAIC_CODE": "",
+        "ACORD": "ACORD 823 (2011/10)",
+        "ATTACHMENT": "ACORD 125 \u00a9 2006-2011 ACORD CORPORATION. All rights reserved."
+      }
+    },
+    {
+      "page": 6,
+      "data": {
+        "agency_name": "Crest Insurance Group, LLC",
+        "agency_customer_id": "1800NOR-02",
+        "carrier": "AmTrust Group",
+        "policy_number": "",
+        "effective_date": "05/01/2026",
+        "named_insured": "1800 North Stone LLC",
+        "date": "04/08/2026",
+        "naic_code": "",
+        "blanket_summary": [],
+        "premises_information": {
+          "premises_number": 0,
+          "building_number": 0,
+          "street_address": "",
+          "bldg_description": ""
+        },
+        "subject_of_insurance": [
+          {
+            "type": "Building",
+            "amount": 12591761,
+            "coins_percent": "R",
+            "valuation": "R",
+            "causes_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "ded": 5000,
+            "ded_type": "",
+            "blkt_number": "",
+            "forms_and_conditions_to_apply": ""
+          },
+          {
+            "type": "Business Personal Property",
+            "amount": 1413213,
+            "coins_percent": "R",
+            "valuation": "R",
+            "causes_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "ded": 5000,
+            "ded_type": "",
+            "blkt_number": "",
+            "forms_and_conditions_to_apply": ""
+          },
+          {
+            "type": "Business Income with Extra Expense",
+            "amount": "",
+            "coins_percent": "L",
+            "valuation": "L",
+            "causes_of_loss": "Special (Including theft)",
+            "inflation_guard_percent": "",
+            "ded": 72,
+            "ded_type": "Hours",
+            "blkt_number": "",
+            "forms_and_conditions_to_apply": ""
+          }
+        ],
+        "additional_information": {
+          "business_income_extra_expense": "Attach ACORD 810",
+          "value_reporting_information": "Attach ACORD 811"
+        },
+        "additional_coverages_options_restrictions_endorsements_and_rating_information": {
+          "spoilage_coverage": false,
+          "refrig_maint_agreement": false,
+          "breakdown_or_contamination": false,
+          "power_outage": false,
+          "selling_price": false,
+          "sinkhole_coverage": "",
+          "mine_subsidence_coverage": "",
+          "property_has_been_designated_an_historical_landmark": false,
+          "number_of_open_sides_on_structure": ""
+        },
+        "construction_type": {
+          "distance_to_hydrant_ft": "",
+          "fire_stat_mi": "",
+          "fire_district": "",
+          "code_number": "",
+          "prot_cl": "",
+          "stories": "",
+          "basmt_ts": "",
+          "yr_built": "",
+          "total_area": "",
+          "building_improvements": {
+            "wiring_yr": "",
+            "plumbing_yr": "",
+            "roofing_yr": "",
+            "heating_yr": "",
+            "other_yr": ""
+          },
+          "bldg_code_grade": "",
+          "tax_code": "",
+          "roof_type": "",
+          "other_occupancies": "",
+          "wind_class": "",
+          "heating_source_incl_woodburning_stove_or_fireplace_insert": "",
+          "manufacturer": "",
+          "date_installed": "",
+          "primary_heat": {
+            "boiler": false,
+            "solid_fuel": false
+          },
+          "secondary_heat": {
+            "boiler": false,
+            "solid_fuel": false
+          },
+          "if_boiler_is_insurance_placed_elsewhere": false,
+          "if_boiler_is_insurance_placed_elsewhere_secondary": false,
+          "right_exposure_and_distance": "",
+          "left_exposure_and_distance": "",
+          "front_exposure_and_distance": "",
+          "rear_exposure_and_distance": "",
+          "burglar_alarm_type": "",
+          "certificate_number": "",
+          "expiration_date": "",
+          "central_station_with_keys": false,
+          "local_gong": false,
+          "burglar_alarm_installed_and_serviced_by": "",
+          "extent": "",
+          "grade": "",
+          "guards_watchmen": "",
+          "clock_hourly": false,
+          "premises_fire_protection": {
+            "sprinklers_standpipes_co2_chemical_systems": "",
+            "percent_sprinklers": "",
+            "fire_alarm_manufacturer": ""
+          }
+        },
+        "additional_interest": {
+          "interest": "MORTGAGEE",
+          "name_and_address": "Berkadia Commercial Mortgage, LLC 332 Norristown Road, Suite 300 Ambrler, PA 19002 Montgomery",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "location_in_item_number": 0,
+          "building_in_item_number": 0,
+          "item_class": "",
+          "item": "",
+          "item_description": "",
+          "reference_loan_number": ""
+        },
+        "footer": {
+          "acord_code": "ACORD 140 (2014/12)",
+          "copyright": "\u00a9 1985-2014 ACORD CORPORATION. All rights reserved."
+        }
+      }
+    },
+    {
+      "page": 7,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "PREMISES_#": "1",
+        "STREET_ADDRESS": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+        "BUILDING_#": "1",
+        "BLDG_DESCRIPTION": "14 Units",
+        "SUBJECT_OF_INSURANCE": "",
+        "AMOUNT": "",
+        "COINS_%": "",
+        "VALUATION": "",
+        "CAUSES_OF_LOSS": "",
+        "INFLATION_GUARD_%": "",
+        "DED": "",
+        "DED_TYPE": "",
+        "BLKT_#": "",
+        "FORMS_AND_CONDITIONS_TO_APPLY": "",
+        "ADDITIONAL_INFORMATION": "",
+        "BUSINESS_INCOME_EXTRA_EXPENSE": "Attach ACORD 810",
+        "VALUE_REPORTING_INFORMATION": "Attach ACORD 811",
+        "SPOILAGE_COVERAGE": false,
+        "DESCRIPTION_OF_PROPERTY_COVERED": "",
+        "LIMIT": "",
+        "REFRIG_MAINT_AGREEMENT": false,
+        "OPTIONS": {
+          "BREAKDOWN_OR_CONTAMINATION": false,
+          "POWER_OUTAGE": false,
+          "SELLING_PRICE": false
+        },
+        "SINKHOLE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "MINE_SUBSIDENCE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "PROPERTY_HAS_BEEN_DESIGNATED_AN_HISTORICAL_LANDMARK": false,
+        "NUMBER_OF_OPEN_SIDES_ON_STRUCTURE": "",
+        "CONSTRUCTION_TYPE": "Frame",
+        "DISTANCE_TO_HYDRANT_FT": "",
+        "FIRE_STAT_MI": "",
+        "FIRE_DISTRICT": "",
+        "CODE_NUMBER": "",
+        "PROT_CL": "3",
+        "STORIES": "3",
+        "BASMTS": "",
+        "YEAR_BUILT": "2003",
+        "TOTAL_AREA": "21,836",
+        "BUILDING_IMPROVEMENTS": {
+          "WIRING_YR": "",
+          "PLUMBING_YR": "",
+          "ROOFING_YR": "2025",
+          "HEATING_YR": "",
+          "OTHER": ""
+        },
+        "BLDG_CODE_GRADE": "",
+        "TAX_CODE": "",
+        "ROOF_TYPE": "SEMI-RESISTIVE",
+        "OTHER_OCCUPANCIES": {
+          "HEATING_SOURCE_INCL_WOODBURNING_STOVE_OR_FIREPLACE_INSERT": false,
+          "MANUFACTURER": ""
+        },
+        "PRIMARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "SECONDARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "IF_BOILER_IS_INSURANCE_PLACED_ELSEWHERE": false,
+        "RIGHT_EXPOSURE_AND_DISTANCE": "",
+        "LEFT_EXPOSURE_AND_DISTANCE": "",
+        "FRONT_EXPOSURE_AND_DISTANCE": "",
+        "REAR_EXPOSURE_AND_DISTANCE": "",
+        "BURGLAR_ALARM_TYPE": "",
+        "CERTIFICATE_#": "",
+        "EXPIRATION_DATE": "",
+        "CENTRAL_STATION_WITH_KEYS": false,
+        "LOCAL_GONG": false,
+        "BURGLAR_ALARM_INSTALLED_AND_SERVICED_BY": "",
+        "EXTENT": "",
+        "GRADE": "",
+        "GUARDS_WATCHMEN": "",
+        "CLOCK_HOURLY": false,
+        "PREMISES_FIRE_PROTECTION": {
+          "SPRINK": "",
+          "FIRE_ALARM_MANUFACTURER": ""
+        },
+        "ADDITIONAL_INTEREST": {
+          "LOSS_PAYEE": false,
+          "MORTGAGEE": false
+        },
+        "ACORD_45_ATTACHED_FOR_ADDITIONAL_NAMES": false,
+        "INTEREST": {
+          "NAME_AND_ADDRESS": "",
+          "RANK": "",
+          "EVIDENCE": "",
+          "CERTIFICATE": ""
+        },
+        "INTEREST_IN_ITEM_NUMBER": {
+          "LOCATION": "",
+          "BUILDING": "",
+          "ITEM_CLASS": "",
+          "ITEM": "",
+          "ITEM_DESCRIPTION": ""
+        },
+        "REFERENCE_LOAN_#": "",
+        "REMARKS": "",
+        "ACORD_140": "2014/12",
+        "PAGE": "2 of 3"
+      }
+    },
+    {
+      "page": 8,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "SIGNATURE": "",
+        "PRODUCER_SIGNATURE": "",
+        "PRODUCER_NAME": "",
+        "STATE_PRODUCER_LICENSE_NO": "",
+        "APPLICANT_SIGNATURE": "",
+        "DATE": "",
+        "NATIONAL_PRODUCER_NUMBER": ""
+      }
+    },
+    {
+      "page": 9,
+      "data": {
+        "agency_customer_id": "1800NOR-02",
+        "agency_name": "Crest Insurance Group, LLC",
+        "policy_number": "",
+        "effective_date": "05/01/2026",
+        "named_insured": "1800 North Stone LLC",
+        "carrier": "AmTrust Group",
+        "date": "04/08/2026",
+        "naic_code": "",
+        "blanket_summary": [],
+        "premises_information": {
+          "premises_number": 1,
+          "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+          "building_number": 2,
+          "building_description": "12 Units"
+        },
+        "additional_information": {
+          "business_income_extra_expense": false,
+          "value_reporting_information": false
+        },
+        "additional_coverages_options_restrictions_endorsements_and_rating_information": {
+          "spoilage_coverage": false,
+          "sinkhole_coverage": false,
+          "mine_subsidence_coverage": false,
+          "property_has_been_designated_an_historical_landmark": false,
+          "number_of_open_sides_on_structure": ""
+        },
+        "construction_type": "Frame",
+        "distance_to_hydrant": {
+          "ft": "",
+          "mi": ""
+        },
+        "fire_district": "",
+        "code_number": "",
+        "prot_cl": 3,
+        "number_of_stories": 3,
+        "year_built": 2003,
+        "total_area": 15612,
+        "building_improvements": {
+          "wiring_year": "",
+          "plumbing_year": "",
+          "roofing_year": 2025,
+          "heating_year": ""
+        },
+        "bldg_code_grade": "",
+        "tax_code": "",
+        "roof_type": "",
+        "other_occupancies": "",
+        "wind_class": "RESISTIVE",
+        "heating_source_incl_woodburning_stove_or_fireplace_insert": false,
+        "manufacturer": "",
+        "date_installed": "",
+        "primary_heat": {
+          "boiler": false,
+          "solid_fuel": false
+        },
+        "secondary_heat": {
+          "boiler": false,
+          "solid_fuel": false
+        },
+        "if_boiler_is_insurance_placed_elsewhere": false,
+        "burglar_alarm_type": "",
+        "certificate_number": "",
+        "expiration_date": "",
+        "central_station_with_keys": false,
+        "local_gong": false,
+        "burglar_alarm_installed_and_serviced_by": "",
+        "extent": "",
+        "grade": "",
+        "number_of_guards_watchmen": "",
+        "clock_hourly": false,
+        "premises_fire_protection": {
+          "sprinklers_standpipes_co2_chemical_systems": "",
+          "percentage_sprinklers": ""
+        },
+        "fire_alarm_manufacturer": "",
+        "additional_interest": {
+          "interest": "",
+          "loss_payee": false,
+          "mortgagee": false,
+          "name_and_address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "location": "",
+          "building": "",
+          "item_class": "",
+          "item": "",
+          "item_description": "",
+          "reference_loan_number": ""
+        },
+        "acord_version": "ACORD 140 (2014/12)",
+        "footer_watermark": "\u00a9 1985-2014 ACORD CORPORATION. All rights reserved. The ACORD name and logo are registered marks of ACORD"
+      }
+    },
+    {
+      "page": 10,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "PREMISES_#": 1,
+        "STREET_ADDRESS": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+        "BUILDING_#": 3,
+        "BLDG_DESCRIPTION": "18 Units",
+        "SUBJECT_OF_INSURANCE": "",
+        "AMOUNT": "",
+        "COINS_%": "",
+        "VALUATION": "",
+        "CAUSES_OF_LOSS": "",
+        "INFLATION_GUARD_%": "",
+        "DED": "",
+        "DED_TYPE": "",
+        "BLKT_#": "",
+        "FORMS_AND_CONDITIONS_TO_APPLY": "",
+        "ADDITIONAL_INFORMATION": "",
+        "BUSINESS_INCOME_EXTRAS_EXPENSE": "Attach ACORD 810",
+        "VALUE_REPORTING_INFORMATION": "Attach ACORD 811",
+        "SPOILAGE_COVERAGE": false,
+        "DESCRIPTION_OF_PROPERTY_COVERED": "",
+        "LIMIT": "",
+        "REFRIG_MAINT_AGREEMENT": false,
+        "OPTIONS": {
+          "BREAKDOWN_OR_CONTAMINATION": false,
+          "POWER_OUTAGE": false,
+          "SELLING_PRICE": false
+        },
+        "SINKHOLE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "MINE_SUBSIDENCE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "PROPERTY_HAS_BEEN_DESIGNATED_AN_HISTORICAL_LANDMARK": false,
+        "NUMBER_OF_OPEN_SIDES_ON_STRUCTURE": "",
+        "CONSTRUCTION_TYPE": "Frame",
+        "DISTANCE_TO_HYDRANT_FT": "",
+        "DISTANCE_TO_HYDRANT_MI": "",
+        "FIRE_DISTRICT": "",
+        "CODE_NUMBER": "",
+        "PROT_CL": 3,
+        "STORIES": 3,
+        "BASMTS": "",
+        "YEAR_BUILT": 2003,
+        "TOTAL_AREA": 28932,
+        "BUILDING_IMPROVEMENTS": {
+          "WIRING_YR": "",
+          "PLUMBING_YR": "",
+          "ROOFING_YR": 2025,
+          "HEATING_YR": "",
+          "OTHER": ""
+        },
+        "BLDG_CODE_GRADE": "",
+        "TAX_CODE": "",
+        "ROOF_TYPE": "SEMI-RESISTIVE",
+        "OTHER_OCCUPANCIES": "HEATING_SOURCE_INCL_WOODBURNING_STOVE_OR_FIREPLACE_INSERT",
+        "MANUFACTURER": "",
+        "DATE_INSTALLED": "",
+        "PRIMARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "IF_BOILER_IS_INSURANCE_PLACED_ELSEWHERE": false,
+        "SECONDARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "IF_BOILER_IS_INSURANCE_PLACED_ELSEWHERE_2": false,
+        "RIGHT_EXPOSURE_AND_DISTANCE": "",
+        "LEFT_EXPOSURE_AND_DISTANCE": "",
+        "FRONT_EXPOSURE_AND_DISTANCE": "",
+        "REAR_EXPOSURE_AND_DISTANCE": "",
+        "BURGLAR_ALARM_TYPE": "",
+        "CERTIFICATE_#": "",
+        "EXPIRATION_DATE": "",
+        "CENTRAL_STATION_WITH_KEYS": false,
+        "LOCAL_GONG": false,
+        "BURGLAR_ALARM_INSTALLED_AND_SERVICED_BY": "",
+        "EXTENT": "",
+        "GRADE": "",
+        "GUARDS_WATCHMEN": "",
+        "CLOCK_HOURLY": false,
+        "PREMISES_FIRE_PROTECTION": "",
+        "PERCENT_SPRNK": "",
+        "FIRE_ALARM_MANUFACTURER": "",
+        "ADDITIONAL_INTEREST": {
+          "LOSS_PAYEE": false,
+          "MORTGAGEE": false
+        },
+        "ACORD_45_ATTACHED_FOR_ADDITIONAL_NAMES": false,
+        "INTEREST": {
+          "NAME_AND_ADDRESS": "",
+          "RANK": "",
+          "EVIDENCE": "",
+          "CERTIFICATE": ""
+        },
+        "INTEREST_IN_ITEM_NUMBER": {
+          "LOCATION": "",
+          "BUILDING": "",
+          "ITEM_CLASS": "",
+          "ITEM": "",
+          "ITEM_DESCRIPTION": ""
+        },
+        "REFERENCE_LOAN_#": "",
+        "REMARKS": "",
+        "ACORD_140": "2014/12",
+        "PAGE": 2,
+        "TOTAL_PAGES": 3
+      }
+    },
+    {
+      "page": 11,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "LBKER": "LBKER",
+        "SIGNATURE": "SIGNATURE",
+        "ACORD_140": "ACORD 140 (2014/12)",
+        "Page": "3",
+        "of": "3",
+        "Applicable_in_AL_AR_DC_LA_MD_NM_RI_and_WV": "Applicable in AL, AR, DC, LA, MD, NM, RI and WV",
+        "Applicable_in_CO": "Applicable in CO",
+        "Applicable_in_FL_and_OK": "Applicable in FL and OK",
+        "Applicable_in_KS": "Applicable in KS",
+        "Applicable_in_KY_NY_OH_and_PA": "Applicable in KY, NY, OH and PA",
+        "Applicable_in_ME_TN_VA_and_WA": "Applicable in ME, TN, VA and WA",
+        "Applicable_in_NJ": "Applicable in NJ",
+        "Applicable_in_OR": "Applicable in OR",
+        "Applicable_in_PR": "Applicable in PR",
+        "THE_UNDERSIGNED_IS_AN_AUTHORIZED_REPRESENTATIVE_OF_THE_APPLICANT_AND_REPRESENTS_THAT_REASONABLE_INQUIRY_HAS_BEEN_MADE_TO_OBTAIN_THE_ANSWERS_TO_QUESTIONS_ON_THIS_APPLICATION_HESHE_REPRESENTS_THAT_THE_ANSWERS_ARE_TRUE_CORRECT_AND_COMPLETE_TO_THE_BEST_OF_HISHER_KNOWLEDGE": "THE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE ANSWERS TO QUESTIONS ON THIS APPLICATION. HE/ SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER KNOWLEDGE.",
+        "PRODUCER'S_SIGNATURE": "PRODUCER'S SIGNATURE",
+        "PRODUCER'S_NAME": "PRODUCER'S NAME (Please Print)",
+        "STATE_PRODUCER_LICENSE_NO": "STATE PRODUCER LICENSE NO (Required in Florida)",
+        "APPLICANT'S_SIGNATURE": "APPLICANT'S SIGNATURE",
+        "DATE": "DATE",
+        "NATIONAL_PRODUCER_NUMBER": "NATIONAL PRODUCER NUMBER"
+      }
+    },
+    {
+      "page": 12,
+      "data": []
+    },
+    {
+      "page": 13,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "PREMISES_#": 1,
+        "STREET_ADDRESS": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+        "BUILDING_#": 5,
+        "BLDG_DESCRIPTION": "12 Units",
+        "SUBJECT_OF_INSURANCE": "",
+        "AMOUNT": "",
+        "COINS_%": "",
+        "VALUATION": "",
+        "CAUSES_OF_LOSS": "",
+        "INFLATION_GUARD_%": "",
+        "DED": "",
+        "DED_TYPE": "",
+        "BLKT_#": "",
+        "FORMS_AND_CONDITIONS_TO_APPLY": "",
+        "ADDITIONAL_INFORMATION": "",
+        "BUSINESS_INCOME_EXTRA_EXPENSE": "Attach ACORD 810",
+        "VALUE_REPORTING_INFORMATION": "Attach ACORD 811",
+        "SPOILAGE_COVERAGE": false,
+        "DESCRIPTION_OF_PROPERTY_COVERED": "",
+        "LIMIT": "",
+        "REFRIG_MAINT_AGREEMENT": false,
+        "OPTIONS": {
+          "BREAKDOWN_OR_CONTAMINATION": false,
+          "POWER_OUTAGE": false,
+          "SELLING_PRICE": false
+        },
+        "SINKHOLE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "MINE_SUBSIDENCE_COVERAGE": {
+          "ACCEPT_COVERAGE": false,
+          "REJECT_COVERAGE": false,
+          "LIMIT": ""
+        },
+        "PROPERTY_HAS_BEEN_DESIGNATED_AN_HISTORICAL_LANDMARK": false,
+        "NUMBER_OF_OPEN_SIDES_ON_STRUCTURE": "",
+        "CONSTRUCTION_TYPE": "Frame",
+        "DISTANCE_TO_HYDRANT_FT": "",
+        "FIRE_STAT_MI": "",
+        "FIRE_DISTRICT": "",
+        "CODE_NUMBER": "",
+        "PROT_CL": 3,
+        "STORIES": 3,
+        "BASMTS": "",
+        "YEAR_BUILT": 2003,
+        "TOTAL_AREA": 17100,
+        "BUILDING_IMPROVEMENTS": {
+          "WIRING_YR": "",
+          "PLUMBING_YR": "",
+          "ROOFING_YR": 2025,
+          "HEATING_YR": "",
+          "OTHER": ""
+        },
+        "BLDG_CODE_GRADE": "",
+        "TAX_CODE": "",
+        "ROOF_TYPE": "SEMI-RESISTIVE",
+        "OTHER_OCCUPANCIES": "HEATING_SOURCE_INCL_WOODBURNING_STOVE_OR_FIREPLACE_INSERT",
+        "WIND_CLASS": "RESISTIVE",
+        "PRIMARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "SECONDARY_HEAT": {
+          "BOILER": false,
+          "SOLID_FUEL": false
+        },
+        "IF_BOILER_IS_INSURANCE_PLACED_ELSEWHERE": false,
+        "RIGHT_EXPOSURE_AND_DISTANCE": "",
+        "LEFT_EXPOSURE_AND_DISTANCE": "",
+        "FRONT_EXPOSURE_AND_DISTANCE": "",
+        "REAR_EXPOSURE_AND_DISTANCE": "",
+        "BURGLAR_ALARM_TYPE": "",
+        "CERTIFICATE_#": "",
+        "EXPIRATION_DATE": "",
+        "CENTRAL_STATION_WITH_KEYS": false,
+        "LOCAL_GONG": false,
+        "BURGLAR_ALARM_INSTALLED_AND_SERVICED_BY": "",
+        "EXTENT": "",
+        "GRADE": "",
+        "GUARDS_WATCHMEN": "",
+        "CLOCK_HOURLY": false,
+        "PREMISES_FIRE_PROTECTION": {
+          "SPRINK": "",
+          "FIRE_ALARM_MANUFACTURER": ""
+        },
+        "ADDITIONAL_INTEREST": {
+          "LOSS_PAYEE": false,
+          "MORTGAGEE": false
+        },
+        "ACORD_45_ATTACHED_FOR_ADDITIONAL_NAMES": false,
+        "INTEREST": {
+          "NAME_AND_ADDRESS": "",
+          "RANK": "",
+          "EVIDENCE": "",
+          "CERTIFICATE": ""
+        },
+        "INTEREST_IN_ITEM_NUMBER": {
+          "LOCATION": "",
+          "BUILDING": "",
+          "ITEM_CLASS": "",
+          "ITEM": "",
+          "ITEM_DESCRIPTION": ""
+        },
+        "REFERENCE_LOAN_#": "",
+        "REMARKS": "",
+        "ACORD_140": "2014/12",
+        "PAGE_NUMBER": 2,
+        "TOTAL_PAGES": 3
+      }
+    },
+    {
+      "page": 14,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "SIGNATURE": "",
+        "PRODUCER_SIGNATURE": "",
+        "PRODUCER_NAME": "",
+        "STATE_PRODUCER_LICENSE_NO": "",
+        "APPLICANT_SIGNATURE": "",
+        "DATE": "",
+        "NATIONAL_PRODUCER_NUMBER": "",
+        "ACORD": "140 (2014/12)",
+        "PAGE": "3",
+        "TOTAL_PAGES": "3"
+      }
+    },
+    {
+      "page": 15,
+      "data": {
+        "document_type": "ADDITIONAL COVERAGES OVERFLOW",
+        "form_code": "1800NOR-02",
+        "producer_code": "LBAKER",
+        "page_number": 1,
+        "total_pages": 1,
+        "applied_policy": "APPLIED 98 (2001/01)",
+        "coverages": [
+          {
+            "code": "XTEND",
+            "description": "Property Enhancement Endorsement"
+          },
+          {
+            "code": "EV",
+            "description": "Electric Vehicle Charging Stations"
+          }
+        ]
+      }
+    },
+    {
+      "page": 16,
+      "data": {
+        "agency": "Crest Insurance Group, LLC",
+        "agency_customer_id": "1800NOR-02",
+        "carrier": "AmTrust Group",
+        "policy_number": "",
+        "effective_date": "05/01/2026",
+        "applicant_first_named_insured": "1800 North Stone LLC",
+        "date": "04/08/2026",
+        "coverage": {
+          "commercial_general_liability": true,
+          "claims_made": true,
+          "occurrence": false,
+          "owners_contractor_protective": false
+        },
+        "limits": {
+          "general_aggregate": 2000000,
+          "limit_applies_per": {
+            "policy": true,
+            "project": false,
+            "location": true,
+            "other": false
+          },
+          "products_completed_operations_aggregate": 2000000,
+          "personal_advertising_injury": 2000000,
+          "each_occurrence": 2000000,
+          "damage_to_rented_premises_each_occurrence": 100000,
+          "medical_expense_any_one_person": 10000,
+          "employee_benefits": 0
+        },
+        "deductibles": {
+          "property_damage": 0,
+          "bodily_injury": 0
+        },
+        "premiums_operations": {
+          "products": 0,
+          "other": 0
+        },
+        "schedule_of_hazards": [
+          {
+            "loc": 0,
+            "haz": 1,
+            "classification": "APARTMENT BUILDINGS - STUDENT HOUSING",
+            "class_code": 60010,
+            "premium_basis": "U",
+            "exposure": 68,
+            "terr": "",
+            "rate": {
+              "prem_ops": "",
+              "products": ""
+            },
+            "premium": {
+              "prem_ops": "",
+              "products": ""
+            }
+          },
+          {
+            "loc": 0,
+            "haz": 2,
+            "classification": "SWIMMING POOL",
+            "class_code": 48925,
+            "premium_basis": "T",
+            "exposure": 1,
+            "terr": "",
+            "rate": {
+              "prem_ops": "",
+              "products": ""
+            },
+            "premium": {
+              "prem_ops": "",
+              "products": ""
+            }
+          }
+        ],
+        "claims_made_explain_all_yes_responses": [
+          "PROPOSED RETROACTIVE DATE: ",
+          "ENTRY DATE INTO UNINTERRUPTED CLAIMS MADE COVERAGE: ",
+          "HAS ANY PRODUCT, WORK, ACCIDENT, OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF-INSURED FROM ANY PREVIOUS COVERAGE? ",
+          "WAS TAIL COVERAGE PURCHASED UNDER ANY PREVIOUS POLICY? "
+        ],
+        "employee_benefits_liability": {
+          "deductible_per_claim": 0,
+          "number_of_employees": 0,
+          "number_of_employees_covered_by_employee_benefits_plans": 0,
+          "retroactive_date": ""
+        }
+      }
+    },
+    {
+      "page": 17,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "CONTRACTORS": {
+          "EXPLAIN_ALL_YES_RESPONSES": "For all past or present operations",
+          "1_DOES_APPLICANT_DRAW_PLANS_DESIGNS_OR_SPECIFICATIONS_FOR_OTHERS": "Y/N",
+          "2_DO_ANY_OPERATIONS_INCLUDE_BLASTING_OR_UTILIZE_OR_STORE_EXPLOSIVE_MATERIAL": "Y/N",
+          "3_DO_ANY_OPERATIONS_INCLUDE_EXCAVATION_TUNNELING_UNDERGROUND_WORK_OR_EARTH_MOVING": "Y/N",
+          "4_DO_YOUR_SUBCONTRACTORS_CARRY_COVERAGES_OR_LIMITS_LESS_THAN_YOURS": "Y/N",
+          "5_ARE_SUBCONTRACTORS_ALLOWED_TO_WORK_WITHOUT_PROVIDING_YOU_WITH_A_CERTIFICATE_OF_INSURANCE": "Y/N",
+          "6_DOES_APPLICANT_LEASE_EQUIPMENT_TO_OTHERS_WITH_OR_WITHOUT_OPERATORS": "Y/N",
+          "DESCRIBE_THE_TYPE_OF_WORK_SUBCONTRACTED": {
+            "$_PAID_TO_SUB_CONTRACTORS": "",
+            "%_OF_WORK_SUBCONTRACTED": "",
+            "#_FULL_TIME_STAFF": "",
+            "#_PART_TIME_STAFF": ""
+          }
+        },
+        "PRODUCTS_COMPLETED_OPERATIONS": {
+          "EXPLAIN_ALL_YES_RESPONSES": "For all past or present products or operations",
+          "PLEASE_ATTACH_LITERATURE_BROCHURES_LABELS_WARNINGS_ETC": "Y/N",
+          "1_DOES_APPLICANT_INSTALL_SERVICE_OR_DEMONSTRATE_PRODUCTS": "Y/N",
+          "2_FOREIGN_PRODUCTS_SOLD_DISTRIBUTED_USED_AS_COMPONENTS": "Y/N",
+          "3_RESEARCH_AND_DEVELOPMENT_CONDUCTED_OR_NEW_PRODUCTS_PLANNED": "Y/N",
+          "4_GUARANTEES_WARRANTIES_HOLD_HARMLESS_AGREEMENTS": "Y/N",
+          "5_PRODUCTS_RELATED_TO_AIRCRAFT_SPACE_INDUSTRY": "Y/N",
+          "6_PRODUCTS_RECALLED_DISCONTINUED_CHANGED": "Y/N",
+          "7_PRODUCTS_OF_OTHERS_SOLD_OR_RE_PACKAGED_UNDER_APPLICANT_LABEL": "Y/N",
+          "8_PRODUCTS_UNDER_LABEL_OF_OTHERS": "Y/N",
+          "9_VENDORS_COVERAGE_REQUIRED": "Y/N",
+          "10_DOES_ANY_NAMED_INSURED_SELL_TO_OTHER_NAMED_INSUREDS": "Y/N"
+        },
+        "PRODUCTS_COMPLETED_OPERATIONS_TABLE": [
+          {
+            "PRODUCTS": "",
+            "ANNUAL_GROSS_SALES": "",
+            "#_OF_UNITS": "",
+            "TIME_IN_MARKET": "",
+            "EXPECTED_LIFE": "",
+            "INTENDED_USE": "",
+            "PRINCIPAL_COMPONENTS": ""
+          },
+          {
+            "PRODUCTS": "",
+            "ANNUAL_GROSS_SALES": "",
+            "#_OF_UNITS": "",
+            "TIME_IN_MARKET": "",
+            "EXPECTED_LIFE": "",
+            "INTENDED_USE": "",
+            "PRINCIPAL_COMPONENTS": ""
+          },
+          {
+            "PRODUCTS": "",
+            "ANNUAL_GROSS_SALES": "",
+            "#_OF_UNITS": "",
+            "TIME_IN_MARKET": "",
+            "EXPECTED_LIFE": "",
+            "INTENDED_USE": "",
+            "PRINCIPAL_COMPONENTS": ""
+          }
+        ],
+        "ACORD": "126 (2014/04)",
+        "PAGE": "2 of 4"
+      }
+    },
+    {
+      "page": 18,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "LBAKER": "LBAKER",
+        "ACORD_126": "ACORD 126 (2014/04)",
+        "Page": "3 of 4",
+        "INTEREST": "ADDITIONAL INSURED",
+        "NAME_AND_ADDRESS": "",
+        "RANK": "",
+        "EVIDENCE": "",
+        "CERTIFICATE": "",
+        "INTEREST_IN_ITEM_NUMBER": {
+          "LOCATION": "",
+          "BUILDING": "",
+          "ITEM_CLASS": "",
+          "ITEM": "",
+          "ITEM_DESCRIPTION": ""
+        },
+        "REFERENCE_LOAN": "",
+        "GENERAL_INFORMATION": {
+          "1": {
+            "Y_N": ""
+          },
+          "2": {
+            "Y_N": ""
+          },
+          "3": {
+            "Y_N": ""
+          },
+          "4": {
+            "Y_N": ""
+          },
+          "5": {
+            "EQUIPMENT": "",
+            "TYPE_OF_EQUIPMENT": {
+              "SMALL_TOOLS": "",
+              "LARGE_EQUIPMENT": ""
+            },
+            "INSTRUCTION GIVEN": {
+              "Y_N": ""
+            }
+          },
+          "6": {
+            "Y_N": ""
+          },
+          "7": {
+            "Y_N": ""
+          },
+          "8": {
+            "Y_N": ""
+          },
+          "9": {
+            "Y_N": ""
+          },
+          "10": {
+            "#APTS": "",
+            "TOTAL_APT_AREA_Sq_Ft": "",
+            "DESCRIBE_OTHER_LODGING_OPERATIONS": ""
+          },
+          "11": {
+            "APPROVED_FENCE": false,
+            "LIMITED_ACCESS": false,
+            "DIVING_BOARD": false,
+            "SLIDE": false,
+            "ABOVE_GROUND": false,
+            "IN_GROUND": false,
+            "LIFE_GUARD": false
+          },
+          "12": {
+            "Y_N": ""
+          },
+          "13": {
+            "TYPE_OF_SPORT": "",
+            "CONTACT_SPORT": {
+              "Y_N": ""
+            },
+            "AGE_GROUP": {
+              "13 - 18": false,
+              "12 & UNDER": false,
+              "OVER 18": false
+            },
+            "EXTENT_OF_SPONSORSHIP": ""
+          },
+          "14": {
+            "Y_N": ""
+          },
+          "15": {
+            "Y_N": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 19,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "LBAKER": "LBAKER",
+        "GENERAL_INFORMATION_continued": true,
+        "EXPLAIN_ALL_YES_RESPONSES": true,
+        "16_HAS_APPLICANT_BEEN_ACTIVE_IN_JOINT_VENTURES": null,
+        "17_DO_YOU_LEASE_EMPLOYEES_TO_OR_FROM_OTHER_EMPLOYERS": {
+          "LEASE_TO": [],
+          "WORKERS_COMPENSATION_COVERAGE_CARRIED_Y_N": [],
+          "LEASE_FROM": []
+        },
+        "18_IS_THERE_A_LABOR_INTERCHANGE_WITH_ANY_OTHER_BUSINESS_OR_SUBSIDIARIES": null,
+        "19_ARE_DAY_CARE_FACILITIES_OPERATED_OR_CONTROLLED": null,
+        "20_HAVE_ANY_CRIMES_OCCURRED_OR_BEEN_ATTEMPTED_ON_YOUR_PREMISES_WITHIN_THE_LAST_THREE_YEARS": null,
+        "21_IS_THERE_A_FORMAL_WRITTEN_SAFETY_AND_SECURITY_POLICY_IN_EFFECT": null,
+        "22_DOES_THE_BUSINESSES_PROMOTIONAL_LITERATURE_MAKE_ANY_REPRESENTATIONS_ABOUT_THE_SAFETY_OR_SECURITY_OF_THE_PREMISES": null,
+        "REMARKS": null,
+        "SIGNATURE": {
+          "Applicable_in_AL_AR_DC_LA_MD_NM_RI_and_WV": "Any person who knowingly (or willfully) presents a false or fraudulent claim for payment of a loss or benefit or attempting (or willfully) presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison. *Applies in MD Only.",
+          "Applicable_in_CO": "It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory Agencies.",
+          "Applicable_in_FL_and_OK": "Any person who knowingly and with intent to defraud, defraud, or deceive any insurer files a statement of claim or an application containing any false, incomplete, or misleading information is guilty of a felony (of the third degree). *Applies in FL Only.",
+          "Applicable_in_KS": "Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be presented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance of, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for commercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act.",
+          "Applicable_in_KY_NY_OH_and_PA": "Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and the stated value of the claim for each such violation). *Applies in NY Only.",
+          "Applicable_in_ME_TN_VA_and_WA": "It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose of defrauding the company. Penalties (may) include imprisonment, fines and denial of insurance benefits. *Applies in ME Only.",
+          "Applicable_in_NJ": "Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil penalties.",
+          "Applicable_in_OR": "Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a false statement to any material fact may be violating state law.",
+          "Applicable_in_PR": "Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps, or causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss, shall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten thousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty thus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2) years.",
+          "THE_UNDERSIGNED_IS_AN_AUTHORIZED_REPRESENTATIVE_OF_THE_APPLICANT_AND_REPRESENTS_THAT_REASONABLE_INQUIRY_HAS_BEEN_MADE_TO_OBTAIN_THE_ANSWERS_TO_QUESTIONS_ON_THIS_APPLICATION_HESHE_REPRESENTS_THAT_THE_ANSWERS_ARE_TRUE_CORRECT_AND_COMPLETE_TO_THE_BEST_OF_HISHER_KNOWLEDGE": true,
+          "PRODUCER_SIGNATURE": null,
+          "PRODUCER_NAME": null,
+          "STATE_PRODUCER_LICENSE_NO": null,
+          "APPLICANT_SIGNATURE": null,
+          "DATE": null,
+          "NATIONAL_PRODUCER_NUMBER": null
+        },
+        "ACORD_126": "ACORD 126 (2014/04)",
+        "Page": 4,
+        "of": 4
+      }
+    },
+    {
+      "page": 20,
+      "data": {
+        "document_type": "ADDITIONAL COVERAGES OVERFLOW",
+        "form_code": "1800NOR-02",
+        "producer": "LBAKER",
+        "page": 1,
+        "total_pages": 1,
+        "application_version": "APPLIED 98",
+        "application_year": 2001,
+        "application_month": 1,
+        "coverage_code": "XTEND",
+        "coverage_description": "GL Enhancement Endt",
+        "coverage_code_2": "HNOA",
+        "coverage_description_2": "Hired And Non-Owned Auto",
+        "coverage_limit_2": 1000000
+      }
+    },
+    {
+      "page": 21,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "DATE": "04/08/2026",
+        "AGENCY": "Crest Insurance Group, LLC",
+        "CARRIER": "AmTrust Group",
+        "POLICY_NUMBER": "",
+        "EFFECTIVE_DATE": "05/01/2026",
+        "NAMED_INSURED(S)": "1800 North Stone LLC",
+        "TRANSACTION_TYPE": {
+          "NEW": true,
+          "RENEWAL": false,
+          "UMBRELLA": true,
+          "EXCESS": true,
+          "OCCURRENCE": true,
+          "CLAIMS_MADE": false
+        },
+        "RETROACTIVE_DATE": {
+          "PROPOSED": "",
+          "CURRENT": ""
+        },
+        "LIMIT_OF_LIABILITY": 5000000,
+        "RETAINED_LIMIT": 0,
+        "EXPIRING_POL": "",
+        "FIRST_DOLLAR_DEFENSE": "",
+        "LIMIT_OF_INSURANCE_Ea_Employee": "",
+        "AGGREGATE_LIMIT_FOR_EBL": "",
+        "RETAINED_LIMIT_FOR_EBL": "",
+        "RETROACTIVE_DATE_FOR_EBL": "",
+        "NAME_OF_BENEFIT_PROGRAM": "",
+        "PRIMARY_LOCATION_SUBSIDIARIES": [],
+        "UNDERLYING_INSURANCE": [
+          {
+            "TYPE": "AUTOMOBILE LIABILITY",
+            "CARRIER_POLICY_NUMBER": "",
+            "POLICY_EFF_DATE": "",
+            "POLICY_EXP_DATE": "",
+            "LIMITS": {
+              "CSL EA ACC": "",
+              "BI EA ACC": "",
+              "BI EA PER": "",
+              "PD EA ACC": ""
+            },
+            "ANNUAL_RENEWAL_PREMIUM": "",
+            "RATING_MOD": ""
+          },
+          {
+            "TYPE": "GENERAL LIABILITY POLICY TYPE",
+            "CARRIER_POLICY_NUMBER": "TBD",
+            "POLICY_EFF_DATE": "05/01/2026",
+            "POLICY_EXP_DATE": "05/01/2027",
+            "LIMITS": {
+              "EACH OCCURRENCE": 1000000,
+              "GENERAL AGGR": 2000000,
+              "PROD & COMP OPS AGGREGATE": 2000000,
+              "PERSONAL & ADV INJURY": 1000000,
+              "DAMAGE TO RENTED PREMISES": 100000,
+              "MEDICAL EXPENSE": 10000
+            },
+            "ANNUAL_RENEWAL_PREMIUM": "PREM / OPS",
+            "RATING_MOD": "PRODUCTS"
+          },
+          {
+            "TYPE": "EMPLOYERS LIABILITY",
+            "CARRIER_POLICY_NUMBER": "TBD",
+            "POLICY_EFF_DATE": "",
+            "POLICY_EXP_DATE": "",
+            "LIMITS": {
+              "EACH ACCIDENT": "",
+              "DISEASE EACH EMPLOYEE": "",
+              "DISEASE POLICY LIMIT": ""
+            },
+            "ANNUAL_RENEWAL_PREMIUM": "",
+            "RATING_MOD": ""
+          }
+        ]
+      }
+    },
+    {
+      "page": 22,
+      "data": {
+        "UNDERLYING_INSURANCE": {
+          "AGENCY_CUSTOMER_ID": "1800NOR-02",
+          "LBAKER": "LBAKER",
+          "UNDERLYING_GENERAL_LIABILITY_INFORMATION": {
+            "ARE_DEFENSE_COSTS": "WITHIN AGGREGATE LIMITS?",
+            "A_SEPARATE_LIMIT": "UNLIMITED?",
+            "INDICATE_THE_EDITION_DATE_OF_THE_ISO_FORM_OR_SIMILAR_FILING_FOR_THE_UNDERLYING_COVERAGE": "",
+            "HAS_ANY_PRODUCT_WORK_ACCIDENT_OR_LOCATION_BEEN_EXCLUDED_UNINSURED_OR_SELF_INSURED_FROM_ANY_PREVIOUS_COVERAGE": "Y/N",
+            "FOR_CLAIMS_MADE_INDICATE_RETROACTIVE_DATE_OF_CURRENT_UNDERLYING_POLICY": "",
+            "FOR_CLAIMS_MADE_INDICATE_ENTRY_DATE_INTO_UNINTERRUPTED_CLAIMS_MADE_COVERAGE": "",
+            "FOR_CLAIMS_MADE_WAS_TAIL_COVERAGE_PURCHASED_FOR_ANY_PREVIOUS_PRIMARY_OR_EXCESS_POLICY": "Y/N",
+            "EFF_DATE": ""
+          },
+          "CHECK_ALL_COVERAGES_IN_UNDERLYING_POLICIES": {
+            "CHECK_IF_APPROPRIATE": [
+              "ANY AUTO (SYMBOL 1)",
+              "CGL - CLAIMS MADE",
+              "CGL - OCCURRENCE"
+            ],
+            "COVERAGE": [
+              "CARE, CUSTODY, CONTROL",
+              "EMPLOYEE BENEFIT LIABILITY",
+              "FOREIGN LIABILITY / TRAVEL",
+              "GARAGEKEEPERS LIABILITY",
+              "INCIDENTAL MEDICAL MALPRACTICE",
+              "LIQUOR LIABILITY",
+              "POLLUTION LIABILITY"
+            ],
+            "EXPOSURE": [
+              "PROFESSIONAL LIABILITY (E&O)",
+              "VENDORS LIABILITY",
+              "WATERCRAFT LIABILITY"
+            ]
+          },
+          "UNDERLYING_INSURANCE_COVERAGE_INFORMATION": {
+            "INCLUDES_ALL_RESTRICTIONS": "e.g. LASER ENDORSEMENTS, DISCRIMINATION, SUBROGATION WAIVERS, OR EXTENSIONS OF COVERAGE",
+            "ATTACH_ACORD_101_Additional_Remarks_Schedule": "if more space is required"
+          },
+          "PREVIOUS_EXPERIENCE": {
+            "GIVE_DETAILS_OF_ALL_LIABILITY_CLAIMS_EXCEEDING_10000_OR_OCCURRENCES": "DURING THE PAST FIVE (5) YEARS, WHETHER INSURED OR NOT. SPECIFY DATE, COVERAGE, DESCRIPTION, AMOUNT PAID, AMOUNT OUTSTANDING",
+            "ATTACH_ACORD_101_Additional_Remarks_Schedule": "if more space is required"
+          },
+          "NO_SUCH_CLAIMS": "NO SUCH CLAIMS",
+          "CARE_CUSTODY_CONTROL": {
+            "LOC": "REAL",
+            "PROPERTY_TYPE": "PERSONAL",
+            "VALUE": "",
+            "A*": "",
+            "B*": "",
+            "C*": "",
+            "D*": "",
+            "SQ_FT_OF_BLDG_OCC": ""
+          },
+          "VEHICLES": {
+            "TYPE": "PRIVATE PASSENGER",
+            "LIGHT": "",
+            "MEDIUM": "",
+            "HEAVY": "",
+            "EX_HEAVY": "",
+            "TRUCKS": {
+              "HEAVY": "",
+              "EX_HEAVY": ""
+            },
+            "TRUCKS_TRACTORS": {
+              "HEAVY": "",
+              "EX_HEAVY": ""
+            },
+            "BUSES": ""
+          }
+        },
+        "ACORD_131": "2009/10",
+        "Page": "2 of 5"
+      }
+    },
+    {
+      "page": 23,
+      "data": {
+        "ACORD_131": "2009/10",
+        "Agency_Customer_ID": "1800NOR-02",
+        "Page": 3,
+        "Total_Pages": 5,
+        "Additional_Exposures": [
+          {
+            "Section": "ADVERTISERS LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 1,
+                "Label": "MEDIA USED:",
+                "Value": "ANNUAL COST: $"
+              },
+              {
+                "Question_Number": 2,
+                "Label": "ARE SERVICES OF AN ADVERTISING AGENCY USED?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 3,
+                "Label": "ANY COVERAGE PROVIDED UNDER AGENCY'S POLICY?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "AIRCRAFT LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 4,
+                "Label": "DOES APPLICANT OWN / LEASE / OPERATE AIRCRAFT?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "AUTO LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 5,
+                "Label": "ARE EXPLOSIVES, CAUSTICS, FLAMMABLES OR OTHER DANGEROUS CARGO HAULED?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 6,
+                "Label": "ARE PASSENGERS CARRIED FOR A FEE?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 7,
+                "Label": "ANY UNITS NOT INSURED BY UNDERLYING POLICIES?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 8,
+                "Label": "ARE ANY VEHICLES LEASED OR RENTED TO OTHERS?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 9,
+                "Label": "ARE HIRED AND NON-OWNED COVERAGES PROVIDED?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "CONTRACTORS LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 10,
+                "Label": "IS BRIDGE, DAM, OR MARINE WORK PERFORMED?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 11,
+                "Label": "DESCRIBE TYPICAL JOBS PERFORMED (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+                "Value": ""
+              },
+              {
+                "Question_Number": 12,
+                "Label": "DESCRIBE AGREEMENT (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+                "Value": ""
+              },
+              {
+                "Question_Number": 13,
+                "Label": "DOES APPLICANT OWN, RENT, OR OTHERWISE USE CRANES?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 14,
+                "Label": "DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "EMPLOYERS LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 15,
+                "Label": "IS APPLICANT SELF-INSURED IN ANY STATE?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 16,
+                "Label": "SUBJECT TO:",
+                "Options": [
+                  "JONES ACT",
+                  "FELA",
+                  "STOP GAP",
+                  "OTHER:"
+                ],
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "INCIDENTAL MALPRACTICE LIABILITY",
+            "Questions": [
+              {
+                "Question_Number": 17,
+                "Label": "IS A HOSPITAL OR FIRST AID FACILITY MAINTAINED?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 18,
+                "Label": "ARE COVERAGES PROVIDED FOR DOCTORS / NURSES?",
+                "Value": ""
+              },
+              {
+                "Question_Number": 19,
+                "Label": "INDICATE # OF DOCTORS:",
+                "Value": "",
+                "Subfields": [
+                  "NURSES:",
+                  "BEDS:"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 24,
+      "data": {
+        "ACORD": "131",
+        "ACORD_Version": "2009/10",
+        "Agency_Customer_ID": "1800NR-02",
+        "Carrier": "LBAKER",
+        "Page": 4,
+        "Total_Pages": 5,
+        "Section": "ADDITIONAL EXPOSURES (continued)",
+        "Pollution_Liability": {
+          "EPA_#": "",
+          "Question_20": {
+            "Y_N": false,
+            "Text": ""
+          }
+        },
+        "Product_Liability": {
+          "Question_22": {
+            "Y_N": false,
+            "Text": ""
+          },
+          "Question_23": {
+            "Y_N": false,
+            "Text": ""
+          },
+          "Question_24": {
+            "Y_N": false,
+            "Text": ""
+          },
+          "Question_25": {
+            "Y_N": false,
+            "Text": ""
+          }
+        },
+        "Protective_Liability": {
+          "Question_26": {
+            "Y_N": false,
+            "Text": ""
+          }
+        },
+        "Watercraft_Liability": {
+          "Question_27": {
+            "Y_N": false,
+            "Text": ""
+          }
+        },
+        "Apartments_Condominiums_Hotels_Motels": {
+          "Question_28": {
+            "Y_N": false,
+            "Text": ""
+          }
+        },
+        "Remarks": {
+          "Y_N": false,
+          "Text": ""
+        }
+      }
+    },
+    {
+      "page": 25,
+      "data": {
+        "AGENCY_CUSTOMER_ID": "1800NOR-02",
+        "REMARKS": "",
+        "SIGNATURE": "",
+        "STATE": "LOUISIANA",
+        "UM_COVERAGE": "0",
+        "UIM_COVERAGE": "0",
+        "APPLICABLE_ONLY_IN_LOUISIANA": "1",
+        "APPLICABLE_ONLY_IN_NEW_HAMPSHIRE": "0",
+        "APPLICABLE_ONLY_IN_VERMONT": "0",
+        "APPLICABLE_ONLY_IN_WISCONSIN": "0",
+        "PRODUCER_SIGNATURE": "",
+        "PRODUCER_NAME": "",
+        "STATE_PRODUCER_LICENSE_NO": "",
+        "NATIONAL_PRODUCER_NUMBER": "",
+        "APPLICANT_SIGNATURE": "",
+        "DATE": "",
+        "ACORD_VERSION": "131 (2009/10)",
+        "PAGE_NUMBER": "5"
+      }
+    }
+  ]
+}

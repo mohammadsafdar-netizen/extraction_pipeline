@@ -1,0 +1,43 @@
+{
+  "source_file": "LR_25-26_Kinsale GL_3-19-26.PDF",
+  "document_type": "loss_run",
+  "total_pages": 1,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "policy#": "0100371678",
+          "insured": "Prism Broward LP",
+          "address": "Boca Raton, FL",
+          "carrier": "Kinsale Insurance Company",
+          "agent": "CRC Group - Boca Raton, FL",
+          "dates": {
+            "policy_term": "5/26/2025 to 5/26/2026",
+            "report_date": "3/19/2026"
+          }
+        },
+        "Claims": [
+          {
+            "claim#": "00060543",
+            "date_of_loss": "9/13/2025",
+            "type": "Slip/Trip and Fall",
+            "paid": 0,
+            "reserved": 5000,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "Open",
+            "date_closed": "11/4/2025"
+          }
+        ],
+        "Summary Totals": {
+          "total_claims": 1,
+          "total_open": 5000,
+          "total_paid": 0,
+          "total_incurred": 5000
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "source_file": "LR_21-23 CIBA GL Loss Run 03-18-26.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "policy#": "P00095389",
+          "insured": "Prism Broward, LP",
+          "address": "333 SE 2nd Avenue, Ste 4400, Miami FL 33131",
+          "carrier": "CIBA Insurance Services",
+          "agent": "CRC Insurance Services, Inc. - Boca Raton, FL (500588)",
+          "dates": {
+            "policy_effective": "05/26/2021",
+            "policy_expiration": "05/26/2022"
+          }
+        },
+        "Claims": [
+          {
+            "claim#": "P00095390",
+            "date_of_loss": null,
+            "type": "Commercial FSL Primary Liability",
+            "paid": 0,
+            "reserved": 0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "NO LOSSES OR CLAIMS REPORTED",
+            "date_closed": null
+          }
+        ],
+        "Summary_totals": {
+          "total_claims": 0,
+          "total_paid": 0,
+          "total_reserved": 0,
+          "total_expenses": 0,
+          "total_recovered": 0
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "policy#": "CIBA I 2021-2023",
+          "insured": "Prism Tamarac LP",
+          "address": "333 SE 2nd Avenue, Suite 4400, Miami FL 33131",
+          "carrier": "CIBA Insurance Services",
+          "agent": "CIBA",
+          "dates": {
+            "policy_effective": "10/24/2021 - 05/26/2022",
+            "policy_end": "05/26/2023"
+          }
+        },
+        "Claims": [
+          {
+            "claim#": "GLF21-251",
+            "date_of_loss": "11/05/2021",
+            "type": "General Liability/Slip & Fall",
+            "paid": 25000,
+            "reserved": 0,
+            "expenses": 0,
+            "recovered": 1000,
+            "status": "Closed w/Payment",
+            "date_closed": "12/05/2023"
+          },
+          {
+            "claim#": "GLF22-040",
+            "date_of_loss": "09/21/2022",
+            "type": "General Liability/Slip & Fall",
+            "paid": 90000,
+            "reserved": 0,
+            "expenses": 0,
+            "recovered": 5000,
+            "status": "Closed w/Payment",
+            "date_closed": "12/12/2023"
+          }
+        ],
+        "Summary": {
+          "total_claims": 2,
+          "total_paid_and_reserved": 115000,
+          "total_expenses": 0,
+          "total_recovered": 6000,
+          "open_claims": 0
+        },
+        "Note": "NO LOSSES OR CLAIMS REPORTED"
+      }
+    }
+  ]
+}

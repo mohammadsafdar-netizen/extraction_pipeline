@@ -1,0 +1,1359 @@
+{
+  "source_file": "Acord App (1800 North Stone LLC) 2026.pdf",
+  "method": "anchor_aligned_expanded",
+  "pages": {
+    "page_1": {
+      "template": "acord_125.pdf",
+      "template_page": 1,
+      "dy_offset": 9.14,
+      "field_count": 17,
+      "fields": {
+        "Form_CompletionDate_A[0]": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The date on which the form is completed.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Producer_FullName_A[0]": {
+          "value": "Crest Insurance Group, LLC 5285 E. Williams Circle Suite 4500",
+          "tooltip": "Enter text: The full name of the producer / agency. ",
+          "type": "text"
+        },
+        "Producer_MailingAddress_LineOne_A[0]": {
+          "value": "Tucson, AZ 85711",
+          "tooltip": "Enter text: The mailing address line one of the producer / agency. ",
+          "type": "text"
+        },
+        "Producer_ContactPerson_PhoneNumber_A[0]": {
+          "value": "(888) 881-5765",
+          "tooltip": "Enter number: The producer's contact person's phone number.  If applicable, include the area code and extension. ",
+          "type": "text"
+        },
+        "Producer_FaxNumber_A[0]": {
+          "value": "(520) 325-3757",
+          "tooltip": "Enter number: The fax number of the producer / agency. ",
+          "type": "text"
+        },
+        "Producer_ContactPerson_EmailAddress_A[0]": {
+          "value": "info@crestins.com",
+          "tooltip": "Enter text: The producer's contact person's e-mail address. ",
+          "type": "text"
+        },
+        "Producer_CustomerIdentifier_A[0]": {
+          "value": "1800NOR-02",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g., agency or brokerage). ",
+          "type": "text"
+        },
+        "Insurer_FullName_A[0]": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ",
+          "type": "text"
+        },
+        "Policy_EffectiveDate_A[0]": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.  (MM/DD/YYYY)  As used here, this is the proposed effective date.",
+          "type": "text"
+        },
+        "Policy_ExpirationDate_A[0]": {
+          "value": "05/01/2027",
+          "tooltip": "Enter date: The date on which the terms and conditions of the policy will expire.  (MM/DD/YYYY)  As used here, this is the proposed expiration date.",
+          "type": "text"
+        },
+        "NamedInsured_FullName_A[0]": {
+          "value": "1800 North Stone LLC 1800 N Stone Ave",
+          "tooltip": "Enter text: The named insured(s) as it / they will appear on the policy declarations page. ",
+          "type": "text"
+        },
+        "NamedInsured_MailingAddress_LineOne_A[0]": {
+          "value": "Tucson, AZ 85705-5761",
+          "tooltip": "Enter text: The named insured's mailing address line one. ",
+          "type": "text"
+        },
+        "NamedInsured_SICCode_A[0]": {
+          "value": "6513",
+          "tooltip": "Enter code: The Standard Industry Classification code assigned to the business activity (if known).  This is the code which represents the nature of the employer's business which is contained in the Standard Industrial Classification Manual published by the Federal Office of Management and Budget. ",
+          "type": "text"
+        },
+        "NamedInsured_Primary_PhoneNumber_A[0]": {
+          "value": "(520) 415-3022",
+          "tooltip": "Enter number: The named insured's primary phone number. ",
+          "type": "text"
+        },
+        "NamedInsured_Primary_WebsiteAddress_A[0]": {
+          "value": "stoneavenuestandard.com",
+          "tooltip": "Enter text: The primary website address for the named insured. ",
+          "type": "text"
+        },
+        "NamedInsured_LegalEntity_JointVentureIndicator_A[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the legal entity code for the named insured is \"Joint Venture\". ",
+          "type": "checkbox"
+        },
+        "NamedInsured_LegalEntity_LimitedLiabilityCorporationIndicator_A[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the legal entity code for the named insured is \"Limited Liability Corporation\". ",
+          "type": "checkbox"
+        }
+      }
+    },
+    "page_2": {
+      "template": "acord_125.pdf",
+      "template_page": 2,
+      "dy_offset": 7.8,
+      "field_count": 17,
+      "fields": {
+        "Producer_CustomerIdentifier_A[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g., agency or brokerage). ",
+          "type": "text"
+        },
+        "NamedInsured_Contact_FullName_A[0]": {
+          "value": "SECONDARY",
+          "tooltip": "Enter text: The full name of the contact. ",
+          "type": "text"
+        },
+        "NamedInsured_Contact_FullName_B[0]": {
+          "value": "SECONDARY",
+          "tooltip": "Enter text: The full name of the contact. ",
+          "type": "text"
+        },
+        "CommercialStructure_Location_ProducerIdentifier_A[0]": {
+          "value": "1",
+          "tooltip": "Enter number: The location number for the premises. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_A[0]": {
+          "value": "1",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_PhysicalAddress_PostalCode_A[0]": {
+          "value": "85705-5761",
+          "tooltip": "Enter code: The postal code of the commercial structure. ",
+          "type": "text"
+        },
+        "CommercialStructure_Location_ProducerIdentifier_B[0]": {
+          "value": "1",
+          "tooltip": "Enter number: The location number for the premises. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_B[0]": {
+          "value": "2",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_PhysicalAddress_PostalCode_B[0]": {
+          "value": "85705-5761",
+          "tooltip": "Enter code: The postal code of the commercial structure. ",
+          "type": "text"
+        },
+        "CommercialStructure_Location_ProducerIdentifier_C[0]": {
+          "value": "1",
+          "tooltip": "Enter number: The location number for the premises. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_C[0]": {
+          "value": "3",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_PhysicalAddress_PostalCode_C[0]": {
+          "value": "85705-5761",
+          "tooltip": "Enter code: The postal code of the commercial structure. ",
+          "type": "text"
+        },
+        "CommercialStructure_Location_ProducerIdentifier_D[0]": {
+          "value": "1",
+          "tooltip": "Enter number: The location number for the premises. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_D[0]": {
+          "value": "4",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_PhysicalAddress_PostalCode_D[0]": {
+          "value": "85705-5761",
+          "tooltip": "Enter code: The postal code of the commercial structure. ",
+          "type": "text"
+        },
+        "BusinessInformation_BusinessType_OtherIndicator_A[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the nature of business is other than those listed. ",
+          "type": "checkbox"
+        },
+        "BusinessInformation_BusinessType_OtherDescription_A[0]": {
+          "value": "Apartment Complex",
+          "tooltip": "Enter text: The description of the other nature / type of business. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_3": {
+      "template": "acord_125.pdf",
+      "template_page": 3,
+      "dy_offset": 7.44,
+      "field_count": 1,
+      "fields": {
+        "Producer_CustomerIdentifier_A[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g., agency or brokerage). ",
+          "type": "text"
+        }
+      }
+    },
+    "page_4": {
+      "template": "acord_125.pdf",
+      "template_page": 4,
+      "dy_offset": 8.5,
+      "field_count": 1,
+      "fields": {
+        "Producer_CustomerIdentifier_A[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g., agency or brokerage). ",
+          "type": "text"
+        }
+      }
+    },
+    "page_6": {
+      "template": "acord_140.pdf",
+      "template_page": 1,
+      "dy_offset": 8.11,
+      "field_count": 32,
+      "fields": {
+        "Form_CompletionDate_A": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The date on which the form is completed.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Producer_FullName_A": {
+          "value": "Crest Insurance Group, LLC",
+          "tooltip": "Enter text: The full name of the producer / agency. ",
+          "type": "text"
+        },
+        "Policy_EffectiveDate_A": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Insurer_FullName_A": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ",
+          "type": "text"
+        },
+        "NamedInsured_FullName_A": {
+          "value": "1800 North Stone LLC",
+          "tooltip": "Enter text: The named insured(s) as it / they will appear on the policy declarations page. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_A": {
+          "value": "0",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_A": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_SubjectOfInsuranceCode_A": {
+          "value": "Building",
+          "tooltip": "Enter code: The code designating all unit at risk / coverages that are to be insured at this particular location number / building number combination.\n\nExamples:\n\nB - Building\nBUSEE - Business Income without Extra Expense\nBUSIN - Business Income with Extra Expense\nBUSER - Business Income with Extra Expense and Rental Value  \nBUSRN - Business Income with Rental Value without Extra Expense\nBPP - Business Personal Property \nEE - Extra Expense \nFF - Furniture & Fixtures \nMACEQ - Machinery, Equipment \nPP - Personal Property \nPOTOP - Property of Others \nSTK - Stock  ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_LimitAmount_A": {
+          "value": "12,591,761",
+          "tooltip": "Enter limit: The maximum amount of coverage provided for this subject of insurance or premium-bearing option. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_ValuationCode_A": {
+          "value": "R",
+          "tooltip": "Enter code: Indicate the method which will be used to determine the amount paid on a claim.  If other valuation basis applies, provide necessary information.\n\nExample valuation methods are:\n\nA -  Actual Cash Value\nR  - Replacement Cost\nV -  Agreed Amount\nM - Market Value ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_CauseOfLossCode_A": {
+          "value": "Special (Including  theft)",
+          "tooltip": "Enter code: The causes of loss the subject of insurance is to be covered for.  Examples:\n  * Basic\n  * Broad\n  * Special excluding theft\n  * Earthquake ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_DeductibleAmount_A": {
+          "value": "5,000",
+          "tooltip": "Enter deductible: The deductible amount that is to apply to this subject of insurance. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_SubjectOfInsuranceCode_B": {
+          "value": "Business Personal  Property",
+          "tooltip": "Enter code: The code designating all unit at risk / coverages that are to be insured at this particular location number / building number combination.\n\nExamples:\n\nB - Building\nBUSEE - Business Income without Extra Expense\nBUSIN - Business Income with Extra Expense\nBUSER - Business Income with Extra Expense and Rental Value  \nBUSRN - Business Income with Rental Value without Extra Expense\nBPP - Business Personal Property \nEE - Extra Expense \nFF - Furniture & Fixtures \nMACEQ - Machinery, Equipment \nPP - Personal Property \nPOTOP - Property of Others \nSTK - Stock  ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_LimitAmount_B": {
+          "value": "1,413,213",
+          "tooltip": "Enter limit: The maximum amount of coverage provided for this subject of insurance or premium-bearing option. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_ValuationCode_B": {
+          "value": "R",
+          "tooltip": "Enter code: Indicate the method which will be used to determine the amount paid on a claim.  If other valuation basis applies, provide necessary information.\n\nExample valuation methods are:\n\nA -  Actual Cash Value\nR  - Replacement Cost\nV -  Agreed Amount\nM - Market Value ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_CauseOfLossCode_B": {
+          "value": "Special (Including  theft)",
+          "tooltip": "Enter code: The causes of loss the subject of insurance is to be covered for.  Examples:\n  * Basic\n  * Broad\n  * Special excluding theft\n  * Earthquake ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_DeductibleAmount_B": {
+          "value": "5,000",
+          "tooltip": "Enter deductible: The deductible amount that is to apply to this subject of insurance. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_SubjectOfInsuranceCode_C": {
+          "value": "Business Income with  Extra Expense",
+          "tooltip": "Enter code: The code designating all unit at risk / coverages that are to be insured at this particular location number / building number combination.\n\nExamples:\n\nB - Building\nBUSEE - Business Income without Extra Expense\nBUSIN - Business Income with Extra Expense\nBUSER - Business Income with Extra Expense and Rental Value  \nBUSRN - Business Income with Rental Value without Extra Expense\nBPP - Business Personal Property \nEE - Extra Expense \nFF - Furniture & Fixtures \nMACEQ - Machinery, Equipment \nPP - Personal Property \nPOTOP - Property of Others \nSTK - Stock  ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_ValuationCode_C": {
+          "value": "L",
+          "tooltip": "Enter code: Indicate the method which will be used to determine the amount paid on a claim.  If other valuation basis applies, provide necessary information.\n\nExample valuation methods are:\n\nA -  Actual Cash Value\nR  - Replacement Cost\nV -  Agreed Amount\nM - Market Value ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_CauseOfLossCode_C": {
+          "value": "Special (Including  theft)",
+          "tooltip": "Enter code: The causes of loss the subject of insurance is to be covered for.  Examples:\n  * Basic\n  * Broad\n  * Special excluding theft\n  * Earthquake ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_DeductibleAmount_C": {
+          "value": "72",
+          "tooltip": "Enter deductible: The deductible amount that is to apply to this subject of insurance. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_DeductibleTypeCode_C": {
+          "value": "Hours",
+          "tooltip": "Enter code: The code indicating the type of deductible that is to apply to this subject of insurance.  Examples are percent, dollars and number of days.  \"Number of days\" is used to describe the waiting period (deductible) for business income. ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_RemarkText_A": {
+          "value": "DISTANCE TO",
+          "tooltip": "Enter text: The remarks associated with a specific location or sublocation. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_A": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_A": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_A": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        },
+        "AdditionalInterest_Interest_LossPayeeIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the additional interest type is a loss payee. ",
+          "type": "checkbox"
+        },
+        "AdditionalInterest_FullName_A": {
+          "value": "Berkadia Commercial Mortgage, LLC 332 Norristown Road, Suite 300",
+          "tooltip": "Enter text: The additional interest's full name. ",
+          "type": "text"
+        },
+        "AdditionalInterest_MailingAddress_LineOne_A": {
+          "value": "Ambler, PA 19002",
+          "tooltip": "Enter text: The additional interest's mailing address line one. ",
+          "type": "text"
+        },
+        "AdditionalInterest_MailingAddress_LineTwo_A": {
+          "value": "Montgomery",
+          "tooltip": "Enter text: The additional interest's mailing address line two. ",
+          "type": "text"
+        },
+        "AdditionalInterest_Item_LocationProducerIdentifier_A": {
+          "value": "0",
+          "tooltip": "Enter number: The producer assigned number of the location which has an additional interest. ",
+          "type": "text"
+        },
+        "AdditionalInterest_Item_BuildingProducerIdentifier_A": {
+          "value": "0",
+          "tooltip": "Enter number: The producer assigned number of the building which has an additional interest. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_9": {
+      "template": "acord_140.pdf",
+      "template_page": 1,
+      "dy_offset": 8.11,
+      "field_count": 17,
+      "fields": {
+        "Form_CompletionDate_A": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The date on which the form is completed.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Producer_FullName_A": {
+          "value": "Crest Insurance Group, LLC",
+          "tooltip": "Enter text: The full name of the producer / agency. ",
+          "type": "text"
+        },
+        "Policy_EffectiveDate_A": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Insurer_FullName_A": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ",
+          "type": "text"
+        },
+        "NamedInsured_FullName_A": {
+          "value": "1800 North Stone LLC",
+          "tooltip": "Enter text: The named insured(s) as it / they will appear on the policy declarations page. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_A": {
+          "value": "2",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_A": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_RemarkText_A": {
+          "value": "DISTANCE TO",
+          "tooltip": "Enter text: The remarks associated with a specific location or sublocation. ",
+          "type": "text"
+        },
+        "Construction_ConstructionCode_A": {
+          "value": "Frame",
+          "tooltip": "Enter code: The primary construction type of the premises. Common construction classifications are:\n* Frame\n* Joisted Masonry\n* Non-Combustible\n* Masonry Non-Combustible\n* Modified Fire Resistive\n* Fire Resistive ",
+          "type": "text"
+        },
+        "Construction_StoreyCount_A": {
+          "value": "3",
+          "tooltip": "Enter number: The number of stories or floors for this building not including any basement. ",
+          "type": "text"
+        },
+        "CommercialStructure_BuiltYear_A": {
+          "value": "2003",
+          "tooltip": "Enter year: The year the building at each location was originally constructed. Specify in the Remarks section any significant additions or renovations and the year they were completed. ",
+          "type": "text"
+        },
+        "Construction_BuildingArea_A": {
+          "value": "15,612",
+          "tooltip": "Enter number: The number of square feet of the building at this location for which insurance is being requested. ",
+          "type": "text"
+        },
+        "BuildingImprovement_RoofingIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates if any roofing improvements have been made since the original construction. ",
+          "type": "checkbox"
+        },
+        "BuildingImprovement_RoofingYear_A": {
+          "value": "2025",
+          "tooltip": "Enter year: The year the roofing improvements took place. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_A": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_A": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_A": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_12": {
+      "template": "acord_140.pdf",
+      "template_page": 1,
+      "dy_offset": 8.11,
+      "field_count": 17,
+      "fields": {
+        "Form_CompletionDate_A": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The date on which the form is completed.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Producer_FullName_A": {
+          "value": "Crest Insurance Group, LLC",
+          "tooltip": "Enter text: The full name of the producer / agency. ",
+          "type": "text"
+        },
+        "Policy_EffectiveDate_A": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Insurer_FullName_A": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ",
+          "type": "text"
+        },
+        "NamedInsured_FullName_A": {
+          "value": "1800 North Stone LLC",
+          "tooltip": "Enter text: The named insured(s) as it / they will appear on the policy declarations page. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_ProducerIdentifier_A": {
+          "value": "4",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_A": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "CommercialProperty_Premises_RemarkText_A": {
+          "value": "DISTANCE TO",
+          "tooltip": "Enter text: The remarks associated with a specific location or sublocation. ",
+          "type": "text"
+        },
+        "Construction_ConstructionCode_A": {
+          "value": "Frame",
+          "tooltip": "Enter code: The primary construction type of the premises. Common construction classifications are:\n* Frame\n* Joisted Masonry\n* Non-Combustible\n* Masonry Non-Combustible\n* Modified Fire Resistive\n* Fire Resistive ",
+          "type": "text"
+        },
+        "Construction_StoreyCount_A": {
+          "value": "3",
+          "tooltip": "Enter number: The number of stories or floors for this building not including any basement. ",
+          "type": "text"
+        },
+        "CommercialStructure_BuiltYear_A": {
+          "value": "2003",
+          "tooltip": "Enter year: The year the building at each location was originally constructed. Specify in the Remarks section any significant additions or renovations and the year they were completed. ",
+          "type": "text"
+        },
+        "Construction_BuildingArea_A": {
+          "value": "15,612",
+          "tooltip": "Enter number: The number of square feet of the building at this location for which insurance is being requested. ",
+          "type": "text"
+        },
+        "BuildingImprovement_RoofingIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates if any roofing improvements have been made since the original construction. ",
+          "type": "checkbox"
+        },
+        "BuildingImprovement_RoofingYear_A": {
+          "value": "2025",
+          "tooltip": "Enter year: The year the roofing improvements took place. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_A": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_A": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_A": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_7": {
+      "template": "acord_140.pdf",
+      "template_page": 2,
+      "dy_offset": 8.08,
+      "field_count": 11,
+      "fields": {
+        "CommercialStructure_Building_ProducerIdentifier_B": {
+          "value": "1",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_B": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "Construction_ConstructionCode_B": {
+          "value": "Frame",
+          "tooltip": "Enter code: The primary construction type of the premises. Common construction classifications are:\n* Frame\n* Joisted Masonry\n* Non-Combustible\n* Masonry Non-Combustible\n* Modified Fire Resistive\n* Fire Resistive ",
+          "type": "text"
+        },
+        "Construction_StoreyCount_B": {
+          "value": "3",
+          "tooltip": "Enter number: The number of stories or floors for this building not including any basement. ",
+          "type": "text"
+        },
+        "CommercialStructure_BuiltYear_B": {
+          "value": "2003",
+          "tooltip": "Enter year: The year the building at each location was originally constructed. Specify in the Remarks section any significant additions or renovations and the year they were completed. ",
+          "type": "text"
+        },
+        "Construction_BuildingArea_B": {
+          "value": "21,836",
+          "tooltip": "Enter number: The number of square feet of the building at this location for which insurance is being requested. ",
+          "type": "text"
+        },
+        "BuildingImprovement_RoofingIndicator_B": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates if any roofing improvements have been made since the original construction. ",
+          "type": "checkbox"
+        },
+        "BuildingImprovement_RoofingYear_B": {
+          "value": "2025",
+          "tooltip": "Enter year: The year the roofing improvements took place. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_B": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_B": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_B": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_10": {
+      "template": "acord_140.pdf",
+      "template_page": 2,
+      "dy_offset": 8.08,
+      "field_count": 11,
+      "fields": {
+        "CommercialStructure_Building_ProducerIdentifier_B": {
+          "value": "3",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_B": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "Construction_ConstructionCode_B": {
+          "value": "Frame",
+          "tooltip": "Enter code: The primary construction type of the premises. Common construction classifications are:\n* Frame\n* Joisted Masonry\n* Non-Combustible\n* Masonry Non-Combustible\n* Modified Fire Resistive\n* Fire Resistive ",
+          "type": "text"
+        },
+        "Construction_StoreyCount_B": {
+          "value": "3",
+          "tooltip": "Enter number: The number of stories or floors for this building not including any basement. ",
+          "type": "text"
+        },
+        "CommercialStructure_BuiltYear_B": {
+          "value": "2003",
+          "tooltip": "Enter year: The year the building at each location was originally constructed. Specify in the Remarks section any significant additions or renovations and the year they were completed. ",
+          "type": "text"
+        },
+        "Construction_BuildingArea_B": {
+          "value": "28,932",
+          "tooltip": "Enter number: The number of square feet of the building at this location for which insurance is being requested. ",
+          "type": "text"
+        },
+        "BuildingImprovement_RoofingIndicator_B": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates if any roofing improvements have been made since the original construction. ",
+          "type": "checkbox"
+        },
+        "BuildingImprovement_RoofingYear_B": {
+          "value": "2025",
+          "tooltip": "Enter year: The year the roofing improvements took place. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_B": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_B": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_B": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_13": {
+      "template": "acord_140.pdf",
+      "template_page": 2,
+      "dy_offset": 8.08,
+      "field_count": 11,
+      "fields": {
+        "CommercialStructure_Building_ProducerIdentifier_B": {
+          "value": "5",
+          "tooltip": "Enter number: The building number for the premises.  Used when more than one building exists at an individual location. ",
+          "type": "text"
+        },
+        "CommercialStructure_Building_SublocationDescription_B": {
+          "value": "INFLATION DED BLKT",
+          "tooltip": "Enter text: This describes the particular sublocation in a manner sufficient to distinguish it from other sublocations at a given location.  An example might be \"3 story blue structure on the left of the main building\". ",
+          "type": "text"
+        },
+        "Construction_ConstructionCode_B": {
+          "value": "Frame",
+          "tooltip": "Enter code: The primary construction type of the premises. Common construction classifications are:\n* Frame\n* Joisted Masonry\n* Non-Combustible\n* Masonry Non-Combustible\n* Modified Fire Resistive\n* Fire Resistive ",
+          "type": "text"
+        },
+        "Construction_StoreyCount_B": {
+          "value": "3",
+          "tooltip": "Enter number: The number of stories or floors for this building not including any basement. ",
+          "type": "text"
+        },
+        "CommercialStructure_BuiltYear_B": {
+          "value": "2003",
+          "tooltip": "Enter year: The year the building at each location was originally constructed. Specify in the Remarks section any significant additions or renovations and the year they were completed. ",
+          "type": "text"
+        },
+        "Construction_BuildingArea_B": {
+          "value": "17,100",
+          "tooltip": "Enter number: The number of square feet of the building at this location for which insurance is being requested. ",
+          "type": "text"
+        },
+        "BuildingImprovement_RoofingIndicator_B": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates if any roofing improvements have been made since the original construction. ",
+          "type": "checkbox"
+        },
+        "BuildingImprovement_RoofingYear_B": {
+          "value": "2025",
+          "tooltip": "Enter year: The year the roofing improvements took place. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_OtherOccupanciesDescription_B": {
+          "value": "HEATING SOURCE INCL WOODBURNING DATE",
+          "tooltip": "Enter text: The description of any other occupancies located in the building not operated by the insured and not listed in the Description of Operations section on the ACORD 125.  If no other occupancy, enter None. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDescription_B": {
+          "value": "CENTRAL",
+          "tooltip": "Enter text: The description of the buildings, structures, activities conducted, or use of the adjacent property to the rear of the insured premises. ",
+          "type": "text"
+        },
+        "BuildingExposure_RearDistance_B": {
+          "value": "LOCAL",
+          "tooltip": "Enter number: The distance to the adjacent exposure in the rear of the insured premises in linear feet. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_8": {
+      "template": "acord_140.pdf",
+      "template_page": 3,
+      "dy_offset": 7.56,
+      "field_count": 0,
+      "fields": {}
+    },
+    "page_11": {
+      "template": "acord_140.pdf",
+      "template_page": 3,
+      "dy_offset": 7.56,
+      "field_count": 0,
+      "fields": {}
+    },
+    "page_14": {
+      "template": "acord_140.pdf",
+      "template_page": 3,
+      "dy_offset": 7.56,
+      "field_count": 0,
+      "fields": {}
+    },
+    "page_16": {
+      "template": "acord_126_2014.pdf",
+      "template_page": 1,
+      "dy_offset": 8.12,
+      "field_count": 18,
+      "fields": {
+        "Form_CompletionDate_A": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The date on which the form is completed.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Producer_FullName_A": {
+          "value": "Crest Insurance Group, LLC",
+          "tooltip": "Enter text: The full name of the producer / agency. ",
+          "type": "text"
+        },
+        "Policy_EffectiveDate_A": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.  (MM/DD/YYYY) ",
+          "type": "text"
+        },
+        "Insurer_FullName_A": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ",
+          "type": "text"
+        },
+        "NamedInsured_FullName_A": {
+          "value": "1800 North Stone LLC",
+          "tooltip": "Enter text: The named insured(s) as it / they will appear on the policy declarations page. ",
+          "type": "text"
+        },
+        "GeneralLiability_CoverageIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the claims made or occurrence option applies for the general liability policy. ",
+          "type": "checkbox"
+        },
+        "GeneralLiability_OccurrenceIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the general liability policy, occurrence basis applies. ",
+          "type": "checkbox"
+        },
+        "GeneralLiability_GeneralAggregate_LimitAmount_A": {
+          "value": "2,000,000",
+          "tooltip": "Enter limit: The general liability, general aggregate limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiability_GeneralAggregate_LimitAppliesPerLocationIndicator_A": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the general liability policy, general aggregate limit applies per location. ",
+          "type": "checkbox"
+        },
+        "GeneralLiability_ProductsAndCompletedOperations_AggregateLimitAmount_A": {
+          "value": "2,000,000",
+          "tooltip": "Enter limit: The general liability, products and completed operations aggregate limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiability_PersonalAndAdvertisingInjury_LimitAmount_A": {
+          "value": "2,000,000",
+          "tooltip": "Enter limit: The general liability, personal and advertising injury limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiability_EachOccurrence_LimitAmount_A": {
+          "value": "2,000,000",
+          "tooltip": "Enter limit: The general liability, each occurrence limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiability_FireDamageRentedPremises_EachOccurrenceLimitAmount_A": {
+          "value": "100,000",
+          "tooltip": "Enter limit: The general liability, damage to rented premises each occurrence limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiability_MedicalExpense_EachPersonLimitAmount_A": {
+          "value": "10,000",
+          "tooltip": "Enter limit: The general liability, medical expense each person limit amount.  Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s). ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_RemarkText_A": {
+          "value": "See attached Additional Coverages overflow.",
+          "tooltip": "Enter text: The remarks associated with the general liability line of business.  Use this section to provide any additional information required for underwriting or rating.  ACORD 101, Additional Remarks Schedule, may be attached if more space is required. ",
+          "type": "text"
+        },
+        "GeneralLiability_Hazard_LocationProducerIdentifier_A": {
+          "value": "0",
+          "tooltip": "Enter number: The producer assigned identifier for the location number of the risk's location as it appears on the Applicant Information Section of ACORD 125.  All classifications should be grouped by location number. ",
+          "type": "text"
+        },
+        "GeneralLiability_Hazard_Exposure_A": {
+          "value": "60010 U",
+          "tooltip": "Enter amount: The amount of the exposure used for this class code in calculating the premium.  The contents of this data element depends on the rating basis used.  The full amount of exposure is contained. ",
+          "type": "text"
+        },
+        "GeneralLiability_Hazard_Classification_A": {
+          "value": "SWIMMING POOL 0 2 48925 T 1",
+          "tooltip": "Enter text: The classification of the applicant's liability exposures by location, using the ISO Classification Table or other industry organization rules.  Enter the appropriate class description from the table in this field. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_17": {
+      "template": "acord_126_2014.pdf",
+      "template_page": 2,
+      "dy_offset": 8.0,
+      "field_count": 1,
+      "fields": {
+        "GeneralLiabilityLineOfBusiness_ApplicantLeaseEquipmentToOthersExplanation_A": {
+          "value": "$ PAID TO SUB- % OF WORK # FULL- # PART-",
+          "tooltip": "Enter text: An explanation of any  applicant who leases equipment to others with or without operators. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_18": {
+      "template": "acord_126_2014.pdf",
+      "template_page": 3,
+      "dy_offset": -3.84,
+      "field_count": 15,
+      "fields": {
+        "AdditionalInterest_ItemDescription_A": {
+          "value": "ITEM DESCRIPTION",
+          "tooltip": "Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_OperationsInvolveStoringDisposingTransportingHazardousMaterialExplanation_A": {
+          "value": "TRANSPORTING OF HAZARDOUS MATERIAL? (e.g. landfills, wastes, fuel tanks, etc)",
+          "tooltip": "Enter text: An explanation any operations that involve storing, treating, discharging, applying, disposing or transporting hazardous material. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_AnyListedOperationsSoldAcquiredLastFiveYearsExplanation_A": {
+          "value": "4.    ANY OPERATIONS SOLD, ACQUIRED, OR DISCONTINUED IN LAST FIVE (5) YEARS?",
+          "tooltip": "Enter text: An explanation of any listed operations sold, acquired, or discontinued in the last five (5) years. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_MachineryOrEquipmentLoanedRentedOthersExplanation_A": {
+          "value": "EQUIPMENT",
+          "tooltip": "Enter text: An explanation of  any machinery or equipment that is loaned or rented to others. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_WatercraftDocksFloatsOwnedHiredLeasedExplanation_A": {
+          "value": "6.    ANY WATERCRAFT, DOCKS, FLOATS OWNED, HIRED OR LEASED?",
+          "tooltip": "Enter text: An explanation of any watercraft, docks, floats owned, hired, or leased. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_AnyParkingFacilitiesOwnedRentedExplanation_A": {
+          "value": "7.    ANY PARKING FACILITIES OWNED/RENTED?",
+          "tooltip": "Enter text: An explanation of any parking facilities owned/ rented. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_FeeChargedForParkingExplanation_A": {
+          "value": "8.    IS A FEE CHARGED FOR PARKING?",
+          "tooltip": "Enter text: An explanation of any fee charged for parking. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_RecreationalFacilitiesProvidedExplanation_A": {
+          "value": "9.    RECREATION FACILITIES PROVIDED?",
+          "tooltip": "Enter text: An explanation of  any recreational facilities provided. ",
+          "type": "text"
+        },
+        "BuildingOccupancy_ApartmentCount_A": {
+          "value": "# APTS",
+          "tooltip": "Enter number: The number of separate living units in structure. ",
+          "type": "text"
+        },
+        "GeneralLiability_Otherlodgingoperationsdescription_A": {
+          "value": "DESCRIBE OTHER LODGING OPERATIONS",
+          "tooltip": "Enter text: The description of other lodging operations. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_SportingOrSocialEventsSponsoredExplanation_A": {
+          "value": "12. ARE SOCIAL EVENTS SPONSORED?",
+          "tooltip": "Enter text: An explanation of any social events sponsored. ",
+          "type": "text"
+        },
+        "AthleticTeam_SponsorshipExtentDescription_A": {
+          "value": "12 & UNDER OVER 18",
+          "tooltip": "Enter text: The description of the extent of sponsorship the named insured provides for the athletic team. ",
+          "type": "text"
+        },
+        "AthleticTeam_SponsorshipExtentDescription_B": {
+          "value": "12 & UNDER OVER 18",
+          "tooltip": "Enter text: The description of the extent of sponsorship the named insured provides for the athletic team. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_StructuralAlterationsContemplatedExplanation_A": {
+          "value": "14. ANY STRUCTURAL ALTERATIONS CONTEMPLATED?",
+          "tooltip": "Enter text: An explanation of any structural alterations contemplated. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_DemolitionExposureContemplatedExplanation_A": {
+          "value": "15. ANY DEMOLITION EXPOSURE CONTEMPLATED?",
+          "tooltip": "Enter text: An explanation of any demolition exposure contemplated. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_19": {
+      "template": "acord_126_2014.pdf",
+      "template_page": 4,
+      "dy_offset": 14.16,
+      "field_count": 10,
+      "fields": {
+        "GeneralLiabilityLineOfBusiness_ApplicantActiveJointVenturesExplanation_A": {
+          "value": "17. DO YOU LEASE EMPLOYEES TO OR FROM OTHER EMPLOYERS?",
+          "tooltip": "Enter text: An explanation of any joint ventures in which the applicant may be currently active. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_LabourInterchangeOtherBusinessSubsidiariesExplanation_A": {
+          "value": "19.  ARE DAY CARE FACILITIES OPERATED OR CONTROLLED?",
+          "tooltip": "Enter text: An explanation of any labor interchange with any other business or subsidiaries. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_DayCareFacilitiesOperatedExplanation_A": {
+          "value": "20.  HAVE ANY CRIMES OCCURRED OR BEEN ATTEMPTED ON YOUR PREMISES WITHIN THE LAST THREE (3) YEARS?",
+          "tooltip": "Enter text: An explanation of any daycare facilities operated or controlled. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_CrimesOccurredOrAttemptedLastThreeYearsExplanation_A": {
+          "value": "21.  IS THERE A FORMAL, WRITTEN SAFETY AND SECURITY POLICY IN EFFECT?",
+          "tooltip": "Enter text: An explanation of any crimes that  occurred or been attempted on your premises within the last three (3) years ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_FormalSafetySecurityPolicyInEffectExplanation_A": {
+          "value": "22.  DOES THE BUSINESSES' PROMOTIONAL LITERATURE MAKE ANY REPRESENTATIONS ABOUT THE SAFETY OR SECURITY OF THE PREMISES?",
+          "tooltip": "Enter text: An explanation of any formal, written safety and security policy in effect. ",
+          "type": "text"
+        },
+        "GeneralLiabilityLineOfBusiness_BusinessPromotionalLiteratureSafetyRepresentationsExplanation_A": {
+          "value": "REMARKS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+          "tooltip": "Enter text: An explanation of any business promotional literature that makes any representations about the safety or security of the premises. ",
+          "type": "text"
+        },
+        "Producer_AuthorizedRepresentative_Signature_A": {
+          "value": "APPLICANT'S SIGNATURE",
+          "tooltip": "Sign here: Accommodates the signature of the authorized representative (e.g., producer, agent, broker, etc.) of the company(ies) listed on the document.  This is required in most states. ",
+          "type": "text"
+        },
+        "Producer_AuthorizedRepresentative_FullName_A": {
+          "value": "DATE",
+          "tooltip": "Enter text: The name of the authorized representative of the producer, agency and/or broker that signed the form. ",
+          "type": "text"
+        },
+        "Producer_StateLicenseIdentifier_A": {
+          "value": "NATIONAL PRODUCER NUMBER",
+          "tooltip": "Enter identifier: The State License Number of the producer. ",
+          "type": "text"
+        },
+        "NamedInsured_Signature_A": {
+          "value": "ACORD 126 (2014/04) Page 4 of 4",
+          "tooltip": "Sign here: Accommodates the signature of the applicant or named insured. ",
+          "type": "text"
+        }
+      }
+    },
+    "page_21": {
+      "template": "acord_131.pdf",
+      "template_page": 1,
+      "dy_offset": 7.78,
+      "field_count": 36,
+      "fields": {
+        "Text1[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g. agency or brokerage).",
+          "type": "text"
+        },
+        "Text2[0]": {
+          "value": "04/08/2026",
+          "tooltip": "Enter date: The month/day/year on which the form is completed. (MM/DD/YYYY)",
+          "type": "text"
+        },
+        "Text3[0]": {
+          "value": "Crest Insurance Group, LLC",
+          "tooltip": "Enter text: The full name of the producer/agency.",
+          "type": "text"
+        },
+        "Text5[0]": {
+          "value": "05/01/2026",
+          "tooltip": "Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence.",
+          "type": "text"
+        },
+        "Text6[0]": {
+          "value": "AmTrust Group",
+          "tooltip": "Enter text: The insurer's full legal company name(s) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name.",
+          "type": "text"
+        },
+        "Text8[0]": {
+          "value": "1800 North Stone LLC",
+          "tooltip": "Enter text: The named insured(s) as it/they will appear on the policy declarations page.",
+          "type": "text"
+        },
+        "Check3[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the response expected from the company is a new issued policy.",
+          "type": "checkbox"
+        },
+        "Check5[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the type of policy is umbrella.",
+          "type": "checkbox"
+        },
+        "Check7[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates \"coverage trigger\" is on an occurrence basis on an excess or umbrella liability policy.",
+          "type": "checkbox"
+        },
+        "Text14[0]": {
+          "value": "Aggregate",
+          "tooltip": "Enter text: The description of other coverage (not the limit) on the excess umbrella liability policy. Any questions about appropriate limits or applicable policy coverage(s) should be answered by the issuing insurer(s).",
+          "type": "text"
+        },
+        "Text19[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The each employee limit for employee benefits coverage.",
+          "type": "text"
+        },
+        "Text20[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The aggregate limit for employee benefits coverage.",
+          "type": "text"
+        },
+        "Text21[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The retention amount for employee benefits coverage.",
+          "type": "text"
+        },
+        "Text94[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The combined single limit on the underlying automobile policy.",
+          "type": "text"
+        },
+        "Text95[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The combined single limit premium on the underlying automobile policy.",
+          "type": "text"
+        },
+        "Text96[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The bodily injury each accident limit or combined single limit on the underlying automobile policy.",
+          "type": "text"
+        },
+        "Text97[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The bodily injury each person limit on the underlying automobile policy.  ",
+          "type": "text"
+        },
+        "Text98[0]": {
+          "value": "$",
+          "tooltip": "  Enter amount: The bodily injury premium amount on the underlying automobile policy.",
+          "type": "text"
+        },
+        "Text99[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The property damage each accident limit on the underlying automobile policy.  ",
+          "type": "text"
+        },
+        "Text100[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The property damage premium amount on the underlying automobile policy.  ",
+          "type": "text"
+        },
+        "Check9[0]": {
+          "value": true,
+          "tooltip": "Check the box (if applicable): Indicates the underlying general liability policy is on an occurrence basis.",
+          "type": "checkbox"
+        },
+        "Text106[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The each occurrence limit on the underlying general liability policy.",
+          "type": "text"
+        },
+        "Text107[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The general aggregate limit on the underlying general liability policy. ",
+          "type": "text"
+        },
+        "Text108[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The premises operations premium amount on the underlying general liability policy.",
+          "type": "text"
+        },
+        "Text109[0]": {
+          "value": "$",
+          "tooltip": " Enter limit: The products and completed operations limit on the underlying general liability policy.",
+          "type": "text"
+        },
+        "Text110[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The personal and advertising injury limit on the underlying general liability policy. ",
+          "type": "text"
+        },
+        "Text111[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The products premium on the underlying general liability policy.",
+          "type": "text"
+        },
+        "Text112[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The fire damage (damage to rented premises) limit on the underlying general liability policy. ",
+          "type": "text"
+        },
+        "Text113[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The medical expense limit on the underlying general liability policy. ",
+          "type": "text"
+        },
+        "Text114[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The premium associated with other coverages on the underlying general liability policy.",
+          "type": "text"
+        },
+        "Text120[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The limit of the underlying employers liability policy.",
+          "type": "text"
+        },
+        "Text121[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The disease each employee limit of the underlying employers liability policy.",
+          "type": "text"
+        },
+        "Text122[0]": {
+          "value": "$",
+          "tooltip": "Enter limit: The disease policy limit of the underlying employers liability policy.",
+          "type": "text"
+        },
+        "Text123[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The premium amount on the underlying employers liability policy.",
+          "type": "text"
+        },
+        "Text131[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The premium amount on the underlying policy.",
+          "type": "text"
+        },
+        "Text139[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The premium amount on the underlying policy.",
+          "type": "text"
+        }
+      }
+    },
+    "page_22": {
+      "template": "acord_131.pdf",
+      "template_page": 2,
+      "dy_offset": 8.0,
+      "field_count": 4,
+      "fields": {
+        "Text1[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g. agency or brokerage).",
+          "type": "text"
+        },
+        "Text7[0]": {
+          "value": "3.  HAS ANY PRODUCT, WORK, ACCIDENT, OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF INSURED FROM ANY PREVIOUS COVERAGE? (Y / N)",
+          "tooltip": "Enter text: An explanation of a response to a general information or underwriting question.  Normally, \"Yes\" responses require an explanation.",
+          "type": "text"
+        },
+        "Text17[0]": {
+          "value": "COVERAGE)  Attach ACORD 101, Additional Remarks Schedule, if more space is required.",
+          "tooltip": "Enter text: The description of underlying insurance coverage information including all restrictions (e.g. laser endorsements, discrimination, subrogation waivers) or extensions of coverage.",
+          "type": "text"
+        },
+        "Text60[0]": {
+          "value": "OCCUPANCY / DESCRIPTION OF PERSONAL PROPERTY",
+          "tooltip": "Enter text: The description of the building occupancy or of the property held by the insured in his care, custody and control.",
+          "type": "text"
+        }
+      }
+    },
+    "page_23": {
+      "template": "acord_131.pdf",
+      "template_page": 3,
+      "dy_offset": 8.0,
+      "field_count": 4,
+      "fields": {
+        "Text1[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g. agency or brokerage).",
+          "type": "text"
+        },
+        "Text23[0]": {
+          "value": "12.  DESCRIBE AGREEMENT  (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+          "tooltip": "Enter text: The description of the contractual agreement(s) pertaining to the work performed.  Attach ACORD 101, Additional Remarks Schedule, if more space is required.",
+          "type": "text"
+        },
+        "Text27[0]": {
+          "value": "14.  DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?",
+          "tooltip": "Indicate if certificates are required.",
+          "type": "text"
+        },
+        "Text29[0]": {
+          "value": "15.  IS APPLICANT SELF-INSURED IN ANY STATE?",
+          "tooltip": "Specify the states involved and give the amount of the self insured retention. Indicate if\nself insurance adequately satisfies state requirements.",
+          "type": "text"
+        }
+      }
+    },
+    "page_24": {
+      "template": "acord_131.pdf",
+      "template_page": 4,
+      "dy_offset": 8.0,
+      "field_count": 5,
+      "fields": {
+        "Text1[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g. agency or brokerage).",
+          "type": "text"
+        },
+        "Text4[0]": {
+          "value": "DISPOSAL METHODS?",
+          "tooltip": "Enter text: An explanation of a response to a general information or underwriting question.  Normally, \"Yes\" responses require an explanation.",
+          "type": "text"
+        },
+        "Text10[0]": {
+          "value": "$",
+          "tooltip": "Enter amount: The gross sales or receipts amount.",
+          "type": "text"
+        },
+        "Text11[0]": {
+          "value": "$",
+          "tooltip": "'Enter amount: The gross sales or receipts amount.",
+          "type": "text"
+        },
+        "Text12[0]": {
+          "value": "$",
+          "tooltip": "'Enter amount: The gross sales or receipts amount.",
+          "type": "text"
+        }
+      }
+    },
+    "page_25": {
+      "template": "acord_131.pdf",
+      "template_page": 5,
+      "dy_offset": 6.78,
+      "field_count": 8,
+      "fields": {
+        "Text1[0]": {
+          "value": "1800NOR-02 LBAKER",
+          "tooltip": "Enter identifier: The customer's identification number assigned by the producer (e.g. agency or brokerage).",
+          "type": "text"
+        },
+        "Text6[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in Louisiana.",
+          "type": "text"
+        },
+        "Text7[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in New Hampshire.",
+          "type": "text"
+        },
+        "Text8[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in New Hampshire.",
+          "type": "text"
+        },
+        "Text9[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in Wisconsin.",
+          "type": "text"
+        },
+        "Text10[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in Wisconsin.",
+          "type": "text"
+        },
+        "Text11[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in Wisconsin.",
+          "type": "text"
+        },
+        "Text12[0]": {
+          "value": "(INITIALS)",
+          "tooltip": "Initial here: The named insured's initials. As used here, applicable in Wisconsin.",
+          "type": "text"
+        }
+      }
+    }
+  }
+}

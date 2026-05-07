@@ -1,0 +1,452 @@
+{
+  "source_file": "ACORD_112322108_125.pdf",
+  "document_type": "acord_application",
+  "total_pages": 4,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "date": "05/15/2026",
+          "agency": "Lockton",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "Varsity Campus LLC",
+          "address": "1616 Camden Road, Suite 250\nCharlotte, NC 28203"
+        },
+        "ApplicantInformation": {
+          "contact": {
+            "name": "",
+            "phone": "",
+            "fax": "",
+            "email": "",
+            "address": "",
+            "code": "",
+            "subcode": ""
+          },
+          "lines_of_business": [
+            {
+              "coverage": "COMMERCIAL GENERAL LIABILITY",
+              "premium": ""
+            },
+            {
+              "coverage": "CRIME",
+              "premium": ""
+            },
+            {
+              "coverage": "UMBRELLA",
+              "premium": ""
+            }
+          ],
+          "attachments": [
+            "ACCOUNTS RECEIVABLE / VALUABLE PAPERS",
+            "ADDITIONAL INTEREST SCHEDULE",
+            "ADDITIONAL PREMISES INFORMATION SCHEDULE",
+            "APARTMENT BUILDING SUPPLEMENT",
+            "CONDO ASSN BYLAWS (for D&O Coverage only)",
+            "CONTRACTORS SUPPLEMENT",
+            "COVERAGES SCHEDULE",
+            "DEALERS SECTION",
+            "DRIVER INFORMATION SCHEDULE",
+            "ELECTRONIC DATA PROCESSING SECTION",
+            "GLASS AND SIGN SECTION",
+            "HOTEL / MOTEL SUPPLEMENT",
+            "INSTALLATION / BUILDERS RISK SECTION",
+            "INTERNATIONAL LIABILITY EXPOSURE SUPPLEMENT",
+            "INTERNATIONAL PROPERTY EXPOSURE SUPPLEMENT",
+            "LOSS SUMMARY",
+            "OPEN CARGO SECTION",
+            "PREMIUM PAYMENT SUPPLEMENT",
+            "PROFESSIONAL LIABILITY SUPPLEMENT",
+            "RESTAURANT / TAVERN SUPPLEMENT",
+            "STATEMENT / SCHEDULE OF VALUES",
+            "STATE SUPPLEMENT (if applicable)",
+            "VACANT BUILDING SUPPLEMENT",
+            "VEHICLE SCHEDULE"
+          ],
+          "policy_information": {
+            "proposed_eff_date": "05/15/2026",
+            "proposed_exp_date": "05/15/2027",
+            "billing_plan": "DIRECT",
+            "payment_plan": "AGENCY",
+            "method_of_payment": "",
+            "audit": "",
+            "deposit": "",
+            "minimum_premium": "",
+            "policy_premium": ""
+          }
+        },
+        "ApplicantDetails": {
+          "name": "Varsity Campus LLC",
+          "address": "1616 Camden Road, Suite 250\nCharlotte, NC 28203",
+          "business_phone": "",
+          "website_address": "",
+          "corporation": true,
+          "joint_venture": false,
+          "llc": false,
+          "not_for_profit_org": false,
+          "partnership": false,
+          "subchapter_s_corporation": false,
+          "trust": false,
+          "gl_code": "",
+          "sic": "",
+          "naics": "",
+          "fein_or_soc_sec": "",
+          "other_named_insured": "",
+          "other_insured_address": "",
+          "other_insured_business_phone": "",
+          "other_insured_website_address": "",
+          "other_insured_corporation": false,
+          "other_insured_joint_venture": false,
+          "other_insured_llc": false,
+          "other_insured_not_for_profit_org": false,
+          "other_insured_partnership": false,
+          "other_insured_subchapter_s_corporation": false,
+          "other_insured_trust": false,
+          "other_insured_gl_code": "",
+          "other_insured_sic": "",
+          "other_insured_naics": "",
+          "other_insured_fein_or_soc_sec": ""
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "ContactInformation": {
+          "contact_type": "",
+          "contact_name": "",
+          "primary_phone": {
+            "type": "HOME",
+            "number": ""
+          },
+          "secondary_phone": {
+            "type": "HOME",
+            "number": ""
+          },
+          "primary_email": "",
+          "secondary_email": ""
+        },
+        "PremisesInformation": [
+          {
+            "loc": "1176-1188 Mt Hope Ave",
+            "bld": "Rochester",
+            "state": "NY",
+            "zip": "14620",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "annual_revenues": "",
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": "",
+            "any_area_leased_to_others": "Y/N"
+          },
+          {
+            "loc": "410 South Morgan Street",
+            "bld": "Chicago",
+            "state": "IL",
+            "zip": "60607",
+            "city_limits": "INSIDE",
+            "interest": "TENANT",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "annual_revenues": "",
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": "",
+            "any_area_leased_to_others": "Y/N"
+          },
+          {
+            "loc": "",
+            "bld": "",
+            "state": "",
+            "zip": "",
+            "city_limits": "",
+            "interest": "",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "annual_revenues": "",
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": "",
+            "any_area_leased_to_others": "Y/N"
+          },
+          {
+            "loc": "",
+            "bld": "",
+            "state": "",
+            "zip": "",
+            "city_limits": "",
+            "interest": "",
+            "full_time_empl": "",
+            "part_time_empl": "",
+            "annual_revenues": "",
+            "occupied_area": "",
+            "open_to_public_area": "",
+            "total_building_area": "",
+            "any_area_leased_to_others": "Y/N"
+          }
+        ],
+        "NatureOfBusiness": {
+          "business_type": "APARTMENTS",
+          "description_of_primary_operations": "Apartments - Student Housing",
+          "date_business_started": "",
+          "retail_stores_or_service_operations_percent_of_total_sales": "",
+          "installation_service_or_repair_work_percent": "",
+          "off_premises_installation_service_or_repair_work_percent": "",
+          "description_of_operations_of_other_named_insureds": ""
+        },
+        "AdditionalInterest": {
+          "interest": "ADDITIONAL INSURED BREACH OF WARRANTY",
+          "name_and_address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "policy": "",
+          "send_bill": "",
+          "location": "",
+          "building": "",
+          "vehicle": "",
+          "boat": "",
+          "airport": "",
+          "aircraft": "",
+          "item_class": "",
+          "item": "",
+          "reference_loan_number": "",
+          "interest_end_date": "",
+          "lien_amount": "",
+          "phone": "",
+          "fax": "",
+          "reason_for_interest": ""
+        }
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "GeneralInformation": {
+          "1a": {
+            "IS_THE_APPLICANT_A_SUBSIDIARY_OF_ANOTHER_ENTITY": "",
+            "PARENT_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "1b": {
+            "DOES_THE_APPLICANT_HAVE_ANY_SUBSIDIARIES": "",
+            "SUBSIDIARY_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "2": {
+            "IS_A_FORMAL_SAFETY_PROGRAM_IN_OPERATION": {
+              "SAFETY_MANUAL": false,
+              "SAFETY_POSITION": false,
+              "MONTHLY_MEETINGS": false,
+              "OSHA": false
+            }
+          },
+          "3": {
+            "ANY_EXPOSURE_TO_FLAMMABLES_EXPLOSIVES_CHEMICALS": ""
+          },
+          "4": {
+            "ANY_OTHER_INSURANCE_WITH_THIS_COMPANY": [
+              {
+                "LINE_OF_BUSINESS": "",
+                "POLICY_NUMBER": ""
+              }
+            ]
+          },
+          "5": {
+            "ANY_POLICY_OR_COVERAGE_DECLINED_CANCELED_OR_NON_RENEWED_DURING_THE_PRIOR_THREE_3_YEARS_FOR_ANY_PREMISES_OR_OPERATIONS": {
+              "NON_PAYMENT": false,
+              "AGENT_NO_LONGER_REPRESENTS_CARRIER": false,
+              "NON_RENEWAL": false,
+              "UNDERWRITING": false,
+              "CONDITION_CORRECTED": ""
+            }
+          },
+          "6": {
+            "ANY_PAST_LOSSES_OR_CLAIMS_RELATING_TO_SEXUAL_ABUSE_OR_MOLESTATION_ALLEGATIONS_DISCRIMINATION_OR_NEGIGENT_HIRING": ""
+          },
+          "7": {
+            "DURING_THE_LAST_FIVE_YEARS_TEN_IN_RI_HAS_ANY_APPLICANT_BEEN_INDICTED_FOR_OR_CONVICTED_OF_ANY_DEGREE_OF_THE_CRIME_OF_FRAUD_BRIBERY_ARSON_OR_ANY_OTHER_ARSON_RELATED_CRIME_IN_CONNECTION_WITH_THIS_OR_ANY_OTHER_PROPERTY": ""
+          },
+          "8": {
+            "ANY_UNCORRECTED_FIRE_AND_OR_SAFETY_CODE_VIOLATIONS": [
+              {
+                "OCCUR_DATE": "",
+                "EXPLANATION": "",
+                "RESOLUTION": "",
+                "RESOLVE_DATE": ""
+              }
+            ]
+          },
+          "9": {
+            "HAS_APPLICANT_HAD_A_FORECLOSURE_REPOSSESSION_BANKRUPTCY_OR_FILED_FOR_BANKRUPTCY_DURING_THE_LAST_FIVE_5_YEARS": [
+              {
+                "OCCUR_DATE": "",
+                "EXPLANATION": "",
+                "RESOLUTION": "",
+                "RESOLVE_DATE": ""
+              }
+            ]
+          },
+          "10": {
+            "HAS_APPLICANT_HAD_A_JUDGEMENT_OR_LIEN_DURING_THE_LAST_FIVE_5_YEARS": [
+              {
+                "OCCUR_DATE": "",
+                "EXPLANATION": "",
+                "RESOLUTION": "",
+                "RESOLVE_DATE": ""
+              }
+            ]
+          },
+          "11": {
+            "HAS_BUSINESS_BEEN_PLACED_IN_A_TRUST": {
+              "NAME_OF_TRUST": ""
+            }
+          },
+          "12": {
+            "ANY_FOREIGN_OPERATIONS_FOREIGN_PRODUCTS_DISTRIBUTED_IN_USA_OR_US_PRODUCTS_SOLD_DISTRIBUTED_IN_FOREIGN_COUNTRIES": {
+              "YES": false,
+              "ACORD_815": "",
+              "ACORD_816": ""
+            }
+          },
+          "13": {
+            "DOES_APPLICANT_HAVE_OTHER_BUSINESS_VENTURES_FOR_WHICH_COVERAGE_IS_NOT_REQUESTED": ""
+          },
+          "14": {
+            "DOES_APPLICANT_OWN_LEASE_OPERATE_ANY_DRONES": {
+              "YES": false,
+              "DESCRIBE_USE": ""
+            }
+          },
+          "15": {
+            "DOES_APPLICANT_HIRE_OTHERS_TO_OPERATE_DRONES": {
+              "YES": false,
+              "DESCRIBE_USE": ""
+            }
+          },
+          "Remarks_ProcessingInstructions": "",
+          "PriorCarrierInformation": {
+            "YEAR": "",
+            "CATEGORY": "",
+            "GENERAL_LIABILITY": "",
+            "AUTOMOBILE": "",
+            "PROPERTY": "",
+            "OTHER": "",
+            "CARRIER": "",
+            "POLICY_NUMBER": "",
+            "PREMIUM": "",
+            "EFFECTIVE_DATE": "",
+            "EXPIRATION_DATE": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "Table": [
+          {
+            "YEAR": "",
+            "CATEGORY": "GENERAL LIABILITY",
+            "CARRIER": "",
+            "POLICY NUMBER": "",
+            "PREMIUM": "$",
+            "EFFECTIVE DATE": "",
+            "EXPIRATION DATE": ""
+          },
+          {
+            "YEAR": "",
+            "CATEGORY": "AUTOMOBILE",
+            "CARRIER": "",
+            "POLICY NUMBER": "",
+            "PREMIUM": "$",
+            "EFFECTIVE DATE": "",
+            "EXPIRATION DATE": ""
+          },
+          {
+            "YEAR": "",
+            "CATEGORY": "PROPERTY",
+            "CARRIER": "",
+            "POLICY NUMBER": "",
+            "PREMIUM": "$",
+            "EFFECTIVE DATE": "",
+            "EXPIRATION DATE": ""
+          },
+          {
+            "YEAR": "",
+            "CATEGORY": "OTHER:",
+            "CARRIER": "",
+            "POLICY NUMBER": "",
+            "PREMIUM": "$",
+            "EFFECTIVE DATE": "",
+            "EXPIRATION DATE": ""
+          }
+        ],
+        "LossHistory": {
+          "Check if none": "Check if none",
+          "Attach Loss Summary for Additional Loss Information": "Attach Loss Summary for Additional Loss Information",
+          "TOTAL LOSSES": "$",
+          "DATE OF OCCURRENCE": "",
+          "LINE": "",
+          "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM": "",
+          "DATE OF CLAIM": "",
+          "AMOUNT PAID": "",
+          "AMOUNT RESERVED": "",
+          "SUBROGATION Y/N": "",
+          "CLAIM OPEN Y/N": ""
+        },
+        "Signature": {
+          "Copy of the Notice of Information Practices (Privacy)": "Copy of the Notice of Information Practices (Privacy) has been given to the applicant. (Not required in all states, contact your agent or broker for your state's requirements.)",
+          "PERSONAL INFORMATION ABOUT YOU": "PERSONAL INFORMATION ABOUT YOU, INCLUDING INFORMATION FROM A CREDIT OR OTHER INVESTIGATIVE REPORT, MAY BE COLLECTED FROM PERSONS OTHER THAN YOU IN CONNECTION WITH THIS APPLICATION FOR INSURANCE AND SUBSEQUENT AMENDMENTS AND RENEWALS. SUCH INFORMATION AS WELL AS OTHER PERSONAL AND PRIVILEGED INFORMATION COLLECTED BY US OR OUR AGENTS MAY IN CERTAIN CIRCUMSTANCES BE DISCLOSED TO THIRD PARTIES WITHOUT YOUR AUTHORIZATION. CREDIT SCORING INFORMATION MAY BE USED TO HELP DETERMINE EITHER YOUR ELIGIBILITY FOR INSURANCE OR THE PREMIUM YOU WILL BE CHARGED. WE MAY USE A THIRD PARTY IN CONNECTION WITH THE DEVELOPMENT OF YOUR SCORE. YOU MAY HAVE THE RIGHT TO REVIEW YOUR PERSONAL INFORMATION IN OUR FILES AND REQUEST CORRECTION OF ANY INACCURACIES. YOU MAY ALSO HAVE THE RIGHT TO REQUEST IN WRITING THAT WE CONSIDER EXTRAORDINARY LIFE CIRCUMSTANCES IN CONNECTION WITH THE DEVELOPMENT OF YOUR CREDIT SCORE. THESE RIGHTS MAY BE LIMITED IN SOME STATES. PLEASE CONTACT YOUR AGENT OR BROKER TO LEARN HOW THESE RIGHTS MAY APPLY IN YOUR STATE OR FOR INSTRUCTIONS ON HOW TO SUBMIT A REQUEST TO US FOR A MORE DETAILED DESCRIPTION OF YOUR RIGHTS AND OUR PRACTICES REGARDING PERSONAL INFORMATION. (Not applicable in AZ, CA, DE, KS, MA, MN, ND, NY, OR VA, or WV. Specific ACORD 38s are available for applicants in these states.)",
+          "Applicant's Initials": "",
+          "Applicable in AL, AR, DC, LA, MD, NM, RI and WV": "Any person who knowingly (or willfully*) presents a false or fraudulent claim for payment of a loss or benefit or knowingly (or willfully*) presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison. *Applies in MD Only.",
+          "Applicable in CO": "It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant or for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory Agencies.",
+          "Applicable in FL and OK": "Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a statement of claim or an application containing any, incomplete, or misleading information is guilty of a felony (of the third degree)*. *Applies in FL Only.",
+          "Applicable in KS": "Any person who, knowingly and with intent to defraud, presents, causes, or prepares with knowledge or belief that it will be presented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance of, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for commercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and the stated value of the claim for each such violation)*. *Applies in NY Only.",
+          "Applicable in ME, TN, VA and WA": "It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose of defrauding the company. Penalties (may)* include imprisonment, fines and denial of insurance benefits. *Applies in ME Only.",
+          "Applicable in NJ": "Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil penalties.",
+          "Applicable in OR": "Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a false statement as to any material fact may be violating state law.",
+          "Applicable in PR": "Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps, or causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss, shall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten thousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty thus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2) years.",
+          "THE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE ANSWERS TO QUESTIONS ON THIS APPLICATION. HE/SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER KNOWLEDGE.": "THE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE ANSWERS TO QUESTIONS ON THIS APPLICATION. HE/SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER KNOWLEDGE.",
+          "PRODUCER'S SIGNATURE": "",
+          "PRODUCER'S NAME (Please Print)": "",
+          "STATE PRODUCER LICENSE NO (Required in Florida)": "",
+          "APPLICANT'S SIGNATURE": "",
+          "DATE": "",
+          "NATIONAL PRODUCER NUMBER": ""
+        }
+      }
+    }
+  ]
+}

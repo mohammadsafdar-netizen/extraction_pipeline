@@ -1,0 +1,101 @@
+{
+  "source_file": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "targeted",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "header": {
+          "policy_number": "RN-7-0500493",
+          "company/carrier": "Richmond National Insurance Company",
+          "insured_name": "Prism Broward, LP",
+          "insured_address": "",
+          "agency_name": "",
+          "valuation_date": "03/19/2026",
+          "date_range": "05/26/2023 - 05/26/2024",
+          "line_of_business": "General Casualty / Premises Ops"
+        },
+        "summary": [],
+        "detail": [
+          {
+            "claim_number": "RN-9-0000504",
+            "date_of_loss": "06/26/2023",
+            "reported_date": "09/21/2023",
+            "type_cause": "Premises/Slip /Trip/ fall",
+            "claimant": "Kerry Brown",
+            "description": "General Casualty /Premises Ops",
+            "amount_paid": 41578.97,
+            "amount_reserved": 125905.45,
+            "expenses": 0,
+            "amount_recovered": 0,
+            "status": "Open",
+            "date_closed": null
+          },
+          {
+            "claim_number": "RN-9-0001039",
+            "date_of_loss": "05/21/2024",
+            "reported_date": "06/10/2024",
+            "type_cause": "Premises/injury by object",
+            "claimant": "Nikole Machado",
+            "description": "General Casualty /Premises Ops",
+            "amount_paid": 50000,
+            "amount_reserved": 0,
+            "expenses": 0,
+            "amount_recovered": 0,
+            "status": "Closed",
+            "date_closed": "05/21/2024"
+          }
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "header": {
+          "policy_number": "RN-7-0500493-01",
+          "company/carrier": "Richmond National Insurance Company",
+          "insured_name": "Prism Broward, LP",
+          "insured_address": "",
+          "agency_name": "",
+          "valuation_date": "03/19/2026",
+          "date_range": "05/26/2024 - 05/26/2025",
+          "line_of_business": "General Casualty / Premises Ops"
+        },
+        "summary": [],
+        "detail": [
+          {
+            "claim_number": "RN-9-0001655",
+            "date_of_loss": "10/09/2024",
+            "reported_date": "01/07/2025",
+            "type_cause": "Premises/injury by object",
+            "claimant": "Shavoya Braziel",
+            "description": "",
+            "amount_paid": 41585.56,
+            "amount_reserved": 0.0,
+            "expenses": 0.0,
+            "amount_recovered": 0.0,
+            "status": "Closed",
+            "date_closed": "10/09/2024"
+          },
+          {
+            "claim_number": "RN-9-0002360",
+            "date_of_loss": "03/13/2025",
+            "reported_date": "07/17/2025",
+            "type_cause": "Bodily Injury",
+            "claimant": "Idelmo Lopez, et al.",
+            "description": "",
+            "amount_paid": 6959.0,
+            "amount_reserved": 50041.0,
+            "expenses": 0.0,
+            "amount_recovered": 0.0,
+            "status": "Open",
+            "date_closed": null
+          }
+        ]
+      }
+    }
+  ]
+}

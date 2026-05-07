@@ -1,0 +1,77 @@
+{
+  "source_file": "113199142_Genstar Apartment Supp (8).pdf",
+  "document_type": "supplemental_application",
+  "total_pages": 4,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "applicant_info": {
+          "name": "",
+          "years": "",
+          "owned": ""
+        },
+        "property_locations": [],
+        "description_of_locations": {
+          "occupancy": {
+            "apartment_building": false,
+            "rooming_or_boarding_house": false,
+            "apartment_hotel": false
+          },
+          "number_of_units": "",
+          "number_of_stories": "",
+          "percent_occupied": "",
+          "wiring": {
+            "fuses": false,
+            "knob_and_tube": false,
+            "circuit_breakers": false,
+            "challenger": false,
+            "federal_pacific_stab_lok": false,
+            "gte_sylvania": false,
+            "pushmatic": false,
+            "zinsco": false,
+            "none_of_the_above": false,
+            "aluminum_wiring": false,
+            "repaired_via_copalm_or_alumniconn_connectors": false
+          },
+          "handicapped_disabled_housing_facility": false,
+          "assisted_living_or_dedicated_senior_housing": false,
+          "more_than_30_percent_tenants_college_students": false,
+          "more_than_30_percent_tenants_subsidized": false,
+          "parking_provided_for_a_charge": false,
+          "plans_for_any_major_renovations": false,
+          "if_work_subbed_out_are_coi_obtained_from_all_contractors": false,
+          "signs_posted_on_property_informing_tenants_visitors_of_construction_routine_maintenance": false,
+          "procedures_in_place_to_ensure_adequate_snow_and_ice_removal": false
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "applicant_info": {},
+        "property_details": {},
+        "construction": {},
+        "occupancy": {},
+        "management": {},
+        "financial_data": {},
+        "loss_history": {},
+        "questions": [],
+        "table_rows": []
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "error": "No filled data found. The document is blank or contains no completed fields."
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "error": "No filled data found. The document is blank except for state laws and signature fields, which are not filled out."
+      }
+    }
+  ]
+}

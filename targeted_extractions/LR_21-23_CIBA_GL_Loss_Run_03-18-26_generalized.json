@@ -1,0 +1,143 @@
+{
+  "source_file": "LR_21-23 CIBA GL Loss Run 03-18-26.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "carrier_name": "ciba INSURANCE SERVICES",
+        "license_number": "0D44433",
+        "address": "655 N. Central Ave., Suite 1125, Glendale, CA 91203",
+        "phone": "818-638-8525",
+        "fax": "818-638-8551",
+        "date": "03/18/2026",
+        "account_name": "Prism Broward LP",
+        "broker": "CRC Insurance Services, Inc. - Boca Raton, FL (500588)",
+        "account_names_used_during_reporting_period": [
+          {
+            "account_name": "Prism Broward LP",
+            "address": "333 SE 2nd Avenue Suite 4400, Miami, FL 33131"
+          }
+        ],
+        "pid": "P00095389",
+        "named_insured": {
+          "name": "Prism Broward, LP",
+          "address": "333 SE 2nd Avenue, Ste 4400, Miami FL 33131"
+        },
+        "property_name": "Spectra at Plantation",
+        "insured_address": "4561 NW 10th Court INCL Plantation FL 33313; 4561 NW 10th CT Plantation FL 33313",
+        "ciba_policy_term": [
+          {
+            "policy_term": "CIBA I 2021-2023",
+            "status": "New Business",
+            "coverage_name": "Commercial FSL Primary Liability",
+            "policy_effective_dates": "05/26/2021 - 05/26/2022"
+          },
+          {
+            "policy_term": "CIBA I 2022-2024",
+            "status": "NR Sent",
+            "coverage_name": "Commercial FSL Primary Liability",
+            "policy_effective_dates": "05/26/2022 - 05/26/2023"
+          }
+        ],
+        "claim_detail": {
+          "claim_status": "NO LOSSES OR CLAIMS REPORTED",
+          "pid": "P00095390",
+          "named_insured": {
+            "name": "Prism Broward, LP",
+            "address": "333 SE 2nd Avenue, Ste 4400, Miami FL 33131"
+          },
+          "property_name": "Spectra Palms",
+          "insured_address": "1751 NW 46th AVE Plantation FL 33313; 1751 NW 46th Avenue INCL Plantation FL 33313",
+          "ciba_policy_term": [
+            {
+              "policy_term": "CIBA I 2021-2023",
+              "status": "New Business",
+              "coverage_name": "Commercial FSL Primary Liability",
+              "policy_effective_dates": "05/26/2021 - 05/26/2022"
+            },
+            {
+              "policy_term": "CIBA I 2022-2024",
+              "status": "NR Sent",
+              "coverage_name": "Commercial FSL Primary Liability",
+              "policy_effective_dates": "05/26/2022 - 05/26/2023"
+            }
+          ]
+        },
+        "page_number": "1 of 2"
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "carrier_name": "ciba",
+        "carrier_address": "655 N. Central Ave., Suite 1125, Glendale, CA 91203",
+        "carrier_phone": "818-638-8525",
+        "carrier_fax": "818-638-8551",
+        "license_number": "OD44433",
+        "coverage_name": "Commercial FSL Primary Liability",
+        "policy_effective_dates": [
+          "05/26/2022",
+          "05/26/2023"
+        ],
+        "claim_detail": [
+          {
+            "ciba_claim": "GLF21-251",
+            "dol": "11/05/2021",
+            "type_cause": "General Liability/Slip & Fall",
+            "amt_paid_rsvd": 25000,
+            "expenses": 0,
+            "amt_recovered": 1000,
+            "status": "Closed w/Payment",
+            "date_closed": "12/05/2023"
+          },
+          {
+            "ciba_claim": "GLF22-040",
+            "dol": "09/21/2022",
+            "type_cause": "General Liability/Slip & Fall",
+            "amt_paid_rsvd": 90000,
+            "expenses": 0,
+            "amt_recovered": 5000,
+            "status": "Closed w/Payment",
+            "date_closed": "12/12/2023"
+          }
+        ],
+        "pid": "P00096472",
+        "named_insured": "Prism Tamarac LP",
+        "named_insured_address": "333 SE 2nd Avenue, Suite 4400, Miami FL 33131",
+        "property_name": "8650 NW 61st ST INCL Tamarac FL 33321; 8650 NW 61st Street INCL Tamarac FL 33321",
+        "ciba_policy_term": [
+          {
+            "policy_term": "CIBA I 2021-2023",
+            "status": "New Business",
+            "coverage_name": "Commercial FSL Primary Liability",
+            "policy_effective_dates": [
+              "10/24/2021",
+              "05/26/2022"
+            ]
+          },
+          {
+            "policy_term": "CIBA I 2022-2024",
+            "status": "NR Sent",
+            "coverage_name": "Commercial FSL Primary Liability",
+            "policy_effective_dates": [
+              "05/26/2022",
+              "05/26/2023"
+            ]
+          }
+        ],
+        "loss_experience_summary": {
+          "total_number_of_claims": 2,
+          "total_amount_paid_rsvd": 115000,
+          "total_expenses": 0,
+          "total_amount_recovered": 6000,
+          "number_of_claims_open": 0
+        },
+        "disclaimer": "This information being provided herein is based on current information available at the time of request. The Company does not make any express or implied representation or warranty as to the completeness of the information and shall have no liability relating to any errors or omissions made based on reliance on this information."
+      }
+    }
+  ]
+}

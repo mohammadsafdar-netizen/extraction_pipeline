@@ -1,0 +1,1182 @@
+{
+  "source_file": "26 XS Application for Prism Broward.pdf",
+  "document_type": "acord_application",
+  "total_pages": 12,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "date": "01/14/2026",
+          "agency": {
+            "name": "Franklin Street Insurance Services, LLC",
+            "address": "1311 N Westshore Blvd, Suite 200, Tampa, FL 33607"
+          },
+          "carrier": {
+            "name": "Kinsale Insurance Company",
+            "naic_code": "38920"
+          },
+          "policy_number": "R/O 01003718160"
+        },
+        "Named_Insured": [
+          {
+            "name": "Prism Broward, LP",
+            "address": "333 SE 2nd Avenue, Ste 4400, Miami, FL 33131",
+            "type": "CORPORATION"
+          },
+          {
+            "name": "Prism Tamarac, LP",
+            "address": "333 SE 2nd Avenue, Ste 4400, Miami, FL 33131",
+            "type": "CORPORATION"
+          }
+        ],
+        "Contact": {
+          "name": "Rina Ruiz",
+          "phone": "(813) 839-7300",
+          "fax": "(813) 839-7330",
+          "email": "Rina.Ruiz@franklinst.com"
+        },
+        "Underwriter": {
+          "name": "Daniel Ball"
+        },
+        "Transaction": {
+          "status": "CANCEL",
+          "date": "05/26/2026",
+          "time": "12:01 AM"
+        },
+        "Lines_of_Business": [
+          {
+            "line": "BOILER & MACHINERY",
+            "premium": "$"
+          },
+          {
+            "line": "BUSINESS AUTO",
+            "premium": "$"
+          },
+          {
+            "line": "BUSINESS OWNERS",
+            "premium": "$"
+          },
+          {
+            "line": "COMMERCIAL GENERAL LIABILITY",
+            "premium": "$"
+          },
+          {
+            "line": "COMMERCIAL INLAND MARINE",
+            "premium": "$"
+          },
+          {
+            "line": "COMMERCIAL PROPERTY",
+            "premium": "$"
+          },
+          {
+            "line": "CRIME",
+            "premium": "$"
+          },
+          {
+            "line": "CYBER AND PRIVACY",
+            "premium": "$"
+          },
+          {
+            "line": "FIDUCIARY LIABILITY",
+            "premium": "$"
+          },
+          {
+            "line": "GARAGE AND DEALERS",
+            "premium": "$"
+          },
+          {
+            "line": "LIQUOR LIABILITY",
+            "premium": "$"
+          },
+          {
+            "line": "MOTOR CARRIER",
+            "premium": "$"
+          },
+          {
+            "line": "TRUCKERS",
+            "premium": "$"
+          },
+          {
+            "line": "UMBRELLA",
+            "premium": "$"
+          }
+        ],
+        "Attachments": [
+          "ACCOUNTS RECEIVABLE / VALUABLE PAPERS",
+          "ADDITIONAL INTEREST SCHEDULE",
+          "ADDITIONAL PREMISES INFORMATION SCHEDULE",
+          "APARTMENT BUILDING SUPPLEMENT",
+          "CONDO ASSN BYLAWS (for D&O Coverage only)",
+          "CONTRACTORS SUPPLEMENT",
+          "COVERAGES SCHEDULE",
+          "DEALERS SECTION",
+          "DRIVER INFORMATION SCHEDULE",
+          "ELECTRONIC DATA PROCESSING SECTION",
+          "GLASS AND SIGN SECTION",
+          "HOTEL / MOTEL SUPPLEMENT",
+          "INSTALLATION / BUILDERS RISK SECTION",
+          "INTERNATIONAL LIABILITY EXPOSURE SUPPLEMENT",
+          "INTERNATIONAL PROPERTY EXPOSURE SUPPLEMENT",
+          "LOSS SUMMARY",
+          "OPEN CARGO SECTION",
+          "PREMIUM PAYMENT SUPPLEMENT",
+          "PROFESSIONAL LIABILITY SUPPLEMENT",
+          "RESTAURANT / TAVERN SUPPLEMENT",
+          "STATEMENT / SCHEDULE OF VALUES",
+          "STATE SUPPLEMENT (if applicable)",
+          "VACANT BUILDING SUPPLEMENT",
+          "VEHICLE SCHEDULE"
+        ],
+        "Policy_Information": {
+          "proposed_eff_date": "05/26/2026",
+          "proposed_exp_date": "05/26/2027",
+          "billing_plan": "AGENCY",
+          "payment_plan": "DIRECT",
+          "method_of_payment": "AGENCY",
+          "deposit": "$",
+          "minimum_premium": "$",
+          "policy_premium": "$ 0.00"
+        },
+        "Agency_Customer_ID": "00003285",
+        "NAICS": "844716625",
+        "FEIN_OR_SOC_SEC": "844716625"
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "00003285",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "Mark Zolty",
+          "address": "4561-4581 N.W. 10th Court, Plantation, FL 33313"
+        },
+        "Contact": {
+          "contact_type": "Contact",
+          "contact_name": "Mark Zolty",
+          "primary_phone": "",
+          "secondary_phone": "",
+          "primary_email": "mzolty@prismmf.com",
+          "secondary_email": ""
+        },
+        "Premises": [
+          {
+            "loc": 1,
+            "street": "4561-4581 N.W. 10th Court",
+            "city": "Plantation",
+            "state": "FL",
+            "county": "Broward",
+            "zip": "33313",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": "$",
+            "occupied_area": "SQ FT",
+            "open_to_public_area": "SQ FT",
+            "total_building_area": "SQ FT",
+            "any_area_leased_to_others": "Y / N"
+          },
+          {
+            "loc": 2,
+            "street": "4650-4660 N.W. 10th Place",
+            "city": "Plantation",
+            "state": "FL",
+            "county": "Broward",
+            "zip": "33313",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": "$",
+            "occupied_area": "SQ FT",
+            "open_to_public_area": "SQ FT",
+            "total_building_area": "SQ FT",
+            "any_area_leased_to_others": "Y / N"
+          },
+          {
+            "loc": 3,
+            "street": "4640 N.W. 10th Place",
+            "city": "Plantation",
+            "state": "FL",
+            "county": "Broward",
+            "zip": "33313",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": "$",
+            "occupied_area": "SQ FT",
+            "open_to_public_area": "SQ FT",
+            "total_building_area": "SQ FT",
+            "any_area_leased_to_others": "Y / N"
+          },
+          {
+            "loc": 4,
+            "street": "4681 N.W. 10th Court",
+            "city": "Plantation",
+            "state": "FL",
+            "county": "Broward",
+            "zip": "33313",
+            "city_limits": "INSIDE",
+            "interest": "OWNER",
+            "annual_revenues": "$",
+            "occupied_area": "SQ FT",
+            "open_to_public_area": "SQ FT",
+            "total_building_area": "SQ FT",
+            "any_area_leased_to_others": "Y / N"
+          }
+        ],
+        "Nature_of_Business": {
+          "date_business_started": "06/10/2020",
+          "description_of_primary_operations": "",
+          "retail_stores_or_service_operations_percent_of_total_sales": "%",
+          "installation_service_or_repair_work_percent": "%",
+          "off_premises_installation_service_or_repair_work_percent": "%",
+          "description_of_operations_of_other_named_insureds": ""
+        },
+        "Additional_Interest": {
+          "interest": "ADDITIONAL INSURED BREACH OF WARRANTY",
+          "name_and_address": "",
+          "rank": "",
+          "evidence": "",
+          "certificate": "",
+          "policy": "",
+          "send_bill": "",
+          "location": "",
+          "building": "",
+          "vehicle": "",
+          "boat": "",
+          "airport": "",
+          "aircraft": "",
+          "item_class": "",
+          "item": "",
+          "reference_loan_number": "",
+          "interest_end_date": "",
+          "lien_amount": "",
+          "phone": "",
+          "fax": "",
+          "reason_for_interest": ""
+        }
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "00003285",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "GeneralInformation": {
+          "1a": {
+            "IS_THE_APPLICANT_A_SUBSIDIARY_OF_ANOTHER_ENTITY": "N",
+            "PARENT_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "1b": {
+            "DOES_THE_APPLICANT_HAVE_ANY_SUBSIDIARIES": "N",
+            "SUBSIDIARY_COMPANY_NAME": "",
+            "RELATIONSHIP_DESCRIPTION": "",
+            "PERCENT_OWNED": ""
+          },
+          "2": {
+            "IS_A_FORMAL_SAFETY_PROGRAM_IN_OPERATION": {
+              "SAFETY_MANUAL": false,
+              "SAFETY_POSITION": false,
+              "MONTHLY_MEETINGS": false,
+              "OSHA": false
+            }
+          },
+          "3": {
+            "ANY_EXPOSURE_TO_FLAMMABLES_EXPLOSIVES_CHEMICALS": "N"
+          },
+          "4": {
+            "ANY_OTHER_INSURANCE_WITH_THIS_COMPANY": {
+              "LINE_OF_BUSINESS": "",
+              "POLICY_NUMBER": ""
+            }
+          },
+          "5": {
+            "ANY_POLICY_OR_COVERAGE_DECLINED_CANCELLING_OR_NON_RENEWED_DURING_THE_PRIOR_THREE_YEARS": "N",
+            "NON_PAYMENT": false,
+            "AGENT_NO_LONGER_REPRESENTS_CARRIER": false,
+            "NON_RENEWAL": false,
+            "UNDERWRITING": false,
+            "CONDITION_CORRECTED": ""
+          },
+          "6": {
+            "ANY_PAST_LOSSES_OR_CLAIMS_RELATING_TO_SEXUAL_ABUSE_OR_MOLESTATION_ALLEGATIONS_DISCRIMINATION_OR_NEGIGENT_HIRING": "N"
+          },
+          "7": {
+            "DURING_THE_LAST_FIVE_YEARS_HAS_ANY_APPLICANT_BEEN_INDICTED_FOR_OR_CONVICTED_OF_ANY_DEGREE_OF_THE_CRIME_OF_FRAUD_BRIEBERY_ARSON_OR_ANY_OTHER_ARSON_RELATED_CRIME_IN_CONNECTION_WITH_THIS_OR_ANY_OTHER_PROPERTY": "N"
+          },
+          "8": {
+            "ANY_UNCORRECTED_FIRE_AND_OR_SAFETY_CODE_VIOLATIONS": {
+              "OCCUR_DATE": "",
+              "EXPLANATION": "",
+              "RESOLUTION": "",
+              "RESOLVE_DATE": ""
+            }
+          },
+          "9": {
+            "HAS_APPLICANT_HAD_A_FORECLOSURE_REPOSSESSION_BANKRUPTCY_OR_FILED_FOR_BANKRUPTCY_DURING_THE_LAST_FIVE_YEARS": "N",
+            "OCCUR_DATE": "",
+            "EXPLANATION": "",
+            "RESOLUTION": "",
+            "RESOLVE_DATE": ""
+          },
+          "10": {
+            "HAS_APPLICANT_HAD_A_JUDGEMENT_OR_LIEN_DURING_THE_LAST_FIVE_YEARS": "N",
+            "OCCUR_DATE": "",
+            "EXPLANATION": "",
+            "RESOLUTION": "",
+            "RESOLVE_DATE": ""
+          },
+          "11": {
+            "HAS_BUSINESS_BEEN_PLACED_IN_A_TRUST": "N",
+            "NAME_OF_TRUST": ""
+          },
+          "12": {
+            "ANY_FOREIGN_OPERATIONS_FOREIGN_PRODUCTS_DISTRIBUTED_IN_USA_OR_US_PRODUCTS_SOLD_DISTRIBUTED_IN_FOREIGN_COUNTRIES": "N"
+          },
+          "13": {
+            "DOES_APPLICANT_HAVE_OTHER_BUSINESS_VENTURES_FOR_WHICH_COVERAGE_IS_NOT_REQUESTED": "N"
+          },
+          "14": {
+            "DOES_APPLICANT_OWN_LEASE_OPERATE_ANY_DRONES": "N",
+            "DESCRIBE_USE": ""
+          },
+          "15": {
+            "DOES_APPLICANT_HIRE_OTHERS_TO_OPERATE_DRONES": "N",
+            "DESCRIBE_USE": ""
+          }
+        },
+        "RemarksProcessingInstructions": {
+          "REMARKS": "",
+          "PROCESSING_INSTRUCTIONS": "ACORD 101, Additional Remarks Schedule, may be attached if more space is required"
+        },
+        "PriorCarrierInformation": {
+          "YEAR": "",
+          "CATEGORY": {
+            "GENERAL_LIABILITY": "",
+            "AUTOMOBILE": "",
+            "PROPERTY": "",
+            "OTHER": ""
+          },
+          "CARRIER": "",
+          "POLICY_NUMBER": "",
+          "PREMIUM": {
+            "GENERAL_LIABILITY": "$",
+            "AUTOMOBILE": "$",
+            "PROPERTY": "$",
+            "OTHER": "$"
+          },
+          "EFFECTIVE_DATE": "",
+          "EXPIRATION_DATE": ""
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "00003285",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "FilledTextFields": {
+          "Signature": "Evan Seacat P084907/RRUIZ",
+          "Producer's Signature": "Evan Seacat P084907/RRUIZ",
+          "Applicant's Signature": "",
+          "Date": "",
+          "National Producer Number": "",
+          "State Producer License No": "",
+          "Agency Customer ID": "00003285",
+          "ACORD 125 (2016/03)": "Page 4 of 4"
+        },
+        "Tables": [
+          {
+            "Title": "PRIOR CARRIER INFORMATION (continued)",
+            "Columns": [
+              "YEAR",
+              "CATEGORY",
+              "GENERAL LIABILITY",
+              "AUTOMOBILE",
+              "PROPERTY",
+              "OTHER:"
+            ],
+            "Rows": [
+              {
+                "YEAR": "",
+                "CATEGORY": "",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              },
+              {
+                "YEAR": "",
+                "CATEGORY": "",
+                "GENERAL LIABILITY": "",
+                "AUTOMOBILE": "",
+                "PROPERTY": "",
+                "OTHER": ""
+              }
+            ]
+          },
+          {
+            "Title": "LOSS HISTORY",
+            "Columns": [
+              "Check if none",
+              "Attach Loss Summary for Additional Loss Information",
+              "TOTAL LOSSES: $",
+              "DATE OF OCCURRENCE",
+              "LINE",
+              "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM",
+              "DATE OF CLAIM",
+              "AMOUNT PAID",
+              "AMOUNT RESERVED",
+              "SUBROGATION Y/N",
+              "CLAIM OPEN Y/N"
+            ],
+            "Rows": [
+              {
+                "Check if none": "",
+                "Attach Loss Summary for Additional Loss Information": "",
+                "TOTAL LOSSES: $": "",
+                "DATE OF OCCURRENCE": "",
+                "LINE": "",
+                "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM": "",
+                "DATE OF CLAIM": "",
+                "AMOUNT PAID": "",
+                "AMOUNT RESERVED": "",
+                "SUBROGATION Y/N": "",
+                "CLAIM OPEN Y/N": ""
+              }
+            ]
+          }
+        ],
+        "Coverages": [],
+        "Limits": [],
+        "Premiums": [],
+        "Classifications": [],
+        "PremisesBuildingInfo": []
+      }
+    },
+    {
+      "page": 5,
+      "data": {
+        "Header": {
+          "date": "05/26/2026",
+          "agency": "Franklin Street Insurance Services, LLC",
+          "carrier": "Kinsale Insurance Company",
+          "policy_number": "R/O 01003718160",
+          "named_insured": "Prism Broward, LP"
+        },
+        "PremisesInformation": [
+          {
+            "LOC #": 5,
+            "STREET": "4681 N.W. 10th Court",
+            "BLD #": "Clubhouse",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 6,
+            "STREET": "4641-4651-4661 N.W. 10th Court",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 7,
+            "STREET": "4580 N.W. 10th Place",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 8,
+            "STREET": "4540-4560 N.W. 10th Place",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 9,
+            "STREET": "4561-4581 N.W. 10th Court",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 10,
+            "STREET": "4541 N.W. 10th Court",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 11,
+            "STREET": "4400-4430 N.W. 10th Place",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 12,
+            "STREET": "4360 N.W. 10th Place",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 13,
+            "STREET": "4300-4330 N.W. 10th Place",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 14,
+            "STREET": "4301 N.W. 10th Court",
+            "BLD #": "",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "COUNTY": "Broward",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          }
+        ]
+      }
+    },
+    {
+      "page": 6,
+      "data": {
+        "Header": {
+          "date": "05/26/2026",
+          "agency": "Franklin Street Insurance Services, LLC",
+          "carrier": "Kinsale Insurance Company",
+          "policy_number": "R/O 01003718160",
+          "named_insured": "Prism Broward, LP"
+        },
+        "PremisesInformation": [
+          {
+            "LOC #": 15,
+            "STREET": "4331-4361 N.W. 10th Court",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 16,
+            "STREET": "4401-4431 N.W. 10th Court",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 17,
+            "STREET": "4461 N.W. 10th Court",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 18,
+            "STREET": "1751 N.W. 46th Avenue",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 19,
+            "STREET": "1761 N.W. 46th Avenue",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 20,
+            "STREET": "1861 N.W. 46th Avenue",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 21,
+            "STREET": "1851 N.W. 46th Avenue",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 22,
+            "STREET": "1861 N.W. 46th Avenue",
+            "CITY": "Plantation",
+            "STATE": "FL",
+            "ZIP": "33313",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "TENANT",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 23,
+            "STREET": "8650 NW 61st St",
+            "CITY": "Tamarac",
+            "STATE": "FL",
+            "ZIP": "33321",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          },
+          {
+            "LOC #": 24,
+            "STREET": "8650 NW 61st St",
+            "CITY": "Tamarac",
+            "STATE": "FL",
+            "ZIP": "33321",
+            "CITY LIMITS": "INSIDE",
+            "INTEREST": "OWNER",
+            "ANNUAL REVENUES": "$",
+            "OCCUPIED AREA": "SQ FT",
+            "OPEN TO PUBLIC AREA": "SQ FT",
+            "TOTAL BUILDING AREA": "SQ FT",
+            "ANY AREA LEASED TO OTHERS? Y / N": "Y / N"
+          }
+        ]
+      }
+    },
+    {
+      "page": 7,
+      "data": {
+        "Header": {
+          "date": "01/14/2026",
+          "agency": "Franklin Street Insurance Services, LLC",
+          "carrier": "Kinsale Insurance Company",
+          "policy_number": "R/O 01003718160",
+          "named_insured": "Prism Broward, LP"
+        },
+        "PolicyInformation": {
+          "transaction_type": {
+            "umbrella": true,
+            "excess": true,
+            "renewal": true,
+            "occurrence": false,
+            "voluntary": false,
+            "claims_made": false,
+            "retroactive_date": "05/26/2026",
+            "limit_of_liability": {
+              "ea_occ": 5000000,
+              "agg": 5000000
+            },
+            "retained_limit": 0,
+            "first_dollar_defense": false
+          }
+        },
+        "UnderlyingInsurance": {
+          "automobile_liability": {
+            "carrier_policy_number": "",
+            "policy_eff_date": "",
+            "policy_exp_date": "",
+            "limits": {
+              "csle_aacc": "",
+              "bi_ea_acc": "",
+              "bi_ea_per": "",
+              "pd_ea_acc": ""
+            }
+          },
+          "general_liability_policy_type": {
+            "carrier_policy_number": "Kinsale Insurance Company R/O 01003716780",
+            "policy_eff_date": "05/26/2026",
+            "policy_exp_date": "05/26/2027",
+            "limits": {
+              "each_occurrence": 1000000,
+              "general_aggr": 2000000,
+              "prod_comp_ops_aggregate": 2000000,
+              "personal_adv_injury": 1000000,
+              "damage_to_rented_premises": 100000,
+              "medical_expense": "Excluded"
+            },
+            "annual_renewal_premium": "PREM / OPS",
+            "rating_mod": "PRODUCTS"
+          },
+          "employers_liability": {
+            "carrier_policy_number": "",
+            "policy_eff_date": "",
+            "policy_exp_date": "",
+            "limits": {
+              "each_accident": "",
+              "disease": "",
+              "each_employee": "",
+              "policy_limit": ""
+            },
+            "annual_renewal_premium": "",
+            "rating_mod": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 8,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "UnderlyingInsuranceInformation": {
+          "defense_costs": {
+            "within_aggregate_limits": false,
+            "separate_limit": false,
+            "unlimited": false
+          },
+          "edition_date_of_iso_form": "",
+          "excluded_uninsured_self_insured": false,
+          "retroactive_date_of_current_underlying_policy": "",
+          "entry_date_into_uninterrupted_claims_made_coverage": "",
+          "tail_coverage_purchased": false,
+          "eff_date": ""
+        },
+        "CoveragesAndExposures": {
+          "coverages": [],
+          "exposures": []
+        },
+        "PreviousExperience": {
+          "liability_claims_exceeding_10000": [],
+          "occurrences_may_give_rise_to_claims": []
+        },
+        "CareCustodyControl": {
+          "location": "",
+          "property_type": "",
+          "value": "",
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "",
+          "sq_ft_of_bldg_occ": ""
+        },
+        "OccupancyDescriptionOfPersonalProperty": "",
+        "ApplicantNotes": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "Vehicles": {
+          "type": "",
+          "owned": "",
+          "non_owned": "",
+          "leased": "",
+          "property_hauled": "",
+          "radius_miles": {
+            "local": "",
+            "intermediate": "",
+            "long_distance": ""
+          }
+        }
+      }
+    },
+    {
+      "page": 9,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "Table": [
+          {
+            "Section": "ADVERTISERS LIABILITY",
+            "Fields": [
+              {
+                "Field": "MEDIA USED:",
+                "Value": ""
+              },
+              {
+                "Field": "ANNUAL COST: $",
+                "Value": ""
+              },
+              {
+                "Field": "ARE SERVICES OF AN ADVERTISING AGENCY USED?",
+                "Value": ""
+              },
+              {
+                "Field": "ANY COVERAGE PROVIDED UNDER AGENCY'S POLICY?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "AIRCRAFT LIABILITY",
+            "Fields": [
+              {
+                "Field": "DOES APPLICANT OWN / LEASE / OPERATE AIRCRAFT?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "AUTO LIABILITY",
+            "Fields": [
+              {
+                "Field": "ARE EXPLOSIVES, CAUSTICS, FLAMMABLES OR OTHER DANGEROUS CARGO HAULED?",
+                "Value": ""
+              },
+              {
+                "Field": "ARE PASSENGERS CARRIED FOR A FEE?",
+                "Value": ""
+              },
+              {
+                "Field": "ANY UNITS NOT INSURED BY UNDERLYING POLICIES?",
+                "Value": ""
+              },
+              {
+                "Field": "ARE ANY VEHICLES LEASED OR RENTED TO OTHERS?",
+                "Value": ""
+              },
+              {
+                "Field": "ARE HIRED AND NON-OWNED COVERAGES PROVIDED?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "CONTRACTORS LIABILITY",
+            "Fields": [
+              {
+                "Field": "IS BRIDGE, DAM, OR MARINE WORK PERFORMED?",
+                "Value": ""
+              },
+              {
+                "Field": "DESCRIBE TYPICAL JOBS PERFORMED (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+                "Value": ""
+              },
+              {
+                "Field": "DESCRIBE AGREEMENT (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+                "Value": ""
+              },
+              {
+                "Field": "DOES APPLICANT OWN, RENT, OR OTHERWISE USE CRANES?",
+                "Value": ""
+              },
+              {
+                "Field": "DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?",
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Section": "EMPLOYERS LIABILITY",
+            "Fields": [
+              {
+                "Field": "IS APPLICANT SELF-INSURED IN ANY STATE?",
+                "Value": ""
+              },
+              {
+                "Field": "SUBJECT TO:",
+                "Value": "JONES ACT",
+                "Checkbox": false
+              },
+              {
+                "Field": "FELA",
+                "Value": "",
+                "Checkbox": false
+              },
+              {
+                "Field": "STOP GAP",
+                "Value": "",
+                "Checkbox": false
+              },
+              {
+                "Field": "OTHER:",
+                "Value": "",
+                "Checkbox": false
+              }
+            ]
+          },
+          {
+            "Section": "INCIDENTAL MALPRACTICE LIABILITY",
+            "Fields": [
+              {
+                "Field": "IS A HOSPITAL OR FIRST AID FACILITY MAINTAINED?",
+                "Value": ""
+              },
+              {
+                "Field": "ARE COVERAGES PROVIDED FOR DOCTORS / NURSES?",
+                "Value": ""
+              },
+              {
+                "Field": "INDICATE # OF DOCTORS: NURSES: BEDS:",
+                "Value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 10,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "FilledTextFields": {},
+        "CheckedBoxes": {},
+        "Tables": [
+          {
+            "TableTitle": "POLLUTION LIABILITY",
+            "Rows": []
+          },
+          {
+            "TableTitle": "PRODUCT LIABILITY",
+            "Rows": []
+          },
+          {
+            "TableTitle": "PROTECTIVE LIABILITY",
+            "Rows": []
+          },
+          {
+            "TableTitle": "WATERCRAFT LIABILITY",
+            "Rows": []
+          },
+          {
+            "TableTitle": "APARTMENTS / CONDOMINIUMS / HOTELS / MOTELS",
+            "Rows": []
+          }
+        ],
+        "Coverages": [],
+        "Limits": [],
+        "Premiums": [],
+        "Classifications": [],
+        "PremisesBuildingInfo": []
+      }
+    },
+    {
+      "page": 11,
+      "data": {
+        "error": "No filled data found. The provided image is a page of fraud statements applicable in various U.S. states and contains no application-specific fields such as date, agency, carrier, policy number, named insured, address, coverages, limits, premiums, classifications, or premises/building information."
+      }
+    },
+    {
+      "page": 12,
+      "data": {
+        "Header": {
+          "date": "",
+          "agency": "00003285",
+          "carrier": "",
+          "policy_number": "",
+          "named_insured": "",
+          "address": ""
+        },
+        "Coverages": {
+          "Uninsured Motorists (UM)": {
+            "coverage": "",
+            "limits": ""
+          },
+          "Underinsured Motorists (UIM)": {
+            "coverage": "",
+            "limits": ""
+          },
+          "Medical Payments": {
+            "coverage": "",
+            "limits": ""
+          }
+        },
+        "Producer": {
+          "signature": "Evan Seacat",
+          "name": "Evan Seacat",
+          "license_no": "P084907/RRUIZ",
+          "national_producer_number": ""
+        },
+        "Applicant": {
+          "signature": "",
+          "date": ""
+        },
+        "State": "Louisiana, Montana, New Hampshire, Vermont",
+        "Applicable_Only_In_Louisiana": {
+          "acknowledgement": "I ACKNOWLEDGE THAT UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION OF SELECTING UM LIMITS EQUAL TO MY LIABILITY LIMITS, UM LIMITS LOWER THAN MY LIABILITY LIMITS, OR TO REJECT UM COVERAGE ENTIRELY.",
+          "selection": "1. I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+          "initials": ""
+        },
+        "Applicable_Only_In_Montana": {
+          "acknowledgement": "I ACKNOWLEDGE I HAVE BEEN OFFERED UNINSURED MOTORISTS (UM) COVERAGE AND UNDERINSURED MOTORISTS (UIM) COVERAGE. I HAVE SELECTED THE LIMITS INDICATED IN THIS APPLICATION. IF NO LIMITS ARE SHOWN, I HAVE REJECTED THESE COVERAGES.",
+          "selection": "I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+          "initials": ""
+        },
+        "Applicable_Only_In_New_Hampshire": {
+          "acknowledgement": "I ACKNOWLEDGE THAT UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION OF SELECTING UM LIMITS EQUAL TO MY LIABILITY LIMITS OR TO REJECT UM COVERAGE ENTIRELY.",
+          "selection": "1. I SELECT UM LIMITS INDICATED IN THIS APPLICATION.",
+          "initials": ""
+        },
+        "Applicable_Only_In_Vermont": {
+          "acknowledgement": "I ACKNOWLEDGE THAT I HAVE BEEN OFFERED UM COVERAGE EQUAL TO MY LIABILITY LIMITS. I HAVE SELECTED THE LIMITS INDICATED IN THIS APPLICATION.",
+          "selection": "",
+          "initials": ""
+        },
+        "Important": "THE STATEMENTS (ANSWERS) GIVEN ABOVE ARE TRUE AND ACCURATE. THE APPLICANT HAS NOT WILLFULLY CONCEALED OR MISREPRESENTED ANY MATERIAL FACT OR CIRCUMSTANCE CONCERNING THIS APPLICATION. THIS APPLICATION DOES NOT CONSTITUTE A BINDER."
+      }
+    }
+  ]
+}

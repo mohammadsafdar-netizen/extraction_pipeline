@@ -1,0 +1,96 @@
+{
+  "source_file": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "policy#": "RN-7-0500493",
+          "insured": "Prism Broward, LP",
+          "carrier": "Richmond National Insurance Company",
+          "agent": "",
+          "dates": {
+            "as_of_date": "03/19/2026",
+            "policy_term": "05/26/2023 - 05/26/2024"
+          }
+        },
+        "Claims": [
+          {
+            "claim#": "RN-9-0000504",
+            "date_of_loss": "06/26/2023",
+            "type": "Premises/Slip /Trip/fall",
+            "paid": 41578.97,
+            "reserved": 125905.45,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "Open",
+            "date_closed": ""
+          },
+          {
+            "claim#": "RN-9-0001039",
+            "date_of_loss": "05/21/2024",
+            "type": "Premises/injury by object",
+            "paid": 50000.0,
+            "reserved": 0.0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "Closed",
+            "date_closed": "06/10/2024"
+          }
+        ],
+        "Summary Totals": {
+          "total_paid": 91578.97,
+          "total_reserved": 125905.45,
+          "total_incurred": 216484.42
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "policy#": "RN-7-0500493-01",
+          "insured": "Prism Broward, LP",
+          "carrier": "Richmond National Insurance Company",
+          "agent": "",
+          "dates": {
+            "as_of_date": "03/19/2026",
+            "policy_term": "05/26/2024 - 05/26/2025"
+          }
+        },
+        "Claims": [
+          {
+            "claim#": "RN-9-0001655",
+            "date_of_loss": "10/09/2024",
+            "type": "Premises/injury by object",
+            "paid": 41585.56,
+            "reserved": 0.0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "Closed",
+            "date_closed": "01/07/2025"
+          },
+          {
+            "claim#": "RN-9-0002360",
+            "date_of_loss": "03/13/2025",
+            "type": "Bodily Injury",
+            "paid": 6959.0,
+            "reserved": 50041.0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "Open",
+            "date_closed": ""
+          }
+        ],
+        "Summary Totals": {
+          "total_paid": 48544.56,
+          "total_reserved": 50041.0,
+          "total_incurred": 102000.0
+        }
+      }
+    }
+  ]
+}

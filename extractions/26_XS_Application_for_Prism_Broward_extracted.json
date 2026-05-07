@@ -1,0 +1,3429 @@
+{
+  "source_file": "26 XS Application for Prism Broward.pdf",
+  "total_pages": 12,
+  "method": "pdfplumber",
+  "pages": [
+    {
+      "page": 1,
+      "text": "COMMERCIAL INSURANCE APPLICATION\nDATE (MM/DD/YYYY)\nAPPLICANT INFORMATION SECTION 01/14/2026\nAGENCY CARRIER NAIC CODE\nFranklin Street Insurance Services, LLC Kinsale Insurance Company 38920\n1311 N Westshore Blvd COMPANY POLICY OR PROGRAM NAME PROGRAM CODE\nSuite 200\nTampa FL 33607 POLICY NUMBER\nR/O 01003718160\nCONTACT Rina Ruiz UNDERWRITER UNDERWRITER OFFICE\nNAME:\nPHONE (813) 839-7300 Daniel Ball\n(A/C, No, Ext):\nF (A A / X C, No): (813) 839-7330 QUOTE ISSUE POLICY RENEW\nA E- D M D A R IL ESS: Rina.Ruiz@franklinst.com S TR TA A T N U S S A O CT F ION BOUND (Give Date and/or Attach Copy):\nCODE: SUBCODE: CHANGE DATE TIME AM\nAGENCY CUSTOMER ID: 00003285 CANCEL 05/26/2026 12:01 PM\nLINES OF BUSINESS\nINDICATE LINES OF BUSINESS PREMIUM PREMIUM PREMIUM\nBOILER & MACHINERY $ CYBER AND PRIVACY $ YACHT $\nBUSINESS AUTO $ FIDUCIARY LIABILITY $ $\nBUSINESS OWNERS $ GARAGE AND DEALERS $ $\nCOMMERCIAL GENERAL LIABILITY $ LIQUOR LIABILITY $ $\nCOMMERCIAL INLAND MARINE $ MOTOR CARRIER $ $\nCOMMERCIAL PROPERTY $ TRUCKERS $ $\nCRIME $ UMBRELLA $ $\nATTACHMENTS\nACCOUNTS RECEIVABLE / VALUABLE PAPERS GLASS AND SIGN SECTION STATEMENT / SCHEDULE OF VALUES\nADDITIONAL INTEREST SCHEDULE HOTEL / MOTEL SUPPLEMENT STATE SUPPLEMENT (If applicable)\nADDITIONAL PREMISES INFORMATION SCHEDULE INSTALLATION / BUILDERS RISK SECTION VACANT BUILDING SUPPLEMENT\nAPARTMENT BUILDING SUPPLEMENT INTERNATIONAL LIABILITY EXPOSURE SUPPLEMENT VEHICLE SCHEDULE\nCONDO ASSN BYLAWS (for D&O Coverage only) INTERNATIONAL PROPERTY EXPOSURE SUPPLEMENT\nCONTRACTORS SUPPLEMENT LOSS SUMMARY\nCOVERAGES SCHEDULE OPEN CARGO SECTION\nDEALERS SECTION PREMIUM PAYMENT SUPPLEMENT\nDRIVER INFORMATION SCHEDULE PROFESSIONAL LIABILITY SUPPLEMENT\nELECTRONIC DATA PROCESSING SECTION RESTAURANT / TAVERN SUPPLEMENT\nPOLICY INFORMATION\nPROPOSED EFF DATE PROPOSED EXP DATE BILLING PLAN PAYMENT PLAN METHOD OF PAYMENT AUDIT DEPOSIT P M R IN E I M M I U U M M POLICY PREMIUM\n05/26/2026 05/26/2027 $ $ $ 0.00\nDIRECT AGENCY\nAPPLICANT INFORMATION\nNAME (First Named Insured) AND MAILING ADDRESS (including ZIP+4) GL CODE SIC NAICS FEIN OR SOC SEC #\nPrism Broward, LP 844716625\n333 SE 2nd Avenue BUSINESS PHONE #:\nSte 4400 WEBSITE ADDRESS\nMiami FL 33131\nCORPORATION JOINT VENTURE NOT FOR PROFIT ORG SUBCHAPTER \"S\" CORPORATION\nNO. OF MEMBERS\nINDIVIDUAL LLC AND MANAGERS: PARTNERSHIP TRUST\nNAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4) GL CODE SIC NAICS FEIN OR SOC SEC #\nPrism Tamarac, LP\nBUSINESS PHONE #:\nWEBSITE ADDRESS\nCORPORATION JOINT VENTURE NOT FOR PROFIT ORG SUBCHAPTER \"S\" CORPORATION\nNO. OF MEMBERS\nINDIVIDUAL LLC AND MANAGERS: PARTNERSHIP TRUST\nNAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4) GL CODE SIC NAICS FEIN OR SOC SEC #\nBUSINESS PHONE #:\nWEBSITE ADDRESS\nCORPORATION JOINT VENTURE NOT FOR PROFIT ORG SUBCHAPTER \"S\" CORPORATION\nNO. OF MEMBERS\nINDIVIDUAL LLC AND MANAGERS: PARTNERSHIP TRUST\nACORD 125 (2016/03) Page 1 of 4 \u00a9 1993-2015 ACORD CORPORATION. All rights reserved.\nThe ACORD name and logo are registered marks of ACORD",
+      "tables": [
+        [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "DATE (MM/DD/YYYY)\n01/14/2026",
+            "",
+            ""
+          ],
+          [
+            "AGENCY\nFranklin Street Insurance Services, LLC\n1311 N Westshore Blvd\nSuite 200\nTampa FL 33607",
+            "",
+            "CARRIER\nKinsale Insurance Company",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "NAIC CODE\n38920"
+          ],
+          [
+            "",
+            "",
+            "COMPANY POLICY OR PROGRAM NAME",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PROGRAM CODE",
+            ""
+          ],
+          [
+            "",
+            "",
+            "POLICY NUMBER\nR/O 01003718160",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CONTACT Rina Ruiz\nNAME:",
+            "",
+            "UNDERWRITER\nDaniel Ball",
+            "",
+            "",
+            "",
+            "UNDERWRITER OFFICE",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PHONE (813) 839-7300\n(A/C, No, Ext):",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "FAX (813) 839-7330\n(A/C, No):",
+            "",
+            "STATUS OF\nTRANSACTION",
+            "",
+            "",
+            "QUOTE ISSUE POLICY RENEW\nBOUND (Give Date and/or Attach Copy):\nCHANGE DATE TIME AM\nCANCEL 05/26/2026 12:01 PM",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "E-MAIL Rina.Ruiz@franklinst.com\nADDRESS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CODE:",
+            "SUBCODE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "00003285\nAGENCY CUSTOMER ID:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "INDICATE LINES OF BUSINESS",
+            "",
+            "PREMIUM",
+            "",
+            "",
+            "",
+            "PREMIUM",
+            "",
+            "",
+            "PREMIUM"
+          ],
+          [
+            "",
+            "BOILER & MACHINERY",
+            "$",
+            "",
+            "",
+            "CYBER AND PRIVACY",
+            "$",
+            "",
+            "YACHT",
+            "$"
+          ],
+          [
+            "",
+            "BUSINESS AUTO",
+            "$",
+            "",
+            "",
+            "FIDUCIARY LIABILITY",
+            "$",
+            "",
+            "",
+            "$"
+          ],
+          [
+            "",
+            "BUSINESS OWNERS",
+            "$",
+            "",
+            "",
+            "GARAGE AND DEALERS",
+            "$",
+            "",
+            "",
+            "$"
+          ],
+          [
+            "",
+            "COMMERCIAL GENERAL LIABILITY",
+            "$",
+            "",
+            "",
+            "LIQUOR LIABILITY",
+            "$",
+            "",
+            "",
+            "$"
+          ],
+          [
+            "",
+            "COMMERCIAL INLAND MARINE",
+            "$",
+            "",
+            "",
+            "MOTOR CARRIER",
+            "$",
+            "",
+            "",
+            "$"
+          ],
+          [
+            "",
+            "COMMERCIAL PROPERTY",
+            "$",
+            "",
+            "",
+            "TRUCKERS",
+            "$",
+            "",
+            "",
+            "$"
+          ],
+          [
+            "",
+            "CRIME",
+            "$",
+            "",
+            "",
+            "UMBRELLA",
+            "$",
+            "",
+            "",
+            "$"
+          ]
+        ],
+        [
+          [
+            "",
+            "ACCOUNTS RECEIVABLE / VALUABLE PAPERS",
+            "",
+            "GLASS AND SIGN SECTION",
+            "",
+            "STATEMENT / SCHEDULE OF VALUES"
+          ],
+          [
+            "",
+            "ADDITIONAL INTEREST SCHEDULE",
+            "",
+            "HOTEL / MOTEL SUPPLEMENT",
+            "",
+            "STATE SUPPLEMENT (If applicable)"
+          ],
+          [
+            "",
+            "ADDITIONAL PREMISES INFORMATION SCHEDULE",
+            "",
+            "INSTALLATION / BUILDERS RISK SECTION",
+            "",
+            "VACANT BUILDING SUPPLEMENT"
+          ],
+          [
+            "",
+            "APARTMENT BUILDING SUPPLEMENT",
+            "",
+            "INTERNATIONAL LIABILITY EXPOSURE SUPPLEMENT",
+            "",
+            "VEHICLE SCHEDULE"
+          ],
+          [
+            "",
+            "CONDO ASSN BYLAWS (for D&O Coverage only)",
+            "",
+            "INTERNATIONAL PROPERTY EXPOSURE SUPPLEMENT",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CONTRACTORS SUPPLEMENT",
+            "",
+            "LOSS SUMMARY",
+            "",
+            ""
+          ],
+          [
+            "",
+            "COVERAGES SCHEDULE",
+            "",
+            "OPEN CARGO SECTION",
+            "",
+            ""
+          ],
+          [
+            "",
+            "DEALERS SECTION",
+            "",
+            "PREMIUM PAYMENT SUPPLEMENT",
+            "",
+            ""
+          ],
+          [
+            "",
+            "DRIVER INFORMATION SCHEDULE",
+            "",
+            "PROFESSIONAL LIABILITY SUPPLEMENT",
+            "",
+            ""
+          ],
+          [
+            "",
+            "ELECTRONIC DATA PROCESSING SECTION",
+            "",
+            "RESTAURANT / TAVERN SUPPLEMENT",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "PROPOSED EFF DATE\n05/26/2026",
+            "PROPOSED EXP DATE\n05/26/2027",
+            "BILLING PLAN\nDIRECT AGENCY",
+            "PAYMENT PLAN",
+            "METHOD OF PAYMENT",
+            "AUDIT",
+            "DEPOSIT\n$",
+            "MINIMUM\nPREMIUM\n$",
+            "POLICY PREMIUM\n$ 0.00"
+          ]
+        ],
+        [
+          [
+            "NAME (First Named Insured) AND MAILING ADDRESS (including ZIP+4)\nPrism Broward, LP\n333 SE 2nd Avenue\nSte 4400\nMiami FL 33131",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "GL CODE",
+            "",
+            "",
+            "SIC",
+            "NAICS",
+            "FEIN OR SOC SEC #\n844716625"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "BUSINESS PHONE #:",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "WEBSITE ADDRESS",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CORPORATION\nINDIVIDUAL",
+            "",
+            "JOINT VENTURE\nNO. OF MEMBERS\nLLC AND MANAGERS:",
+            "",
+            "",
+            "NOT FOR PROFIT ORG\nPARTNERSHIP",
+            "",
+            "",
+            "SUBCHAPTER \"S\" CORPORATION\nTRUST",
+            "",
+            "",
+            ""
+          ],
+          [
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)\nPrism Tamarac, LP",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "GL CODE",
+            "",
+            "",
+            "SIC",
+            "NAICS",
+            "FEIN OR SOC SEC #"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "BUSINESS PHONE #:",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "WEBSITE ADDRESS",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CORPORATION\nINDIVIDUAL",
+            "",
+            "JOINT VENTURE\nNO. OF MEMBERS\nLLC AND MANAGERS:",
+            "",
+            "",
+            "NOT FOR PROFIT ORG\nPARTNERSHIP",
+            "",
+            "",
+            "SUBCHAPTER \"S\" CORPORATION\nTRUST",
+            "",
+            "",
+            ""
+          ],
+          [
+            "NAME (Other Named Insured) AND MAILING ADDRESS (including ZIP+4)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "GL CODE",
+            "",
+            "",
+            "SIC",
+            "NAICS",
+            "FEIN OR SOC SEC #"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "BUSINESS PHONE #:",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "WEBSITE ADDRESS",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CORPORATION\nINDIVIDUAL",
+            "",
+            "JOINT VENTURE\nNO. OF MEMBERS\nLLC AND MANAGERS:",
+            "",
+            "",
+            "NOT FOR PROFIT ORG\nPARTNERSHIP",
+            "",
+            "",
+            "SUBCHAPTER \"S\" CORPORATION\nTRUST",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "AGENCY CUSTOMER ID: 00003285\nCONTACT INFORMATION\nContact Inspection\nCONTACT TYPE: CONTACT TYPE:\nMark Zolty Mark Zolty\nCONTACT NAME: CONTACT NAME:\nP P H R O IM N A E R # Y HOME BUS CELL P S H EC O O N N E D # ARY HOME BUS CELL P P H R O IM N A E R # Y HOME BUS CELL P S H EC O O N N E D # ARY HOME BUS CELL\nmzolty@prismmf.com mzolty@prismmf.com\nPRIMARY E-MAIL ADDRESS: PRIMARY E-MAIL ADDRESS:\nSECONDARY E-MAIL ADDRESS: SECONDARY E-MAIL ADDRESS:\nPREMISES INFORMATION (Attach ACORD 823 for Additional Premises)\nLOC # STREET 4561-4581 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n1 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N\nLOC # STREET 4650-4660 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n2 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N\nLOC # STREET 4640 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n3 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N\nLOC # STREET 4681 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n4 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N\nNATURE OF BUSINESS\nDATE BUSINESS\nAPARTMENTS CONTRACTOR MANUFACTURING RESTAURANT SERVICE STARTED (MM/DD/YYYY)\n06/10/2020\nCONDOMINIUMS INSTITUTIONAL OFFICE RETAIL WHOLESALE\nDESCRIPTION OF PRIMARY OPERATIONS\nINSTALLATION, SERVICE OR REPAIR WORK OFF PREMISES INSTALLATION, SERVICE OR REPAIR WORK\nRETAIL STORES OR SERVICE OPERATIONS % OF TOTAL SALES: % %\nDESCRIPTION OF OPERATIONS OF OTHER NAMED INSUREDS\nADDITIONAL INTEREST (Not all fields apply to all scenarios - provide only the necessary data) Attach ACORD 45 for more Additional Interests\nINTEREST NAME AND ADDRESS RANK: EVIDENCE: CERTIFICATE POLICY SEND BILL INTEREST IN ITEM NUMBER\nADDITIONAL LIENHOLDER LOCATION: BUILDING:\nINSURED\nBREACH OF LOSS PAYEE VEHICLE: BOAT:\nWARRANTY\nCO-OWNER MORTGAGEE AIRPORT: AIRCRAFT:\nA EM S P L L E O S Y S E O E R OWNER C IT L E A M SS: ITEM:\nLEASEBACK REGISTRANT ITEM DESCRIPTION\nOWNER\nLENDER'S TRUSTEE REFERENCE / LOAN #: INTEREST END DATE:\nLOSS PAYABLE\nLIEN AMOUNT: PHONE (A/C, No, Ext): FAX (A/C, No):\nREASON FOR INTEREST: E-MAIL ADDRESS:\nACORD 125 (2016/03) Page 2 of 4",
+      "tables": [
+        [
+          [
+            "Contact\nCONTACT TYPE:",
+            "",
+            "Inspection\nCONTACT TYPE:",
+            ""
+          ],
+          [
+            "Mark Zolty\nCONTACT NAME:\nPRIMARY SECONDARY",
+            "",
+            "Mark Zolty\nCONTACT NAME:\nPRIMARY SECONDARY",
+            ""
+          ],
+          [
+            "PHONE # HOME BUS CELL",
+            "PHONE # HOME BUS CELL",
+            "PHONE # HOME BUS CELL",
+            "PHONE # HOME BUS CELL"
+          ],
+          [
+            "mzolty@prismmf.com\nPRIMARY E-MAIL ADDRESS:",
+            "",
+            "mzolty@prismmf.com\nPRIMARY E-MAIL ADDRESS:",
+            ""
+          ],
+          [
+            "SECONDARY E-MAIL ADDRESS:",
+            "",
+            "SECONDARY E-MAIL ADDRESS:",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC #\n1",
+            "STREET 4561-4581 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N"
+          ],
+          [
+            "LOC #\n2",
+            "STREET 4650-4660 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N"
+          ],
+          [
+            "LOC #\n3",
+            "STREET 4640 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N"
+          ],
+          [
+            "LOC #\n4",
+            "STREET 4681 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N"
+          ]
+        ],
+        [
+          [
+            "",
+            "APARTMENTS\nCONDOMINIUMS",
+            "",
+            "CONTRACTOR\nINSTITUTIONAL",
+            "",
+            "MANUFACTURING\nOFFICE",
+            "",
+            "",
+            "RESTAURANT\nRETAIL",
+            "",
+            "SERVICE\nWHOLESALE",
+            "",
+            "DATE BUSINESS\nSTARTED (MM/DD/YYYY)\n06/10/2020"
+          ],
+          [
+            "DESCRIPTION OF PRIMARY OPERATIONS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "RETAIL STORES OR SERVICE OPERATIONS % OF TOTAL SALES:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "INSTALLATION, SERVICE OR REPAIR WORK\n%",
+            "",
+            "",
+            "",
+            "",
+            "OFF PREMISES INSTALLATION, SERVICE OR REPAIR WORK\n%",
+            ""
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS OF OTHER NAMED INSUREDS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "INTEREST\nADDITIONAL LIENHOLDER\nINSURED\nBREACH OF LOSS PAYEE\nWARRANTY\nCO-OWNER MORTGAGEE\nEMPLOYEE OWNER\nAS LESSOR\nLEASEBACK REGISTRANT\nOWNER\nLENDER'S TRUSTEE\nLOSS PAYABLE",
+            "NAME AND ADDRESS RANK: EVIDENCE: CERTIFICATE POLICY SEND BILL",
+            "EVIDENCE:",
+            "",
+            "CERTIFICATE",
+            "",
+            "POLICY",
+            "",
+            "SEND BILL",
+            "INTEREST IN ITEM NUMBER",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "LOCATION:",
+            "BUILDING:"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "VEHICLE:",
+            "BOAT:"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "AIRPORT:",
+            "AIRCRAFT:"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ITEM\nCLASS:",
+            "ITEM:"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ITEM DESCRIPTION",
+            ""
+          ],
+          [
+            "",
+            "REFERENCE / LOAN #:",
+            "",
+            "INTEREST END DATE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "LIEN AMOUNT:",
+            "",
+            "PHONE (A/C, No, Ext):",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "FAX (A/C, No):",
+            ""
+          ],
+          [
+            "REASON FOR INTEREST:",
+            "",
+            "",
+            "E-MAIL ADDRESS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "AGENCY CUSTOMER ID: 00003285\nGENERAL INFORMATION\nEXPLAIN ALL \"YES\" RESPONSES Y / N\n1a. IS THE APPLICANT A SUBSIDIARY OF ANOTHER ENTITY ? N\nPARENT COMPANY NAME RELATIONSHIP DESCRIPTION % OWNED\n1b. DOES THE APPLICANT HAVE ANY SUBSIDIARIES? N\nSUBSIDIARY COMPANY NAME RELATIONSHIP DESCRIPTION % OWNED\n2. IS A FORMAL SAFETY PROGRAM IN OPERATION? N\nSAFETY MANUAL SAFETY POSITION MONTHLY MEETINGS OSHA\n3. ANY EXPOSURE TO FLAMMABLES, EXPLOSIVES, CHEMICALS? N\n4. ANY OTHER INSURANCE WITH THIS COMPANY? (List policy numbers) N\nLINE OF BUSINESS POLICY NUMBER LINE OF BUSINESS POLICY NUMBER\n5. ANY POLICY OR COVERAGE DECLINED, CANCELLED OR NON-RENEWED DURING THE PRIOR THREE (3) YEARS FOR ANY PREMISES OR N\nOPERATIONS? (Missouri Applicants - Do not answer this question)\nNON-PAYMENT AGENT NO LONGER REPRESENTS CARRIER\nNON-RENEWAL UNDERWRITING CONDITION CORRECTED (Describe):\n6. ANY PAST LOSSES OR CLAIMS RELATING TO SEXUAL ABUSE OR MOLESTATION ALLEGATIONS, DISCRIMINATION OR NEGLIGENT HIRING? N\n7. DURING THE LAST FIVE YEARS (TEN IN RI), HAS ANY APPLICANT BEEN INDICTED FOR OR CONVICTED OF ANY DEGREE OF THE CRIME OF FRAUD,\nBRIBERY, ARSON OR ANY OTHER ARSON-RELATED CRIME IN CONNECTION WITH THIS OR ANY OTHER PROPERTY? N\n(In RI, this question must be answered by any applicant for property insurance. Failure to disclose the existence of an arson conviction is a misdemeanor punishable\nby a sentence of up to one year of imprisonment).\n8. ANY UNCORRECTED FIRE AND/OR SAFETY CODE VIOLATIONS? N\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE\n9. HAS APPLICANT HAD A FORECLOSURE, REPOSSESSION, BANKRUPTCY OR FILED FOR BANKRUPTCY DURING THE LAST FIVE (5) YEARS? N\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE\n10. HAS APPLICANT HAD A JUDGEMENT OR LIEN DURING THE LAST FIVE (5) YEARS? N\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE\n11. HAS BUSINESS BEEN PLACED IN A TRUST? NAME OF TRUST: N\n12. ANY FOREIGN OPERATIONS, FOREIGN PRODUCTS DISTRIBUTED IN USA, OR US PRODUCTS SOLD / DISTRIBUTED IN FOREIGN COUNTRIES? N\n(If \"YES\", attach ACORD 815 for Liability Exposure and/or ACORD 816 for Property Exposure)\n13. DOES APPLICANT HAVE OTHER BUSINESS VENTURES FOR WHICH COVERAGE IS NOT REQUESTED? N\n14. DOES APPLICANT OWN / LEASE / OPERATE ANY DRONES? (If \"YES\", describe use) N\n15. DOES APPLICANT HIRE OTHERS TO OPERATE DRONES? (If \"YES\", describe use) N\nREMARKS / PROCESSING INSTRUCTIONS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)\nPRIOR CARRIER INFORMATION\nYEAR CATEGORY GENERAL LIABILITY AUTOMOBILE PROPERTY OTHER:\nCARRIER\nPOLICY NUMBER\nPREMIUM $ $ $ $\nEFFECTIVE DATE\nEXPIRATION DATE\nACORD 125 (2016/03) Page 3 of 4",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES",
+            "Y / N"
+          ],
+          [
+            "1a. IS THE APPLICANT A SUBSIDIARY OF ANOTHER ENTITY ?\nPARENT COMPANY NAME RELATIONSHIP DESCRIPTION % OWNED",
+            "N"
+          ],
+          [
+            "1b. DOES THE APPLICANT HAVE ANY SUBSIDIARIES?\nSUBSIDIARY COMPANY NAME RELATIONSHIP DESCRIPTION % OWNED",
+            "N"
+          ],
+          [
+            "2. IS A FORMAL SAFETY PROGRAM IN OPERATION?\nSAFETY MANUAL SAFETY POSITION MONTHLY MEETINGS OSHA",
+            "N"
+          ],
+          [
+            "3. ANY EXPOSURE TO FLAMMABLES, EXPLOSIVES, CHEMICALS?",
+            "N"
+          ],
+          [
+            "4. ANY OTHER INSURANCE WITH THIS COMPANY? (List policy numbers)\nLINE OF BUSINESS POLICY NUMBER LINE OF BUSINESS POLICY NUMBER",
+            "N"
+          ],
+          [
+            "5. ANY POLICY OR COVERAGE DECLINED, CANCELLED OR NON-RENEWED DURING THE PRIOR THREE (3) YEARS FOR ANY PREMISES OR\nOPERATIONS? (Missouri Applicants - Do not answer this question)\nNON-PAYMENT AGENT NO LONGER REPRESENTS CARRIER\nNON-RENEWAL UNDERWRITING CONDITION CORRECTED (Describe):",
+            "N"
+          ],
+          [
+            "6. ANY PAST LOSSES OR CLAIMS RELATING TO SEXUAL ABUSE OR MOLESTATION ALLEGATIONS, DISCRIMINATION OR NEGLIGENT HIRING?",
+            "N"
+          ],
+          [
+            "7. DURING THE LAST FIVE YEARS (TEN IN RI), HAS ANY APPLICANT BEEN INDICTED FOR OR CONVICTED OF ANY DEGREE OF THE CRIME OF FRAUD,\nBRIBERY, ARSON OR ANY OTHER ARSON-RELATED CRIME IN CONNECTION WITH THIS OR ANY OTHER PROPERTY?\n(In RI, this question must be answered by any applicant for property insurance. Failure to disclose the existence of an arson conviction is a misdemeanor punishable\nby a sentence of up to one year of imprisonment).",
+            "N"
+          ],
+          [
+            "8. ANY UNCORRECTED FIRE AND/OR SAFETY CODE VIOLATIONS?\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE",
+            "N"
+          ],
+          [
+            "9. HAS APPLICANT HAD A FORECLOSURE, REPOSSESSION, BANKRUPTCY OR FILED FOR BANKRUPTCY DURING THE LAST FIVE (5) YEARS?\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE",
+            "N"
+          ],
+          [
+            "10. HAS APPLICANT HAD A JUDGEMENT OR LIEN DURING THE LAST FIVE (5) YEARS?\nOCCUR DATE EXPLANATION RESOLUTION RESOLVE DATE",
+            "N"
+          ],
+          [
+            "11. HAS BUSINESS BEEN PLACED IN A TRUST? NAME OF TRUST:",
+            "N"
+          ],
+          [
+            "12. ANY FOREIGN OPERATIONS, FOREIGN PRODUCTS DISTRIBUTED IN USA, OR US PRODUCTS SOLD / DISTRIBUTED IN FOREIGN COUNTRIES?\n(If \"YES\", attach ACORD 815 for Liability Exposure and/or ACORD 816 for Property Exposure)",
+            "N"
+          ],
+          [
+            "13. DOES APPLICANT HAVE OTHER BUSINESS VENTURES FOR WHICH COVERAGE IS NOT REQUESTED?",
+            "N"
+          ],
+          [
+            "14. DOES APPLICANT OWN / LEASE / OPERATE ANY DRONES? (If \"YES\", describe use)",
+            "N"
+          ],
+          [
+            "15. DOES APPLICANT HIRE OTHERS TO OPERATE DRONES? (If \"YES\", describe use)",
+            "N"
+          ]
+        ],
+        [
+          [
+            "PARENT COMPANY NAME",
+            "RELATIONSHIP DESCRIPTION",
+            "% OWNED"
+          ]
+        ],
+        [
+          [
+            "SUBSIDIARY COMPANY NAME",
+            "RELATIONSHIP DESCRIPTION",
+            "% OWNED"
+          ]
+        ],
+        [
+          [
+            "LINE OF BUSINESS",
+            "POLICY NUMBER"
+          ]
+        ],
+        [
+          [
+            "LINE OF BUSINESS",
+            "POLICY NUMBER"
+          ]
+        ],
+        [
+          [
+            "OCCUR DATE",
+            "EXPLANATION",
+            "RESOLUTION",
+            "RESOLVE DATE"
+          ]
+        ],
+        [
+          [
+            "OCCUR DATE",
+            "EXPLANATION",
+            "RESOLUTION",
+            "RESOLVE DATE"
+          ]
+        ],
+        [
+          [
+            "OCCUR DATE",
+            "EXPLANATION",
+            "RESOLUTION",
+            "RESOLVE DATE"
+          ]
+        ],
+        [
+          [
+            "YEAR",
+            "CATEGORY",
+            "GENERAL LIABILITY",
+            "AUTOMOBILE",
+            "PROPERTY",
+            "OTHER:"
+          ],
+          [
+            "",
+            "CARRIER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "POLICY NUMBER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "PREMIUM",
+            "$",
+            "$",
+            "$",
+            "$"
+          ],
+          [
+            "",
+            "EFFECTIVE DATE",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EXPIRATION DATE",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "AGENCY CUSTOMER ID: 00003285\nPRIOR CARRIER INFORMATION (continued)\nYEAR CATEGORY GENERAL LIABILITY AUTOMOBILE PROPERTY OTHER:\nCARRIER\nPOLICY NUMBER\nPREMIUM $ $ $ $\nEFFECTIVE DATE\nEXPIRATION DATE\nCARRIER\nPOLICY NUMBER\nPREMIUM $ $ $ $\nEFFECTIVE DATE\nEXPIRATION DATE\nLOSS HISTORY Check if none (Attach Loss Summary for Additional Loss Information)\nENTER ALL CLAIMS OR LOSSES (REGARDLESS OF FAULT AND WHETHER OR NOT INSURED) OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS\nFOR THE LAST YEARS TOTAL LOSSES: $\nSUBRO- CLAIM\nOC D C A U T R E R O EN F CE LINE TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM DATE OF CLAIM AMOUNT PAID AMOUNT RESERVED GA Y T / I O N N O Y P / E N N\nSIGNATURE\nCopy of the Notice of Information Practices (Privacy) has been given to the applicant. (Not required in all states, contact your agent or broker for your state's requirements.)\nPERSONAL INFORMATION ABOUT YOU, INCLUDING INFORMATION FROM A CREDIT OR OTHER INVESTIGATIVE REPORT, MAY BE COLLECTED FROM PERSONS\nOTHER THAN YOU IN CONNECTION WITH THIS APPLICATION FOR INSURANCE AND SUBSEQUENT AMENDMENTS AND RENEWALS. SUCH INFORMATION AS WELL AS\nOTHER PERSONAL AND PRIVILEGED INFORMATION COLLECTED BY US OR OUR AGENTS MAY IN CERTAIN CIRCUMSTANCES BE DISCLOSED TO THIRD PARTIES\nWITHOUT YOUR AUTHORIZATION. CREDIT SCORING INFORMATION MAY BE USED TO HELP DETERMINE EITHER YOUR ELIGIBILITY FOR INSURANCE OR THE\nPREMIUM YOU WILL BE CHARGED. WE MAY USE A THIRD PARTY IN CONNECTION WITH THE DEVELOPMENT OF YOUR SCORE. YOU MAY HAVE THE RIGHT TO\nREVIEW YOUR PERSONAL INFORMATION IN OUR FILES AND REQUEST CORRECTION OF ANY INACCURACIES. YOU MAY ALSO HAVE THE RIGHT TO REQUEST IN\nWRITING THAT WE CONSIDER EXTRAORDINARY LIFE CIRCUMSTANCES IN CONNECTION WITH THE DEVELOPMENT OF YOUR CREDIT SCORE. THESE RIGHTS MAY\nBE LIMITED IN SOME STATES. PLEASE CONTACT YOUR AGENT OR BROKER TO LEARN HOW THESE RIGHTS MAY APPLY IN YOUR STATE OR FOR INSTRUCTIONS ON\nHOW TO SUBMIT A REQUEST TO US FOR A MORE DETAILED DESCRIPTION OF YOUR RIGHTS AND OUR PRACTICES REGARDING PERSONAL INFORMATION.\n(Not applicable in AZ, CA, DE, KS, MA, MN, ND, NY, OR, VA, or WV. Specific ACORD 38s are available for applicants in these states.) (Applicant's Initials):\nApplicable in AL, AR, DC, LA, MD, NM, RI and WV: Any person who knowingly (or willfully)* presents a false or fraudulent claim for payment of a loss or\nbenefit or knowingly (or willfully)* presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in\nprison. *Applies in MD Only.\nApplicable in CO: It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of\ndefrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance\ncompany or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the\npurpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be\nreported to the Colorado Division of Insurance within the Department of Regulatory Agencies.\nApplicable in FL and OK: Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a statement of claim or an application\ncontaining any false, incomplete, or misleading information is guilty of a felony (of the third degree)*. *Applies in FL Only.\nApplicable in KS: Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be\npresented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance\nof, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for\ncommercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the\npurpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act.\nApplicable in KY, NY, OH and PA: Any person who knowingly and with intent to defraud any insurance company or other person files an application for\ninsurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material\nthereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and\nthe stated value of the claim for each such violation)*. *Applies in NY Only.\nApplicable in ME, TN, VA and WA: It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose\nof defrauding the company. Penalties (may)* include imprisonment, fines and denial of insurance benefits. *Applies in ME Only.\nApplicable in NJ: Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil\npenalties.\nApplicable in OR: Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a\nfalse statement as to any material fact may be violating state law.\nApplicable in PR: Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps,\nor causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss,\nshall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten\nthousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty\nthus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2)\nyears.\nTHE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE\nANSWERS TO QUESTIONS ON THIS APPLICATION. HE/SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER\nKNOWLEDGE.\nPRODUCER'S SIGNATURE PRODUCER'S NAME (Please Print) ( S R T e A q T u E ir P ed R O in D F U lo C r E id R a L ) ICENSE NO\nEvan Seacat P084907/RRUIZ\nAPPLICANT'S SIGNATURE DATE NATIONAL PRODUCER NUMBER\nACORD 125 (2016/03) Page 4 of 4",
+      "tables": [
+        [
+          [
+            "YEAR",
+            "CATEGORY",
+            "GENERAL LIABILITY",
+            "AUTOMOBILE",
+            "PROPERTY",
+            "OTHER:"
+          ],
+          [
+            "",
+            "CARRIER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "POLICY NUMBER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "PREMIUM",
+            "$",
+            "$",
+            "$",
+            "$"
+          ],
+          [
+            "",
+            "EFFECTIVE DATE",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EXPIRATION DATE",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CARRIER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "POLICY NUMBER",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "PREMIUM",
+            "$",
+            "$",
+            "$",
+            "$"
+          ],
+          [
+            "",
+            "EFFECTIVE DATE",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EXPIRATION DATE",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "ENTER ALL CLAIMS OR LOSSES (REGARDLESS OF FAULT AND WHETHER OR NOT INSURED) OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS\nFOR THE LAST YEARS",
+            "",
+            "",
+            "",
+            "",
+            "TOTAL LOSSES: $",
+            "",
+            ""
+          ],
+          [
+            "DATE OF\nOCCURRENCE LINE TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM DATE OF CLAIM AMOUNT PAID",
+            "",
+            "",
+            "",
+            "",
+            "SUBRO- CLAIM\nAMOUNT RESERVED GATION OPEN\nY / N Y / N",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "",
+            "Copy of the Notice of Information Practices (Privacy) has been given to the applicant. (Not required in all states, contact your agent or broker for your state's requirements.)",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PERSONAL INFORMATION ABOUT YOU, INCLUDING INFORMATION FROM A CREDIT OR OTHER INVESTIGATIVE REPORT, MAY BE COLLECTED FROM PERSONS\nOTHER THAN YOU IN CONNECTION WITH THIS APPLICATION FOR INSURANCE AND SUBSEQUENT AMENDMENTS AND RENEWALS. SUCH INFORMATION AS WELL AS\nOTHER PERSONAL AND PRIVILEGED INFORMATION COLLECTED BY US OR OUR AGENTS MAY IN CERTAIN CIRCUMSTANCES BE DISCLOSED TO THIRD PARTIES\nWITHOUT YOUR AUTHORIZATION. CREDIT SCORING INFORMATION MAY BE USED TO HELP DETERMINE EITHER YOUR ELIGIBILITY FOR INSURANCE OR THE\nPREMIUM YOU WILL BE CHARGED. WE MAY USE A THIRD PARTY IN CONNECTION WITH THE DEVELOPMENT OF YOUR SCORE. YOU MAY HAVE THE RIGHT TO\nREVIEW YOUR PERSONAL INFORMATION IN OUR FILES AND REQUEST CORRECTION OF ANY INACCURACIES. YOU MAY ALSO HAVE THE RIGHT TO REQUEST IN\nWRITING THAT WE CONSIDER EXTRAORDINARY LIFE CIRCUMSTANCES IN CONNECTION WITH THE DEVELOPMENT OF YOUR CREDIT SCORE. THESE RIGHTS MAY\nBE LIMITED IN SOME STATES. PLEASE CONTACT YOUR AGENT OR BROKER TO LEARN HOW THESE RIGHTS MAY APPLY IN YOUR STATE OR FOR INSTRUCTIONS ON\nHOW TO SUBMIT A REQUEST TO US FOR A MORE DETAILED DESCRIPTION OF YOUR RIGHTS AND OUR PRACTICES REGARDING PERSONAL INFORMATION.\n(Not applicable in AZ, CA, DE, KS, MA, MN, ND, NY, OR, VA, or WV. Specific ACORD 38s are available for applicants in these states.) (Applicant's Initials):",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Applicable in AL, AR, DC, LA, MD, NM, RI and WV: Any person who knowingly (or willfully)* presents a false or fraudulent claim for payment of a loss or\nbenefit or knowingly (or willfully)* presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in\nprison. *Applies in MD Only.\nApplicable in CO: It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of\ndefrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance\ncompany or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the\npurpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be\nreported to the Colorado Division of Insurance within the Department of Regulatory Agencies.\nApplicable in FL and OK: Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a statement of claim or an application\ncontaining any false, incomplete, or misleading information is guilty of a felony (of the third degree)*. *Applies in FL Only.\nApplicable in KS: Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be\npresented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance\nof, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for\ncommercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the\npurpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act.\nApplicable in KY, NY, OH and PA: Any person who knowingly and with intent to defraud any insurance company or other person files an application for\ninsurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material\nthereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and\nthe stated value of the claim for each such violation)*. *Applies in NY Only.\nApplicable in ME, TN, VA and WA: It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose\nof defrauding the company. Penalties (may)* include imprisonment, fines and denial of insurance benefits. *Applies in ME Only.\nApplicable in NJ: Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil\npenalties.\nApplicable in OR: Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a\nfalse statement as to any material fact may be violating state law.\nApplicable in PR: Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps,\nor causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss,\nshall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten\nthousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty\nthus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2)\nyears.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "THE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE\nANSWERS TO QUESTIONS ON THIS APPLICATION. HE/SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER\nKNOWLEDGE.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PRODUCER'S SIGNATURE",
+            "",
+            "PRODUCER'S NAME (Please Print)\nEvan Seacat P084907/RRUIZ",
+            "",
+            "STATE PRODUCER LICENSE NO\n(Required in Florida)"
+          ],
+          [
+            "APPLICANT'S SIGNATURE",
+            "",
+            "",
+            "DATE",
+            "NATIONAL PRODUCER NUMBER"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "AGENCY CUSTOMER ID: 00003285\nADDITIONAL PREMISES INFORMATION SCHEDULE Page of\nAGENCY CARRIER NAIC CODE\nFranklin Street Insurance Services, LLC Kinsale Insurance Company 38920\nPOLICY NUMBER EFFECTIVE DATE NAMED INSURED(S)\nR/O 01003718160 05/26/2026 Prism Broward, LP\nPREMISES INFORMATION\nLOC # STREET 4681 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n5 Clubhouse INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4641-4651-4661 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n6 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4580 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n7 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4540-4560 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n8 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4561-4581 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n9 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4541 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n10 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4400-4430 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n11 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4360 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n12 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4300-4330 N.W. 10th Place CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n13 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4301 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n14 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nACORD 823 (2015/12) Attach to ACORD 125 \u00a9 2006-2015 ACORD CORPORATION. All rights reserved.\nThe ACORD name and logo are registered marks of ACORD",
+      "tables": [
+        [
+          [
+            "AGENCY\nFranklin Street Insurance Services, LLC",
+            "",
+            "CARRIER\nKinsale Insurance Company",
+            "NAIC CODE\n38920"
+          ],
+          [
+            "POLICY NUMBER\nR/O 01003718160",
+            "EFFECTIVE DATE\n05/26/2026",
+            "NAMED INSURED(S)\nPrism Broward, LP",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC #\n5",
+            "STREET 4681 N.W. 10th Court\nClubhouse",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n6",
+            "STREET 4641-4651-4661 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n7",
+            "STREET 4580 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n8",
+            "STREET 4540-4560 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n9",
+            "STREET 4561-4581 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n10",
+            "STREET 4541 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n11",
+            "STREET 4400-4430 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n12",
+            "STREET 4360 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n13",
+            "STREET 4300-4330 N.W. 10th Place",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n14",
+            "STREET 4301 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "AGENCY CUSTOMER ID: 00003285\nADDITIONAL PREMISES INFORMATION SCHEDULE Page of\nAGENCY CARRIER NAIC CODE\nFranklin Street Insurance Services, LLC Kinsale Insurance Company 38920\nPOLICY NUMBER EFFECTIVE DATE NAMED INSURED(S)\nR/O 01003718160 05/26/2026 Prism Broward, LP\nPREMISES INFORMATION\nLOC # STREET 4331-4361 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n15 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4401-4431 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n16 R + rental office INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 4461 N.W. 10th Court CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n17 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 1751 N.W. 46th Avenue CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n18 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 1761 N.W. 46th Avenue CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n19 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 1861 N.W. 46th Avenue CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n20 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 1851 N.W. 46th Avenue CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n21 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 1861 N.W. 46th Avenue CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n22 Rec INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Plantation STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33313 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 8650 NW 61st St CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n23 Bldg 1-9 INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Tamarac STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33321 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nLOC # STREET 8650 NW 61st St CITY LIMITS INTEREST # FULL TIME EMPL ANNUAL REVENUES: $\n24 Pool House INSIDE OWNER OCCUPIED AREA: SQ FT\nBLD # CITY: Tamarac STATE: FL OUTSIDE TENANT # PART TIME EMPL OPEN TO PUBLIC AREA: SQ FT\nCOUNTY: Broward ZIP:33321 TOTAL BUILDING AREA: SQ FT\nDESCRIPTION OF OPERATIONS: ANY AREA LEASED TO OTHERS? Y / N:\nACORD 823 (2015/12) Attach to ACORD 125 \u00a9 2006-2015 ACORD CORPORATION. All rights reserved.\nThe ACORD name and logo are registered marks of ACORD",
+      "tables": [
+        [
+          [
+            "AGENCY\nFranklin Street Insurance Services, LLC",
+            "",
+            "CARRIER\nKinsale Insurance Company",
+            "NAIC CODE\n38920"
+          ],
+          [
+            "POLICY NUMBER\nR/O 01003718160",
+            "EFFECTIVE DATE\n05/26/2026",
+            "NAMED INSURED(S)\nPrism Broward, LP",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC #\n15",
+            "STREET 4331-4361 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n16",
+            "STREET 4401-4431 N.W. 10th Court\nR + rental office",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n17",
+            "STREET 4461 N.W. 10th Court",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n18",
+            "STREET 1751 N.W. 46th Avenue",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n19",
+            "STREET 1761 N.W. 46th Avenue",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n20",
+            "STREET 1861 N.W. 46th Avenue",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n21",
+            "STREET 1851 N.W. 46th Avenue",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n22",
+            "STREET 1861 N.W. 46th Avenue\nRec",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Plantation",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33313",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n23",
+            "STREET 8650 NW 61st St\nBldg 1-9",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Tamarac",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33321",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ],
+          [
+            "LOC #\n24",
+            "STREET 8650 NW 61st St\nPool House",
+            "",
+            "CITY LIMITS\nINSIDE\nOUTSIDE",
+            "INTEREST\nOWNER\nTENANT",
+            "# FULL TIME EMPL",
+            "ANNUAL REVENUES: $"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "OCCUPIED AREA: SQ FT"
+          ],
+          [
+            "BLD #",
+            "CITY: Tamarac",
+            "STATE: FL",
+            "",
+            "",
+            "# PART TIME EMPL",
+            "OPEN TO PUBLIC AREA: SQ FT"
+          ],
+          [
+            "",
+            "COUNTY: Broward",
+            "ZIP:33321",
+            "",
+            "",
+            "",
+            "TOTAL BUILDING AREA: SQ FT"
+          ],
+          [
+            "DESCRIPTION OF OPERATIONS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "ANY AREA LEASED TO OTHERS? Y / N:"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 7,
+      "text": "AGENCY CUSTOMER ID: 00003285\nUMBRELLA / EXCESS SECTION DATE (MM/DD/YYYY)\n01/14/2026\nIMPORTANT - If CLAIMS MADE is checked in the POLICY INFORMATION section below, this is an application for a claims-made policy.\nRead all provisions of the policy carefully.\nAGENCY CARRIER NAIC CODE\nFranklin Street Insurance Services, LLC Kinsale Insurance Company 38920\nPOLICY NUMBER EFFECTIVE DATE NAMED INSURED(S)\nR/O 01003718160 05/26/2026 Prism Broward, LP\nPOLICY INFORMATION\nTRANSACTION TYPE LIMIT OF LIABILITY RETAINED LIMIT\nNEW UMBRELLA OCCURRENCE VOLUNTARY RETROACTIVE DATE $ 5,000,000 EA OCC $ 0\nRENEWAL EXCESS CLAIMS MADE PROPOSED CURRENT $ 5,000,000 AGG\nFIRST DOLLAR\nEXPIRING POL #: $ DEFENSE (Y / N)\nEMPLOYEE BENEFITS LIABILITY\nLIMIT OF INSURANCE (Ea Employee) AGGREGATE LIMIT FOR EBL RETAINED LIMIT FOR EBL RETROACTIVE DATE FOR EBL\n$ $ $\nNAME OF BENEFIT PROGRAM\nPRIMARY LOCATION & SUBSIDIARIES (ACORD 125)\nFOREIGN\n# NAME AND LOCATION OF PRIMARY AND ALL SUBSIDIARY COMPANIES (Describe Operations) ANNUAL PAYROLL ANN GROSS SALES GROSS SALES # EMPL\nNAME:\nLOCATION:\nDESCRIPTION:\nNAME:\nLOCATION:\nDESCRIPTION:\nNAME:\nLOCATION:\nDESCRIPTION:\nNAME:\nLOCATION:\nDESCRIPTION:\nNAME:\nLOCATION:\nDESCRIPTION:\nNAME:\nLOCATION:\nDESCRIPTION:\nUNDERLYING INSURANCE\nLIST ALL LIABILITY / COMPENSATION POLICIES IN FORCE TO APPLY AS UNDERLYING INSURANCE + -\nRATING\nTYPE CARRIER / POLICY NUMBER POLICY EFF DATE POLICY EXP DATE LIMITS ANNU P A R L E R M E IU N M EWAL MOD\nCSL EA ACC $ $\nAUTOMOBILE BI EA ACC $\n$\nLIABILITY\nBI EA PER $\nPD EA ACC $ $\n1,000,000\nEACH OCCURRENCE $ PREM / OPS\nGENERAL\n2,000,000\nLIABILITY GENERAL AGGR $ $\nPOLICY TYPE Kinsale Insurance Company PROD & COMP OPS 2,000,000\n05/26/2026 05/26/2027 AGGREGATE $ PRODUCTS\nOCCUR R/O 01003716780 I P N E J R U S R O Y NAL & ADV $ 1,000,000 $\nCLAIMS DAMAGE TO RENTED 100,000\nMADE PREMISES $ OTHER\nExcluded\nMEDICAL EXPENSE $ $\nEACH ACCIDENT $\nEMPLOYERS DISEASE\nLIABILITY EACH EMPLOYEE $ $\nDISEASE\nPOLICY LIMIT $\n$\n$\nACORD 131 (2017/11) Page 1 of 6 \u00a9 1991-2017 ACORD CORPORATION. All rights reserved.\nAttach to ACORD 125\nThe ACORD name and logo are registered marks of ACORD",
+      "tables": [
+        [
+          [
+            "",
+            "",
+            "",
+            "DATE (MM/DD/YYYY)\n01/14/2026",
+            ""
+          ],
+          [
+            "IMPORTANT - If CLAIMS MADE is checked in the POLICY INFORMATION section below, this is an application for a claims-made policy.\nRead all provisions of the policy carefully.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "AGENCY\nFranklin Street Insurance Services, LLC",
+            "",
+            "CARRIER\nKinsale Insurance Company",
+            "",
+            "NAIC CODE\n38920"
+          ],
+          [
+            "POLICY NUMBER\nR/O 01003718160",
+            "EFFECTIVE DATE\n05/26/2026",
+            "NAMED INSURED(S)\nPrism Broward, LP",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "TRANSACTION TYPE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "LIMIT OF LIABILITY",
+            "RETAINED LIMIT",
+            ""
+          ],
+          [
+            "",
+            "",
+            "NEW\nRENEWAL",
+            "",
+            "",
+            "UMBRELLA\nEXCESS",
+            "",
+            "OCCURRENCE\nCLAIMS MADE",
+            "",
+            "VOLUNTARY",
+            "RETROACTIVE DATE",
+            "",
+            "$ 5,000,000 EA OCC\n$ 5,000,000 AGG\n$",
+            "$ 0",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PROPOSED",
+            "CURRENT",
+            "",
+            "FIRST DOLLAR\nDEFENSE (Y / N)",
+            ""
+          ],
+          [
+            "EXPIRING POL #:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LIMIT OF INSURANCE (Ea Employee)\n$",
+            "AGGREGATE LIMIT FOR EBL\n$",
+            "RETAINED LIMIT FOR EBL\n$",
+            "RETROACTIVE DATE FOR EBL"
+          ],
+          [
+            "NAME OF BENEFIT PROGRAM",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "#",
+            "NAME AND LOCATION OF PRIMARY AND ALL SUBSIDIARY COMPANIES (Describe Operations)",
+            "ANNUAL PAYROLL",
+            "ANN GROSS SALES",
+            "FOREIGN\nGROSS SALES",
+            "# EMPL"
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "NAME:\nLOCATION:\nDESCRIPTION:",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LIST ALL LIABILITY / COMPENSATION POLICIES IN FORCE TO APPLY AS UNDERLYING INSURANCE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "+ -\nRATING\nMOD"
+          ],
+          [
+            "TYPE",
+            "CARRIER / POLICY NUMBER",
+            "POLICY EFF DATE",
+            "POLICY EXP DATE",
+            "LIMITS",
+            "ANNUAL RENEWAL\nPREMIUM",
+            ""
+          ],
+          [
+            "AUTOMOBILE\nLIABILITY",
+            "",
+            "",
+            "",
+            "CSL EA ACC $",
+            "$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "BI EA ACC $",
+            "$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "BI EA PER $",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "PD EA ACC $",
+            "$",
+            ""
+          ],
+          [
+            "GENERAL\nLIABILITY\nPOLICY TYPE\nOCCUR\nCLAIMS\nMADE",
+            "Kinsale Insurance Company\nR/O 01003716780",
+            "05/26/2026",
+            "05/26/2027",
+            "1,000,000\nEACH OCCURRENCE $",
+            "PREM / OPS\n$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "2,000,000\nGENERAL AGGR $",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "PROD & COMP OPS 2,000,000\nAGGREGATE $",
+            "PRODUCTS\n$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "PERSONAL & ADV 1,000,000\nINJURY $",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "DAMAGE TO RENTED 100,000\nPREMISES $",
+            "OTHER\n$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "Excluded\nMEDICAL EXPENSE $",
+            "",
+            ""
+          ],
+          [
+            "EMPLOYERS\nLIABILITY",
+            "",
+            "",
+            "",
+            "EACH ACCIDENT $",
+            "$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "DISEASE\nEACH EMPLOYEE $",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "DISEASE\nPOLICY LIMIT $",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "$",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "$",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "text": "AGENCY CUSTOMER ID: 00003285\nUNDERLYING INSURANCE (continued)\nUNDERLYING GENERAL LIABILITY INFORMATION (Explain all \"YES\" responses)\n1. ARE DEFENSE COSTS: WITHIN AGGREGATE LIMITS? A SEPARATE LIMIT? UNLIMITED?\n(In Arkansas, the underlying General Liability coverage cannot contain defense costs within aggregate limits, but must have a separate, equal limit or must be unlimited.)\n(In Oklahoma, the underlying General Liability coverage cannot contain defense costs wthin the limits; subject to Commissioner's Orders.)\n2. INDICATE THE EDITION DATE OF THE ISO FORM OR SIMILAR FILING FOR THE UNDERLYING COVERAGE:\n3. HAS ANY PRODUCT, WORK, ACCIDENT OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF-INSURED FROM ANY PREVIOUS COVERAGE? (Y / N)\n4. FOR CLAIMS MADE, INDICATE RETROACTIVE DATE OF CURRENT UNDERLYING POLICY:\n5. FOR CLAIMS MADE, INDICATE ENTRY DATE INTO UNINTERRUPTED CLAIMS MADE COVERAGE:\n6. FOR CLAIMS MADE, WAS \"TAIL\" COVERAGE PURCHASED FOR ANY PREVIOUS PRIMARY OR EXCESS POLICY? (Y / N) EFF. DATE:\nCHECK ALL COVERAGES IN UNDERLYING POLICIES. ALSO CHECK IF ANY EXPOSURES ARE PRESENT FOR EACH COVERAGE. PROVIDE AN EXPLANATION. EXPLAIN IF\nDIFFERENT LIMITS, EXTENSIONS, OR EXCLUSIONS. EXPLAIN ANY SPECIAL COVERAGES BEYOND STANDARD FORMS.EXPLAIN ALL EXPOSURES.\nCHECK IF APPROPRIATE COVERAGE EXPOSURE COVERAGE EXPOSURE\nANY AUTO (SYMBOL 1) CARE, CUSTODY, CONTROL PROFESSIONAL LIABILITY (E&O)\nCGL - CLAIMS MADE EMPLOYEE BENEFIT LIABILITY VENDORS LIABILITY\nCGL - OCCURRENCE FOREIGN LIABILITY / TRAVEL WATERCRAFT LIABILITY\nCOVERAGE EXPOSURE GARAGEKEEPERS LIABILITY\nAIRCRAFT LIABILITY INCIDENTAL MEDICAL MALPRACTICE\nAIRCRAFT PASSENGER LIABILITY LIQUOR LIABILITY\nADDITIONAL INTERESTS POLLUTION LIABILITY\nUNDERLYING INSURANCE COVERAGE INFORMATION (INCLUDE ALL RESTRICTIONS; e.g. LASER ENDORSEMENTS, DISCRIMINATION, SUBROGATION WAIVERS, OR EXTENSIONS OF\nCOVERAGE) ACORD 101, Additional Remarks Schedule, may be attached if more space is required.\nPREVIOUS EXPERIENCE: (GIVE DETAILS OF ALL LIABILITY CLAIMS EXCEEDING $10,000 OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS, DURING THE PAST FIVE (5) YEARS,\nWHETHER INSURED OR NOT. SPECIFY DATE, COVERAGE, DESCRIPTION, AMOUNT PAID, AMOUNT OUTSTANDING) ACORD 101, Additional Remarks Schedule, may be attached if more space is\nrequired.\nNO SUCH CLAIMS\nCARE, CUSTODY, CONTROL\nLOC PROPERTY TYPE VALUE A* B* C* D* SQ FT OF BLDG OCC\nREAL\nPERSONAL\nOCCUPANCY / DESCRIPTION OF PERSONAL PROPERTY\n*APPLICANT: [A] IS HELD HARMLESS IN THE LEASE, [B] HAS A WAIVER OF SUBROGATION, [C] IS A NAMED INSURED IN THE FIRE POLICY, [D] OTHER (specify)\nVEHICLES\n# NON- RADIUS (MILES)\nTYPE # OWNED OWNED # LEASED PROPERTY HAULED LOCAL M IN E T D E IA R T - E DIS L T O A N N G CE\nPRIVATE PASSENGER\nLIGHT\nMEDIUM\nTRUCKS\nHEAVY\nEX. HEAVY\nTRUCKS / HEAVY\nTRACTORS EX. HEAVY\nBUSES\nACORD 131 (2017/11) Page 2 of 6",
+      "tables": [
+        [
+          [
+            "UNDERLYING GENERAL LIABILITY INFORMATION (Explain all \"YES\" responses)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. ARE DEFENSE COSTS: WITHIN AGGREGATE LIMITS? A SEPARATE LIMIT? UNLIMITED?\n(In Arkansas, the underlying General Liability coverage cannot contain defense costs within aggregate limits, but must have a separate, equal limit or must be unlimited.)\n(In Oklahoma, the underlying General Liability coverage cannot contain defense costs wthin the limits; subject to Commissioner's Orders.)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. INDICATE THE EDITION DATE OF THE ISO FORM OR SIMILAR FILING FOR THE UNDERLYING COVERAGE:\n3. HAS ANY PRODUCT, WORK, ACCIDENT OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF-INSURED FROM ANY PREVIOUS COVERAGE? (Y / N)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. FOR CLAIMS MADE, INDICATE RETROACTIVE DATE OF CURRENT UNDERLYING POLICY:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. FOR CLAIMS MADE, INDICATE ENTRY DATE INTO UNINTERRUPTED CLAIMS MADE COVERAGE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. FOR CLAIMS MADE, WAS \"TAIL\" COVERAGE PURCHASED FOR ANY PREVIOUS PRIMARY OR EXCESS POLICY? (Y / N) EFF. DATE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CHECK ALL COVERAGES IN UNDERLYING POLICIES. ALSO CHECK IF ANY EXPOSURES ARE PRESENT FOR EACH COVERAGE. PROVIDE AN EXPLANATION. EXPLAIN IF\nDIFFERENT LIMITS, EXTENSIONS, OR EXCLUSIONS. EXPLAIN ANY SPECIAL COVERAGES BEYOND STANDARD FORMS.EXPLAIN ALL EXPOSURES.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CHECK IF APPROPRIATE",
+            "",
+            "",
+            "COVERAGE EXPOSURE",
+            "",
+            "",
+            "COVERAGE EXPOSURE",
+            "",
+            ""
+          ],
+          [
+            "",
+            "ANY AUTO (SYMBOL 1)\nCGL - CLAIMS MADE\nCGL - OCCURRENCE",
+            "",
+            "",
+            "CARE, CUSTODY, CONTROL\nEMPLOYEE BENEFIT LIABILITY\nFOREIGN LIABILITY / TRAVEL\nGARAGEKEEPERS LIABILITY\nINCIDENTAL MEDICAL MALPRACTICE\nLIQUOR LIABILITY\nPOLLUTION LIABILITY",
+            "",
+            "",
+            "PROFESSIONAL LIABILITY (E&O)\nVENDORS LIABILITY\nWATERCRAFT LIABILITY",
+            ""
+          ],
+          [
+            "COVERAGE EXPOSURE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "AIRCRAFT LIABILITY\nAIRCRAFT PASSENGER LIABILITY\nADDITIONAL INTERESTS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "UNDERLYING INSURANCE COVERAGE INFORMATION (INCLUDE ALL RESTRICTIONS; e.g. LASER ENDORSEMENTS, DISCRIMINATION, SUBROGATION WAIVERS, OR EXTENSIONS OF\nCOVERAGE) ACORD 101, Additional Remarks Schedule, may be attached if more space is required.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PREVIOUS EXPERIENCE: (GIVE DETAILS OF ALL LIABILITY CLAIMS EXCEEDING $10,000 OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS, DURING THE PAST FIVE (5) YEARS,\nWHETHER INSURED OR NOT. SPECIFY DATE, COVERAGE, DESCRIPTION, AMOUNT PAID, AMOUNT OUTSTANDING) ACORD 101, Additional Remarks Schedule, may be attached if more space is\nrequired.\nNO SUCH CLAIMS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC",
+            "PROPERTY TYPE",
+            "",
+            "VALUE",
+            "A*",
+            "B*",
+            "C*",
+            "D*",
+            "SQ FT OF BLDG OCC"
+          ],
+          [
+            "",
+            "",
+            "REAL\nPERSONAL",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "OCCUPANCY / DESCRIPTION OF PERSONAL PROPERTY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "*APPLICANT: [A] IS HELD HARMLESS IN THE LEASE, [B] HAS A WAIVER OF SUBROGATION, [C] IS A NAMED INSURED IN THE FIRE POLICY, [D] OTHER (specify)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "TYPE",
+            "",
+            "# OWNED",
+            "# NON-\nOWNED",
+            "# LEASED",
+            "PROPERTY HAULED",
+            "RADIUS (MILES)",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "LOCAL",
+            "INTER-\nMEDIATE",
+            "LONG\nDISTANCE"
+          ],
+          [
+            "PRIVATE PASSENGER",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "TRUCKS",
+            "LIGHT",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "MEDIUM",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EX. HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "TRUCKS /\nTRACTORS",
+            "HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EX. HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "BUSES",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 9,
+      "text": "AGENCY CUSTOMER ID: 00003285\nADDITIONAL EXPOSURES\nEXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED Y / N\nADVERTISERS LIABILITY\n1. MEDIA USED:\nANNUAL COST: $\n2. ARE SERVICES OF AN ADVERTISING AGENCY USED?\n3. ANY COVERAGE PROVIDED UNDER AGENCY'S POLICY?\nAIRCRAFT LIABILITY\n4. DOES APPLICANT OWN / LEASE / OPERATE AIRCRAFT?\nAUTO LIABILITY\n5. ARE EXPLOSIVES, CAUSTICS, FLAMMABLES OR OTHER DANGEROUS CARGO HAULED?\n6. ARE PASSENGERS CARRIED FOR A FEE?\n7. ANY UNITS NOT INSURED BY UNDERLYING POLICIES?\n8. ARE ANY VEHICLES LEASED OR RENTED TO OTHERS?\n9. ARE HIRED AND NON-OWNED COVERAGES PROVIDED?\nCONTRACTORS LIABILITY\n10. IS BRIDGE, DAM, OR MARINE WORK PERFORMED?\n11. DESCRIBE TYPICAL JOBS PERFORMED (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)\n12. DESCRIBE AGREEMENT (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)\n13. DOES APPLICANT OWN, RENT, OR OTHERWISE USE CRANES?\n14. DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?\nEMPLOYERS LIABILITY\n15. IS APPLICANT SELF-INSURED IN ANY STATE?\n16. SUBJECT TO: JONES ACT FELA STOP GAP OTHER:\nINCIDENTAL MALPRACTICE LIABILITY\n17. IS A HOSPITAL OR FIRST AID FACILITY MAINTAINED?\n18. ARE COVERAGES PROVIDED FOR DOCTORS / NURSES?\n19. INDICATE # OF DOCTORS: NURSES: BEDS:\nACORD 131 (2017/11) Page 3 of 6",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "ADVERTISERS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. MEDIA USED:\nANNUAL COST: $",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. ARE SERVICES OF AN ADVERTISING AGENCY USED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. ANY COVERAGE PROVIDED UNDER AGENCY'S POLICY?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "AIRCRAFT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. DOES APPLICANT OWN / LEASE / OPERATE AIRCRAFT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "AUTO LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. ARE EXPLOSIVES, CAUSTICS, FLAMMABLES OR OTHER DANGEROUS CARGO HAULED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. ARE PASSENGERS CARRIED FOR A FEE?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7. ANY UNITS NOT INSURED BY UNDERLYING POLICIES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8. ARE ANY VEHICLES LEASED OR RENTED TO OTHERS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9. ARE HIRED AND NON-OWNED COVERAGES PROVIDED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CONTRACTORS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10. IS BRIDGE, DAM, OR MARINE WORK PERFORMED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "11. DESCRIBE TYPICAL JOBS PERFORMED (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "12. DESCRIBE AGREEMENT (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "13. DOES APPLICANT OWN, RENT, OR OTHERWISE USE CRANES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "14. DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "EMPLOYERS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "15. IS APPLICANT SELF-INSURED IN ANY STATE?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "16. SUBJECT TO:",
+            "",
+            "JONES ACT",
+            "",
+            "FELA",
+            "",
+            "STOP GAP",
+            "",
+            "OTHER:",
+            ""
+          ],
+          [
+            "INCIDENTAL MALPRACTICE LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "17. IS A HOSPITAL OR FIRST AID FACILITY MAINTAINED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "18. ARE COVERAGES PROVIDED FOR DOCTORS / NURSES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "19. INDICATE # OF DOCTORS: NURSES: BEDS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 10,
+      "text": "AGENCY CUSTOMER ID: 00003285\nADDITIONAL EXPOSURES (continued)\nEXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED Y / N\nEPA #: POLLUTION LIABILITY\n20. DO CURRENT OR PAST PRODUCTS, OR THEIR COMPONENTS, CONTAIN HAZARDOUS MATERIALS THAT MAY REQUIRE SPECIAL\nDISPOSAL METHODS?\n21. INDICATE THE COVERAGES CARRIED:\nGL WITH STANDARD ISO POLLUTION EXCLUSION GL WITH POLLUTION COVERAGE ENDORSEMENT\nGL WITH STANDARD SUDDEN & ACCIDENTAL ONLY SEPARATE POLLUTION COVERAGE\nPRODUCT LIABILITY\n22. ARE MISSILES, ENGINES, GUIDANCE SYSTEMS, FRAMES OR ANY OTHER PRODUCT USED / INSTALLED IN AIRCRAFT?\n23. ANY FOREIGN OPERATIONS, FOREIGN PRODUCTS DISTRIBUTED IN THE USA OR US PRODUCTS SOLD / DISTRIBUTED IN FOREIGN COUNTRIES?\n(If \"YES\", Attach ACORD 815)\n24. PRODUCT LIABILITY LOSS IN PAST THREE (3) YEARS? (SPECIFY)\n25. GROSS SALES FROM EACH OF LAST THREE (3) YEARS: $ $ $\nPROTECTIVE LIABILITY\n26. DESCRIBE INDEPENDENT CONTRACTORS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)\nWATERCRAFT LIABILITY\n27. DOES APPLICANT OWN OR LEASE WATERCRAFT?\nLOC # # OWNED LENGTH HORSEPOWER LOC # # OWNED LENGTH HORSEPOWER\nAPARTMENTS / CONDOMINIUMS / HOTELS / MOTELS\n28. LOC # # STORIES # UNITS # SWIMMING POOLS # DIVING BOARDS LOC # # STORIES # UNITS # SWIMMING POOLS # DIVING BOARDS\nREMARKS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)\nACORD 131 (2017/11) Page 4 of 6",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "EPA #: POLLUTION LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "20. DO CURRENT OR PAST PRODUCTS, OR THEIR COMPONENTS, CONTAIN HAZARDOUS MATERIALS THAT MAY REQUIRE SPECIAL\nDISPOSAL METHODS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "21. INDICATE THE COVERAGES CARRIED:\nGL WITH STANDARD ISO POLLUTION EXCLUSION GL WITH POLLUTION COVERAGE ENDORSEMENT\nGL WITH STANDARD SUDDEN & ACCIDENTAL ONLY SEPARATE POLLUTION COVERAGE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PRODUCT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "22. ARE MISSILES, ENGINES, GUIDANCE SYSTEMS, FRAMES OR ANY OTHER PRODUCT USED / INSTALLED IN AIRCRAFT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "23. ANY FOREIGN OPERATIONS, FOREIGN PRODUCTS DISTRIBUTED IN THE USA OR US PRODUCTS SOLD / DISTRIBUTED IN FOREIGN COUNTRIES?\n(If \"YES\", Attach ACORD 815)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "24. PRODUCT LIABILITY LOSS IN PAST THREE (3) YEARS? (SPECIFY)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "25. GROSS SALES FROM EACH OF LAST THREE (3) YEARS: $ $ $",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PROTECTIVE LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "26. DESCRIBE INDEPENDENT CONTRACTORS (ACORD 101, Additional Remarks Schedule, may be attached if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "WATERCRAFT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "27. DOES APPLICANT OWN OR LEASE WATERCRAFT?\nLOC # # OWNED LENGTH HORSEPOWER LOC # # OWNED LENGTH HORSEPOWER",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "APARTMENTS / CONDOMINIUMS / HOTELS / MOTELS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "28.",
+            "LOC #",
+            "# STORIES",
+            "# UNITS",
+            "# SWIMMING POOLS",
+            "# DIVING BOARDS",
+            "",
+            "LOC #",
+            "# STORIES",
+            "# UNITS",
+            "# SWIMMING POOLS",
+            "# DIVING BOARDS",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC #",
+            "# OWNED",
+            "LENGTH",
+            "HORSEPOWER"
+          ]
+        ],
+        [
+          [
+            "LOC #",
+            "# OWNED",
+            "LENGTH",
+            "HORSEPOWER"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 11,
+      "text": "AGENCY CUSTOMER ID: 00003285\nFRAUD STATEMENTS\nApplicable in AL, AR, DC, LA, MD, NM, RI and WV: Any person who knowingly (or willfully)* presents a false or fraudulent\nclaim for payment of a loss or benefit or knowingly (or willfully)* presents false information in an application for insurance is\nguilty of a crime and may be subject to fines and confinement in prison. *Applies in MD Only.\nApplicable in CO: It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance\ncompany for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines,\ndenial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides\nfalse, incomplete, or misleading facts or information to a policyholder or claimant for the purpose of defrauding or attempting to\ndefraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to\nthe Colorado Division of Insurance within the Department of Regulatory Agencies.\nApplicable in FL and OK: Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a\nstatement of claim or an application containing any false, incomplete, or misleading information is guilty of a felony (of the\nthird degree)*. *Applies in FL Only.\nApplicable in KS: Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with\nknowledge or belief that it will be presented to or by an insurer, purported insurer, broker or any agent thereof, any written,\nelectronic, electronic impulse, facsimile, magnetic, oral, or telephonic communication or statement as part of, or in support of,\nan application for the issuance of, or the rating of an insurance policy for personal or commercial insurance, or a claim for\npayment or other benefit pursuant to an insurance policy for commercial or personal insurance which such person knows to\ncontain materially false information concerning any fact material thereto; or conceals, for the purpose of misleading, information\nconcerning any fact material thereto commits a fraudulent insurance act.\nApplicable in KY, NY, OH and PA: Any person who knowingly and with intent to defraud any insurance company or other\nperson files an application for insurance or statement of claim containing any materially false information or conceals for the\npurpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime\nand subjects such person to criminal and civil penalties* (not to exceed five thousand dollars and the stated value of the claim\nfor each such violation)*. *Applies in NY Only.\nApplicable in ME, TN, VA and WA: It is a crime to knowingly provide false, incomplete or misleading information to an\ninsurance company for the purpose of defrauding the company. Penalties (may)* include imprisonment, fines and denial of\ninsurance benefits. *Applies in ME Only.\nApplicable in NJ: Any person who includes any false or misleading information on an application for an insurance policy is\nsubject to criminal and civil penalties.\nApplicable in OR: Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting\nan application containing a false statement as to any material fact may be violating state law.\nApplicable in PR: Any person who knowingly and with the intention of defrauding presents false information in an insurance\napplication, or presents, helps, or causes the presentation of a fraudulent claim for the payment of a loss or any other benefit,\nor presents more than one claim for the same damage or loss, shall incur a felony and, upon conviction, shall be sanctioned for\neach violation by a fine of not less than five thousand dollars ($5,000) and not more than ten thousand dollars ($10,000), or a\nfixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty\nthus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced\nto a minimum of two (2) years.\nACORD 131 (2017/11) Page 5 of 6",
+      "tables": []
+    },
+    {
+      "page": 12,
+      "text": "AGENCY CUSTOMER ID: 00003285\nSIGNATURE\nIF THE COMPANY TO WHICH I AM APPLYING OFFERS UNINSURED MOTORISTS (UM), UNDERINSURED MOTORISTS\n(UIM) AND/OR MEDICAL PAYMENTS COVERAGE IN MY STATE:\nUNINSURED MOTORISTS (UM) COVERAGE: $ *\nUNDERINSURED MOTORISTS (UIM) COVERAGE: $ *\nMEDICAL PAYMENTS COVERAGE: $ * * IF APPLICABLE IN YOUR STATE\nAPPLICABLE ONLY IN LOUISIANA, MONTANA, NEW HAMPSHIRE AND VERMONT\nAPPLICABLE ONLY IN LOUISIANA:\nI ACKNOWLEDGE THAT UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION\nOF SELECTING UM LIMITS EQUAL TO MY LIABILITY LIMITS, UM LIMITS LOWER THAN MY LIABILITY LIMITS, OR TO\nREJECT UM COVERAGE ENTIRELY.\n1. I SELECT UM LIMITS INDICATED IN THIS APPLICATION. OR\n(INITIALS)\n2. I REJECT UM COVERAGE IN ITS ENTIRETY.\n(INITIALS)\nAPPLICABLE ONLY IN MONTANA:\nI ACKNOWLEDGE I HAVE BEEN OFFERED UNINSURED MOTORISTS (UM) COVERAGE AND\nUNDERINSURED MOTORISTS (UIM) COVERAGE. I HAVE SELECTED THE LIMITS INDICATED IN (INITIALS)\nTHIS APPLICATION. IF NO LIMITS ARE SHOWN, I HAVE REJECTED THESE COVERAGES.\nAPPLICABLE ONLY IN NEW HAMPSHIRE:\nI ACKNOWLEDGE THAT UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION\nOF SELECTING UM LIMITS EQUAL TO MY LIABILITY LIMITS OR TO REJECT UM COVERAGE ENTIRELY.\n1. I SELECT UM LIMITS INDICATED IN THIS APPLICATION. OR\n(INITIALS)\n2. I REJECT UM COVERAGE IN ITS ENTIRETY.\n(INITIALS)\nAPPLICABLE ONLY IN VERMONT:\nI ACKNOWLEDGE THAT I HAVE BEEN OFFERED UM COVERAGE EQUAL TO MY LIABILITY LIMITS. I HAVE\nSELECTED THE LIMITS INDICATED IN THIS APPLICATION.\nIMPORTANT - THE STATEMENTS (ANSWERS) GIVEN ABOVE ARE TRUE AND ACCURATE. THE APPLICANT HAS NOT\nWILLFULLY CONCEALED OR MISREPRESENTED ANY MATERIAL FACT OR CIRCUMSTANCE CONCERNING THIS\nAPPLICATION. THIS APPLICATION DOES NOT CONSTITUTE A BINDER.\nPRODUCER'S SIGNATURE PRODUCER'S NAME (Please Print) STATE PRODUCER LICENSE NO\nEvan Seacat P084907/RRUIZ (Required in Florida)\nAPPLICANT'S SIGNATURE DATE NATIONAL PRODUCER NUMBER\nACORD 131 (2017/11) Page 6 of 6",
+      "tables": []
+    }
+  ]
+}

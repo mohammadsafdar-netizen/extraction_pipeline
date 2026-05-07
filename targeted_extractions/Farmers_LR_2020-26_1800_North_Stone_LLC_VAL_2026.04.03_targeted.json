@@ -1,0 +1,187 @@
+{
+  "source_file": "Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf",
+  "document_type": "loss_run",
+  "total_pages": 4,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "targeted",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "header": {
+          "policy_number": "606742147",
+          "company_carrier": "Truck Insurance Exchange",
+          "insured_name": "1800 NORTH STONE, LLC",
+          "insured_address": "1800 N STONE AVE TUCSON AZ 85705",
+          "agency_name": "Darius M Vasquez",
+          "valuation_date": "04/03/2026",
+          "date_range": "01/01/2019 - 04/03/2026",
+          "line_of_business": "Commercial Multi-Peril"
+        },
+        "summary": [
+          {
+            "effective_date": "05/01/2025",
+            "expiration_date": "05/01/2026",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2024",
+            "expiration_date": "05/01/2025",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2023",
+            "expiration_date": "05/01/2024",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2022",
+            "expiration_date": "05/01/2023",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2021",
+            "expiration_date": "05/01/2022",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2020",
+            "expiration_date": "05/01/2021",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "05/01/2019",
+            "expiration_date": "05/01/2020",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          }
+        ],
+        "totals": {
+          "effective_date": "05/01/2025",
+          "expiration_date": "05/01/2026",
+          "claim_count": 0,
+          "losses_paid": 0.0,
+          "reserves": 0.0,
+          "gross_incurred": 0.0,
+          "expenses": 0.0,
+          "recoveries": 0.0,
+          "net_incurred": 0.0
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "header": {
+          "policy_number": "606742147",
+          "company_carrier": "Truck Insurance Exchange",
+          "insured_name": "1800 NORTH STONE, LLC",
+          "insured_address": "1800 N STONE AVE TUCSON AZ 85705",
+          "agency_name": "Darius M Vasquez",
+          "valuation_date": "04/03/2026",
+          "date_range": "01/01/2019 - 04/03/2026",
+          "line_of_business": "Commercial Multi-Peril"
+        },
+        "summary": [
+          {
+            "effective_date": "01/01/2019",
+            "expiration_date": "04/03/2026",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          }
+        ],
+        "totals": {
+          "effective_date": "01/01/2019",
+          "expiration_date": "04/03/2026",
+          "claim_count": 0,
+          "losses_paid": 0.0,
+          "reserves": 0.0,
+          "gross_incurred": 0.0,
+          "expenses": 0.0,
+          "recoveries": 0.0,
+          "net_incurred": 0.0
+        }
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "header": {
+          "policy_number": "606742147",
+          "company/carrier": "Truck Insurance Exchange",
+          "insured_name": "1800 NORTH STONE, LLC",
+          "insured_address": "1800 N STONE AVE TUCSON AZ 85705",
+          "agency_name": "Darius M Vasquez",
+          "valuation_date": "04/03/2026",
+          "date_range": "01/01/2019 - 04/03/2026",
+          "line_of_business": "Commercial Multi-Peril"
+        },
+        "summary": [],
+        "detail": []
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "header": {
+          "policy_number": "606742147",
+          "company/carrier": "Truck Insurance Exchange",
+          "insured_name": "1800 NORTH STONE, LLC",
+          "insured_address": "1800 N STONE AVE TUCSON AZ 85705",
+          "agency_name": "Darius M Vasquez",
+          "valuation_date": "04/03/2026",
+          "date_range": "01/01/2019 - 04/03/2026",
+          "line_of_business": "Commercial Multi-Peril"
+        },
+        "summary": [],
+        "detail": []
+      }
+    }
+  ]
+}

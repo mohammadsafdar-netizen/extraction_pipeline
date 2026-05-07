@@ -1,0 +1,1356 @@
+[
+  {
+    "file": "Acord App (1800 North Stone LLC) 2026.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 34,
+        "confirmed": 34,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 42,
+        "confirmed": 40,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "NATURE_OF_BUSINESS.service",
+            "True"
+          ],
+          [
+            "NATURE_OF_BUSINESS.other",
+            "68 Unit Student Housing Apartment Complex"
+          ]
+        ]
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 5,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 14,
+        "confirmed": 14,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 6,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 26,
+        "confirmed": 26,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 7,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 22,
+        "confirmed": 21,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "BUILDING_IMPROVEMENTS.other.description",
+            "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT"
+          ]
+        ]
+      },
+      {
+        "page": 8,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 6,
+        "confirmed": 6,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 9,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 24,
+        "confirmed": 22,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "BUILDING_IMPROVEMENTS.wiring.checked",
+            "True"
+          ],
+          [
+            "BUILDING_IMPROVEMENTS.roofing.checked",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 10,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 22,
+        "confirmed": 21,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "BUILDING_IMPROVEMENTS.other.description",
+            "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT"
+          ]
+        ]
+      },
+      {
+        "page": 11,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 6,
+        "confirmed": 6,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 12,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 24,
+        "confirmed": 22,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "BUILDING_IMPROVEMENTS.wiring.checked",
+            "True"
+          ],
+          [
+            "BUILDING_IMPROVEMENTS.roofing.checked",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 13,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 14,
+        "confirmed": 11,
+        "unconfirmed": 3,
+        "unconfirmed_fields": [
+          [
+            "BUILDING_IMPROVEMENTS.wiring.checked",
+            "True"
+          ],
+          [
+            "BUILDING_IMPROVEMENTS.roofing.checked",
+            "True"
+          ],
+          [
+            "BUILDING_IMPROVEMENTS.other.description",
+            "HEATING SOURCE INCL WOODBURNING STOVE OR FIREPLACE INSERT"
+          ]
+        ]
+      },
+      {
+        "page": 14,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 6,
+        "confirmed": 6,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 15,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 10,
+        "confirmed": 10,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 16,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 31,
+        "confirmed": 24,
+        "unconfirmed": 7,
+        "unconfirmed_fields": [
+          [
+            "COVERAGES.commercial_general_liability",
+            "True"
+          ],
+          [
+            "COVERAGES.claims_made",
+            "True"
+          ],
+          [
+            "COVERAGES.occurrence",
+            "True"
+          ],
+          [
+            "COVERAGES.other_coverage",
+            "True"
+          ],
+          [
+            "LIMIT_APPLIES_PER.policy",
+            "True"
+          ],
+          [
+            "LIMIT_APPLIES_PER.location",
+            "True"
+          ],
+          [
+            "DEDUCTIBLES.bodily_injury.per_claim_per_occurrence",
+            "PER OCCURRENCE"
+          ]
+        ]
+      },
+      {
+        "page": 17,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 1,
+        "confirmed": 0,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "error",
+            "No valid JSON can be generated as the provided image does not contain any Y/N answers or explanations. The image only contains question headers and tables without filled-in responses or explanations. Additionally, the tables for subcontractors and products are empty and do not contain any data to extract."
+          ]
+        ]
+      },
+      {
+        "page": 18,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 31,
+        "confirmed": 31,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 19,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 21,
+        "confirmed": 21,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 20,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 12,
+        "confirmed": 12,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 21,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 29,
+        "confirmed": 23,
+        "unconfirmed": 6,
+        "unconfirmed_fields": [
+          [
+            "POLICY_INFORMATION.transaction_type.new",
+            "True"
+          ],
+          [
+            "POLICY_INFORMATION.policy_type.umbrella",
+            "True"
+          ],
+          [
+            "POLICY_INFORMATION.policy_type.excess",
+            "True"
+          ],
+          [
+            "POLICY_INFORMATION.coverage_trigger.occurrence",
+            "True"
+          ],
+          [
+            "UNDERLYING_INSURANCE[1].type",
+            "general_liability"
+          ],
+          [
+            "UNDERLYING_INSURANCE[2].type",
+            "employers_liability"
+          ]
+        ]
+      },
+      {
+        "page": 22,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 107,
+        "confirmed": 38,
+        "unconfirmed": 69,
+        "unconfirmed_fields": [
+          [
+            "underlying_GL_information.2.response",
+            "Not specified"
+          ],
+          [
+            "underlying_GL_information.3.response",
+            "Not specified"
+          ],
+          [
+            "underlying_GL_information.4.response",
+            "Not specified"
+          ],
+          [
+            "underlying_GL_information.5.response",
+            "Not specified"
+          ],
+          [
+            "underlying_GL_information.6.response",
+            "Not specified"
+          ],
+          [
+            "underlying_GL_information.6.eff_date",
+            "Not specified"
+          ],
+          [
+            "care_custody_control.table.value",
+            "Not specified"
+          ],
+          [
+            "care_custody_control.table.a",
+            "Not specified"
+          ],
+          [
+            "care_custody_control.table.b",
+            "Not specified"
+          ],
+          [
+            "care_custody_control.table.c",
+            "Not specified"
+          ]
+        ]
+      },
+      {
+        "page": 23,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 22,
+        "confirmed": 22,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 24,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 28,
+        "confirmed": 28,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 25,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 16,
+        "confirmed": 16,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  },
+  {
+    "file": "26-27 Acord 125.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 72,
+        "confirmed": 72,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 62,
+        "confirmed": 62,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 17,
+        "confirmed": 17,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 37,
+        "confirmed": 35,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "FilledTextFields.PRODUCER'S SIGNATURE",
+            "David J. Robinson"
+          ],
+          [
+            "Tables[1].Columns[6]",
+            "SUBROGATION Y/N"
+          ]
+        ]
+      },
+      {
+        "page": 5,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 96,
+        "confirmed": 96,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 6,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 87,
+        "confirmed": 87,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 7,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 48,
+        "confirmed": 48,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 8,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 52,
+        "confirmed": 44,
+        "unconfirmed": 8,
+        "unconfirmed_fields": [
+          [
+            "TableRows[0].corporation",
+            "True"
+          ],
+          [
+            "TableRows[1].corporation",
+            "True"
+          ],
+          [
+            "TableRows[2].corporation",
+            "True"
+          ],
+          [
+            "TableRows[3].corporation",
+            "True"
+          ],
+          [
+            "TableRows[4].corporation",
+            "True"
+          ],
+          [
+            "TableRows[5].corporation",
+            "True"
+          ],
+          [
+            "TableRows[6].corporation",
+            "True"
+          ],
+          [
+            "TableRows[7].corporation",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 9,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 44,
+        "confirmed": 40,
+        "unconfirmed": 4,
+        "unconfirmed_fields": [
+          [
+            "Header.named_insured[7].name",
+            "Ben Well"
+          ],
+          [
+            "Header.named_insured[7].address",
+            "Ben Well"
+          ],
+          [
+            "TableRows[7].name",
+            "Ben Well"
+          ],
+          [
+            "TableRows[7].address",
+            "Ben Well"
+          ]
+        ]
+      },
+      {
+        "page": 10,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 27,
+        "confirmed": 27,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 11,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 44,
+        "confirmed": 44,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 12,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 19,
+        "confirmed": 19,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 13,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 24,
+        "confirmed": 24,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 14,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 11,
+        "confirmed": 11,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  },
+  {
+    "file": "26 GL Application for Prism Broward.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 57,
+        "confirmed": 57,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 52,
+        "confirmed": 52,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 14,
+        "confirmed": 14,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 24,
+        "confirmed": 22,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Tables[1].Columns[9]",
+            "SUBROGATION Y/N"
+          ],
+          [
+            "Tables[1].Columns[10]",
+            "CLAIM OPEN Y/N"
+          ]
+        ]
+      },
+      {
+        "page": 5,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 96,
+        "confirmed": 96,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 6,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 125,
+        "confirmed": 125,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 7,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 44,
+        "confirmed": 32,
+        "unconfirmed": 12,
+        "unconfirmed_fields": [
+          [
+            "Coverages.commercial_general_liability",
+            "True"
+          ],
+          [
+            "Coverages.claims_made",
+            "True"
+          ],
+          [
+            "Coverages.occurrence",
+            "True"
+          ],
+          [
+            "Deductibles.both_bi_pd",
+            "True"
+          ],
+          [
+            "Deductibles.per_claim_per_occurrence",
+            "True"
+          ],
+          [
+            "RatingAndPremiumBasis.payroll_per_1000_pay",
+            "True"
+          ],
+          [
+            "RatingAndPremiumBasis.total_cost_per_1000_cost",
+            "True"
+          ],
+          [
+            "RatingAndPremiumBasis.unit_per_unit",
+            "True"
+          ],
+          [
+            "RatingAndPremiumBasis.gross_sales_per_1000_sales",
+            "True"
+          ],
+          [
+            "RatingAndPremiumBasis.area_per_1000_sq_ft",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 8,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 1,
+        "confirmed": 0,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "error",
+            "No filled data found. The provided image is a blank ACORD insurance application page with no completed fields or data entries."
+          ]
+        ]
+      },
+      {
+        "page": 9,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 10,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 29,
+        "confirmed": 29,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 11,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 12,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 13,
+        "confirmed": 13,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  },
+  {
+    "file": "26 XS Application for Prism Broward.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 83,
+        "confirmed": 82,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "Transaction.time",
+            "12:01 AM"
+          ]
+        ]
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 63,
+        "confirmed": 63,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 19,
+        "confirmed": 19,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 24,
+        "confirmed": 22,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Tables[1].Columns[9]",
+            "SUBROGATION Y/N"
+          ],
+          [
+            "Tables[1].Columns[10]",
+            "CLAIM OPEN Y/N"
+          ]
+        ]
+      },
+      {
+        "page": 5,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 136,
+        "confirmed": 136,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 6,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 125,
+        "confirmed": 125,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 7,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 22,
+        "confirmed": 19,
+        "unconfirmed": 3,
+        "unconfirmed_fields": [
+          [
+            "PolicyInformation.transaction_type.umbrella",
+            "True"
+          ],
+          [
+            "PolicyInformation.transaction_type.excess",
+            "True"
+          ],
+          [
+            "PolicyInformation.transaction_type.renewal",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 8,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 9,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 30,
+        "confirmed": 30,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 10,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 5,
+        "confirmed": 5,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 11,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 1,
+        "confirmed": 0,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "error",
+            "No filled data found. The provided image is a page of fraud statements applicable in various U.S. states and contains no application-specific fields such as date, agency, carrier, policy number, named insured, address, coverages, limits, premiums, classifications, or premises/building information."
+          ]
+        ]
+      },
+      {
+        "page": 12,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 13,
+        "confirmed": 13,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  },
+  {
+    "file": "ACORD_112322108_125.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 38,
+        "confirmed": 36,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "ApplicantInformation.policy_information.billing_plan",
+            "DIRECT"
+          ],
+          [
+            "ApplicantDetails.corporation",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 21,
+        "confirmed": 20,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "AdditionalInterest.interest",
+            "ADDITIONAL INSURED BREACH OF WARRANTY"
+          ]
+        ]
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 22,
+        "confirmed": 22,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  },
+  {
+    "file": "113199142_Genstar Apartment Supp (8).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 0,
+        "confirmed": 0,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 1,
+        "confirmed": 0,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "error",
+            "No filled data found. The document is blank or contains no completed fields."
+          ]
+        ]
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 1,
+        "confirmed": 0,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "error",
+            "No filled data found. The document is blank except for state laws and signature fields, which are not filled out."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "NREPG Questionnaire (01-26).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 25,
+        "confirmed": 15,
+        "unconfirmed": 10,
+        "unconfirmed_fields": [
+          [
+            "Applicant Information.Named Insured",
+            "Prism Broward LP"
+          ],
+          [
+            "Applicant Information.Property Name",
+            "See SOV on file"
+          ],
+          [
+            "Applicant Information.Property Address",
+            "See SOV on file"
+          ],
+          [
+            "Building Information.Year Built",
+            "see SO'"
+          ],
+          [
+            "Building Information.Number of Buildings",
+            "3232"
+          ],
+          [
+            "Building Information.Number of Stories",
+            "See SC"
+          ],
+          [
+            "Building Information.Building Updates[0].Year of Update",
+            "2015-2018"
+          ],
+          [
+            "Building Information.Building Updates[1].Year of Update",
+            "2015-2018"
+          ],
+          [
+            "Building Information.Building Updates[2].Year of Update",
+            "As needed"
+          ],
+          [
+            "Building Information.Building Updates[3].Year of Update",
+            "See SOV (2006, 2017, 2019)"
+          ]
+        ]
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 28,
+        "confirmed": 27,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "tables[3].data[0].answer",
+            "n/a"
+          ]
+        ]
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 79,
+        "confirmed": 79,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 16,
+        "confirmed": 16,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 5,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 34,
+        "confirmed": 17,
+        "unconfirmed": 17,
+        "unconfirmed_fields": [
+          [
+            "property_details.recreational_facilities.swimming_pools.depth_marked",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.swimming_pools.pool_fenced",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.swimming_pools.slide",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.swimming_pools.rules_posted",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.swimming_pools.pool_gated",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.playground_facilities.available",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.clubhouse.available",
+            "True"
+          ],
+          [
+            "property_details.recreational_facilities.clubhouse.rented_out",
+            "True"
+          ],
+          [
+            "tables[0].rows[0].answer.yes_no",
+            "True"
+          ],
+          [
+            "tables[0].rows[0].answer.depth_marked",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 6,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 25,
+        "confirmed": 13,
+        "unconfirmed": 12,
+        "unconfirmed_fields": [
+          [
+            "property_details.high_profile_landmark_structures",
+            "n/a"
+          ],
+          [
+            "property_details.generate_power_sell_excess_utilities",
+            "n/a"
+          ],
+          [
+            "property_details.major_renovations",
+            "n/a"
+          ],
+          [
+            "q_a[1].answer.yes",
+            "True"
+          ],
+          [
+            "q_a[1].answer.description",
+            "See attached loss runs"
+          ],
+          [
+            "management.management_info",
+            "n/a"
+          ],
+          [
+            "occupancy_data.occupancy_info",
+            "n/a"
+          ],
+          [
+            "tables[0].rows[1].content.yes",
+            "True"
+          ],
+          [
+            "tables[0].rows[1].content.description",
+            "See attached loss runs"
+          ],
+          [
+            "tables[1].rows[0].content",
+            "n/a"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 8,
+        "confirmed": 8,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 8,
+        "confirmed": 6,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Header.carrier",
+            "Farmers Insurance"
+          ],
+          [
+            "Note",
+            "NO LOSSES OR CLAIMS REPORTED"
+          ]
+        ]
+      },
+      {
+        "page": 3,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 7,
+        "confirmed": 5,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Header.carrier",
+            "Farmers Insurance"
+          ],
+          [
+            "Summary Totals.no_losses_or_claims_reported",
+            "True"
+          ]
+        ]
+      },
+      {
+        "page": 4,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 7,
+        "confirmed": 5,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Header.carrier",
+            "Farmers Insurance"
+          ],
+          [
+            "Summary Totals.no_losses_or_claims_reported",
+            "True"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "LR_21-23 CIBA GL Loss Run 03-18-26.PDF",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 10,
+        "confirmed": 10,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "ocr",
+        "vlm_fields": 25,
+        "confirmed": 23,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Claims[0].status",
+            "Closed w/Payment"
+          ],
+          [
+            "Claims[1].status",
+            "Closed w/Payment"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "LR_113199144_Rise Campus Quarters Loss Run.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 9,
+        "confirmed": 8,
+        "unconfirmed": 1,
+        "unconfirmed_fields": [
+          [
+            "Header.dates",
+            "4/16/2023 to 4/16/2026"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 21,
+        "confirmed": 18,
+        "unconfirmed": 3,
+        "unconfirmed_fields": [
+          [
+            "Claims[0].type",
+            "Premises/Slip /Trip/fall"
+          ],
+          [
+            "Summary Totals.total_paid",
+            "91578.97"
+          ],
+          [
+            "Summary Totals.total_incurred",
+            "216484.42"
+          ]
+        ]
+      },
+      {
+        "page": 2,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 21,
+        "confirmed": 19,
+        "unconfirmed": 2,
+        "unconfirmed_fields": [
+          [
+            "Summary Totals.total_paid",
+            "48544.56"
+          ],
+          [
+            "Summary Totals.total_incurred",
+            "102000.0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "LR_25-26_Kinsale GL_3-19-26.PDF",
+    "pages": [
+      {
+        "page": 1,
+        "status": "OK",
+        "raw_method": "pdfplumber",
+        "vlm_fields": 16,
+        "confirmed": 16,
+        "unconfirmed": 0,
+        "unconfirmed_fields": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,1818 @@
+{
+  "metadata": {
+    "source_file": "/home/safdar/Desktop/inevoai/new_accord_extraction_project/Acord App (1800 North Stone LLC) 2026.pdf",
+    "total_pages": 25,
+    "extractor": "acord_coordinate_extractor_v1"
+  },
+  "pages": {
+    "page_1": {
+      "form": "ACORD 125",
+      "section": "Applicant Information (Page 1 of 4)",
+      "date": "04/08/2026",
+      "agency": "Crest Insurance Group, LLC 5285 E. Williams Circle Suite 4500 Tucson, AZ 85711",
+      "carrier": "AmTrust Group",
+      "contact_phone": "(888) 881-5765",
+      "contact_fax": "(520) 325-3757",
+      "contact_email": "info@crestins.com",
+      "agency_customer_id": "1800NOR-02",
+      "proposed_eff_date": "05/01/2026",
+      "proposed_exp_date": "05/01/2027",
+      "billing_plan_direct": false,
+      "billing_plan_agency": false,
+      "named_insured": "1800 North Stone LLC 1800 N Stone Ave Tucson, AZ 85705-5761",
+      "sic": "6513",
+      "business_phone": "(520) 415-3022",
+      "website_address": "stoneavenuestandard.com",
+      "entity_type": [
+        "LLC"
+      ]
+    },
+    "page_2": {
+      "form": "ACORD 125",
+      "section": "Contact & Premises Info (Page 2 of 4)",
+      "agency_customer_id": "1800NOR-02",
+      "premises": [
+        {
+          "street": "STREET 1800 N Stone Ave",
+          "loc_num": "LOC # 1",
+          "city": "Tucson",
+          "state": "AZ",
+          "bld_num": "1",
+          "county": "Pima",
+          "zip": "85705-5761"
+        },
+        {
+          "street": "STREET 1800 N Stone Ave",
+          "loc_num": "LOC # 1",
+          "city": "Tucson",
+          "state": "AZ",
+          "bld_num": "2",
+          "county": "Pima",
+          "zip": "85705-5761"
+        },
+        {
+          "street": "STREET 1800 N Stone Ave",
+          "loc_num": "LOC # 1",
+          "city": "Tucson",
+          "state": "AZ",
+          "bld_num": "3",
+          "county": "Pima",
+          "zip": "85705-5761"
+        },
+        {
+          "street": "STREET 1800 N Stone Ave",
+          "loc_num": "LOC # 1",
+          "city": "Tucson",
+          "state": "AZ",
+          "bld_num": "4",
+          "county": "Pima",
+          "zip": "85705-5761"
+        }
+      ],
+      "nature_of_business": "68 Unit Student Housing Apartment Complex"
+    },
+    "page_3": {
+      "form": "ACORD 125",
+      "section": "General Information (Page 3 of 4)",
+      "agency_customer_id": "1800NOR-02"
+    },
+    "page_4": {
+      "form": "ACORD 125",
+      "section": "Prior Carrier / Loss History / Signature (Page 4 of 4)",
+      "agency_customer_id": "1800NOR-02"
+    },
+    "page_5": {
+      "form": "ACORD 823",
+      "section": "Additional Premises Information Schedule",
+      "agency_customer_id": "1800NOR-02",
+      "agency": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "premises_5": {
+        "loc_num": "1",
+        "bld_num": "5",
+        "street": "1800 N Stone Ave",
+        "city": "Tucson",
+        "state": "AZ",
+        "county": "Pima",
+        "zip": "85705-5761"
+      }
+    },
+    "page_6": {
+      "form": "ACORD 140",
+      "section": "Property Section (Page 6)",
+      "agency_customer_id": "1800NOR-02",
+      "date": "04/08/2026",
+      "agency_name": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "premises_num": "0",
+      "building_num": "0",
+      "street_address": "",
+      "bldg_description": "VALU- INFLATION DED BLKT",
+      "coverages": [
+        {
+          "subject": "Building",
+          "amount": "12,591,761",
+          "valuation": "ATION R",
+          "causes_of_loss": "GUARD % Special (Including theft)",
+          "deductible": "TYPE 5,000"
+        },
+        {
+          "subject": "Business Personal Property",
+          "amount": "1,413,213",
+          "valuation": "R",
+          "causes_of_loss": "Special (Including theft)",
+          "deductible": "5,000"
+        },
+        {
+          "subject": "Business Income with Extra Expense",
+          "valuation": "L",
+          "causes_of_loss": "Special (Including theft)",
+          "deductible": "72 Hours"
+        }
+      ],
+      "wiring_updated": false,
+      "additional_interest_name": "Berkadia Commercial Mortgage, LLC 332 Norristown Road, Suite 300 Ambler, PA 19002 Montgomery",
+      "additional_interest_type": [
+        "Mortgagee"
+      ],
+      "additional_interest_location": "0",
+      "additional_interest_building": "0"
+    },
+    "page_7": {
+      "form": "ACORD 140",
+      "section": "Property Details (Page 7)",
+      "agency_customer_id": "1800NOR-02",
+      "premises_num": "1",
+      "building_num": "1",
+      "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+      "bldg_description": "14 Units",
+      "construction_type": "Frame",
+      "num_stories": "3",
+      "year_built": "2003",
+      "total_area": "21,836",
+      "roofing_year": "2025",
+      "wiring_updated": false,
+      "additional_interest_name": "REFERENCE / LOAN #:"
+    },
+    "page_8": {
+      "form": "ACORD 140 Signature",
+      "section": "Signature (Page 8)",
+      "agency_customer_id": "1800NOR-02",
+      "note": "Legal disclaimer / signature page - no fillable data fields"
+    },
+    "page_9": {
+      "form": "ACORD 140",
+      "section": "Property Section (Page 9)",
+      "agency_customer_id": "1800NOR-02",
+      "date": "04/08/2026",
+      "agency_name": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "premises_num": "1",
+      "building_num": "2",
+      "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+      "bldg_description": "12 Units VALU- INFLATION DED BLKT",
+      "construction_type": "Frame",
+      "num_stories": "3",
+      "year_built": "2003",
+      "total_area": "15,612",
+      "roofing_year": "2025",
+      "wiring_updated": false
+    },
+    "page_10": {
+      "form": "ACORD 140",
+      "section": "Property Details (Page 10)",
+      "agency_customer_id": "1800NOR-02",
+      "premises_num": "1",
+      "building_num": "3",
+      "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+      "bldg_description": "18 Units",
+      "construction_type": "Frame",
+      "num_stories": "3",
+      "year_built": "2003",
+      "total_area": "28,932",
+      "roofing_year": "2025",
+      "wiring_updated": false,
+      "additional_interest_name": "REFERENCE / LOAN #:"
+    },
+    "page_11": {
+      "form": "ACORD 140 Signature",
+      "section": "Signature (Page 11)",
+      "agency_customer_id": "1800NOR-02",
+      "note": "Legal disclaimer / signature page - no fillable data fields"
+    },
+    "page_12": {
+      "form": "ACORD 140",
+      "section": "Property Section (Page 12)",
+      "agency_customer_id": "1800NOR-02",
+      "date": "04/08/2026",
+      "agency_name": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "premises_num": "1",
+      "building_num": "4",
+      "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+      "bldg_description": "12 Units VALU- INFLATION DED BLKT",
+      "construction_type": "Frame",
+      "num_stories": "3",
+      "year_built": "2003",
+      "total_area": "15,612",
+      "roofing_year": "2025",
+      "wiring_updated": false
+    },
+    "page_13": {
+      "form": "ACORD 140",
+      "section": "Property Details (Page 13)",
+      "agency_customer_id": "1800NOR-02",
+      "premises_num": "1",
+      "building_num": "5",
+      "street_address": "1800 N Stone Ave, Tucson, AZ 85705-5761",
+      "bldg_description": "12 Units",
+      "construction_type": "Frame",
+      "num_stories": "3",
+      "year_built": "2003",
+      "total_area": "17,100",
+      "roofing_year": "2025",
+      "wiring_updated": false,
+      "additional_interest_name": "REFERENCE / LOAN #:"
+    },
+    "page_14": {
+      "form": "ACORD 140 Signature",
+      "section": "Signature (Page 14)",
+      "agency_customer_id": "1800NOR-02",
+      "note": "Legal disclaimer / signature page - no fillable data fields"
+    },
+    "page_15": {
+      "form": "Overflow",
+      "section": "Additional Coverages Overflow (Page 15)",
+      "agency_customer_id": "1800NOR-02",
+      "additional_coverages": [
+        "* Code XTEND; Description Property Enhancement Endorsement;",
+        "* Code EV; Description Electric Vehicle Charging Stations;"
+      ]
+    },
+    "page_16": {
+      "form": "ACORD 126",
+      "section": "Commercial General Liability (Page 16)",
+      "agency_customer_id": "1800NOR-02",
+      "date": "04/08/2026",
+      "agency": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "cgl_coverage": true,
+      "coverage_type_occurrence": true,
+      "coverage_type_claims_made": false,
+      "general_aggregate": "2,000,000",
+      "products_completed_ops_aggregate": "2,000,000",
+      "personal_advertising_injury": "2,000,000",
+      "each_occurrence": "2,000,000",
+      "damage_to_rented_premises": "100,000",
+      "medical_expense": "10,000",
+      "limit_applies_per_policy": false,
+      "limit_applies_per_location": true,
+      "classifications": [
+        {
+          "description": "APARTMENT BUILDINGS - STUDENT HOUSING",
+          "class_code": "60010",
+          "premium_basis": "U",
+          "exposure": "68"
+        },
+        {
+          "description": "SWIMMING POOL",
+          "class_code": "48925",
+          "premium_basis": "T",
+          "exposure": "1"
+        }
+      ],
+      "other_coverages_note": "OTHER COVERAGES, RESTRICTIONS AND/OR ENDORSEMENTS (For hired/non-owned auto coverages attach the applicable state Business Auto Section, ACORD 137) See attached Additional Coverages overflow."
+    },
+    "page_17": {
+      "form": "ACORD 126 Contractors",
+      "section": "Contractors (Page 17)",
+      "agency_customer_id": "1800NOR-02",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES (For all past or present operations)",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "1. DOES APPLICANT DRAW PLANS, DESIGNS, OR SPECIFICATIONS FOR OTHERS?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. DO ANY OPERATIONS INCLUDE BLASTING OR UTILIZE OR STORE EXPLOSIVE MATERIAL?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. DO ANY OPERATIONS INCLUDE EXCAVATION, TUNNELING, UNDERGROUND WORK OR EARTH MOVING?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. DO YOUR SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN YOURS?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. ARE SUBCONTRACTORS ALLOWED TO WORK WITHOUT PROVIDING YOU WITH A CERTIFICATE OF INSURANCE?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. DOES APPLICANT LEASE EQUIPMENT TO OTHERS WITH OR WITHOUT OPERATORS?",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "$ PAID TO SUB- % OF WORK # FULL- # PART-\nDESCRIBE THE TYPE OF WORK SUBCONTRACTED CONTRACTORS: SUBCONTRACTED: TIME STAFF: TIME STAFF:",
+            "$ PAID TO SUB-\nCONTRACTORS:",
+            "% OF WORK\nSUBCONTRACTED:",
+            "# FULL-\nTIME STAFF:",
+            "# PART-\nTIME STAFF:",
+            ""
+          ]
+        ],
+        [
+          [
+            "PRODUCTS",
+            "ANNUAL GROSS SALES",
+            "# OF UNITS",
+            "TIME IN\nMARKET",
+            "EXPECTED\nLIFE",
+            "INTENDED USE",
+            "PRINCIPAL COMPONENTS",
+            ""
+          ],
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES (For all past or present products or operations) PLEASE ATTACH LITERATURE, BROCHURES, LABELS, WARNINGS, ETC.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "1. DOES APPLICANT INSTALL, SERVICE OR DEMONSTRATE PRODUCTS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. FOREIGN PRODUCTS SOLD, DISTRIBUTED, USED AS COMPONENTS? (If \"YES\", attach ACORD 815)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. RESEARCH AND DEVELOPMENT CONDUCTED OR NEW PRODUCTS PLANNED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. GUARANTEES, WARRANTIES, HOLD HARMLESS AGREEMENTS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. PRODUCTS RELATED TO AIRCRAFT/SPACE INDUSTRY?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. PRODUCTS RECALLED, DISCONTINUED, CHANGED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7. PRODUCTS OF OTHERS SOLD OR RE-PACKAGED UNDER APPLICANT LABEL?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8. PRODUCTS UNDER LABEL OF OTHERS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9. VENDORS COVERAGE REQUIRED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10. DOES ANY NAMED INSURED SELL TO OTHER NAMED INSUREDS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    "page_18": {
+      "form": "ACORD 126 Add'l Interest",
+      "section": "Additional Interest (Page 18)",
+      "agency_customer_id": "1800NOR-02",
+      "tables": [
+        [
+          [
+            "INTEREST\nADDITIONAL INSURED\nEMPLOYEE AS LESSOR\nLIENHOLDER\nLOSS PAYEE\nMORTGAGEE",
+            "NAME AND ADDRESS RANK: EVIDENCE: CERTIFICATE\nREFERENCE / LOAN #:",
+            "INTEREST IN ITEM NUMBER",
+            ""
+          ],
+          [
+            "",
+            "",
+            "LOCATION:",
+            "BUILDING:"
+          ],
+          [
+            "",
+            "",
+            "ITEM\nCLASS:",
+            "ITEM:"
+          ],
+          [
+            "",
+            "",
+            "ITEM DESCRIPTION",
+            ""
+          ],
+          [
+            "",
+            "REFERENCE / LOAN #:",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "EVIDENCE:",
+            "",
+            "CERTIFICATE"
+          ]
+        ],
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES (For all past or present operations)",
+            "Y / N"
+          ],
+          [
+            "1. ANY MEDICAL FACILITIES PROVIDED OR MEDICAL PROFESSIONALS EMPLOYED OR CONTRACTED?",
+            ""
+          ],
+          [
+            "2. ANY EXPOSURE TO RADIOACTIVE/NUCLEAR MATERIALS?",
+            ""
+          ],
+          [
+            "3. DO/HAVE PAST, PRESENT OR DISCONTINUED OPERATIONS INVOLVE(D) STORING, TREATING, DISCHARGING, APPLYING, DISPOSING, OR\nTRANSPORTING OF HAZARDOUS MATERIAL? (e.g. landfills, wastes, fuel tanks, etc)",
+            ""
+          ],
+          [
+            "4. ANY OPERATIONS SOLD, ACQUIRED, OR DISCONTINUED IN LAST FIVE (5) YEARS?",
+            ""
+          ],
+          [
+            "5. DO YOU RENT OR LOAN EQUIPMENT TO OTHERS?\nEQUIPMENT TYPE OF EQUIPMENT INSTRUCTION GIVEN (Y/N)\nSMALL TOOLS LARGE EQUIPMENT\nSMALL TOOLS LARGE EQUIPMENT",
+            ""
+          ],
+          [
+            "6. ANY WATERCRAFT, DOCKS, FLOATS OWNED, HIRED OR LEASED?",
+            ""
+          ],
+          [
+            "7. ANY PARKING FACILITIES OWNED/RENTED?",
+            ""
+          ],
+          [
+            "8. IS A FEE CHARGED FOR PARKING?",
+            ""
+          ],
+          [
+            "9. RECREATION FACILITIES PROVIDED?",
+            ""
+          ],
+          [
+            "10. ARE THERE ANY LODGING OPERATIONS INCLUDING APARTMENTS? (If \"YES\", answer the following):\n# APTS TOTAL APT AREA DESCRIBE OTHER LODGING OPERATIONS\nSq. Ft.",
+            ""
+          ],
+          [
+            "11. IS THERE A SWIMMING POOL ON PREMISES? (Check all that apply)\nAPPROVED FENCE LIMITED ACCESS DIVING BOARD SLIDE ABOVE GROUND IN GROUND LIFE GUARD",
+            ""
+          ],
+          [
+            "12. ARE SOCIAL EVENTS SPONSORED?",
+            ""
+          ],
+          [
+            "13. ARE ATHLETIC TEAMS SPONSORED?\nTYPE OF SPORT S C P O O N R T T A (Y C / T N) AGE GROUP 13 - 18 TYPE OF SPORT S C P O O N R T T A (Y C / T N) AGE GROUP 13 - 18\n12 & UNDER OVER 18 12 & UNDER OVER 18\nEXTENT OF SPONSORSHIP: EXTENT OF SPONSORSHIP:",
+            ""
+          ],
+          [
+            "14. ANY STRUCTURAL ALTERATIONS CONTEMPLATED?",
+            ""
+          ],
+          [
+            "15. ANY DEMOLITION EXPOSURE CONTEMPLATED?",
+            ""
+          ]
+        ],
+        [
+          [
+            "EQUIPMENT",
+            "TYPE OF EQUIPMENT",
+            "",
+            "",
+            "",
+            "INSTRUCTION GIVEN (Y/N)"
+          ],
+          [
+            "",
+            "",
+            "SMALL TOOLS",
+            "",
+            "LARGE EQUIPMENT",
+            ""
+          ],
+          [
+            "",
+            "",
+            "SMALL TOOLS",
+            "",
+            "LARGE EQUIPMENT",
+            ""
+          ]
+        ],
+        [
+          [
+            "# APTS",
+            "TOTAL APT AREA\nSq. Ft.",
+            "DESCRIBE OTHER LODGING OPERATIONS"
+          ]
+        ],
+        [
+          [
+            "TYPE OF SPORT",
+            "CONTACT\nSPORT (Y/N)",
+            "AGE GROUP 13 - 18\n12 & UNDER OVER 18"
+          ],
+          [
+            "EXTENT OF SPONSORSHIP:",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "TYPE OF SPORT",
+            "CONTACT\nSPORT (Y/N)",
+            "AGE GROUP 13 - 18\n12 & UNDER OVER 18"
+          ],
+          [
+            "EXTENT OF SPONSORSHIP:",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    "page_19": {
+      "form": "ACORD 126 Gen Info",
+      "section": "General Info Continued (Page 19)",
+      "agency_customer_id": "1800NOR-02",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES (For all past or present operations)",
+            "Y / N"
+          ],
+          [
+            "16. HAS APPLICANT BEEN ACTIVE IN OR IS CURRENTLY ACTIVE IN JOINT VENTURES?",
+            ""
+          ],
+          [
+            "17. DO YOU LEASE EMPLOYEES TO OR FROM OTHER EMPLOYERS?\nWORKERS WORKERS\nLEASE TO COMPENSATION LEASE FROM COMPENSATION\nCOVERAGE CARRIED (Y/N) COVERAGE CARRIED (Y/N)",
+            ""
+          ],
+          [
+            "18. IS THERE A LABOR INTERCHANGE WITH ANY OTHER BUSINESS OR SUBSIDIARIES?",
+            ""
+          ],
+          [
+            "19. ARE DAY CARE FACILITIES OPERATED OR CONTROLLED?",
+            ""
+          ],
+          [
+            "20. HAVE ANY CRIMES OCCURRED OR BEEN ATTEMPTED ON YOUR PREMISES WITHIN THE LAST THREE (3) YEARS?",
+            ""
+          ],
+          [
+            "21. IS THERE A FORMAL, WRITTEN SAFETY AND SECURITY POLICY IN EFFECT?",
+            ""
+          ],
+          [
+            "22. DOES THE BUSINESSES' PROMOTIONAL LITERATURE MAKE ANY REPRESENTATIONS ABOUT THE SAFETY OR SECURITY OF THE PREMISES?",
+            ""
+          ]
+        ],
+        [
+          [
+            "LEASE TO",
+            "WORKERS\nCOMPENSATION\nCOVERAGE CARRIED (Y/N)"
+          ]
+        ],
+        [
+          [
+            "LEASE FROM",
+            "WORKERS\nCOMPENSATION\nCOVERAGE CARRIED (Y/N)"
+          ]
+        ],
+        [
+          [
+            "Applicable in AL, AR, DC, LA, MD, NM, RI and WV: Any person who knowingly (or willfully)* presents a false or fraudulent claim for payment of a loss or\nbenefit or knowingly (or willfully)* presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in\nprison. *Applies in MD Only.\nApplicable in CO: It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of\ndefrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance\ncompany or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the\npurpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be\nreported to the Colorado Division of Insurance within the Department of Regulatory Agencies.\nApplicable in FL and OK: Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a statement of claim or an application\ncontaining any false, incomplete, or misleading information is guilty of a felony (of the third degree)*. *Applies in FL Only.\nApplicable in KS: Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be\npresented to or by an insurer, purported insurer, broker or any agent thereof, any written statement as part of, or in support of, an application for the issuance\nof, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for\ncommercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the\npurpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act.\nApplicable in KY, NY, OH and PA: Any person who knowingly and with intent to defraud any insurance company or other person files an application for\ninsurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material\nthereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties (not to exceed five thousand dollars and\nthe stated value of the claim for each such violation)*. *Applies in NY Only.\nApplicable in ME, TN, VA and WA: It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose\nof defrauding the company. Penalties (may)* include imprisonment, fines and denial of insurance benefits. *Applies in ME Only.\nApplicable in NJ: Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil\npenalties.\nApplicable in OR: Any person who knowingly and with intent to defraud or solicit another to defraud the insurer by submitting an application containing a\nfalse statement as to any material fact may be violating state law.\nApplicable in PR: Any person who knowingly and with the intention of defrauding presents false information in an insurance application, or presents, helps,\nor causes the presentation of a fraudulent claim for the payment of a loss or any other benefit, or presents more than one claim for the same damage or loss,\nshall incur a felony and, upon conviction, shall be sanctioned for each violation by a fine of not less than five thousand dollars ($5,000) and not more than ten\nthousand dollars ($10,000), or a fixed term of imprisonment for three (3) years, or both penalties. Should aggravating circumstances [be] present, the penalty\nthus established may be increased to a maximum of five (5) years, if extenuating circumstances are present, it may be reduced to a minimum of two (2)\nyears.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "THE UNDERSIGNED IS AN AUTHORIZED REPRESENTATIVE OF THE APPLICANT AND REPRESENTS THAT REASONABLE INQUIRY HAS BEEN MADE TO OBTAIN THE\nANSWERS TO QUESTIONS ON THIS APPLICATION. HE/SHE REPRESENTS THAT THE ANSWERS ARE TRUE, CORRECT AND COMPLETE TO THE BEST OF HIS/HER\nKNOWLEDGE.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PRODUCER'S SIGNATURE",
+            "PRODUCER'S NAME (Please Print)",
+            "",
+            "STATE PRODUCER LICENSE NO\n(Required in Florida)"
+          ],
+          [
+            "APPLICANT'S SIGNATURE",
+            "",
+            "DATE",
+            "NATIONAL PRODUCER NUMBER"
+          ]
+        ]
+      ]
+    },
+    "page_20": {
+      "form": "Overflow",
+      "section": "Additional Coverages Overflow (Page 20)",
+      "agency_customer_id": "1800NOR-02",
+      "additional_coverages": [
+        "* Code XTEND; Description GL Enhancement Endt",
+        "* Code HNOA; Description Hired And Non-Owned Auto; Limit 1 $1,000,000"
+      ]
+    },
+    "page_21": {
+      "form": "ACORD 131",
+      "section": "Umbrella/Excess Section (Page 21)",
+      "agency_customer_id": "1800NOR-02",
+      "date": "04/08/2026",
+      "agency": "Crest Insurance Group, LLC",
+      "carrier": "AmTrust Group",
+      "effective_date": "05/01/2026",
+      "named_insured": "1800 North Stone LLC",
+      "transaction_new": true,
+      "transaction_renewal": false,
+      "type_umbrella": true,
+      "type_excess": false,
+      "type_occurrence": true,
+      "type_claims_made": false,
+      "limit_each_occurrence": "5,000,000",
+      "limit_aggregate": "5,000,000",
+      "retained_limit": "0",
+      "underlying_gl_carrier": "TBD",
+      "underlying_gl_each_occurrence": "1,000,000",
+      "underlying_gl_general_aggregate": "2,000,000 $",
+      "underlying_gl_products_aggregate": "2,000,000",
+      "underlying_gl_personal_injury": "1,000,000 $",
+      "underlying_gl_damage_rented": "100,000",
+      "underlying_gl_medical": "10,000 $",
+      "underlying_gl_eff_date": "05/01/2026",
+      "underlying_gl_exp_date": "05/01/2027",
+      "underlying_gl_occurrence": true
+    },
+    "page_22": {
+      "form": "ACORD 131 Underlying",
+      "section": "Underlying Insurance (Page 22)",
+      "tables": [
+        [
+          [
+            "UNDERLYING GENERAL LIABILITY INFORMATION (Explain all \"YES\" responses)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. ARE DEFENSE COSTS:",
+            "",
+            "",
+            "WITHIN AGGREGATE LIMITS?",
+            "",
+            "",
+            "",
+            "",
+            "A SEPARATE LIMIT?",
+            "",
+            "",
+            "",
+            "",
+            "UNLIMITED?",
+            ""
+          ],
+          [
+            "2. INDICATE THE EDITION DATE OF THE ISO FORM OR SIMILAR FILING FOR THE UNDERLYING COVERAGE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. HAS ANY PRODUCT, WORK, ACCIDENT, OR LOCATION BEEN EXCLUDED, UNINSURED OR SELF INSURED FROM ANY PREVIOUS COVERAGE? (Y / N)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. FOR CLAIMS MADE, INDICATE RETROACTIVE DATE OF CURRENT UNDERLYING POLICY:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. FOR CLAIMS MADE, INDICATE ENTRY DATE INTO UNINTERRUPTED CLAIMS MADE COVERAGE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. FOR CLAIMS MADE, WAS \"TAIL\" COVERAGE PURCHASED FOR ANY PREVIOUS PRIMARY OR EXCESS POLICY? (Y / N) EFF. DATE:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CHECK ALL COVERAGES IN UNDERLYING POLICIES. ALSO CHECK IF ANY EXPOSURES ARE PRESENT FOR EACH COVERAGE. PROVIDE AN EXPLANATION. EXPLAIN IF\nDIFFERENT LIMITS, EXTENSIONS, OR EXCLUSIONS. EXPLAIN ANY SPECIAL COVERAGES BEYOND STANDARD FORMS. EXPLAIN ALL EXPOSURES.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CHECK IF APPROPRIATE",
+            "",
+            "",
+            "",
+            "",
+            "COVERAGE EXPOSURE",
+            "",
+            "",
+            "",
+            "",
+            "COVERAGE EXPOSURE",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "ANY AUTO (SYMBOL 1)\nCGL - CLAIMS MADE\nCGL - OCCURRENCE",
+            "",
+            "",
+            "",
+            "",
+            "CARE, CUSTODY, CONTROL\nEMPLOYEE BENEFIT LIABILITY\nFOREIGN LIABILITY / TRAVEL\nGARAGEKEEPERS LIABILITY\nINCIDENTAL MEDICAL MALPRACTICE\nLIQUOR LIABILITY\nPOLLUTION LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PROFESSIONAL LIABILITY (E&O)\nVENDORS LIABILITY\nWATERCRAFT LIABILITY",
+            "",
+            ""
+          ],
+          [
+            "COVERAGE EXPOSURE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "AIRCRAFT LIABILITY\nAIRCRAFT PASSENGER LIABILITY\nADDITIONAL INTERESTS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "UNDERLYING INSURANCE COVERAGE INFORMATION (INCLUDE ALL RESTRICTIONS; e.g. LASER ENDORSEMENTS, DISCRIMINATION, SUBROGATION WAIVERS, OR EXTENSIONS OF\nCOVERAGE) Attach ACORD 101, Additional Remarks Schedule, if more space is required.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PREVIOUS EXPERIENCE: (GIVE DETAILS OF ALL LIABILITY CLAIMS EXCEEDING $10,000 OR OCCURRENCES THAT MAY GIVE RISE TO CLAIMS, DURING THE PAST FIVE (5) YEARS,\nWHETHER INSURED OR NOT. SPECIFY DATE, COVERAGE, DESCRIPTION, AMOUNT PAID, AMOUNT OUTSTANDING) Attach ACORD 101, Additional Remarks Schedule, if more space is required.\nNO SUCH CLAIMS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC",
+            "PROPERTY TYPE",
+            "",
+            "VALUE",
+            "A*",
+            "B*",
+            "C*",
+            "D*",
+            "SQ FT OF BLDG OCC"
+          ],
+          [
+            "",
+            "",
+            "REAL\nPERSONAL",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "OCCUPANCY / DESCRIPTION OF PERSONAL PROPERTY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "*APPLICANT: [A] IS HELD HARMLESS IN THE LEASE, [B] HAS A WAIVER OF SUBROGATION, [C] IS A NAMED INSURED IN THE FIRE POLICY, [D] OTHER (specify)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "TYPE",
+            "",
+            "# OWNED",
+            "# NON-\nOWNED",
+            "# LEASED",
+            "PROPERTY HAULED",
+            "RADIUS (MILES)",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "LOCAL",
+            "INTER-\nMEDIATE",
+            "LONG\nDISTANCE"
+          ],
+          [
+            "PRIVATE PASSENGER",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "TRUCKS",
+            "LIGHT",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "MEDIUM",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EX. HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "TRUCKS /\nTRACTORS",
+            "HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "EX. HEAVY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "BUSES",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    "page_23": {
+      "form": "ACORD 131 Exposures",
+      "section": "Additional Exposures (Page 23)",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "ADVERTISERS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. MEDIA USED:\nANNUAL COST: $",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. ARE SERVICES OF AN ADVERTISING AGENCY USED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. ANY COVERAGE PROVIDED UNDER AGENCY'S POLICY?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "AIRCRAFT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4. DOES APPLICANT OWN / LEASE / OPERATE AIRCRAFT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "AUTO LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5. ARE EXPLOSIVES, CAUSTICS, FLAMMABLES OR OTHER DANGEROUS CARGO HAULED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6. ARE PASSENGERS CARRIED FOR A FEE?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7. ANY UNITS NOT INSURED BY UNDERLYING POLICIES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8. ARE ANY VEHICLES LEASED OR RENTED TO OTHERS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9. ARE HIRED AND NON-OWNED COVERAGES PROVIDED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CONTRACTORS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10. IS BRIDGE, DAM, OR MARINE WORK PERFORMED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "11. DESCRIBE TYPICAL JOBS PERFORMED (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "12. DESCRIBE AGREEMENT (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "13. DOES APPLICANT OWN, RENT, OR OTHERWISE USE CRANES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "14. DO SUBCONTRACTORS CARRY COVERAGES OR LIMITS LESS THAN APPLICANT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "EMPLOYERS LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "15. IS APPLICANT SELF-INSURED IN ANY STATE?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "16. SUBJECT TO:",
+            "",
+            "JONES ACT",
+            "",
+            "FELA",
+            "",
+            "STOP GAP",
+            "",
+            "OTHER:",
+            ""
+          ],
+          [
+            "INCIDENTAL MALPRACTICE LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "17. IS A HOSPITAL OR FIRST AID FACILITY MAINTAINED?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "18. ARE COVERAGES PROVIDED FOR DOCTORS / NURSES?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "19. INDICATE # OF DOCTORS: NURSES: BEDS:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    "page_24": {
+      "form": "ACORD 131 Exposures",
+      "section": "Additional Exposures (Page 24)",
+      "tables": [
+        [
+          [
+            "EXPLAIN ALL \"YES\" RESPONSES, PROVIDE OTHER INFORMATION REQUIRED",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Y / N"
+          ],
+          [
+            "EPA #: POLLUTION LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "20. DO CURRENT OR PAST PRODUCTS, OR THEIR COMPONENTS, CONTAIN HAZARDOUS MATERIALS THAT MAY REQUIRE SPECIAL\nDISPOSAL METHODS?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "21. INDICATE THE COVERAGES CARRIED:\nGL WITH STANDARD ISO POLLUTION EXCLUSION GL WITH POLLUTION COVERAGE ENDORSEMENT\nGL WITH STANDARD SUDDEN & ACCIDENTAL ONLY SEPARATE POLLUTION COVERAGE",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PRODUCT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "22. ARE MISSILES, ENGINES, GUIDANCE SYSTEMS, FRAMES OR ANY OTHER PRODUCT USED / INSTALLED IN AIRCRAFT?",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "23. ANY FOREIGN OPERATIONS, FOREIGN PRODUCTS DISTRIBUTED IN THE USA OR US PRODUCTS SOLD / DISTRIBUTED IN FOREIGN COUNTRIES?\n(If \"YES\", Attach ACORD 815)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "24. PRODUCT LIABILITY LOSS IN PAST THREE (3) YEARS? (SPECIFY)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "25. GROSS SALES FROM EACH OF LAST THREE (3) YEARS: $ $ $",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "PROTECTIVE LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "26. DESCRIBE INDEPENDENT CONTRACTORS (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "WATERCRAFT LIABILITY",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "27. DOES APPLICANT OWN OR LEASE WATERCRAFT?\nLOC # # OWNED LENGTH HORSEPOWER LOC # # OWNED LENGTH HORSEPOWER",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "APARTMENTS / CONDOMINIUMS / HOTELS / MOTELS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "28.",
+            "LOC #",
+            "# STORIES",
+            "# UNITS",
+            "# SWIMMING POOLS",
+            "# DIVING BOARDS",
+            "",
+            "LOC #",
+            "# STORIES",
+            "# UNITS",
+            "# SWIMMING POOLS",
+            "# DIVING BOARDS",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "LOC #",
+            "# OWNED",
+            "LENGTH",
+            "HORSEPOWER"
+          ]
+        ],
+        [
+          [
+            "LOC #",
+            "# OWNED",
+            "LENGTH",
+            "HORSEPOWER"
+          ]
+        ]
+      ]
+    },
+    "page_25": {
+      "form": "ACORD 101 Remarks",
+      "section": "Remarks (Page 25)",
+      "remarks_lines": [
+        "AGENCY CUSTOMER ID: 1800NOR-02 LBAKER",
+        "REMARKS (Attach ACORD 101, Additional Remarks Schedule, if more space is required)",
+        "SIGNATURE",
+        "ANY  PERSON  WHO  KNOWINGLY  AND  WITH INTENT TO DEFRAUD ANY INSURANCE COMPANY OR ANOTHER PERSON FILES AN APPLICATION FOR INSURANCE OR",
+        "STATEMENT  OF  CLAIM CONTAINING ANY MATERIALLY FALSE INFORMATION, OR CONCEALS FOR THE PURPOSE OF MISLEADING INFORMATION CONCERNING ANY",
+        "FACT MATERIAL THERETO, COMMITS A FRAUDULENT INSURANCE ACT, WHICH IS A CRIME AND SUBJECTS THE PERSON TO CRIMINAL AND [NY: SUBSTANTIAL] CIVIL",
+        "PENALTIES. (Not applicable in CO, DC, FL, HI, MA, NE, OH, OK, OR, VT or WA; in LA, ME, TN and VA, insurance benefits may also be denied)",
+        "IN  THE DISTRICT OF COLUMBIA, WARNING:  IT IS A CRIME TO PROVIDE FALSE OR MISLEADING INFORMATION TO AN INSURER FOR THE PURPOSE OF DEFRAUDING",
+        "THE INSURER OR ANY OTHER PERSON.  PENALTIES INCLUDE IMPRISONMENT AND/OR FINES.",
+        "IN  FLORIDA,  ANY  PERSON  WHO  KNOWINGLY  AND  WITH  INTENT  TO  INJURE,  DEFRAUD,  OR  DECEIVE  ANY  INSURER  FILES  A  STATEMENT  OF  CLAIM  OR AN",
+        "APPLICATION CONTAINING ANY FALSE, INCOMPLETE, OR MISLEADING INFORMATION IS GUILTY OF A FELONY OF THE THIRD DEGREE.",
+        "IN  MASSACHUSETTS,  NEBRASKA,  OREGON  AND  VERMONT,  ANY  PERSON  WHO  KNOWINGLY  AND  WITH  INTENT  TO DEFRAUD ANY INSURANCE COMPANY OR",
+        "ANOTHER  PERSON  FILES  AN  APPLICATION FOR INSURANCE OR STATEMENT OF CLAIM CONTAINING ANY MATERIALLY FALSE INFORMATION, OR CONCEALS FOR",
+        "THE PURPOSE OF MISLEADING INFORMATION CONCERNING ANY FACT MATERIAL THERETO, MAY BE COMMITTING A FRAUDULENT INSURANCE ACT, WHICH MAY BE",
+        "A CRIME AND MAY SUBJECT THE PERSON TO CRIMINAL AND CIVIL PENALTIES.",
+        "IN WASHINGTON, IT IS A CRIME TO KNOWINGLY PROVIDE FALSE, INCOMPLETE, OR MISLEADING INFORMATION TO AN INSURANCE COMPANY FOR THE PURPOSE OF",
+        "DEFRAUDING THE COMPANY.  PENALTIES INCLUDE IMPRISONMENT, FINES, AND DENIAL OF INSURANCE BENEFITS.",
+        "IF THE COMPANY TO WHICH I AM APPLYING OFFERS UNINSURED MOTORISTS (UM) AND/OR UNDERINSURED MOTORISTS (UIM) COVERAGE IN MY STATE:",
+        "UNINSURED MOTORISTS (UM) COVERAGE: $ * UNDERINSURED MOTORISTS (UIM) COVERAGE: $ *",
+        "* IF APPLICABLE IN YOUR STATE",
+        "APPLICABLE ONLY IN LOUISIANA, NEW HAMPSHIRE, VERMONT AND WISCONSIN",
+        "APPLICABLE ONLY IN LOUISIANA:",
+        "I  ACKNOWLEDGE  THAT  UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION OF SELECTING UM LIMITS EQUAL TO MY LIABILITY",
+        "LIMITS, UM LIMITS LOWER THAN MY LIABILITY LIMITS, OR TO REJECT UM COVERAGE ENTIRELY.",
+        "1.  I SELECT UM LIMITS INDICATED IN THIS APPLICATION. OR 2.  I REJECT UM COVERAGE IN ITS ENTIRETY.",
+        "(INITIALS) (INITIALS)",
+        "APPLICABLE ONLY IN NEW HAMPSHIRE:",
+        "I  ACKNOWLEDGE  THAT  UM COVERAGE HAS BEEN EXPLAINED TO ME, AND I HAVE BEEN OFFERED THE OPTION OF SELECTING UM LIMITS EQUAL TO MY LIABILITY",
+        "LIMITS OR TO REJECT UM COVERAGE ENTIRELY.",
+        "1.  I SELECT UM LIMITS INDICATED IN THIS APPLICATION. OR 2.  I REJECT UM COVERAGE IN ITS ENTIRETY.",
+        "(INITIALS) (INITIALS)",
+        "APPLICABLE ONLY IN VERMONT:",
+        "I  ACKNOWLEDGE  THAT  I  HAVE  BEEN  OFFERED  UM  COVERAGE  EQUAL  TO  MY  LIABILITY LIMITS.  I HAVE SELECTED THE LIMITS INDICATED IN THIS",
+        "APPLICATION.",
+        "APPLICABLE ONLY IN WISCONSIN:",
+        "I ACKNOWLEDGE THAT I HAVE BEEN OFFERED UNINSURED MOTORIST (UM) COVERAGE AND UNDERINSURED MOTORIST (UIM) COVERAGE.",
+        "1.  I SELECT UM LIMITS INDICATED IN THIS APPLICATION. OR 2.  I REJECT UM COVERAGE IN ITS ENTIRETY.",
+        "(INITIALS) (INITIALS)",
+        "3.  I SELECT UIM LIMITS INDICATED IN THIS APPLICATION. OR 4.  I REJECT UIM COVERAGE IN ITS ENTIRETY.",
+        "(INITIALS) (INITIALS)",
+        "IMPORTANT  -  THE  STATEMENTS  (ANSWERS) GIVEN ABOVE ARE TRUE AND ACCURATE. THE APPLICANT HAS NOT WILLFULLY CONCEALED OR MISREPRESENTED",
+        "ANY MATERIAL FACT OR CIRCUMSTANCE CONCERNING THIS APPLICATION. THIS APPLICATION DOES NOT CONSTITUTE A BINDER.",
+        "PRODUCER'S SIGNATURE PRODUCER'S NAME (Please Print) STATE PRODUCER LICENSE NO",
+        "(Required in Florida)",
+        "APPLICANT'S SIGNATURE DATE NATIONAL PRODUCER NUMBER",
+        "ACORD 131 (2009/10) Page 5 of 5"
+      ]
+    }
+  }
+}

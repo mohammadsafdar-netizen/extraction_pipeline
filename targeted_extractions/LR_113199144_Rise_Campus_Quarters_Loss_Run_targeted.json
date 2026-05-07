@@ -1,0 +1,49 @@
+{
+  "source_file": "LR_113199144_Rise Campus Quarters Loss Run.pdf",
+  "document_type": "loss_run",
+  "total_pages": 1,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "targeted",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "header": {
+          "policy_number": null,
+          "company/carrier": "Marsh USA, Inc.",
+          "insured_name": "Campus Quarters",
+          "insured_address": "1773 Ennis Joslin Rd, Corpus Christi, TX 78412",
+          "agency_name": "Vesper Holdings",
+          "valuation_date": "2026-04-16",
+          "date_range": "2023-04-16 to 2026-04-16",
+          "line_of_business": "Property & Casualty"
+        },
+        "summary": [
+          {
+            "effective_date": null,
+            "expiration_date": null,
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          }
+        ],
+        "totals": {
+          "effective_date": null,
+          "expiration_date": null,
+          "claim_count": 0,
+          "losses_paid": 0.0,
+          "reserves": 0.0,
+          "gross_incurred": 0.0,
+          "expenses": 0.0,
+          "recoveries": 0.0,
+          "net_incurred": 0.0
+        },
+        "detail": []
+      }
+    }
+  ]
+}

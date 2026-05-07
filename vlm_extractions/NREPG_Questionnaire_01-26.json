@@ -1,0 +1,568 @@
+{
+  "source_file": "NREPG Questionnaire (01-26).pdf",
+  "document_type": "questionnaire",
+  "total_pages": 6,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Applicant Information": {
+          "Policy Number": "",
+          "Named Insured": "Prism Broward LP",
+          "Property Name": "See SOV on file",
+          "Property Address": "See SOV on file",
+          "Website Address": ""
+        },
+        "Building Information": {
+          "Type of Construction": "Masonry",
+          "Year Built": "see SO'",
+          "Number of Buildings": 3232,
+          "Number of Stories": "See SC",
+          "Avg. 1 BDRM Monthly Rent": "",
+          "Avg. 2 BDRM Monthly Rent": "",
+          "Annual Rental Income": "",
+          "Is there elevator(s)?": "No",
+          "Is the property fenced?": "No",
+          "Is there a property manager?": "Yes",
+          "Property Manager Type": "Full Time",
+          "Is there a maintenance staff?": "Yes",
+          "Maintenance Staff Type": "Full Time",
+          "Is there parking facilities?": "Yes",
+          "Parking Facilities": [
+            "Open Lot",
+            "Lights"
+          ],
+          "What type of electrical wiring?": "Copper",
+          "Building Updates": [
+            {
+              "Type of Update": "Wiring",
+              "Year of Update": "2015-2018"
+            },
+            {
+              "Type of Update": "Plumbing",
+              "Year of Update": "2015-2018"
+            },
+            {
+              "Type of Update": "HVAC",
+              "Year of Update": "As needed"
+            },
+            {
+              "Type of Update": "Roof",
+              "Year of Update": "See SOV (2006, 2017, 2019)"
+            }
+          ],
+          "Percentage of total occupancy?": ""
+        }
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "applicant_info": {},
+        "property_details": {},
+        "management": {},
+        "financials": {},
+        "occupancy_data": {
+          "subsidized_housing": {
+            "type": "No"
+          },
+          "senior_housing": {
+            "do_seniors_live_at_complex": "No",
+            "are_units_equipped_with_call_buttons_or_pull_cords": "No",
+            "is_elder_care_provided": "No",
+            "do_they_provide_senior_activities": "No"
+          },
+          "student_housing": {
+            "do_students_live_at_complex": "No",
+            "type_of_students": [],
+            "is_complex_near_college_university": "No"
+          }
+        },
+        "tables": [
+          {
+            "title": "Subsidized Housing",
+            "data": [
+              {
+                "question": "Is there subsidized housing?",
+                "answer": "No"
+              }
+            ]
+          },
+          {
+            "title": "Senior Housing",
+            "data": [
+              {
+                "question": "1. Do seniors live at complex?",
+                "answer": "No"
+              },
+              {
+                "question": "2. Are the units equipped with call buttons or pull cords?",
+                "answer": "No"
+              },
+              {
+                "question": "3. Is elder care provided?",
+                "answer": "No"
+              },
+              {
+                "question": "4. Do they provide senior activities?",
+                "answer": "No"
+              }
+            ]
+          },
+          {
+            "title": "Student Housing",
+            "data": [
+              {
+                "question": "1. Do students live at complex?",
+                "answer": "No"
+              },
+              {
+                "question": "2. Type of students \u2013 check applicable",
+                "answer": []
+              },
+              {
+                "question": "3. Is the complex near a college/university?",
+                "answer": "No"
+              }
+            ]
+          },
+          {
+            "title": "Commercial Occupancy",
+            "data": [
+              {
+                "question": "1. Describe other occupants and square footage besides residential.",
+                "answer": "n/a"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "applicant_info": {},
+        "property_details": {
+          "life_safety": {
+            "percentage_of_building_sprinklered": 0,
+            "smoke_detectors_in_living_units": "Yes",
+            "smoke_detector_type": "Battery",
+            "fire_alarms": "No",
+            "carbon_monoxide_detectors_in_living_units": "No",
+            "fire_extinguishers": "Yes",
+            "fire_extinguisher_location": "Common Areas",
+            "emergency_exits_marked": "Yes",
+            "outside_balconies": "No",
+            "cooking_allowed_on_balconies": "No",
+            "number_of_exits": {
+              "per_unit": "",
+              "per_floor": "",
+              "per_building": ""
+            }
+          },
+          "security": {
+            "controlled_access": "No",
+            "security_cameras": "No",
+            "units_have_deadbolts": "Yes",
+            "units_rekeyed_on_tenant_change": "Yes",
+            "crime_vandalism_rating": "Low",
+            "tenants_informed_of_criminal_activity": "Yes",
+            "tenants_screened_prior_to_leasing": "Yes",
+            "screening_type": {
+              "criminal": "Yes",
+              "credit": "Yes",
+              "references": "No"
+            },
+            "employees_screened_prior_to_hiring": "Yes",
+            "employee_screening_type": {
+              "criminal": "Yes",
+              "credit": "Yes",
+              "references": "Yes"
+            },
+            "security_service": "No",
+            "security_service_subcontracted": "No",
+            "subcontractor_insured_as_additional_insured": "Yes"
+          }
+        },
+        "management": {},
+        "financials": {},
+        "occupancy_data": {},
+        "tables": [
+          {
+            "title": "Life Safety",
+            "rows": [
+              {
+                "question": "1. What percentage of the building(s) is sprinklered?",
+                "answer": "0 %"
+              },
+              {
+                "question": "2. Are there smoke detectors in living units?",
+                "answer": "Yes",
+                "sub_question": "If yes, check applicable type:",
+                "sub_answer": "Battery"
+              },
+              {
+                "question": "3. Are there fire alarms?",
+                "answer": "No"
+              },
+              {
+                "question": "4. Are there carbon monoxide detectors in living units?",
+                "answer": "No"
+              },
+              {
+                "question": "5. Are there fire extinguishers?",
+                "answer": "Yes",
+                "sub_question": "If yes, check location:",
+                "sub_answer": "Common Areas"
+              },
+              {
+                "question": "6. Are the emergency exits marked?",
+                "answer": "Yes"
+              },
+              {
+                "question": "7. Are there outside balconies?",
+                "answer": "No"
+              },
+              {
+                "question": "Is cooking allowed on the balconies?",
+                "answer": "No"
+              },
+              {
+                "question": "8. How many exits?",
+                "answer": {
+                  "per_unit": "",
+                  "per_floor": "",
+                  "per_building": ""
+                }
+              }
+            ]
+          },
+          {
+            "title": "Security",
+            "rows": [
+              {
+                "question": "1. Is there controlled access (with gates, guardhouses, etc.)?",
+                "answer": "No"
+              },
+              {
+                "question": "2. Are there security cameras?",
+                "answer": "No"
+              },
+              {
+                "question": "3. Do the units have deadbolts?",
+                "answer": "Yes"
+              },
+              {
+                "question": "4. Are units re-keyed when a change in tenant?",
+                "answer": "Yes"
+              },
+              {
+                "question": "5. Rate crime/vandalism in neighborhood.",
+                "answer": "Low"
+              },
+              {
+                "question": "6. Are tenants informed of criminal activity?",
+                "answer": "Yes"
+              },
+              {
+                "question": "7. Are tenants screened prior to leasing?",
+                "answer": "Yes",
+                "sub_question": "If yes, check the type of screening(s):",
+                "sub_answer": {
+                  "criminal": "Yes",
+                  "credit": "Yes",
+                  "references": "No"
+                }
+              },
+              {
+                "question": "8. Are employees screened prior to hiring?",
+                "answer": "Yes",
+                "sub_question": "If yes, check the type of screening(s):",
+                "sub_answer": {
+                  "criminal": "Yes",
+                  "credit": "Yes",
+                  "references": "Yes"
+                }
+              },
+              {
+                "question": "9. Is there a security service?",
+                "answer": "No"
+              },
+              {
+                "question": "If security service is subcontracted, does the insured obtain certificates of insurance?",
+                "answer": "No"
+              },
+              {
+                "question": "Does the subcontractor name insured as an additional insured?",
+                "answer": "Yes"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "applicant_info": {},
+        "property_details": {},
+        "management": {},
+        "financials": {},
+        "occupancy_data": {},
+        "tables": [
+          {
+            "section_title": "Transportation:",
+            "questions": [
+              {
+                "question": "1. Are vehicle(s) used to transport residents or others?",
+                "answer": "No"
+              },
+              {
+                "question": "2. Is there an auto maintenance program?",
+                "answer": "No"
+              },
+              {
+                "question": "3. Are MVR(s) checked?",
+                "answer": "No"
+              }
+            ]
+          },
+          {
+            "section_title": "Contracting Exposures:",
+            "questions": [
+              {
+                "question": "1. Has the insured ever been or currently involved with habitational construction beside routine maintenance?",
+                "answer": "No"
+              },
+              {
+                "question": "2. Does the insured subcontract work?",
+                "answer": "No"
+              },
+              {
+                "question": "Does insured obtain certificate of insurance from subcontractors?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Does the subcontractor name insured as additional insured?",
+                "answer": "Yes"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 5,
+      "data": {
+        "applicant_info": {},
+        "property_details": {
+          "recreational_facilities": {
+            "swimming_pools": {
+              "number_of_pools": 6,
+              "depth_marked": true,
+              "pool_fenced": true,
+              "lifeguard": false,
+              "diving_board": false,
+              "slide": true,
+              "rules_posted": true,
+              "pool_gated": true,
+              "gate_type": [
+                "Locked",
+                "Self-Closing"
+              ]
+            },
+            "exercise_facilities": {
+              "available": false,
+              "types": []
+            },
+            "playground_facilities": {
+              "available": true,
+              "equipment_description": ""
+            },
+            "clubhouse": {
+              "available": true,
+              "rented_out": true,
+              "renters": "Others",
+              "alcohol_permitted": false,
+              "contractual_agreement": ""
+            },
+            "ponds_lakes_levees_dams": {
+              "available": false,
+              "depth": "",
+              "permitted_activities": []
+            },
+            "day_care_facilities": {
+              "available": false,
+              "description": ""
+            },
+            "social_service_programs": {
+              "available": false,
+              "description": ""
+            },
+            "other_recreational_facilities": ""
+          }
+        },
+        "management": {},
+        "financials": {},
+        "occupancy_data": {},
+        "tables": [
+          {
+            "title": "Recreational Facilities",
+            "rows": [
+              {
+                "question": "1. Swimming Pool(s)",
+                "answer": {
+                  "yes_no": true,
+                  "number_of_pools": 6,
+                  "depth_marked": true,
+                  "pool_fenced": true,
+                  "lifeguard": false,
+                  "diving_board": false,
+                  "slide": true,
+                  "rules_posted": true,
+                  "pool_gated": true,
+                  "gate_type": [
+                    "Locked",
+                    "Self-Closing"
+                  ]
+                }
+              },
+              {
+                "question": "2. Exercise Facilities",
+                "answer": {
+                  "available": false,
+                  "types": []
+                }
+              },
+              {
+                "question": "3. Playground Facilities",
+                "answer": {
+                  "available": true,
+                  "equipment_description": ""
+                }
+              },
+              {
+                "question": "4. Clubhouse",
+                "answer": {
+                  "available": true,
+                  "rented_out": true,
+                  "renters": "Others",
+                  "alcohol_permitted": false,
+                  "contractual_agreement": ""
+                }
+              },
+              {
+                "question": "5. Ponds, Lakes, Levees or Dams?",
+                "answer": {
+                  "available": false,
+                  "depth": "",
+                  "permitted_activities": []
+                }
+              },
+              {
+                "question": "6. Day Care Facilities",
+                "answer": {
+                  "available": false,
+                  "description": ""
+                }
+              },
+              {
+                "question": "7. Social Service Programs",
+                "answer": {
+                  "available": false,
+                  "description": ""
+                }
+              },
+              {
+                "question": "8. Describe other types of recreational facilities:",
+                "answer": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 6,
+      "data": {
+        "applicant_info": {
+          "signature": "Applicant's Signature",
+          "date": "Date"
+        },
+        "property_details": {
+          "high_profile_landmark_structures": "n/a",
+          "generate_power_sell_excess_utilities": "n/a",
+          "major_renovations": "n/a"
+        },
+        "q_a": [
+          {
+            "question": "1. Provide 7 years of currently valued loss runs.",
+            "answer": ""
+          },
+          {
+            "question": "2. Have there been assault, molestation and/or rape claims in the past 5 years?",
+            "answer": {
+              "yes": true,
+              "no": false,
+              "description": "See attached loss runs"
+            }
+          },
+          {
+            "question": "3. Please give details of losses over $250,000.",
+            "answer": ""
+          }
+        ],
+        "management": {
+          "management_info": "n/a"
+        },
+        "financials": {
+          "losses_over_250k": ""
+        },
+        "occupancy_data": {
+          "occupancy_info": "n/a"
+        },
+        "tables": [
+          {
+            "table_title": "Loss History",
+            "rows": [
+              {
+                "cell": "1. Provide 7 years of currently valued loss runs.",
+                "content": ""
+              },
+              {
+                "cell": "2. Have there been assault, molestation and/or rape claims in the past 5 years?",
+                "content": {
+                  "yes": true,
+                  "no": false,
+                  "description": "See attached loss runs"
+                }
+              },
+              {
+                "cell": "3. Please give details of losses over $250,000.",
+                "content": ""
+              }
+            ]
+          },
+          {
+            "table_title": "Mandatory Information",
+            "rows": [
+              {
+                "cell": "1. Are there high profile or landmark structures?",
+                "content": "n/a"
+              },
+              {
+                "cell": "2. Do they generate their own power and sell excess to others or any utilities?",
+                "content": "n/a"
+              },
+              {
+                "cell": "3. Are they currently undergoing major renovations or plan major renovations?",
+                "content": "n/a"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "source_file": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF",
+  "total_pages": 2,
+  "method": "pdfplumber",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Loss Runs\nPolicy Information\nInsured As of Date Policy # Policy Term\nPrism Broward, LP 03/19/2026 RN-7-0500493 05/26/2023 - 05/26/2024\nClaims Information\nClaim # Claimant Cause of Loss Policy Type Status Reported Date Loss Date Total Reserves Total Paid Total Incurred\nPremises/Slip General Casualty\nRN-9-0000504 Kerry Brown Open 09/21/2023 06/26/2023 $125,905.45 $41,578.97 $167,484.42\n/Trip/ fall /Premises Ops\nPremises/injury by General Casualty\nRN-9-0001039 Nikole Machado Closed 06/10/2024 05/21/2024 $0.00 $50,000.00 $50,000.00\nobject /Premises Ops\nRichmond National Insurance Company (\u201cRNIC\u201d) notes that the information contained in this loss run is proprietary, and for the purpose of procuring insurance only. Amounts set forth above are estimates of the exposure for the\nloss(es), which are subject to change at any time without notice. RNIC makes no representations or warranties as to the completeness of the information set forth above, and disclaims any liability for any inaccuracies, errors or\nomissions contained therein.\nPage 1 of 1",
+      "tables": [
+        [
+          [
+            "Policy Information",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Insured",
+            "",
+            "",
+            "As of Date",
+            "",
+            "",
+            "Policy #",
+            "",
+            "",
+            "Policy Term",
+            "",
+            ""
+          ],
+          [
+            "Prism Broward, LP",
+            "",
+            "",
+            "03/19/2026",
+            "",
+            "",
+            "RN-7-0500493",
+            "",
+            "",
+            "05/26/2023 - 05/26/2024",
+            "",
+            ""
+          ],
+          [
+            "Claims Information",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Claim #",
+            "Claimant",
+            "Cause of Loss",
+            "",
+            "Policy Type",
+            "Status",
+            "Reported Date",
+            "Loss Date",
+            "Total Reserves",
+            "",
+            "Total Paid",
+            "Total Incurred"
+          ],
+          [
+            "RN-9-0000504",
+            "Kerry Brown",
+            "Premises/Slip\n/Trip/ fall",
+            "",
+            "General Casualty\n/Premises Ops",
+            "Open",
+            "09/21/2023",
+            "06/26/2023",
+            "$125,905.45",
+            "",
+            "$41,578.97",
+            "$167,484.42"
+          ],
+          [
+            "RN-9-0001039",
+            "Nikole Machado",
+            "Premises/injury by\nobject",
+            "",
+            "General Casualty\n/Premises Ops",
+            "Closed",
+            "06/10/2024",
+            "05/21/2024",
+            "$0.00",
+            "",
+            "$50,000.00",
+            "$50,000.00"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Loss Runs\nPolicy Information\nInsured As of Date Policy # Policy Term\nPrism Broward, LP 03/19/2026 RN-7-0500493-01 05/26/2024 - 05/26/2025\nClaims Information\nClaim # Claimant Cause of Loss Policy Type Status Reported Date Loss Date Total Reserves Total Paid Total Incurred\nPremises/injury by General Casualty\nRN-9-0001655 Shavoya Braziel Closed 01/07/2025 10/09/2024 $0.00 $41,585.56 $41,585.56\nobject /Premises Ops\nIdelmo Lopez, et General Casualty\nRN-9-0002360 Bodily Injury Open 07/17/2025 03/13/2025 $50,041.00 $6,959.00 $57,000.00\nal. /Premises Ops\nRichmond National Insurance Company (\u201cRNIC\u201d) notes that the information contained in this loss run is proprietary, and for the purpose of procuring insurance only. Amounts set forth above are estimates of the exposure for the\nloss(es), which are subject to change at any time without notice. RNIC makes no representations or warranties as to the completeness of the information set forth above, and disclaims any liability for any inaccuracies, errors or\nomissions contained therein.\nPage 1 of 1",
+      "tables": [
+        [
+          [
+            "Policy Information",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Insured",
+            "",
+            "",
+            "As of Date",
+            "",
+            "",
+            "Policy #",
+            "",
+            "",
+            "Policy Term",
+            "",
+            ""
+          ],
+          [
+            "Prism Broward, LP",
+            "",
+            "",
+            "03/19/2026",
+            "",
+            "",
+            "RN-7-0500493-01",
+            "",
+            "",
+            "05/26/2024 - 05/26/2025",
+            "",
+            ""
+          ],
+          [
+            "Claims Information",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Claim #",
+            "Claimant",
+            "Cause of Loss",
+            "",
+            "Policy Type",
+            "Status",
+            "Reported Date",
+            "Loss Date",
+            "Total Reserves",
+            "",
+            "Total Paid",
+            "Total Incurred"
+          ],
+          [
+            "RN-9-0001655",
+            "Shavoya Braziel",
+            "Premises/injury by\nobject",
+            "",
+            "General Casualty\n/Premises Ops",
+            "Closed",
+            "01/07/2025",
+            "10/09/2024",
+            "$0.00",
+            "",
+            "$41,585.56",
+            "$41,585.56"
+          ],
+          [
+            "RN-9-0002360",
+            "Idelmo Lopez, et\nal.",
+            "Bodily Injury",
+            "",
+            "General Casualty\n/Premises Ops",
+            "Open",
+            "07/17/2025",
+            "03/13/2025",
+            "$50,041.00",
+            "",
+            "$6,959.00",
+            "$57,000.00"
+          ]
+        ]
+      ]
+    }
+  ]
+}

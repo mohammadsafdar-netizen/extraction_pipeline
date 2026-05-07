@@ -1,0 +1,37 @@
+{
+  "source_file": "LR_25-26_Kinsale GL_3-19-26.PDF",
+  "total_pages": 1,
+  "method": "pdfplumber",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Loss Runs Report\nAs of: 3/19/2026\nPolicy Number: 0100371678\nInsured: Prism Broward LP\nBrokerage: CRC Group - Boca Raton, FL\nPOLICY TERMS DATA\nPolicy Term Policy Status Cancellation Date Claim Count Open Paid Incurred\n5/26/2025 to 5/26/2026 Inforce N/A 1 $5,000.00 $0.00 $5,000.00\nTotals 1 $5,000.00 $0.00 $5,000.00\nCLAIMS DATA\nClaim # Policy Term Loss Description Claimant Dates Status Open Paid Incurred\n5/26/2025 to Loss: 9/13/2025\n00060543 Slip/Trip and Fall Danielle Ferron Open $5,000.00 $0.00 $5,000.00\n5/26/2026 Rept: 11/4/2025\nTotals $5,000.00 $0.00 $5,000.00\nPage 1 of 1\nThe information obtained herein is proprietary and is to be used by the insured and his/her insurance professional for the purpose of obtaining insurance coverage. It is not to be given to any other party for any\nother purpose. The reserve amounts stated above are estimates of the potential cost of the loss and should not be considered as the Company's acceptance of coverage, liability, or, the ultimate settlement\nvalue of any open claim. Reserve amounts are set at the sole discretion of Kinsale Insurance Company and are subject to change at any time without notice.",
+      "tables": [
+        [
+          [
+            "Policy Term",
+            "Policy Status",
+            "Cancellation Date",
+            "Claim Count",
+            "Open",
+            "Paid",
+            "Incurred"
+          ]
+        ],
+        [
+          [
+            "Claim #",
+            "Policy Term",
+            "Loss Description",
+            "Claimant",
+            "Dates",
+            "Status",
+            "Open",
+            "Paid",
+            "Incurred"
+          ]
+        ]
+      ]
+    }
+  ]
+}

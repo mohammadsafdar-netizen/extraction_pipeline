@@ -1,0 +1,217 @@
+{
+  "source_file": "LR_21-23 CIBA GL Loss Run 03-18-26.PDF",
+  "document_type": "loss_run",
+  "total_pages": 2,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "targeted",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "header": {
+          "policy_number": "P00095389",
+          "company/carrier": "CIBA INSURANCE SERVICES",
+          "insured_name": "Prism Broward, LP",
+          "insured_address": "333 SE 2nd Avenue, Ste 4400, Miami FL 33131",
+          "agency_name": "CRC Insurance Services, Inc. - Boca Raton, FL (500588)",
+          "valuation_date": "2026-03-18",
+          "date_range": "2021-05-26 to 2022-05-26",
+          "line_of_business": "Commercial FSL Primary Liability"
+        },
+        "summary": [
+          {
+            "effective_date": "2021-05-26",
+            "expiration_date": "2022-05-26",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          },
+          {
+            "effective_date": "2022-05-26",
+            "expiration_date": "2023-05-26",
+            "claim_count": 0,
+            "losses_paid": 0.0,
+            "reserves": 0.0,
+            "gross_incurred": 0.0,
+            "expenses": 0.0,
+            "recoveries": 0.0,
+            "net_incurred": 0.0
+          }
+        ],
+        "totals": {
+          "effective_date": "2021-05-26",
+          "expiration_date": "2023-05-26",
+          "claim_count": 0,
+          "losses_paid": 0.0,
+          "reserves": 0.0,
+          "gross_incurred": 0.0,
+          "expenses": 0.0,
+          "recoveries": 0.0,
+          "net_incurred": 0.0
+        },
+        "detail": [
+          {
+            "claim_number": "P00095390",
+            "date_of_loss": null,
+            "reported_date": null,
+            "type_cause": null,
+            "claimant": null,
+            "description": null,
+            "amount_paid": 0.0,
+            "amount_reserved": 0.0,
+            "expenses": 0.0,
+            "amount_recovered": 0.0,
+            "status": "NO LOSSES OR CLAIMS REPORTED",
+            "date_closed": null
+          }
+        ],
+        "multi_property": [
+          {
+            "PID": "P00095390",
+            "named_insured": "Prism Broward, LP",
+            "property_name": "Spectra Palms",
+            "insured_address": "1751 NW 46th AVE Plantation FL 33313; 1751 NW 46th Avenue INCL Plantation FL 33313",
+            "claims": [
+              {
+                "claim_number": "P00095390",
+                "date_of_loss": null,
+                "reported_date": null,
+                "type_cause": null,
+                "claimant": null,
+                "description": null,
+                "amount_paid": 0.0,
+                "amount_reserved": 0.0,
+                "expenses": 0.0,
+                "amount_recovered": 0.0,
+                "status": "NO LOSSES OR CLAIMS REPORTED",
+                "date_closed": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "header": {
+          "policy_number": "P00096472",
+          "company/carrier": "CIBA Insurance Services",
+          "insured_name": "Prism Tamarac LP",
+          "insured_address": "333 SE 2nd Avenue, Suite 4400, Miami FL 33131",
+          "agency_name": null,
+          "valuation_date": "2026-03-18",
+          "date_range": "2021-05-26 to 2023-05-26",
+          "line_of_business": "Commercial FSL Primary Liability"
+        },
+        "summary": [
+          {
+            "effective_date": "2021-10-24",
+            "expiration_date": "2022-05-26",
+            "claim_count": 2,
+            "losses_paid": 115000,
+            "reserves": 0,
+            "gross_incurred": 115000,
+            "expenses": 0,
+            "recoveries": 6000,
+            "net_incurred": 109000
+          },
+          {
+            "effective_date": "2022-05-26",
+            "expiration_date": "2023-05-26",
+            "claim_count": 2,
+            "losses_paid": 115000,
+            "reserves": 0,
+            "gross_incurred": 115000,
+            "expenses": 0,
+            "recoveries": 6000,
+            "net_incurred": 109000
+          }
+        ],
+        "totals": {
+          "effective_date": "2021-10-24",
+          "expiration_date": "2023-05-26",
+          "claim_count": 2,
+          "losses_paid": 115000,
+          "reserves": 0,
+          "gross_incurred": 115000,
+          "expenses": 0,
+          "recoveries": 6000,
+          "net_incurred": 109000
+        },
+        "detail": [
+          {
+            "claim_number": "GLF21-251",
+            "date_of_loss": "2021-05-11",
+            "reported_date": null,
+            "type_cause": "General Liability/Slip & Fall",
+            "claimant": null,
+            "description": null,
+            "amount_paid": 25000,
+            "amount_reserved": 0,
+            "expenses": 0,
+            "amount_recovered": 1000,
+            "status": "Closed w/Payment",
+            "date_closed": "2023-05-12"
+          },
+          {
+            "claim_number": "GLF22-040",
+            "date_of_loss": "2022-09-21",
+            "reported_date": null,
+            "type_cause": "General Liability/Slip & Fall",
+            "claimant": null,
+            "description": null,
+            "amount_paid": 90000,
+            "amount_reserved": 0,
+            "expenses": 0,
+            "amount_recovered": 5000,
+            "status": "Closed w/Payment",
+            "date_closed": "2023-12-12"
+          }
+        ],
+        "multi_property": [
+          {
+            "PID": "P00096472",
+            "named_insured": "Prism Tamarac LP",
+            "property_name": "8650 NW 61st ST INCL Tamarac FL 33321; 8650 NW 61st Street INCL Tamarac FL 33321",
+            "insured_address": "8650 NW 61st ST INCL Tamarac FL 33321; 8650 NW 61st Street INCL Tamarac FL 33321",
+            "claims": [
+              {
+                "claim_number": "GLF21-251",
+                "date_of_loss": "2021-05-11",
+                "reported_date": null,
+                "type_cause": "General Liability/Slip & Fall",
+                "claimant": null,
+                "description": null,
+                "amount_paid": 25000,
+                "amount_reserved": 0,
+                "expenses": 0,
+                "amount_recovered": 1000,
+                "status": "Closed w/Payment",
+                "date_closed": "2023-05-12"
+              },
+              {
+                "claim_number": "GLF22-040",
+                "date_of_loss": "2022-09-21",
+                "reported_date": null,
+                "type_cause": "General Liability/Slip & Fall",
+                "claimant": null,
+                "description": null,
+                "amount_paid": 90000,
+                "amount_reserved": 0,
+                "expenses": 0,
+                "amount_recovered": 5000,
+                "status": "Closed w/Payment",
+                "date_closed": "2023-12-12"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

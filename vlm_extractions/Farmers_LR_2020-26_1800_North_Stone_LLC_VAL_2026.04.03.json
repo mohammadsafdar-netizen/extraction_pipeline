@@ -1,0 +1,89 @@
+{
+  "source_file": "Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf",
+  "document_type": "loss_run",
+  "total_pages": 4,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "policy#": "606742147",
+          "insured": "1800 NORTH STONE, LLC",
+          "address": "1800 N STONE AVE, TUCSON AZ 85705",
+          "carrier": "Truck Insurance Exchange",
+          "agent": "Darius M Vasquez",
+          "dates": {
+            "valuation_date": "04/03/2026",
+            "date_range_selection": "01/01/2019 - 04/03/2026"
+          }
+        },
+        "Claims": [],
+        "Summary Totals": {
+          "claim_count": 0,
+          "losses_paid": 0,
+          "reserves": 0,
+          "gross_incurred": 0,
+          "expenses": 0
+        },
+        "Note": "NO LOSSES OR CLAIMS REPORTED"
+      }
+    },
+    {
+      "page": 2,
+      "data": {
+        "Header": {
+          "policy#": "606742147",
+          "insured": "1800 NORTH STONE, LLC",
+          "address": "1800 N STONE AVE TUCSON AZ 85705",
+          "carrier": "Farmers Insurance",
+          "agent": "Darius M Vasquez",
+          "dates": {
+            "valuation_date": "04/03/2026",
+            "date_range_selection": "01/01/2019 - 04/03/2026"
+          }
+        },
+        "Claims": [],
+        "Summary Totals": {
+          "Recoveries": 0,
+          "Net Incurred": 0
+        },
+        "Note": "NO LOSSES OR CLAIMS REPORTED"
+      }
+    },
+    {
+      "page": 3,
+      "data": {
+        "Header": {
+          "policy#": "606742147",
+          "insured": "1800 NORTH STONE, LLC",
+          "address": "1800 N STONE AVE TUCSON AZ 85705",
+          "carrier": "Farmers Insurance",
+          "agent": "Darius M Vasquez",
+          "dates": "01/01/2019 - 04/03/2026"
+        },
+        "Claims": [],
+        "Summary Totals": {
+          "no_losses_or_claims_reported": true
+        }
+      }
+    },
+    {
+      "page": 4,
+      "data": {
+        "Header": {
+          "policy#": "606742147",
+          "insured": "1800 NORTH STONE, LLC",
+          "address": "1800 N STONE AVE TUCSON AZ 85705",
+          "carrier": "Farmers Insurance",
+          "agent": "Darius M Vasquez",
+          "dates": "01/01/2019 - 04/03/2026"
+        },
+        "Claims": [],
+        "Summary Totals": {
+          "no_losses_or_claims_reported": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+[
+  {
+    "page": 1,
+    "data": {
+      "PIDs": [
+        "P00095389",
+        "P00095390"
+      ],
+      "Named Insured": [
+        {
+          "name": "Prism Broward, LP",
+          "address": "333 SE 2nd Avenue, Ste 4400, Miami FL 33131"
+        }
+      ],
+      "Property Name": [
+        "Spectra at Plantation",
+        "Spectra Palms"
+      ],
+      "Insured Address": [
+        "4561 NW 10th Court INCL Plantation FL 33313; 4561 NW 10th CT Plantation FL 33313",
+        "1751 NW 46th AVE Plantation FL 33313; 1751 NW 46th Avenue INCL Plantation FL 33313"
+      ],
+      "Policy Terms": [
+        {
+          "PID": "P00095389",
+          "Policy Terms": [
+            {
+              "term": "CIBA I 2021-2023",
+              "status": "New Business",
+              "coverage": "Commercial FSL Primary Liability",
+              "effective_dates": "05/26/2021 - 05/26/2022"
+            },
+            {
+              "term": "CIBA I 2022-2024",
+              "status": "NR Sent",
+              "coverage": "Commercial FSL Primary Liability",
+              "effective_dates": "05/26/2022 - 05/26/2023"
+            }
+          ]
+        },
+        {
+          "PID": "P00095390",
+          "Policy Terms": [
+            {
+              "term": "CIBA I 2021-2023",
+              "status": "New Business",
+              "coverage": "Commercial FSL Primary Liability",
+              "effective_dates": "05/26/2021 - 05/26/2022"
+            },
+            {
+              "term": "CIBA I 2022-2024",
+              "status": "NR Sent",
+              "coverage": "Commercial FSL Primary Liability",
+              "effective_dates": "05/26/2022 - 05/26/2023"
+            }
+          ]
+        }
+      ],
+      "Claim Details": [],
+      "Summary Totals": {
+        "total_claims": 0,
+        "note": "NO LOSSES OR CLAIMS REPORTED"
+      }
+    }
+  },
+  {
+    "page": 2,
+    "data": {
+      "PIDs": [
+        "P00096472"
+      ],
+      "Named Insured": {
+        "name": "Prism Tamarac LP",
+        "address": "333 SE 2nd Avenue, Suite 4400\nMiami FL 33131"
+      },
+      "Property Name": "",
+      "Insured Address": "8650 NW 61st ST INCL Tamarac FL 33321; 8650 NW 61st Street INCL Tamarac FL 33321",
+      "Policy Terms": [
+        {
+          "term": "CIBA I 2021-2023",
+          "status": "New Business",
+          "coverage": "Commercial FSL Primary Liability",
+          "effective_dates": "10/24/2021 - 05/26/2022"
+        },
+        {
+          "term": "CIBA I 2022-2024",
+          "status": "NR Sent",
+          "coverage": "Commercial FSL Primary Liability",
+          "effective_dates": "05/26/2022 - 05/26/2023"
+        }
+      ],
+      "Claim Details": [
+        {
+          "claim_number": "GLF21-251",
+          "DOL": "11/05/2021",
+          "type_cause": "General Liability/Slip & Fall",
+          "amt_paid_rsvd": "$25,000.00",
+          "expenses": "$0.00",
+          "amt_recovered": "$1,000.00",
+          "status": "Closed w/Payment",
+          "date_closed": "12/05/2023"
+        },
+        {
+          "claim_number": "GLF22-040",
+          "DOL": "09/21/2022",
+          "type_cause": "General Liability/Slip & Fall",
+          "amt_paid_rsvd": "$90,000.00",
+          "expenses": "$0.00",
+          "amt_recovered": "$5,000.00",
+          "status": "Closed w/Payment",
+          "date_closed": "12/12/2023"
+        }
+      ],
+      "Summary Totals": {
+        "total_claims": 2,
+        "total_paid_rsvd": "$115,000.00",
+        "total_expenses": "$0.00",
+        "total_recovered": "$6,000.00",
+        "open_claims": 0
+      }
+    }
+  }
+]

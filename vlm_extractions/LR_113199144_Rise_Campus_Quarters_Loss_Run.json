@@ -1,0 +1,47 @@
+{
+  "source_file": "LR_113199144_Rise Campus Quarters Loss Run.pdf",
+  "document_type": "loss_run",
+  "total_pages": 1,
+  "method": "qwen3-vl-8b",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "Header": {
+          "policy#": "",
+          "insured": "Vesper Holdings",
+          "address": "595 Madison Avenue, 37th Floor, New York, NY 10022",
+          "carrier": "Marsh USA, Inc.",
+          "agent": "",
+          "dates": "4/16/2023 to 4/16/2026"
+        },
+        "Claims": [],
+        "Summary totals": {
+          "General Liability": {
+            "claim#": "",
+            "date_of_loss": "",
+            "type": "General Liability",
+            "paid": 0,
+            "reserved": 0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "No known losses reported",
+            "date_closed": ""
+          },
+          "Property": {
+            "claim#": "",
+            "date_of_loss": "",
+            "type": "Property",
+            "paid": 0,
+            "reserved": 0,
+            "expenses": 0,
+            "recovered": 0,
+            "status": "No known losses reported",
+            "date_closed": ""
+          }
+        },
+        "Note": "NO LOSSES OR CLAIMS REPORTED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_file": "LR_25-26_Kinsale GL_3-19-26.PDF",
+  "document_type": "loss_run",
+  "total_pages": 1,
+  "model": "qwen3-vl:4b-instruct-q4_K_M",
+  "prompt_type": "generalized",
+  "pages": [
+    {
+      "page": 1,
+      "data": {
+        "carrier_name": "Kinsale",
+        "report_type": "Loss Runs Report",
+        "report_date": "3/19/2026",
+        "policy_number": "0100371678",
+        "insured": "Prism Broward LP",
+        "brokerage": "CRC Group - Boca Raton, FL",
+        "policy_term": "5/26/2025 to 5/26/2026",
+        "policy_status": "Inforce",
+        "cancellation_date": "N/A",
+        "claim_count": 1,
+        "open_amount": 5000,
+        "paid_amount": 0,
+        "incurred_amount": 5000,
+        "claim_data": [
+          {
+            "claim_number": "00060543",
+            "policy_term": "5/26/2025 to 5/26/2026",
+            "loss_description": "Slip/Trip and Fall",
+            "claimant": "Danielle Ferron",
+            "dates": {
+              "loss_date": "9/13/2025",
+              "report_date": "11/4/2025"
+            },
+            "status": "Open",
+            "open_amount": 5000,
+            "paid_amount": 0,
+            "incurred_amount": 5000
+          }
+        ],
+        "footer_note": "The information obtained herein is proprietary and is to be used by the insured and his/her insurance professional for the purpose of obtaining insurance coverage. It is not to be given to any other party for any other purpose. The reserve amounts stated above are estimates of the potential cost of the loss and should not be considered as the Company's acceptance of coverage, liability, or, the ultimate settlement value of any open claim. Reserve amounts are set at the sole discretion of Kinsale Insurance Company and are subject to change at any time without notice."
+      }
+    }
+  ]
+}
