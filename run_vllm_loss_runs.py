@@ -212,8 +212,13 @@ def collect_strings(obj):
 
 def _norm(s: str) -> str:
     """Normalize for forgiving compare: lowercase, drop $/,, collapse all
-       whitespace (including newlines) to a single space."""
-    return re.sub(r"\s+", " ", str(s).lower().replace(",", "").replace("$", "")).strip()
+       whitespace (including newlines) to a single space, strip leading
+       zeros from M/D/Y date components ("03/19/2026" → "3/19/2026")."""
+    out = re.sub(r"\s+", " ", str(s).lower().replace(",", "").replace("$", "")).strip()
+    # Strip leading zeros from date components: "0X/" → "X/", "/0X" → "/X"
+    out = re.sub(r"\b0(\d)/", r"\1/", out)
+    out = re.sub(r"/0(\d)\b", r"/\1", out)
+    return out
 
 
 def cross_validate(vlm_pages: list, pdf_data: dict) -> list:
@@ -252,6 +257,13 @@ def cross_validate(vlm_pages: list, pdf_data: dict) -> list:
             check_nows = check.replace(" ", "")
             raw_nows = raw_norm.replace(" ", "")
             if check_nows in raw_nows:
+                continue
+            # Token-level fallback: if every whitespace-separated token of
+            # the VLM value appears somewhere in raw_norm, accept it.
+            # Handles address-layout cases where pdfplumber serializes
+            # tokens in a different order than the VLM emits them.
+            tokens = [t for t in check.split(" ") if len(t) >= 2]
+            if tokens and all(t in raw_norm for t in tokens):
                 continue
             out.append({"page": pg, "vlm_value": s,
                         "issue": "not_in_raw_text"})

@@ -287,6 +287,10 @@ def run_vlm_extraction(flat_path: Path, doc_type: str, dpi: int):
 # ── Merge logic ──
 
 def is_dollar_amount(val):
+    # bool is a subclass of int — exclude explicitly so checkbox booleans
+    # don't get mistaken for amounts.
+    if isinstance(val, bool):
+        return False
     if isinstance(val, (int, float)):
         return True
     if isinstance(val, str):
@@ -294,18 +298,58 @@ def is_dollar_amount(val):
     return False
 
 
+def _norm_for_dedup(v) -> str:
+    """Normalize a value for cross-source dedup: lowercase, strip $/,/whitespace."""
+    return re.sub(r"\s+", " ",
+                  str(v).lower().replace("$", "").replace(",", "")).strip()
+
+
+_BUSINESS_SUFFIXES = re.compile(
+    r"\b(LLC|L\.?L\.?C|LP|L\.?P|INC|CORP|CO|LTD|GROUP|HOLDINGS|"
+    r"PROPERTIES|APARTMENTS|PARTNERS|TRUST|ASSOCIATES|MANAGEMENT|"
+    r"REALTY|VENTURES|ENTERPRISES)\b", re.IGNORECASE)
+_STREET_ADDR = re.compile(r"^\d+\s+[A-Z]")  # "1800 North Stone..."
+
+
 def is_label_not_value(val):
+    """Heuristic that flags pdfplumber-extracted text as form-label noise
+       rather than real data. Errs toward FALSE — never delete real data.
+
+    Recognizes label SHAPE, not client identity:
+      - Numbered-question prefix with literal period: "1. ANY..." / "12. HAS..."
+      - Trailing colon labels: "PRODUCER'S SIGNATURE:"
+      - All-caps text > 25 chars that doesn't look like a business name or
+        a street address.
+    """
     if not isinstance(val, str):
         return False
-    if len(val) < 3:
+    s = val.strip()
+    if len(s) < 3:
         return False
-    if val.isupper() and len(val) > 25:
-        exceptions = ["LLC", "LP", "INC", "STONE", "TUCSON",
-                      "MIAMI", "PLANTATION"]
-        if not any(e in val for e in exceptions):
-            return True
-    if re.match(r'^\d+\.?\s+[A-Z]', val):
+
+    # Numbered-question prefix REQUIRES period — "1." not just "1"
+    if re.match(r"^\d+\.\s+[A-Z]", s):
         return True
+
+    # Trailing colon: "PRODUCER'S SIGNATURE:" / "FEIN OR SOC SEC #:"
+    if s.endswith(":") and len(s) > 5 and s.replace(":", "").strip().isupper():
+        return True
+
+    # All-caps long strings: only flag if no business-suffix and no street-addr
+    if s.isupper() and len(s) > 25:
+        if _BUSINESS_SUFFIXES.search(s):
+            return False  # looks like a business name → keep
+        if _STREET_ADDR.match(s):
+            return False  # looks like a street address → keep
+        # Real labels are typically pure text; data rows often contain
+        # internal digits (codes/amounts/years). After stripping any leading
+        # "12. " numbered prefix, if internal digits remain it's probably
+        # data (e.g. "SWIMMING POOL 0 2 48925 T 1" = Schedule of Hazards row).
+        stripped = re.sub(r"^\d+\.\s+", "", s)
+        if any(c.isdigit() for c in stripped):
+            return False
+        return True
+
     return False
 
 
@@ -338,14 +382,38 @@ def merge_extractions(bbox_result, vlm_result, total_pages):
                 "type": fdata["type"], "source": "bbox",
             }
 
-        # 2: VLM fills gaps
+        # 2: VLM fills gaps. We add a VLM-extracted value only if no bbox
+        # field already has the SAME value (normalized). Substring containment
+        # (the previous check) silently dropped short codes like "NY", "CA",
+        # "100" whenever any bbox text contained those characters.
+        bbox_values_norm = {_norm_for_dedup(f["value"])
+                            for f in page_out["fields"].values()
+                            if isinstance(f["value"], str)}
+
+        def _vlm_already_has(v):
+            """True if a bbox field with the same normalized value exists.
+               For short values (< 4 chars) require word-boundary match in
+               any bbox text rather than equality (state codes, claim suffixes)."""
+            v_norm = _norm_for_dedup(v)
+            if not v_norm:
+                return False
+            if v_norm in bbox_values_norm:
+                return True
+            if len(v_norm) >= 4:
+                return False
+            # Short value: word-boundary check across all bbox texts
+            pat = re.compile(rf"\b{re.escape(v_norm)}\b")
+            for f in page_out["fields"].values():
+                tv = f.get("value")
+                if isinstance(tv, str) and pat.search(tv.lower()):
+                    return True
+            return False
+
         if isinstance(vlm_pg, dict) and "_error" not in vlm_pg and "_raw" not in vlm_pg:
             for vkey, vval in vlm_pg.items():
                 if isinstance(vval, dict):
                     for nk, nv in vval.items():
-                        if nv and not any(str(nv).lower() in str(f["value"]).lower()
-                                          for f in page_out["fields"].values()
-                                          if isinstance(f["value"], str)):
+                        if nv and not _vlm_already_has(nv):
                             page_out["fields"][f"vlm_{vkey}_{nk}"] = {
                                 "value": nv, "tooltip": f"{vkey}.{nk}",
                                 "type": "text", "source": "vlm",
@@ -355,18 +423,13 @@ def merge_extractions(bbox_result, vlm_result, total_pages):
                         if isinstance(item, dict):
                             for nk, nv in item.items():
                                 if nv and str(nv) not in ("", "0", "0.0", "$0.00"):
-                                    if not any(str(nv).lower() in str(f["value"]).lower()
-                                               for f in page_out["fields"].values()
-                                               if isinstance(f["value"], str)):
+                                    if not _vlm_already_has(nv):
                                         page_out["fields"][f"vlm_{vkey}_{i}_{nk}"] = {
                                             "value": nv, "tooltip": f"{vkey}[{i}].{nk}",
                                             "type": "text", "source": "vlm",
                                         }
                 elif vval and str(vval) not in ("", "None", "null"):
-                    val_str = str(vval).lower()
-                    if not any(val_str in str(f["value"]).lower()
-                               for f in page_out["fields"].values()
-                               if isinstance(f["value"], str)):
+                    if not _vlm_already_has(vval):
                         page_out["fields"][f"vlm_{vkey}"] = {
                             "value": vval, "tooltip": vkey,
                             "type": "text", "source": "vlm",
