@@ -49,12 +49,13 @@ PAGE_MAPS = {
 }
 
 MODEL_RUNS = {
-    "merged_qwen3vl8b (bbox+VLM)":          {"dir": "merged_qwen3vl8b",   "suffix": "_merged"},
-    "qwen3-vl-8b (pure VLM)":               {"dir": "vllm_qwen3vl8b",     "suffix": "_targeted"},
-    "qwen2.5-vl-7b":                        {"dir": "vllm_qwen2_5vl_7b",  "suffix": "_targeted"},
-    "internvl3-8b":                         {"dir": "vllm_internvl3_8b",  "suffix": "_targeted"},
-    "qwen2.5-vl-32b-awq (partial, DPI100)": {"dir": "vllm_qwen2_5vl_32b", "suffix": "_targeted"},
-    "qwen3-vl:4b (Ollama baseline)":        {"dir": "targeted_extractions", "suffix": "_targeted"},
+    "merged_qwen3vl8b (bbox+VLM)":          {"dir": "merged_qwen3vl8b",   "suffix": "_merged",   "shape": "merged"},
+    "merged_loss_runs (pdfplumber+VLM)":    {"dir": "merged_loss_runs",   "suffix": "_lossrun",  "shape": "lossrun"},
+    "qwen3-vl-8b (pure VLM)":               {"dir": "vllm_qwen3vl8b",     "suffix": "_targeted", "shape": "vlm"},
+    "qwen2.5-vl-7b":                        {"dir": "vllm_qwen2_5vl_7b",  "suffix": "_targeted", "shape": "vlm"},
+    "internvl3-8b":                         {"dir": "vllm_internvl3_8b",  "suffix": "_targeted", "shape": "vlm"},
+    "qwen2.5-vl-32b-awq (partial, DPI100)": {"dir": "vllm_qwen2_5vl_32b", "suffix": "_targeted", "shape": "vlm"},
+    "qwen3-vl:4b (Ollama baseline)":        {"dir": "targeted_extractions", "suffix": "_targeted", "shape": "vlm"},
 }
 
 ANCHOR_LABELS = ["CARRIER", "NAIC CODE", "POLICY NUMBER", "EFFECTIVE DATE",
@@ -107,8 +108,26 @@ def page_data_from_extraction(extraction, page_num, model_label):
     if extraction is None:
         return None
     cfg = MODEL_RUNS[model_label]
-    if cfg["dir"].startswith("merged_"):
+    shape = cfg.get("shape", "vlm")
+    if shape == "merged":
         return extraction.get("pages", {}).get(f"page_{page_num}")
+    if shape == "lossrun":
+        # Re-shape into a single per-page bundle:
+        #   {vlm, pdfplumber_page, parsed_claims, discrepancies}
+        vlm = None
+        for p in extraction.get("vlm_pages", []) or []:
+            if p.get("page") == page_num:
+                vlm = p.get("data"); break
+        pdfp = None
+        for p in (extraction.get("pdfplumber", {}) or {}).get("pages", []):
+            if p.get("page") == page_num:
+                pdfp = p; break
+        parsed = [c for c in extraction.get("pdfplumber_parsed_claims", [])
+                  if c.get("_page") == page_num]
+        discs = [d for d in extraction.get("discrepancies", [])
+                 if d.get("page") == page_num]
+        return {"vlm": vlm, "pdfplumber_page": pdfp,
+                "parsed_claims": parsed, "discrepancies": discs}
     pages = extraction.get("pages", [])
     if isinstance(pages, list):
         for p in pages:
@@ -298,8 +317,8 @@ def main():
         if page_a is None:
             c2.warning("No extraction for this page.")
         else:
-            cfg = MODEL_RUNS[model_a]
-            if cfg["dir"].startswith("merged_"):
+            shape = MODEL_RUNS[model_a].get("shape", "vlm")
+            if shape == "merged":
                 fields = page_a.get("fields", {})
                 t1, t2, t3 = c2.tabs(["Checkboxes", "Text fields", "All JSON"])
                 with t1:
@@ -328,6 +347,63 @@ def main():
                 if discrep:
                     with c2.expander(f"⚠ {len(discrep)} discrepancies"):
                         st.json(discrep)
+            elif shape == "lossrun":
+                pdfp = page_a.get("pdfplumber_page") or {}
+                parsed = page_a.get("parsed_claims") or []
+                discs = page_a.get("discrepancies") or []
+                vlm = page_a.get("vlm") or {}
+
+                # Header chip line
+                garbled = pdfp.get("garbled_font", False)
+                n_tables = len(pdfp.get("tables") or [])
+                c2.caption(
+                    f"garbled_font: **{garbled}** &nbsp;|&nbsp; "
+                    f"raw_text_chars: **{pdfp.get('raw_text_chars', 0)}** &nbsp;|&nbsp; "
+                    f"tables: **{n_tables}** &nbsp;|&nbsp; "
+                    f"parsed_claims: **{len(parsed)}** &nbsp;|&nbsp; "
+                    f"discrepancies: **{len(discs)}**",
+                    unsafe_allow_html=True)
+
+                t1, t2, t3, t4, t5 = c2.tabs([
+                    "VLM JSON",
+                    f"Parsed claims ({len(parsed)})",
+                    f"pdfplumber tables ({n_tables})",
+                    f"Discrepancies ({len(discs)})",
+                    "Raw text",
+                ])
+                with t1:
+                    st.json(vlm or {"_": "no VLM data"}, expanded=False)
+                with t2:
+                    if not parsed:
+                        st.caption("No structured claim rows parsed for this page.")
+                    for i, c in enumerate(parsed):
+                        st.markdown(f"**claim {i+1}** — page {c.get('_page')}")
+                        st.json({k: v for k, v in c.items() if k != "_page"},
+                                expanded=False)
+                with t3:
+                    tables = pdfp.get("tables") or []
+                    if not tables:
+                        st.caption("pdfplumber found no tables on this page.")
+                    for ti, t in enumerate(tables):
+                        st.write(f"**table {ti}** — {len(t)} rows × {len(t[0]) if t else 0} cols")
+                        st.dataframe(t, use_container_width=True)
+                with t4:
+                    if not discs:
+                        st.caption("✅ No VLM values flagged as missing from raw text.")
+                    for d in discs:
+                        st.markdown(
+                            f"- VLM emitted `{d['vlm_value']}` "
+                            f"<sub>not found in raw page text "
+                            f"({d.get('issue','')})</sub>",
+                            unsafe_allow_html=True)
+                with t5:
+                    raw = pdfp.get("raw_text") or ""
+                    if garbled:
+                        st.warning("Garbled font — raw text not extractable.")
+                    elif not raw:
+                        st.caption("(empty)")
+                    else:
+                        st.code(raw[:6000], language=None)
             else:
                 c2.json(page_a, expanded=False)
 
