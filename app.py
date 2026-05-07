@@ -1,280 +1,335 @@
-import streamlit as st
-import pdfplumber
+"""
+Streamlit visual verifier — explore extractions across all model runs side-by-side.
+
+Run:
+  streamlit run app.py --server.headless true
+
+What it shows:
+  - Source PDF page (rendered at DPI 150)
+  - Bbox-checkbox overlay (green=true, red=false, gray=unmapped, yellow X glyphs)
+  - Extracted JSON from any of the model runs
+  - Comparison mode: two models side-by-side
+"""
 import json
-import fitz
-import io
 import os
-from PIL import Image, ImageDraw
 from pathlib import Path
 
-st.set_page_config(page_title="ACORD PDF Extractor — Visual Verifier", layout="wide")
+import fitz
+import pdfplumber
+import pypdf
+import streamlit as st
+from PIL import Image, ImageDraw, ImageFont
+
+st.set_page_config(page_title="ACORD Extractor — Visual Verifier", layout="wide")
 
 BASE = Path(__file__).parent
-TARGETED_DIR = BASE / "targeted_extractions"
-VLM_DIR = BASE / "vlm_extractions"
+PDF_DIR = BASE / "pdfs"
+TEMPLATES_DIR = BASE / "templates"
 
-# All PDFs
-PDFS = sorted([
-    f for f in os.listdir(BASE)
-    if f.lower().endswith(".pdf") and "template" not in f.lower()
-])
+PAGE_HEIGHT = 792.0
+DPI = 150
+SCALE = DPI / 72.0
+
+PAGE_MAPS = {
+    "Acord App (1800 North Stone LLC) 2026.pdf": {
+        1: ("acord_125.pdf", 0), 2: ("acord_125.pdf", 1),
+        3: ("acord_125.pdf", 2), 4: ("acord_125.pdf", 3),
+        6: ("acord_140.pdf", 0), 7: ("acord_140.pdf", 1), 8: ("acord_140.pdf", 2),
+        9: ("acord_140.pdf", 0), 10: ("acord_140.pdf", 1), 11: ("acord_140.pdf", 2),
+        12: ("acord_140.pdf", 0), 13: ("acord_140.pdf", 1), 14: ("acord_140.pdf", 2),
+        16: ("acord_126_2014.pdf", 0), 17: ("acord_126_2014.pdf", 1),
+        18: ("acord_126_2014.pdf", 2), 19: ("acord_126_2014.pdf", 3),
+        21: ("acord_131.pdf", 0), 22: ("acord_131.pdf", 1), 23: ("acord_131.pdf", 2),
+        24: ("acord_131.pdf", 3), 25: ("acord_131.pdf", 4),
+    },
+    "26-27 Acord 125.pdf": {pg: ("acord_125.pdf", pg - 1) for pg in range(1, 5)},
+    "26 GL Application for Prism Broward.pdf": {pg: ("acord_125.pdf", pg - 1) for pg in range(1, 5)},
+    "26 XS Application for Prism Broward.pdf": {pg: ("acord_125.pdf", pg - 1) for pg in range(1, 5)},
+    "ACORD_112322108_125.pdf": {pg: ("acord_125.pdf", pg - 1) for pg in range(1, 5)},
+}
+
+MODEL_RUNS = {
+    "merged_qwen3vl8b (bbox+VLM)":          {"dir": "merged_qwen3vl8b",   "suffix": "_merged"},
+    "qwen3-vl-8b (pure VLM)":               {"dir": "vllm_qwen3vl8b",     "suffix": "_targeted"},
+    "qwen2.5-vl-7b":                        {"dir": "vllm_qwen2_5vl_7b",  "suffix": "_targeted"},
+    "internvl3-8b":                         {"dir": "vllm_internvl3_8b",  "suffix": "_targeted"},
+    "qwen2.5-vl-32b-awq (partial, DPI100)": {"dir": "vllm_qwen2_5vl_32b", "suffix": "_targeted"},
+    "qwen3-vl:4b (Ollama baseline)":        {"dir": "targeted_extractions", "suffix": "_targeted"},
+}
+
+ANCHOR_LABELS = ["CARRIER", "NAIC CODE", "POLICY NUMBER", "EFFECTIVE DATE",
+                 "NAMED INSURED(S)", "CONSTRUCTION TYPE", "PRIMARY HEAT",
+                 "SECONDARY HEAT", "COVERAGES", "LIMITS", "SIGNATURE",
+                 "GENERAL INFORMATION", "CONTACT INFORMATION",
+                 "ADDITIONAL INTEREST", "UNDERLYING INSURANCE",
+                 "BLANKET SUMMARY", "TOTAL AREA", "YR BUILT"]
+
+
+def safe_name(pdf_name: str) -> str:
+    return (pdf_name.replace(" ", "_").replace("(", "").replace(")", "")
+            .replace(".pdf", "").replace(".PDF", ""))
 
 
 @st.cache_data
-def get_pdf_pages(pdf_name):
-    doc = fitz.open(str(BASE / pdf_name))
-    count = len(doc)
+def list_pdfs():
+    if not PDF_DIR.exists():
+        return []
+    return sorted([f.name for f in PDF_DIR.iterdir() if f.suffix.lower() == ".pdf"])
+
+
+@st.cache_data
+def get_pdf_page_count(pdf_name):
+    doc = fitz.open(str(PDF_DIR / pdf_name))
+    n = len(doc)
     doc.close()
-    return count
+    return n
 
 
 @st.cache_data
-def render_page(pdf_name, page_num, dpi=150):
-    doc = fitz.open(str(BASE / pdf_name))
-    page = doc[page_num - 1]
-    pix = page.get_pixmap(dpi=dpi)
-    img = Image.open(io.BytesIO(pix.tobytes("png")))
+def render_pdf_page(pdf_name, page_num, dpi=DPI):
+    doc = fitz.open(str(PDF_DIR / pdf_name))
+    pix = doc[page_num - 1].get_pixmap(dpi=dpi)
+    img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
     doc.close()
     return img
 
 
 @st.cache_data
-def load_vlm_data(pdf_name):
-    safe = pdf_name.replace(" ", "_").replace("(", "").replace(")", "").replace(".pdf", "").replace(".PDF", "")
-    # Try targeted first
-    tp = TARGETED_DIR / (safe + "_targeted.json")
-    if tp.exists():
-        with open(tp) as f:
-            return json.load(f), "targeted"
-    # Try vlm_extractions
-    vp = VLM_DIR / (safe + ".json")
-    if vp.exists():
-        with open(vp) as f:
-            return json.load(f), "vlm"
-    return None, None
+def load_extraction(pdf_name, model_label):
+    cfg = MODEL_RUNS[model_label]
+    json_path = BASE / cfg["dir"] / f"{safe_name(pdf_name)}{cfg['suffix']}.json"
+    if not json_path.exists():
+        return None
+    return json.load(open(json_path))
+
+
+def page_data_from_extraction(extraction, page_num, model_label):
+    if extraction is None:
+        return None
+    cfg = MODEL_RUNS[model_label]
+    if cfg["dir"].startswith("merged_"):
+        return extraction.get("pages", {}).get(f"page_{page_num}")
+    pages = extraction.get("pages", [])
+    if isinstance(pages, list):
+        for p in pages:
+            if p.get("page") == page_num:
+                return p.get("data")
+    return None
 
 
 @st.cache_data
-def get_raw_text(pdf_name, page_num):
+def compute_dy_for_page(pdf_name, page_num, tmpl_file, tmpl_page):
+    fpdf = pdfplumber.open(str(PDF_DIR / pdf_name))
+    fwords = fpdf.pages[page_num - 1].extract_words(
+        keep_blank_chars=True, x_tolerance=2, y_tolerance=2)
+    fpdf.close()
+    tpdf = pdfplumber.open(str(TEMPLATES_DIR / tmpl_file))
+    twords = tpdf.pages[tmpl_page].extract_words(
+        keep_blank_chars=True, x_tolerance=2, y_tolerance=2)
+    tpdf.close()
+
+    dys = []
+    for label in ANCHOR_LABELS:
+        t_y = f_y = None
+        for w in twords:
+            if w["text"].strip() == label:
+                t_y = w["top"]; break
+        for w in fwords:
+            if w["text"].strip() == label:
+                f_y = w["top"]; break
+        if t_y is not None and f_y is not None:
+            dys.append(f_y - t_y)
+    return (sum(dys) / len(dys) if dys else 8.0), fwords
+
+
+@st.cache_data
+def load_template_btn_fields(tmpl_file, tmpl_page):
+    reader = pypdf.PdfReader(str(TEMPLATES_DIR / tmpl_file))
+    annots = reader.pages[tmpl_page].get("/Annots", []) or []
+    fields = []
+    for annot in annots:
+        obj = annot.get_object()
+        if str(obj.get("/FT", "")) != "/Btn":
+            continue
+        rect = obj.get("/Rect", [])
+        bbox = [float(r) for r in rect] if rect else None
+        name = str(obj.get("/T", ""))
+        if name and bbox and bbox != [0.0, 1.0, 0.0, 1.0]:
+            fields.append({"name": name, "bbox": bbox,
+                           "tooltip": str(obj.get("/TU", ""))})
+    return fields
+
+
+def short_label(field_name: str, max_len: int = 40) -> str:
+    s = field_name.replace("[0]", "")
+    parts = s.split("_")
+    if parts and len(parts[-1]) <= 2:
+        parts = parts[:-1]
+    s = "_".join(parts)
+    if len(s) > max_len:
+        s = "…" + s[-(max_len - 1):]
+    return s
+
+
+def overlay_image(pdf_name, page_num, merged_fields):
+    img = render_pdf_page(pdf_name, page_num).copy()
+    if pdf_name not in PAGE_MAPS or page_num not in PAGE_MAPS[pdf_name]:
+        return img
+
+    tmpl_file, tmpl_page = PAGE_MAPS[pdf_name][page_num]
+    dy, fwords = compute_dy_for_page(pdf_name, page_num, tmpl_file, tmpl_page)
+    btn_fields = load_template_btn_fields(tmpl_file, tmpl_page)
+
+    draw = ImageDraw.Draw(img, "RGBA")
     try:
-        pdf = pdfplumber.open(str(BASE / pdf_name))
-        page = pdf.pages[page_num - 1]
-        words = page.extract_words(keep_blank_chars=True, x_tolerance=2, y_tolerance=2)
-        words.sort(key=lambda w: (round(w["top"], 0), w["x0"]))
-        text = page.extract_text() or ""
-        pdf.close()
-        if "(cid:" in text:
-            return [], "(garbled font — use OCR)"
-        return words, text
-    except:
-        return [], ""
+        font = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 11)
+    except Exception:
+        font = ImageFont.load_default()
 
+    for w in fwords:
+        if w["text"].strip() == "X":
+            cx = (w["x0"] + w["x1"]) / 2 * SCALE
+            cy = (w["top"] + w["bottom"]) / 2 * SCALE
+            draw.ellipse((cx - 8, cy - 8, cx + 8, cy + 8),
+                         outline=(255, 200, 0, 255), width=2)
 
-def draw_word_boxes(img, words, scale=150 / 72):
-    """Draw bounding boxes around each word on the page image."""
-    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
-    for w in words:
-        x0 = w["x0"] * scale
-        top = w["top"] * scale
-        x1 = w["x1"] * scale
-        bottom = w["bottom"] * scale
-        draw.rectangle([x0, top, x1, bottom], outline=(0, 150, 255, 180), width=1)
-    return Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+    n_t = n_f = n_m = 0
+    for f in btn_fields:
+        x0, y0_pdf, x1, y1_pdf = f["bbox"]
+        top = PAGE_HEIGHT - y1_pdf + dy
+        bot = PAGE_HEIGHT - y0_pdf + dy
+        rect = (x0 * SCALE, top * SCALE, x1 * SCALE, bot * SCALE)
 
+        fld = merged_fields.get(f["name"]) if merged_fields else None
+        if fld is None:
+            color = (140, 140, 140, 255); n_m += 1
+        else:
+            color = ((0, 200, 0, 255) if fld.get("value") is True
+                     else (220, 60, 60, 255))
+            if fld.get("value") is True:
+                n_t += 1
+            else:
+                n_f += 1
+        draw.rectangle(rect, outline=color, width=2)
 
-def flatten_json(obj, prefix=""):
-    items = []
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k.startswith("_"):
-                continue
-            new_key = f"{prefix}.{k}" if prefix else k
-            items.extend(flatten_json(v, new_key))
-    elif isinstance(obj, list):
-        for i, v in enumerate(obj):
-            items.extend(flatten_json(v, f"{prefix}[{i}]"))
-    else:
-        if obj is not None and str(obj).strip():
-            items.append((prefix, obj))
-    return items
+        if fld and fld.get("value") is True:
+            label = short_label(f["name"])
+            tx, ty = rect[2] + 4, rect[1] - 2
+            try:
+                bb = draw.textbbox((tx, ty), label, font=font)
+            except AttributeError:
+                bb = (tx, ty, tx + len(label) * 6, ty + 12)
+            draw.rectangle((bb[0] - 2, bb[1], bb[2] + 2, bb[3]),
+                           fill=(255, 255, 255, 230))
+            draw.text((tx, ty), label, fill=color[:3], font=font)
+
+    title = (f"true={n_t}  false={n_f}  unmapped={n_m}  |  "
+             f"template={tmpl_file}#{tmpl_page}")
+    draw.rectangle((0, 0, img.width, 22), fill=(255, 255, 230, 255))
+    draw.text((6, 4), title, fill=(0, 0, 0), font=font)
+    return img
 
 
 def main():
     st.title("Insurance Document Extractor — Visual Verifier")
 
-    # Sidebar — zip download at top
-    zip_path = BASE / "all_extractions.zip"
-    if zip_path.exists():
-        with open(zip_path, "rb") as zf:
-            st.sidebar.download_button(
-                "Download ALL Extractions (ZIP)",
-                data=zf.read(),
-                file_name="all_extractions.zip",
-                mime="application/zip",
-                use_container_width=True,
-            )
+    pdfs = list_pdfs()
+    if not pdfs:
+        st.error(f"No PDFs found under {PDF_DIR}. Unzip ALL_Docs.zip first.")
+        return
 
-    st.sidebar.markdown("---")
-    st.sidebar.header("Select Document")
-    selected_pdf = st.sidebar.selectbox("PDF File", PDFS)
-    total_pages = get_pdf_pages(selected_pdf)
+    st.sidebar.header("Document")
+    pdf_name = st.sidebar.selectbox("PDF", pdfs)
+    n_pages = get_pdf_page_count(pdf_name)
+    page_num = st.sidebar.number_input(
+        f"Page (1–{n_pages})", 1, n_pages, 1)
 
-    page_num = st.sidebar.number_input("Page", min_value=1, max_value=total_pages, value=1)
+    st.sidebar.header("Display")
+    show_overlay = st.sidebar.checkbox("Bbox checkbox overlay", True)
+    compare_mode = st.sidebar.checkbox("Compare two models", False)
 
-    st.sidebar.markdown("---")
-    show_word_boxes = st.sidebar.checkbox("Show word bounding boxes", value=False)
-    dpi = st.sidebar.selectbox("Render DPI", [100, 150, 200], index=1)
+    available = [m for m in MODEL_RUNS if (BASE / MODEL_RUNS[m]["dir"]).exists()]
+    if not available:
+        st.error("No model run dirs found.")
+        return
 
-    # Load VLM data
-    vlm_data, vlm_source = load_vlm_data(selected_pdf)
-    vlm_page = None
-    if vlm_data:
-        for p in vlm_data.get("pages", []):
-            if p["page"] == page_num:
-                vlm_page = p.get("data", {})
-                break
-
-    st.sidebar.markdown("---")
-    if vlm_source:
-        st.sidebar.success(f"VLM: {vlm_source}")
+    if compare_mode:
+        ca, cb = st.sidebar.columns(2)
+        model_a = ca.selectbox("Left model", available, key="left", index=0)
+        model_b = cb.selectbox("Right model", available, key="right",
+                                index=min(1, len(available) - 1))
     else:
-        st.sidebar.warning("No VLM extraction")
+        model_a = st.sidebar.selectbox("Model output", available, index=0)
+        model_b = None
 
-    # Stats
-    if vlm_page and "_error" not in vlm_page and "_raw" not in vlm_page:
-        fields = flatten_json(vlm_page)
-        st.sidebar.metric("Fields on this page", len(fields))
+    ext_a = load_extraction(pdf_name, model_a)
+    page_a = page_data_from_extraction(ext_a, page_num, model_a)
+
+    overlay_supported = (show_overlay and pdf_name in PAGE_MAPS
+                         and page_num in PAGE_MAPS[pdf_name])
+    if overlay_supported:
+        merged_label = "merged_qwen3vl8b (bbox+VLM)"
+        merged_ext = load_extraction(pdf_name, merged_label)
+        merged_page = page_data_from_extraction(merged_ext, page_num, merged_label)
+        merged_fields = (merged_page or {}).get("fields") if merged_page else None
+        img = overlay_image(pdf_name, page_num, merged_fields)
     else:
-        fields = []
+        img = render_pdf_page(pdf_name, page_num)
+        if show_overlay:
+            st.info(f"No bbox template for {pdf_name} page {page_num} "
+                    f"(loss runs / supplementals are pure-VLM only).")
 
-    # Full JSON download
-    if vlm_data:
-        st.sidebar.download_button(
-            "Download Full JSON",
-            data=json.dumps(vlm_data, indent=2),
-            file_name=f"{selected_pdf}_extraction.json",
-            mime="application/json",
-        )
-
-    # Main content
-    col1, col2 = st.columns([1, 1])
-
-    with col1:
-        st.subheader(f"PDF — Page {page_num}/{total_pages}")
-        img = render_page(selected_pdf, page_num, dpi)
-
-        if show_word_boxes:
-            words, _ = get_raw_text(selected_pdf, page_num)
-            if words:
-                scale = dpi / 72
-                img = draw_word_boxes(img, words, scale)
-
-        st.image(img, use_container_width=True)
-
-    with col2:
-        st.subheader("Extracted Fields")
-
-        if vlm_page and "_error" not in vlm_page and "_raw" not in vlm_page:
-            # Get raw text for cross-validation
-            _, raw_text = get_raw_text(selected_pdf, page_num)
-            raw_lower = raw_text.lower().replace(" ", "").replace(",", "")
-
-            tab1, tab2, tab3 = st.tabs(["Fields", "Verification", "Raw JSON"])
-
-            with tab1:
-                for key, value in fields:
-                    val_str = str(value)
-                    if isinstance(value, bool):
-                        st.markdown(f"**{key}:** {'[X]' if value else '[ ]'}")
-                    elif val_str in ("", "0", "0.0", "None"):
-                        continue
-                    else:
-                        st.markdown(f"**{key}:** `{val_str}`")
-
-            with tab2:
-                st.markdown("**Cross-validation: VLM value vs raw text**")
-                ok_count = 0
-                fail_count = 0
-                skip_count = 0
-
-                for key, value in fields:
-                    val_str = str(value)
-                    val_clean = val_str.lower().replace(" ", "").replace(",", "").replace("$", "")
-
-                    if len(val_clean) < 2 or val_str in ("0", "0.0", "None", ""):
-                        skip_count += 1
-                        continue
-
-                    if isinstance(value, bool):
-                        # Can't verify checkboxes in raw text
-                        st.markdown(f"- :blue[[CHECKBOX]] **{key}** = {value}")
-                        skip_count += 1
-                        continue
-
-                    if val_clean in raw_lower.replace("$", ""):
-                        st.markdown(f"- :green[[OK]] **{key}** = `{val_str}`")
-                        ok_count += 1
-                    else:
-                        # Partial match
-                        words_in_val = val_str.split()
-                        if len(words_in_val) > 2:
-                            matches = sum(1 for w in words_in_val
-                                         if w.lower().replace(",", "") in raw_lower)
-                            if matches >= len(words_in_val) * 0.6:
-                                st.markdown(f"- :orange[[PARTIAL]] **{key}** = `{val_str}`")
-                                ok_count += 1
-                                continue
-
-                        st.markdown(f"- :red[[UNCONFIRMED]] **{key}** = `{val_str}`")
-                        fail_count += 1
-
-                st.markdown("---")
-                total = ok_count + fail_count + skip_count
-                st.markdown(f"**Confirmed:** {ok_count} | **Unconfirmed:** {fail_count} | **Skipped:** {skip_count} | **Total:** {total}")
-
-            with tab3:
-                st.json(vlm_page)
-
-        elif vlm_page and "_error" in vlm_page:
-            st.error(f"VLM error: {vlm_page['_error']}")
-        elif vlm_page and "_raw" in vlm_page:
-            st.warning("VLM returned raw text (no JSON)")
-            st.text(vlm_page["_raw"][:1000])
+    if compare_mode:
+        ext_b = load_extraction(pdf_name, model_b)
+        page_b = page_data_from_extraction(ext_b, page_num, model_b)
+        c1, c2, c3 = st.columns([3, 2, 2])
+        c1.image(img, caption=f"{pdf_name} — page {page_num}",
+                 use_container_width=True)
+        c2.subheader(model_a)
+        c2.json(page_a or {"_": "no data"}, expanded=False)
+        c3.subheader(model_b)
+        c3.json(page_b or {"_": "no data"}, expanded=False)
+    else:
+        c1, c2 = st.columns([3, 2])
+        c1.image(img, caption=f"{pdf_name} — page {page_num}",
+                 use_container_width=True)
+        c2.subheader(model_a)
+        if page_a is None:
+            c2.warning("No extraction for this page.")
         else:
-            st.info("No VLM extraction for this page")
-
-    # Bottom: All documents download section
-    st.markdown("---")
-    st.subheader("Download Extractions — All Documents")
-
-    # Build download buttons for every PDF
-    dl_cols = st.columns(3)
-    col_idx = 0
-    for pdf_name in PDFS:
-        vdata, vsrc = load_vlm_data(pdf_name)
-        if not vdata:
-            continue
-
-        total_f = 0
-        for p in vdata.get("pages", []):
-            pg_data = p.get("data", {})
-            if "_error" not in pg_data and "_raw" not in pg_data:
-                total_f += len(flatten_json(pg_data))
-
-        label = f"{pdf_name[:45]}... ({vdata.get('total_pages', '?')}pg, {total_f} fields)"
-        safe = pdf_name.replace(" ", "_").replace("(", "").replace(")", "")
-
-        with dl_cols[col_idx % 3]:
-            st.download_button(
-                label=label,
-                data=json.dumps(vdata, indent=2),
-                file_name=f"{safe}_extraction.json",
-                mime="application/json",
-                key=f"dl_{safe}",
-                use_container_width=True,
-            )
-        col_idx += 1
+            cfg = MODEL_RUNS[model_a]
+            if cfg["dir"].startswith("merged_"):
+                fields = page_a.get("fields", {})
+                t1, t2, t3 = c2.tabs(["Checkboxes", "Text fields", "All JSON"])
+                with t1:
+                    cbs = {n: f for n, f in fields.items()
+                           if f.get("type") == "checkbox"}
+                    true_cbs = {n: f for n, f in cbs.items() if f["value"]}
+                    st.write(f"**True**: {len(true_cbs)} / {len(cbs)} checkboxes")
+                    for n, f in sorted(true_cbs.items()):
+                        st.markdown(f"- `{short_label(n)}` "
+                                    f"<sub>{f.get('tooltip','')[:80]}</sub>",
+                                    unsafe_allow_html=True)
+                with t2:
+                    txts = {n: f for n, f in fields.items()
+                            if f.get("type") == "text"}
+                    for n, f in sorted(txts.items())[:80]:
+                        v = str(f["value"])[:120]
+                        st.markdown(
+                            f"- **{short_label(n)}** = `{v}`  "
+                            f"<sub>[{f['source']}] {f.get('tooltip','')[:60]}</sub>",
+                            unsafe_allow_html=True)
+                    if len(txts) > 80:
+                        st.caption(f"… {len(txts) - 80} more")
+                with t3:
+                    st.json(page_a, expanded=False)
+                discrep = page_a.get("discrepancies", [])
+                if discrep:
+                    with c2.expander(f"⚠ {len(discrep)} discrepancies"):
+                        st.json(discrep)
+            else:
+                c2.json(page_a, expanded=False)
 
 
 if __name__ == "__main__":
