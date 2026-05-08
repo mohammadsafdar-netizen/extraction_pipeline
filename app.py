@@ -205,22 +205,34 @@ def short_label(field_name: str, max_len: int = 40) -> str:
     return s
 
 
-def overlay_image(pdf_name, page_num, merged_fields):
+def overlay_image(pdf_name, page_num, merged_fields, show_text_fields=True):
+    """Render page with ALL extracted fields' bboxes overlaid:
+       - Green rectangle: /Btn checkbox detected as TRUE
+       - Red rectangle (faint): /Btn checkbox detected as FALSE
+       - Blue rectangle + value: /Tx text field with extracted value
+       - Yellow circle: raw 'X' glyph detected by pdfplumber
+       Hover/inspect a single field via the Field Inspector mode."""
     img = render_pdf_page(pdf_name, page_num).copy()
     if pdf_name not in PAGE_MAPS or page_num not in PAGE_MAPS[pdf_name]:
         return img
 
     tmpl_file, tmpl_page = PAGE_MAPS[pdf_name][page_num]
     dy, fwords = compute_dy_for_page(pdf_name, page_num, tmpl_file, tmpl_page)
-    btn_fields = load_template_btn_fields(tmpl_file, tmpl_page)
+    all_fields = get_all_template_fields(tmpl_file, tmpl_page)
+    btn_fields = [f for f in all_fields if f["type"] == "/Btn"]
+    text_fields = [f for f in all_fields if f["type"] == "/Tx"]
 
     draw = ImageDraw.Draw(img, "RGBA")
     try:
         font = ImageFont.truetype(
             "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 11)
+        font_small = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 9)
     except Exception:
         font = ImageFont.load_default()
+        font_small = font
 
+    # Yellow circles around raw X glyphs
     for w in fwords:
         if w["text"].strip() == "X":
             cx = (w["x0"] + w["x1"]) / 2 * SCALE
@@ -228,6 +240,7 @@ def overlay_image(pdf_name, page_num, merged_fields):
             draw.ellipse((cx - 8, cy - 8, cx + 8, cy + 8),
                          outline=(255, 200, 0, 255), width=2)
 
+    # Checkbox bboxes
     n_t = n_f = n_m = 0
     for f in btn_fields:
         x0, y0_pdf, x1, y1_pdf = f["bbox"]
@@ -238,14 +251,14 @@ def overlay_image(pdf_name, page_num, merged_fields):
         fld = merged_fields.get(f["name"]) if merged_fields else None
         if fld is None:
             color = (140, 140, 140, 255); n_m += 1
+            width = 1
+        elif fld.get("value") is True:
+            color = (0, 200, 0, 255); n_t += 1
+            width = 2
         else:
-            color = ((0, 200, 0, 255) if fld.get("value") is True
-                     else (220, 60, 60, 255))
-            if fld.get("value") is True:
-                n_t += 1
-            else:
-                n_f += 1
-        draw.rectangle(rect, outline=color, width=2)
+            color = (220, 60, 60, 200); n_f += 1
+            width = 1
+        draw.rectangle(rect, outline=color, width=width)
 
         if fld and fld.get("value") is True:
             label = short_label(f["name"])
@@ -258,10 +271,49 @@ def overlay_image(pdf_name, page_num, merged_fields):
                            fill=(255, 255, 255, 230))
             draw.text((tx, ty), label, fill=color[:3], font=font)
 
-    title = (f"true={n_t}  false={n_f}  unmapped={n_m}  |  "
-             f"template={tmpl_file}#{tmpl_page}")
+    # Text-field bboxes (only those with extracted values)
+    n_text = 0
+    if show_text_fields:
+        for f in text_fields:
+            fld = merged_fields.get(f["name"]) if merged_fields else None
+            if not fld:
+                continue
+            v = fld.get("value")
+            if v is None or v == "" or v is False:
+                continue
+            x0, y0_pdf, x1, y1_pdf = f["bbox"]
+            top = PAGE_HEIGHT - y1_pdf + dy
+            bot = PAGE_HEIGHT - y0_pdf + dy
+            rect = (x0 * SCALE, top * SCALE, x1 * SCALE, bot * SCALE)
+
+            # Color: blue for bbox-source, orange for VLM gap-fill
+            src = fld.get("source", "")
+            if src.startswith("bbox"):
+                color = (40, 100, 240, 220)  # blue
+            else:
+                color = (250, 140, 0, 220)  # orange = VLM
+            draw.rectangle(rect, outline=color, width=1)
+            n_text += 1
+
+            # Show value snippet INSIDE-or-just-above the bbox (truncated)
+            v_str = str(v)[:50]
+            if v_str:
+                tx = rect[0] + 2
+                ty = max(0, rect[1] - 11)  # above the bbox
+                try:
+                    bb = draw.textbbox((tx, ty), v_str, font=font_small)
+                except AttributeError:
+                    bb = (tx, ty, tx + len(v_str) * 5, ty + 10)
+                draw.rectangle((bb[0] - 1, bb[1], bb[2] + 1, bb[3]),
+                               fill=(255, 255, 255, 220))
+                draw.text((tx, ty), v_str, fill=color[:3], font=font_small)
+
+    title = (f"cb_true={n_t}  cb_false={n_f}  cb_unmapped={n_m}  "
+             f"text={n_text}  |  template={tmpl_file}#{tmpl_page}  "
+             f"|  green=cb-true  red=cb-false  blue=text-bbox  "
+             f"orange=text-vlm  yellow=raw-X")
     draw.rectangle((0, 0, img.width, 22), fill=(255, 255, 230, 255))
-    draw.text((6, 4), title, fill=(0, 0, 0), font=font)
+    draw.text((6, 4), title[:160], fill=(0, 0, 0), font=font_small)
     return img
 
 
@@ -358,7 +410,11 @@ def main():
         f"Page (1–{n_pages})", 1, n_pages, 1)
 
     st.sidebar.header("Display")
-    show_overlay = st.sidebar.checkbox("Bbox checkbox overlay", True)
+    show_overlay = st.sidebar.checkbox("Bbox overlay (all extracted fields)", True)
+    show_text_fields = st.sidebar.checkbox(
+        "Include text-field bboxes (in addition to checkboxes)", True,
+        help="Off = only checkboxes. On = also draws each text field with "
+             "an extracted value (blue=bbox, orange=VLM).")
     compare_mode = st.sidebar.checkbox("Compare two models", False)
     inspector_mode = st.sidebar.checkbox(
         "🔍 Field Inspector (highlight one field)", False,
@@ -525,7 +581,8 @@ def main():
         merged_ext = load_extraction(pdf_name, merged_label)
         merged_page = page_data_from_extraction(merged_ext, page_num, merged_label)
         merged_fields = (merged_page or {}).get("fields") if merged_page else None
-        img = overlay_image(pdf_name, page_num, merged_fields)
+        img = overlay_image(pdf_name, page_num, merged_fields,
+                            show_text_fields=show_text_fields)
     else:
         img = render_pdf_page(pdf_name, page_num)
         if show_overlay:
