@@ -485,6 +485,10 @@ def run_vlm_extraction(flat_path: Path, doc_type: str, dpi: int,
             tmpl_file, tmpl_idx = page_map[pg_num]
             try:
                 schema = get_page_schema(tmpl_file, tmpl_idx, templates_dir)
+                # Short checkbox-rule block only (no field-name listing).
+                # Tested: full schema with field listing (max_text_fields=200)
+                # caused the VLM to hallucinate plausible-looking data for
+                # listed fields when the page is blank — net negative.
                 prompt = prompt + "\n" + build_schema_prompt_block(schema)
             except Exception as e:
                 print(f"  (schema-block skipped: {e})", end="")

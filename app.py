@@ -95,13 +95,28 @@ def render_pdf_page(pdf_name, page_num, dpi=DPI):
     return img
 
 
+def _file_mtime(path: Path) -> float:
+    try:
+        return path.stat().st_mtime
+    except Exception:
+        return 0.0
+
+
 @st.cache_data
-def load_extraction(pdf_name, model_label):
+def _load_extraction_cached(pdf_name, model_label, mtime):
+    """mtime is part of the cache key — busts cache automatically when
+       the underlying JSON file changes on disk."""
     cfg = MODEL_RUNS[model_label]
     json_path = BASE / cfg["dir"] / f"{safe_name(pdf_name)}{cfg['suffix']}.json"
     if not json_path.exists():
         return None
     return json.load(open(json_path))
+
+
+def load_extraction(pdf_name, model_label):
+    cfg = MODEL_RUNS[model_label]
+    json_path = BASE / cfg["dir"] / f"{safe_name(pdf_name)}{cfg['suffix']}.json"
+    return _load_extraction_cached(pdf_name, model_label, _file_mtime(json_path))
 
 
 def page_data_from_extraction(extraction, page_num, model_label):
@@ -284,6 +299,62 @@ def main():
 
     ext_a = load_extraction(pdf_name, model_a)
     page_a = page_data_from_extraction(ext_a, page_num, model_a)
+
+    # Sidebar: downloads
+    st.sidebar.header("Downloads")
+    safe = safe_name(pdf_name)
+    cfg_a = MODEL_RUNS[model_a]
+    json_path_a = BASE / cfg_a["dir"] / f"{safe}{cfg_a['suffix']}.json"
+    if json_path_a.exists():
+        with open(json_path_a) as f:
+            content_a = f.read()
+        st.sidebar.download_button(
+            f"📄 Full JSON ({model_a.split(' ')[0]})",
+            data=content_a,
+            file_name=json_path_a.name,
+            mime="application/json",
+            key="dl_full_a",
+        )
+        if page_a is not None:
+            st.sidebar.download_button(
+                f"📄 Page {page_num} only",
+                data=json.dumps(page_a, indent=2),
+                file_name=f"{safe}{cfg_a['suffix']}_page_{page_num}.json",
+                mime="application/json",
+                key="dl_page_a",
+            )
+
+    # Bulk: latest extractions zip for the merged-pipeline output
+    merged_zip = BASE / "merged_qwen3vl8b_extractions.zip"
+    if merged_zip.exists():
+        with open(merged_zip, "rb") as f:
+            st.sidebar.download_button(
+                "📦 ALL ACORD merged (zip)",
+                data=f.read(),
+                file_name=merged_zip.name,
+                mime="application/zip",
+                key="dl_merged_zip",
+            )
+    lossrun_zip = BASE / "merged_loss_runs_extractions.zip"
+    if lossrun_zip.exists():
+        with open(lossrun_zip, "rb") as f:
+            st.sidebar.download_button(
+                "📦 ALL loss runs merged (zip)",
+                data=f.read(),
+                file_name=lossrun_zip.name,
+                mime="application/zip",
+                key="dl_lossrun_zip",
+            )
+    all_zip = BASE / "ALL_MODEL_RESULTS.zip"
+    if all_zip.exists():
+        with open(all_zip, "rb") as f:
+            st.sidebar.download_button(
+                "📦 ALL_MODEL_RESULTS.zip",
+                data=f.read(),
+                file_name=all_zip.name,
+                mime="application/zip",
+                key="dl_all_zip",
+            )
 
     overlay_supported = (show_overlay and pdf_name in PAGE_MAPS
                          and page_num in PAGE_MAPS[pdf_name])
