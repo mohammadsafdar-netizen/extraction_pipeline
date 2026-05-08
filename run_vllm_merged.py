@@ -26,6 +26,7 @@ import fitz
 import pdfplumber
 import pypdf
 import requests
+from PIL import Image
 
 from prompts import GENERALIZED, get_prompt
 
@@ -40,6 +41,16 @@ MODEL = DEFAULT_MODEL  # overridden by --model
 
 PAGE_HEIGHT = 792.0
 BBOX_EXPAND = 5
+
+# Pixel-density checkbox detector — ported from positional_matcher.py.
+# Used as a fallback when text-X detection misses a non-"X" glyph (e.g.
+# ✓, hand-drawn check, filled-in pen stroke). Threshold tuned from
+# `< 0.08 empty, > 0.35 checked` per the broader project's memory; we
+# pick a conservative single threshold that minimizes false positives.
+PIXEL_CHECKBOX_DPI = 200
+PIXEL_CHECKBOX_SCALE = PIXEL_CHECKBOX_DPI / 72.0
+PIXEL_CHECKBOX_THRESHOLD = 0.18  # dark-pixel ratio above this = "checked"
+PIXEL_DARK_VALUE = 140            # grayscale 0-255; below = "dark"
 
 ANCHOR_LABELS = [
     "CARRIER", "NAIC CODE", "POLICY NUMBER", "EFFECTIVE DATE",
@@ -122,20 +133,7 @@ def bbox_extract_text(fwords, bbox_pdf, dy):
 
 def bbox_check_checkbox(fwords, bbox_pdf, dy):
     """An X is treated as belonging to a checkbox only when its CENTER is
-       inside the RAW (dy-shifted) bbox — no BBOX_EXPAND padding.
-
-       Earlier had two compounding bugs:
-         1. tol=5 boundary padding let an X at the edge of one bbox also
-            satisfy an adjacent bbox 5pt away.
-         2. BBOX_EXPAND=5 extended every bbox's bottom by 5pt for text
-            extraction; for checkboxes this made vertically-adjacent
-            checkbox bboxes overlap by 5pt, so a single X glyph could
-            land inside both. Confirmed on 1800 N Stone p1 entity_type
-            row: JV (top 561.1, bot 578.1 with expand) and LLC (top
-            573.1, bot 590.1 with expand) both claimed the same X
-            at y=577.7.
-
-       Center-in-RAW-bbox eliminates both bleeds."""
+       inside the RAW (dy-shifted) bbox — no BBOX_EXPAND padding."""
     x0, y0_pdf, x1, y1_pdf = bbox_pdf
     top = PAGE_HEIGHT - y1_pdf + dy
     bottom = PAGE_HEIGHT - y0_pdf + dy
@@ -147,6 +145,53 @@ def bbox_check_checkbox(fwords, bbox_pdf, dy):
         if x0 <= cx <= x1 and top <= cy <= bottom:
             return True
     return False
+
+
+def checkbox_pixel_ratio(page_img_l, bbox_pdf, dy, scale=PIXEL_CHECKBOX_SCALE):
+    """Crop the (dy-shifted) bbox from a grayscale page image, apply 20%
+       inset to exclude the printed checkbox border, return dark-pixel
+       ratio (0.0..1.0). Catches ✓/hand-drawn/filled-in marks that
+       pdfplumber doesn't tokenize as 'X'.
+       Returns None if the crop is too small to analyze."""
+    if page_img_l is None:
+        return None
+    x0, y0_pdf, x1, y1_pdf = bbox_pdf
+    top_pt = PAGE_HEIGHT - y1_pdf + dy
+    bot_pt = PAGE_HEIGHT - y0_pdf + dy
+    fx0 = max(0, int(x0 * scale))
+    fy0 = max(0, int(top_pt * scale))
+    fx1 = min(page_img_l.size[0], int(x1 * scale))
+    fy1 = min(page_img_l.size[1], int(bot_pt * scale))
+    if fx1 <= fx0 or fy1 <= fy0:
+        return None
+    crop = page_img_l.crop((fx0, fy0, fx1, fy1))
+    cw, ch = crop.size
+    if cw < 4 or ch < 4:
+        return None
+    inset_x = max(1, int(cw * 0.2))
+    inset_y = max(1, int(ch * 0.2))
+    inner = crop.crop((inset_x, inset_y, cw - inset_x, ch - inset_y))
+    iw, ih = inner.size
+    if iw < 2 or ih < 2:
+        return None
+    pixels = list(inner.getdata())
+    total = len(pixels)
+    if total == 0:
+        return 0.0
+    dark = sum(1 for p in pixels if p < PIXEL_DARK_VALUE)
+    return dark / total
+
+
+def bbox_check_checkbox_combined(fwords, bbox_pdf, dy, page_img_l):
+    """Returns (is_checked, source) where source is 'text_x', 'pixel',
+       or None. is_checked = True if EITHER text-X glyph found inside
+       bbox OR pixel-density above threshold."""
+    if bbox_check_checkbox(fwords, bbox_pdf, dy):
+        return True, "text_x"
+    ratio = checkbox_pixel_ratio(page_img_l, bbox_pdf, dy)
+    if ratio is not None and ratio > PIXEL_CHECKBOX_THRESHOLD:
+        return True, f"pixel:{ratio:.2f}"
+    return False, None
 
 
 def load_template_fields(tmpl_path: Path):
@@ -177,6 +222,10 @@ def run_bbox_extraction(flat_path: Path, page_map: dict, templates_dir: Path):
     tmpl_words_cache = {}
 
     fpdf = pdfplumber.open(str(flat_path))
+    # Render each mapped page ONCE at PIXEL_CHECKBOX_DPI for pixel-density
+    # checkbox detection. Avoids re-rendering per field.
+    fitz_doc = fitz.open(str(flat_path))
+    page_images = {}
     result = {}
 
     for pg_num, (tmpl_file, tmpl_pg) in page_map.items():
@@ -199,6 +248,17 @@ def run_bbox_extraction(flat_path: Path, page_map: dict, templates_dir: Path):
             keep_blank_chars=True, x_tolerance=2, y_tolerance=2)
         dy = compute_dy(twords, fwords)
 
+        # Lazy-render the page in grayscale at PIXEL_CHECKBOX_DPI for
+        # pixel-density checkbox detection.
+        if pg_num not in page_images:
+            try:
+                pix = fitz_doc[pg_num - 1].get_pixmap(dpi=PIXEL_CHECKBOX_DPI)
+                page_images[pg_num] = Image.frombytes(
+                    "RGB", [pix.width, pix.height], pix.samples).convert("L")
+            except Exception:
+                page_images[pg_num] = None
+        page_img_l = page_images[pg_num]
+
         page_fields = {}
         for field in tmpl_fields:
             bbox = field["bbox"]
@@ -207,12 +267,12 @@ def run_bbox_extraction(flat_path: Path, page_map: dict, templates_dir: Path):
             tooltip = field["tooltip"]
 
             if ftype == "/Btn":
-                is_checked = bbox_check_checkbox(fwords, bbox, dy)
-                # Always emit /Btn fields with explicit true/false so
-                # that "false" checkboxes are not silently dropped.
+                is_checked, src_kind = bbox_check_checkbox_combined(
+                    fwords, bbox, dy, page_img_l)
+                src = "bbox" if src_kind is None else f"bbox:{src_kind}"
                 page_fields[name] = {
                     "value": is_checked, "tooltip": tooltip,
-                    "type": "checkbox", "source": "bbox"
+                    "type": "checkbox", "source": src
                 }
             else:
                 text = bbox_extract_text(fwords, bbox, dy)
@@ -226,6 +286,7 @@ def run_bbox_extraction(flat_path: Path, page_map: dict, templates_dir: Path):
                           "template": f"{tmpl_file}#{tmpl_pg}"}
 
     fpdf.close()
+    fitz_doc.close()
     return result
 
 
@@ -269,7 +330,140 @@ def call_vlm(img_b64: str, prompt: str, timeout: int = 240) -> dict:
     return {"_raw": content[:4000]}
 
 
-def run_vlm_extraction(flat_path: Path, doc_type: str, dpi: int):
+def get_page_schema(template_file, template_page_idx, templates_dir: Path):
+    """Returns {'text_fields': [...], 'checkbox_fields': [...]} from the
+       AcroForm template for the given page. Each entry is
+       {name, tooltip, bbox}."""
+    fields_by_page = load_template_fields(templates_dir / template_file)
+    fields = fields_by_page.get(template_page_idx, [])
+    text_fields = [f for f in fields if f["type"] == "/Tx"]
+    btn_fields = [f for f in fields if f["type"] == "/Btn"]
+    return {"text_fields": text_fields, "checkbox_fields": btn_fields}
+
+
+# Common abbreviations / aliases that VLMs use for checkbox option labels.
+# Built once globally; combined per-page with template-derived labels.
+_CHECKBOX_LABEL_SYNONYMS = {
+    "limitedliabilitycorporation": ["llc", "l.l.c", "limited liability corp"],
+    "limitedpartnership": ["lp", "l.p", "limited partnership"],
+    "subchapterscorporation": ["subchapter s", "subchapter \"s\"", "s-corp", "s corp"],
+    "notforprofitorg": ["non-profit", "nonprofit", "not for profit"],
+    "jointventure": ["joint venture", "jv"],
+    "ownerscontractorsprotective": ["ocp"],
+    "claimsmade": ["claims made", "claims-made"],
+    "occurrence": ["occurrence", "per occurrence"],
+    "perclaim": ["per claim"],
+    "deductible": [],
+    "perpolicy": ["per policy"],
+    "perproject": ["per project"],
+    "perlocation": ["per location"],
+    "directbill": ["direct", "direct bill"],
+    "agencybill": ["agency", "agency bill"],
+    "producerbill": ["agency", "producer", "agency bill", "producer bill"],
+    "inside": ["inside"],
+    "outside": ["outside"],
+    "owner": ["owner"],
+    "tenant": ["tenant"],
+    "individual": ["individual"],
+    "corporation": ["corporation", "corp", "corp."],
+    "partnership": ["partnership"],
+    "trust": ["trust"],
+}
+
+
+def _camel_split(s: str) -> str:
+    """CamelCase → space-separated words. 'LimitedLiabilityCorporation' → 'limited liability corporation'."""
+    return re.sub(r"([a-z])([A-Z])", r"\1 \2", s).lower()
+
+
+def get_checkbox_labels_for_page(schema: dict) -> set:
+    """Build a set of normalized option-label strings that the VLM
+       might emit for any /Btn field on this page. Sources:
+         - The last camel-cased segment of each field name, e.g.
+           'NamedInsured_LegalEntity_LimitedLiabilityCorporationIndicator_A'
+           → 'limited liability corporation'
+         - Hardcoded synonyms (LLC, LP, OCP, etc.)
+       This is the template-driven label set used to filter VLM gap-fills."""
+    labels = set()
+    for f in schema.get("checkbox_fields", []):
+        name = f["name"]
+        # Strip [0], trailing _A/_B/_C, trailing 'Indicator'
+        s = re.sub(r"\[\d+\]$", "", name)
+        s = re.sub(r"_[A-Z]$", "", s)
+        s = re.sub(r"Indicator$", "", s)
+        # Take last underscore-separated segment
+        last = s.split("_")[-1]
+        # Add the camel-split version
+        words = _camel_split(last).strip()
+        if words:
+            labels.add(words)
+            # Add synonyms keyed on the camel-flat string
+            key = last.lower()
+            for syn in _CHECKBOX_LABEL_SYNONYMS.get(key, []):
+                labels.add(syn.lower())
+        # Also handle compound names like "AcceptCoverage" / "RejectCoverage"
+        # by adding individual significant words
+    # Add common forms that aren't always derivable:
+    labels.update({"y", "n", "y/n", "yes", "no",
+                   "[ ]", "[x]", "x", "✓", "☐", "☑"})
+    return labels
+
+
+def build_schema_prompt_block(schema: dict, max_text_fields: int = 0) -> str:
+    """Build a SHORT prompt-injection block telling the VLM:
+         - N CHECKBOX fields are bbox-handled — DO NOT emit checkbox values
+         - For checkbox-fields, NEVER emit option-label strings
+       Field-name listing is omitted by default to keep prompts short
+       (was overloading the VLM on dense pages with 100+ fields).
+       Set max_text_fields > 0 to include the listing."""
+    btn_count = len(schema["checkbox_fields"])
+    text_count = len(schema["text_fields"])
+
+    lines = [
+        "",
+        f"=== TEMPLATE-DRIVEN CHECKBOX RULE ===",
+        f"This page has {btn_count} checkboxes and {text_count} text fields.",
+        "The bbox pipeline already determined every checkbox state.",
+        "",
+        "CHECKBOX HANDLING: NEVER emit a JSON value that is a checkbox-option",
+        "LABEL. The forbidden patterns include (but are not limited to):",
+        "  Y, N, Y/N, [ ], [X]",
+        "  CORPORATION, LLC, INDIVIDUAL, PARTNERSHIP, TRUST, JOINT VENTURE",
+        "  DIRECT, AGENCY (billing plan)",
+        "  INSIDE, OUTSIDE (city limits)",
+        "  OWNER, TENANT (interest)",
+        "  PER CLAIM, PER OCCURRENCE (deductible basis)",
+        "  ACCEPT COVERAGE, REJECT COVERAGE",
+        "  BOILER, SOLID FUEL, RESISTIVE, SEMI-RESISTIVE, COMBUSTIBLE",
+        "  CENTRAL STATION, LOCAL GONG, WITH KEYS, CLOCK HOURLY",
+        "  CLAIMS MADE, OCCURRENCE",
+        "  HOME, BUS, CELL (phone-type)",
+        "  PRIMARY, SECONDARY",
+        "",
+        "If a value belongs to a checkbox, OMIT the field entirely from your JSON.",
+        "Boolean checkbox values (true/false) are also unnecessary — bbox handles them.",
+        "",
+        "Focus your extraction on TEXT fields the user has filled in (names,",
+        "addresses, phone numbers, dates, dollar amounts, descriptions).",
+        "Skip blank fields. Never invent values for empty fields.",
+        "",
+    ]
+    # Optional field-name listing (off by default to keep prompts short)
+    if max_text_fields > 0 and schema["text_fields"]:
+        lines.append("Text-field names (use these as JSON keys):")
+        for f in schema["text_fields"][:max_text_fields]:
+            tt = (f.get("tooltip") or "").strip()
+            if tt.startswith("Enter "):
+                tt = tt[6:]
+            lines.append(f"  {f['name']} — {tt[:40]}")
+        if len(schema["text_fields"]) > max_text_fields:
+            lines.append(f"  (+{len(schema['text_fields']) - max_text_fields} more)")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def run_vlm_extraction(flat_path: Path, doc_type: str, dpi: int,
+                       page_map: dict = None, templates_dir: Path = None):
     doc = fitz.open(str(flat_path))
     total_pages = len(doc)
     result = {}
@@ -279,8 +473,21 @@ def run_vlm_extraction(flat_path: Path, doc_type: str, dpi: int):
         pix = doc[pg].get_pixmap(dpi=dpi)
         img_b64 = base64.b64encode(pix.tobytes("png")).decode()
 
+        # Hybrid prompt: legacy per-page prompt + a SHORT template-driven
+        # checkbox-rule block. Tells the VLM that the bbox pipeline owns
+        # checkboxes and not to emit option-label strings as values, but
+        # keeps the well-tuned page-specific extraction guidance from
+        # prompts.py. Short block avoids overloading the VLM on dense
+        # multi-hundred-field pages.
         prompt = get_prompt(flat_path.name, pg_num, total_pages, doc_type)
         prompt = f"Page {pg_num}/{total_pages}.\n{prompt}"
+        if page_map and pg_num in page_map and templates_dir:
+            tmpl_file, tmpl_idx = page_map[pg_num]
+            try:
+                schema = get_page_schema(tmpl_file, tmpl_idx, templates_dir)
+                prompt = prompt + "\n" + build_schema_prompt_block(schema)
+            except Exception as e:
+                print(f"  (schema-block skipped: {e})", end="")
 
         print(f"    p{pg_num}/{total_pages}...", end=" ", flush=True)
         t0 = time.time()
@@ -353,7 +560,7 @@ _VLM_TEMPLATE_GARBAGE = {
 
 
 def _is_all_none_dict(v) -> bool:
-    """True if v is a (possibly nested) dict whose every leaf is None/empty."""
+    """True if v is a (possibly nested) dict/list whose every leaf is None/empty."""
     if v is None:
         return True
     if isinstance(v, dict):
@@ -365,40 +572,67 @@ def _is_all_none_dict(v) -> bool:
     return False
 
 
-def _is_vlm_template_garbage(v) -> bool:
-    """True if the VLM-emitted value is just form template text (not real data)."""
-    if v is None or isinstance(v, bool):
+def _is_vlm_string_garbage(s_str: str) -> bool:
+    """Pure-string check: True if a string is form template text not real data."""
+    if not isinstance(s_str, str):
         return False
-
-    # All-None nested dicts/lists: VLM emitted a structural placeholder
-    # without extracting any actual data.
-    if isinstance(v, (dict, list)) and _is_all_none_dict(v):
+    s_str = s_str.strip()
+    if not s_str:
         return True
-
-    s = _norm_for_dedup(v)
-    if not s:
+    s_norm = _norm_for_dedup(s_str)
+    if s_norm in _VLM_TEMPLATE_GARBAGE:
         return True
-    if s in _VLM_TEMPLATE_GARBAGE:
+    if s_norm in ("☐", "☑", "□", "■", "◯"):
         return True
-    # Empty-checkbox glyphs
-    if s in ("☐", "☑", "□", "■", "◯"):
-        return True
-
-    # Form-question text patterns: VLM read printed questions as values
-    s_str = str(v).strip()
     # Numbered question: "1. DOES APPLICANT..." / "12. HAS APPLICANT..."
     if re.match(r"^\d+\.\s+[A-Z]", s_str):
         return True
-    # Ends with question mark: "ARE PASSENGERS CARRIED FOR A FEE?"
+    # Ends with "?" — form question
     if s_str.endswith("?") and len(s_str) > 12:
         return True
-    # All-caps long phrase that looks like a question/instruction (no digits)
+    # All-caps long phrase without digits/colons — form instruction
     if (s_str.isupper() and len(s_str) > 25
             and not any(c.isdigit() for c in s_str)
             and ":" not in s_str):
         return True
-    # "I SELECT ..." / "I HAVE SELECTED ..." style choice option labels
+    # "I SELECT ..." / "I HAVE SELECTED ..." choice option labels
     if re.match(r"^I\s+(SELECT|HAVE\s+SELECTED|REJECT|ACCEPT)\b", s_str, re.IGNORECASE):
+        return True
+    return False
+
+
+def _scrub_vlm_garbage(v):
+    """Recursively replace template-garbage strings with None and drop
+       branches that become empty. Returns the scrubbed value (or None
+       if everything in this branch was garbage)."""
+    if v is None or isinstance(v, bool):
+        return v
+    if isinstance(v, str):
+        return None if _is_vlm_string_garbage(v) else v
+    if isinstance(v, (int, float)):
+        return v
+    if isinstance(v, list):
+        out = [_scrub_vlm_garbage(x) for x in v]
+        out = [x for x in out
+               if x is not None and not _is_all_none_dict(x)]
+        return out if out else None
+    if isinstance(v, dict):
+        out = {k: _scrub_vlm_garbage(x) for k, x in v.items()}
+        out = {k: x for k, x in out.items()
+               if x is not None and not _is_all_none_dict(x)}
+        return out if out else None
+    return v
+
+
+def _is_vlm_template_garbage(v) -> bool:
+    """True if a VLM-emitted value is purely form template text (not real data).
+       Uses recursive scrub: if scrubbing returns None or an all-None dict, drop."""
+    if v is None or isinstance(v, bool):
+        return False
+    scrubbed = _scrub_vlm_garbage(v)
+    if scrubbed is None:
+        return True
+    if isinstance(scrubbed, (dict, list)) and _is_all_none_dict(scrubbed):
         return True
     return False
 
@@ -452,14 +686,37 @@ def is_label_not_value(val):
     return False
 
 
-def merge_extractions(bbox_result, vlm_result, total_pages):
+def _value_is_checkbox_label(v, labels: set) -> bool:
+    """True if VLM-emitted string matches any template-derived checkbox
+       option label (or known synonym)."""
+    if not isinstance(v, str):
+        return False
+    s = _norm_for_dedup(v)
+    if not s:
+        return False
+    if s in labels:
+        return True
+    # Also check tokenized: e.g. "PER OCCURRENCE" → tokens ["per","occurrence"]
+    tokens = s.split()
+    if len(tokens) <= 4:
+        joined = " ".join(tokens)
+        if joined in labels:
+            return True
+    return False
+
+
+def merge_extractions(bbox_result, vlm_result, total_pages,
+                      page_checkbox_labels: dict = None):
     merged = {"pages": {}}
+
+    page_checkbox_labels = page_checkbox_labels or {}
 
     for pg_num in range(1, total_pages + 1):
         bbox_pg = bbox_result.get(pg_num, {}).get("fields", {})
         bbox_template = bbox_result.get(pg_num, {}).get("template", None)
         vlm_pg = vlm_result.get(pg_num, {})
         vlm_str = json.dumps(vlm_pg).lower()
+        cb_labels = page_checkbox_labels.get(pg_num, set())
 
         page_out = {"page": pg_num,
                     "template": bbox_template,
@@ -512,30 +769,48 @@ def merge_extractions(bbox_result, vlm_result, total_pages):
             for vkey, vval in vlm_pg.items():
                 if isinstance(vval, dict):
                     for nk, nv in vval.items():
-                        if (nv and not _is_vlm_template_garbage(nv)
-                                and not _vlm_already_has(nv)):
-                            page_out["fields"][f"vlm_{vkey}_{nk}"] = {
-                                "value": nv, "tooltip": f"{vkey}.{nk}",
-                                "type": "text", "source": "vlm",
-                            }
+                        # Scrub recursively. If the result is None or empty,
+                        # skip — the value was pure template garbage.
+                        scrubbed = _scrub_vlm_garbage(nv)
+                        if scrubbed in (None, "", [], {}):
+                            continue
+                        if _vlm_already_has(scrubbed):
+                            continue
+                        # Template-derived: drop if value matches a known
+                        # checkbox option label on this page.
+                        if _value_is_checkbox_label(scrubbed, cb_labels):
+                            continue
+                        page_out["fields"][f"vlm_{vkey}_{nk}"] = {
+                            "value": scrubbed, "tooltip": f"{vkey}.{nk}",
+                            "type": "text", "source": "vlm",
+                        }
                 elif isinstance(vval, list):
                     for i, item in enumerate(vval):
                         if isinstance(item, dict):
                             for nk, nv in item.items():
-                                if (nv and str(nv) not in ("", "0", "0.0", "$0.00")
-                                        and not _is_vlm_template_garbage(nv)
-                                        and not _vlm_already_has(nv)):
-                                    page_out["fields"][f"vlm_{vkey}_{i}_{nk}"] = {
-                                        "value": nv, "tooltip": f"{vkey}[{i}].{nk}",
-                                        "type": "text", "source": "vlm",
-                                    }
-                elif (vval and str(vval) not in ("", "None", "null")
-                        and not _is_vlm_template_garbage(vval)):
-                    if not _vlm_already_has(vval):
-                        page_out["fields"][f"vlm_{vkey}"] = {
-                            "value": vval, "tooltip": vkey,
-                            "type": "text", "source": "vlm",
-                        }
+                                scrubbed = _scrub_vlm_garbage(nv)
+                                if scrubbed in (None, "", [], {}, "0", "0.0", "$0.00"):
+                                    continue
+                                if _vlm_already_has(scrubbed):
+                                    continue
+                                if _value_is_checkbox_label(scrubbed, cb_labels):
+                                    continue
+                                page_out["fields"][f"vlm_{vkey}_{i}_{nk}"] = {
+                                    "value": scrubbed, "tooltip": f"{vkey}[{i}].{nk}",
+                                    "type": "text", "source": "vlm",
+                                }
+                else:
+                    scrubbed = _scrub_vlm_garbage(vval)
+                    if scrubbed in (None, "", "None", "null"):
+                        continue
+                    if _vlm_already_has(scrubbed):
+                        continue
+                    if _value_is_checkbox_label(scrubbed, cb_labels):
+                        continue
+                    page_out["fields"][f"vlm_{vkey}"] = {
+                        "value": scrubbed, "tooltip": vkey,
+                        "type": "text", "source": "vlm",
+                    }
 
         # 3: cross-validate amounts
         for fname, fdata in page_out["fields"].items():
@@ -570,10 +845,23 @@ def process_pdf(fname: str, doc_type: str, page_map: dict,
     print(f"    bbox: {bbox_pages} pages, {bbox_field_count} fields ({time.time()-t0:.0f}s)")
 
     print(f"  vlm extraction...")
-    vlm_result, total_pages = run_vlm_extraction(flat_path, doc_type, dpi)
+    vlm_result, total_pages = run_vlm_extraction(
+        flat_path, doc_type, dpi,
+        page_map=page_map, templates_dir=templates_dir)
 
     print(f"  merging...")
-    merged = merge_extractions(bbox_result, vlm_result, total_pages)
+    # Build per-page checkbox-label sets from the template (used by merge
+    # step 2 to drop VLM gap-fills that are option labels).
+    page_checkbox_labels = {}
+    for pg_num, (tmpl_file, tmpl_idx) in page_map.items():
+        try:
+            schema = get_page_schema(tmpl_file, tmpl_idx, templates_dir)
+            page_checkbox_labels[pg_num] = get_checkbox_labels_for_page(schema)
+        except Exception:
+            page_checkbox_labels[pg_num] = set()
+
+    merged = merge_extractions(bbox_result, vlm_result, total_pages,
+                                page_checkbox_labels=page_checkbox_labels)
     merged["source_file"] = fname
     merged["document_type"] = doc_type
     merged["model"] = MODEL

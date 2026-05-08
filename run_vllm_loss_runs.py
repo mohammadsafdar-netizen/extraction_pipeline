@@ -30,6 +30,7 @@ import pdfplumber
 import requests
 
 from prompts import LOSS_RUN
+from run_vllm_merged import _scrub_vlm_garbage  # reuse template-garbage scrubber
 
 REPO = Path(__file__).resolve().parent
 PDF_DIR = REPO / "pdfs"
@@ -186,6 +187,14 @@ def run_vlm(pdf_path: Path, dpi: int) -> list:
         ok = "_error" not in data and "_raw" not in data
         elapsed = time.time() - t0
         print(f"{'OK' if ok else 'FAIL'} ({elapsed:.0f}s)")
+        # Scrub form-template garbage (e.g. VLM emitting form question
+        # text or all-None nested dicts as if they were extracted data).
+        if ok:
+            scrubbed = _scrub_vlm_garbage(data)
+            if scrubbed is None:
+                data = {}
+            else:
+                data = scrubbed
         out.append({"page": pg + 1, "data": data})
     doc.close()
     return out
