@@ -1,0 +1,210 @@
+{
+  "_metadata": {
+    "_source": "Manually curated 2026-05-08 by direct read of source documents",
+    "_documents_used": [
+      "input_docs/Input/Acord App (1800 North Stone LLC) 2026.pdf (visual inspection of pages 1, 2, 16, 21)",
+      "input_docs/Input/SOV updated (1800 North Stone LLC) 2026.04.23.xls (raw cells via pandas)",
+      "input_docs/Input/Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf (raw text via fitz)",
+      "input_docs/Input/email.docx (subject line + signature blocks via python-docx)",
+      "input_docs/Input/1800 North Stone LLC.docx (cover-note narrative)"
+    ],
+    "_unverifiable_fields": "marked '*' (any non-empty acceptable) or null (should be absent)",
+    "_notes": "Independently established — does NOT use submission_mapped.json"
+  },
+
+  "Submission": {
+    "Status": "Cleared",
+    "DateReceived": "2026-04-23",
+    "QuoteNeededBy": "ASAP",
+    "GLSelected": true,
+    "PropertySelected": true,
+    "ProductType": "HabGen",
+    "Notes": "GL Loss Runs RE: 1800 North Stone LLC - Submission / TARGET: $55K - Need asap!",
+    "TargetPremium": 55000
+  },
+
+  "PolicyInfo": {
+    "RenewalFlag": "New",
+    "EffectiveDate": "2026-05-01",
+    "ExpirationDate": "2027-05-01",
+    "LOB": ["General Liability", "Property"]
+  },
+
+  "Insured": {
+    "Name": "1800 North Stone LLC",
+    "EntityType": "Limited Liability Company",
+    "SICCode": "6513",
+    "Website": "stoneavenuestandard.com",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "1800 N Stone Ave",
+        "City": "Tucson",
+        "State": "AZ",
+        "ZipCode": "85705-5761"
+      }
+    ]
+  },
+
+  "Agent": {
+    "Name": "Crest Insurance Group, LLC",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "5285 E. Williams Circle Suite 4500"
+      }
+    ],
+    "Contacts": [
+      {
+        "Type": "Producer",
+        "Phone": "(888) 881-5765",
+        "Email": "info@crestins.com"
+      },
+      {
+        "Type": "Producer",
+        "Name": "Melanie Phillipp",
+        "Title": "Senior Marketing Broker - Property & Inland Marine",
+        "Email": "melanie.phillipp@amwins.com",
+        "Phone": "818.378.4883"
+      }
+    ]
+  },
+
+  "GeneralLiability": {
+    "CoverageSelected": true
+  },
+
+  "Property": {
+    "CoverageSelected": true,
+    "AggregateBusinessIncomeLimit": 3242112
+  },
+
+  "Locations": [
+    {
+      "LocationNumber": 1,
+      "Address": {
+        "Type": "Physical",
+        "Street": "1800 North Stone Avenue",
+        "City": "Tucson",
+        "State": "AZ",
+        "ZipCode": "85705"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Student Housing",
+          "ConstructionType": "Frame",
+          "RoofType": "Flat",
+          "TotalSqFt": 21836,
+          "NoOfStories": 3,
+          "TotalUnits": 14,
+          "YearOfConstruction": 2003,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingCoverageFlag": true,
+            "BuildingLimit": 2774731,
+            "Building100RcValue": 2774731
+          },
+          "Bpp": {
+            "BppCoverageFlag": true,
+            "BppLimit": 282642
+          },
+          "BusinessIncomeLimit": 709728
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Student Housing",
+          "ConstructionType": "Frame",
+          "RoofType": "Flat",
+          "TotalSqFt": 15612,
+          "NoOfStories": 3,
+          "TotalUnits": 12,
+          "YearOfConstruction": 2003,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 1983839},
+          "Bpp": {"BppLimit": 282642},
+          "BusinessIncomeLimit": 561168
+        },
+        {
+          "BuildingNumber": 3,
+          "OccupancyType": "Student Housing",
+          "ConstructionType": "Frame",
+          "RoofType": "Flat",
+          "TotalSqFt": 28932,
+          "NoOfStories": 3,
+          "TotalUnits": 18,
+          "YearOfConstruction": 2003,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 3676431},
+          "Bpp": {"BppLimit": 282642},
+          "BusinessIncomeLimit": 978336
+        },
+        {
+          "BuildingNumber": 4,
+          "OccupancyType": "Student Housing",
+          "ConstructionType": "Frame",
+          "RoofType": "Flat",
+          "TotalSqFt": 15612,
+          "NoOfStories": 3,
+          "TotalUnits": 12,
+          "YearOfConstruction": 2003,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 1983839},
+          "Bpp": {"BppLimit": 282642},
+          "BusinessIncomeLimit": 561168
+        },
+        {
+          "BuildingNumber": 5,
+          "OccupancyType": "Student Housing",
+          "ConstructionType": "Frame",
+          "RoofType": "Flat",
+          "TotalSqFt": 17100,
+          "NoOfStories": 3,
+          "TotalUnits": 12,
+          "YearOfConstruction": 2003,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 2172921},
+          "Bpp": {"BppLimit": 282642},
+          "BusinessIncomeLimit": 431712
+        }
+      ]
+    }
+  ],
+
+  "SecuredParties": [
+    {
+      "Name": "Berkadia Commercial Mortgage, LLC",
+      "Interest": "Loss Payee",
+      "Addresses": [
+        {
+          "Type": "Mailing",
+          "City": "Ambler",
+          "State": "PA",
+          "ZipCode": "19002"
+        }
+      ]
+    }
+  ],
+
+  "LossRuns": [
+    {
+      "Carrier": "Truck Insurance Exchange",
+      "PolicyNumber": "606742147",
+      "EvaluationDate": "2026-04-03",
+      "PolicyEffectiveDate": "2025-05-01",
+      "PolicyExpirationDate": "2026-05-01",
+      "LOB": "General Liability",
+      "NoKnownLossesLast5Years": true,
+      "Claims": []
+    }
+  ],
+
+  "Attachments": [
+    {"Type": "ACORD", "FileName": "Acord App (1800 North Stone LLC) 2026.pdf"},
+    {"Type": "Other", "FileName": "Community Map (1800 North Stone LLC) 2026.pdf"},
+    {"Type": "LossRun", "FileName": "Farmers LR 2020-26 (1800 North Stone LLC) VAL 2026.04.03.pdf"},
+    {"Type": "Email", "FileName": "1800 North Stone LLC.docx"},
+    {"Type": "Email", "FileName": "email.docx"},
+    {"Type": "SOV", "FileName": "SOV updated (1800 North Stone LLC) 2026.04.23.xls"}
+  ]
+}

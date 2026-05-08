@@ -892,23 +892,29 @@ def list_attachments() -> list:
     if not INPUT_DIR.exists():
         return []
     out = []
-    type_map = {
-        ".pdf": "ACORD",  # default; refined below
+    # Filename → Attachments.Type. Order matters: more-specific patterns first.
+    # The default for .pdf is "Other", not "ACORD" — only files matching
+    # ACORD-specific patterns get tagged ACORD.
+    type_map_default = {
+        ".pdf": "Other",
         ".docx": "Email",
         ".xls": "SOV", ".xlsx": "SOV",
     }
+    LOSS_RUN_FNAME_PATS = re.compile(
+        r"\b(loss[\s_-]?run|claims?[\s_-]history|lr[\s_-])", re.IGNORECASE)
+
     for f in sorted(INPUT_DIR.iterdir()):
         if not f.is_file():
             continue
         suffix = f.suffix.lower()
-        a_type = type_map.get(suffix, "Other")
+        a_type = type_map_default.get(suffix, "Other")
         name = f.name.lower()
-        if "loss" in name or "lr_" in name or name.startswith("lr "):
+        if LOSS_RUN_FNAME_PATS.search(name) or name.startswith("lr "):
             a_type = "LossRun"
         elif "acord" in name and ("125" in name or "126" in name or "131" in name or
                                     "140" in name or "823" in name or "app" in name):
             a_type = "ACORD"
-        elif "sov" in name or "schedule" in name:
+        elif "sov" in name or "schedule of values" in name or "statement of values" in name:
             a_type = "SOV"
         elif "supp" in name or "supplemental" in name:
             a_type = "Supplemental"
