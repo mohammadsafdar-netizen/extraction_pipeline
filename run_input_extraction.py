@@ -141,7 +141,12 @@ LOSS_RUN_PATTERNS = re.compile(r"\b(loss[\s_-]?run|LR[_\s-]|claims?[\s_-]history
 
 
 def classify_pdf(path: Path) -> str:
-    """Return one of {acord_application, loss_run, supplemental, other}."""
+    """Filename-based classification (legacy fast-path).
+       Returns one of {acord_application, loss_run, supplemental, other}.
+
+       For content-based per-page classification — including mixed PDFs
+       with both ACORD pages AND loss-run pages — use
+       detect_form_type.classify_pdf_pages() instead."""
     name = path.name.lower()
     if LOSS_RUN_PATTERNS.search(name) or name.startswith("lr_"):
         return "loss_run"
@@ -154,13 +159,53 @@ def classify_pdf(path: Path) -> str:
     return "other"
 
 
+def classify_pdf_by_content(path: Path, templates_dir: Path) -> dict:
+    """Content-based classification. Returns:
+         {primary_kind, n_pages, kinds_present: {ACORD_FORM, LOSS_RUN, ...},
+          page_groups: [{kind, pages}, ...]}
+       Uses detect_form_type.classify_pdf_pages so multi-form PDFs get
+       routed page-by-page to the right pipeline."""
+    from detect_form_type import classify_pdf_pages
+    result = classify_pdf_pages(path, templates_dir)
+    kinds = {}
+    for entry in result["pages"].values():
+        kinds[entry["kind"]] = kinds.get(entry["kind"], 0) + 1
+    # Primary kind = most-frequent non-EMPTY/non-UNKNOWN kind
+    informative = {k: v for k, v in kinds.items()
+                   if k not in ("EMPTY", "UNKNOWN")}
+    primary = max(informative, key=informative.get) if informative else "UNKNOWN"
+    return {
+        "primary_kind": primary,
+        "n_pages": result["n_pages"],
+        "kinds_present": kinds,
+        "page_groups": result["groups"],
+    }
+
+
 def extract_pdf(path: Path, out_dir: Path) -> dict:
     """Route PDF to appropriate pipeline:
        - acord_application → merged bbox+VLM (run_vllm_merged.process_pdf)
+                             with auto-detected page_map
        - loss_run → pdfplumber+VLM cross-check (run_vllm_loss_runs.process_pdf)
-       - other → pure-VLM extraction"""
+       - other → pure-VLM extraction
+       For mixed PDFs (e.g. ACORD app pages + embedded loss-run pages),
+       falls through to acord_application using the per-page detection
+       which will skip non-template pages."""
     doc_type = classify_pdf(path)
-    print(f"  type: {doc_type}")
+    print(f"  type (filename): {doc_type}")
+
+    # Content-based classification — overrides filename if signal is strong
+    try:
+        content = classify_pdf_by_content(path, REPO / "templates")
+        primary = content["primary_kind"]
+        kinds_summary = ", ".join(f"{k}={v}" for k, v in content["kinds_present"].items())
+        print(f"  type (content): {primary}  ({kinds_summary})")
+        if primary == "ACORD_FORM" and doc_type != "acord_application":
+            doc_type = "acord_application"
+        elif primary == "LOSS_RUN" and doc_type != "loss_run":
+            doc_type = "loss_run"
+    except Exception as e:
+        print(f"  (content-classify skipped: {e})")
 
     # Ensure the PDF is in pdfs/ since the pipeline runners read from there
     pdf_target = PDF_DIR / path.name
@@ -169,15 +214,27 @@ def extract_pdf(path: Path, out_dir: Path) -> dict:
         shutil.copy(str(path), str(pdf_target))
 
     if doc_type == "acord_application":
-        # Use a default 4-page acord_125 mapping for unknown ACORD apps
-        # (matches PDFS dict in run_vllm_merged for these named files).
+        # Auto-detect form type per page → builds page_map for any ACORD
+        # packet (any insured / broker / combination of forms). No
+        # hardcoded customer mapping needed.
         from run_vllm_merged import (PDFS as MERGED_PDFS, process_pdf as merged_process,
                                        PAGE_MAP_125_ONLY)
+        from detect_form_type import detect_form_type_for_pdf
+        # 1. Hardcoded mapping wins (covers our test set)
         mapping = MERGED_PDFS.get(path.name)
         if mapping:
-            doc_type, page_map = mapping
+            _, page_map = mapping
+            print(f"  using hardcoded PAGE_MAP for {path.name}")
         else:
-            page_map = PAGE_MAP_125_ONLY
+            # 2. Auto-detect per page
+            page_map = detect_form_type_for_pdf(pdf_target, REPO / "templates")
+            if page_map:
+                kinds = sorted({tmpl for tmpl, _ in page_map.values()})
+                print(f"  auto-detected {len(page_map)} ACORD pages: {kinds}")
+            else:
+                # 3. Fall back to assuming first 4 pages are ACORD 125
+                page_map = PAGE_MAP_125_ONLY
+                print(f"  no template matches; falling back to ACORD-125 1-4")
         return merged_process(
             path.name, "acord_application", page_map,
             PDF_DIR, REPO / "templates", dpi=150,

@@ -29,6 +29,7 @@ import requests
 from PIL import Image
 
 from prompts import GENERALIZED, get_prompt
+from detect_form_type import detect_form_type_for_pdf
 
 REPO = Path(__file__).resolve().parent
 PDF_DIR = REPO / "pdfs"
@@ -906,8 +907,27 @@ def main():
         print(f"ERROR: vLLM not reachable on 127.0.0.1:8000 ({e})")
         return 1
 
-    pdfs = ({args.target: PDFS[args.target]} if args.target and args.target in PDFS
-            else PDFS)
+    # Build the work list. Auto-detect form type per page for any PDF
+    # not in the hardcoded PDFS dict — this is the generalization step
+    # that lets the pipeline handle ANY uploaded ACORD-bearing PDF
+    # (any insured, any broker, any combination of forms) without
+    # touching code.
+    if args.target:
+        if args.target in PDFS:
+            pdfs = {args.target: PDFS[args.target]}
+        else:
+            # Auto-detect: scan every page, identify which ACORD template
+            target_path = pdf_dir / args.target
+            if not target_path.exists():
+                print(f"ERROR: {target_path} not found"); return 1
+            print(f"Auto-detecting form types in {args.target}...")
+            page_map = detect_form_type_for_pdf(target_path, templates_dir)
+            print(f"  Detected templates on {len(page_map)} pages")
+            pdfs = {args.target: ("acord_application", page_map)}
+    else:
+        # When no target given, run the hardcoded test set (for backward
+        # compatibility with the existing benchmarks/CI)
+        pdfs = PDFS
 
     summary = []
     for fname, (doc_type, page_map) in pdfs.items():
