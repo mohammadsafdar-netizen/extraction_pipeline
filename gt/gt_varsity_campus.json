@@ -1,0 +1,119 @@
+{
+  "_metadata": {
+    "_source": "Manually curated from Varsity SOV + Email + ACORD"
+  },
+  "Submission": {
+    "Status": "Cleared",
+    "GLSelected": true,
+    "PropertySelected": true,
+    "ProductType": "HabGen",
+    "Notes": "(5/15) Varsity Campus LLC - GL"
+  },
+  "PolicyInfo": {
+    "RenewalFlag": "New",
+    "EffectiveDate": "2026-05-15",
+    "ExpirationDate": "2027-05-15",
+    "LOB": [
+      "General Liability",
+      "Property"
+    ]
+  },
+  "Insured": {
+    "Name": "Varsity Campus LLC",
+    "EntityType": "Limited Liability Company",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "City": "Charlotte",
+        "State": "NC",
+        "ZipCode": "28203"
+      }
+    ]
+  },
+  "Agent": {
+    "Name": "Lockton"
+  },
+  "GeneralLiability": {
+    "CoverageSelected": true
+  },
+  "Property": {
+    "CoverageSelected": true
+  },
+  "Locations": [
+    {
+      "LocationNumber": 1,
+      "LocationName": "The Lofts at Gold Street",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1176-1188 Mt. Hope Ave. and 17 Langslow St.",
+        "City": "Rochester",
+        "State": "NY",
+        "County": "Monroe",
+        "ZipCode": "14620"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Student Housing"
+        }
+      ]
+    },
+    {
+      "LocationNumber": 2,
+      "LocationName": "410 South Morgan Street, LLC",
+      "Address": {
+        "Type": "Physical",
+        "Street": "410 South Morgan Street",
+        "City": "Chicago",
+        "State": "IL",
+        "County": "Cook",
+        "ZipCode": "60607"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Student Housing",
+          "Building": {
+            "BuildingLimit": 44852140.0
+          },
+          "Bpp": {
+            "BppLimit": 2000000.0
+          },
+          "BusinessIncomeLimit": 5500000.0
+        }
+      ]
+    }
+  ],
+  "LossRuns": [
+    {
+      "Carrier": "*",
+      "LOB": "General Liability"
+    },
+    {
+      "Carrier": "*",
+      "LOB": "General Liability"
+    }
+  ],
+  "Attachments": [
+    {
+      "Type": "ACORD",
+      "FileName": "ACORD_112322108_125.pdf"
+    },
+    {
+      "Type": "Email",
+      "FileName": "Email.docx"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "LR_112322117_Varsity Campus - 2022-2026 GL Loss Run.pdf"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "112322119_410 South Morgan Street - 2025-2026 GL Loss Run.pdf"
+    },
+    {
+      "Type": "SOV",
+      "FileName": "SOV_112322116_Varsity Campus -5.15.25 Liability Renewal Exposures.xlsx"
+    }
+  ]
+}

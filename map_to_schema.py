@@ -49,6 +49,23 @@ def _find_by_pattern(extracted_dir: Path, *substrings) -> dict | None:
     return None
 
 
+def _find_all_by_pattern(extracted_dir: Path, *substrings) -> list:
+    """Like _find_by_pattern but returns ALL matches as list of (filename, json)."""
+    out = []
+    if not extracted_dir.exists():
+        return out
+    for f in sorted(extracted_dir.iterdir()):
+        if f.suffix != ".json":
+            continue
+        name_lower = f.name.lower()
+        if any(s.lower() in name_lower for s in substrings):
+            try:
+                out.append((f.name, json.load(open(f))))
+            except Exception:
+                continue
+    return out
+
+
 def _bbox_field(acord_data: dict, page_num: int, field_name: str):
     """Look up a /Tx field's extracted value from the merged ACORD JSON."""
     page = acord_data.get("pages", {}).get(f"page_{page_num}", {})
@@ -584,6 +601,25 @@ def _pick(p1: dict, *names) -> str | None:
     return None
 
 
+def _pick_fuzzy(fields: dict, *keyword_groups) -> str | None:
+    """Find a field value by keyword-substring matching. Each arg is a
+       tuple of keywords ALL of which must be present in the field-name
+       (case-insensitive). First matching field with a non-empty value wins.
+       Used as a fallback when the VLM emits non-standard key names.
+       Example: _pick_fuzzy(p1, ('agency', 'name'), ('agent', 'name'),
+                                   ('producer', 'fullname')) """
+    for kws in keyword_groups:
+        for fname, f in fields.items():
+            if not isinstance(f, dict):
+                continue
+            name_l = fname.lower()
+            if all(kw.lower() in name_l for kw in kws):
+                v = f.get("value")
+                if v not in (None, "", False, "False"):
+                    return v
+    return None
+
+
 def _looks_like_concat_with_address(v):
     """Heuristic: bbox value bled into the address (e.g.
        '1800 North Stone LLC 1800 N Stone Ave')."""
@@ -593,8 +629,55 @@ def _looks_like_concat_with_address(v):
                           v, re.IGNORECASE))
 
 
-def map_acord(acord) -> dict:
+def _normalize_acord_pages(acord) -> dict:
+    """Normalize ACORD JSON's `pages` to the merged-pipeline shape:
+       {"page_N": {"fields": {field_name: {value, source, type, tooltip}}}}.
+       The merged pipeline produces this shape natively. Pure-VLM fall-back
+       produces {"pages": [{"page": N, "data": {...}}]} which we adapt
+       here so the mapper can read both."""
     if not acord:
+        return {}
+    pages = acord.get("pages")
+    if isinstance(pages, dict):
+        return acord  # already in merged shape
+    if isinstance(pages, list):
+        # Convert list-shape (pure VLM) to merged-shape stub. Each VLM
+        # page's `data` dict becomes a fields dict where each top-level
+        # key is treated as a vlm_<key> entry. This lets the mapper's
+        # _pick("vlm_HEADER_agency_name", ...) lookups still work.
+        new_pages = {}
+        for entry in pages:
+            pn = entry.get("page")
+            if pn is None:
+                continue
+            data = entry.get("data") or {}
+            fields = {}
+            def _flatten(prefix, val):
+                if isinstance(val, dict):
+                    for k, v in val.items():
+                        sub = f"{prefix}_{k}" if prefix else f"vlm_{k}"
+                        _flatten(sub, v)
+                elif isinstance(val, list):
+                    for i, v in enumerate(val):
+                        sub = f"{prefix}_{i}"
+                        _flatten(sub, v)
+                else:
+                    if val not in (None, "", False):
+                        fields[prefix] = {
+                            "value": val, "source": "vlm",
+                            "type": "text", "tooltip": prefix,
+                        }
+            _flatten("", data)
+            new_pages[f"page_{pn}"] = {"fields": fields}
+        out = dict(acord)
+        out["pages"] = new_pages
+        return out
+    return {"pages": {}}
+
+
+def map_acord(acord) -> dict:
+    acord = _normalize_acord_pages(acord)
+    if not acord or "pages" not in acord:
         return {}
     insured = {}
     agent = {}
@@ -604,8 +687,14 @@ def map_acord(acord) -> dict:
 
     # Insured.Name — prefer VLM, fall back to bbox if not bled
     bbox_name = _pick(p1, "NamedInsured_FullName_A[0]", "NamedInsured_FullName_B[0]")
-    vlm_name = _pick(p1, "vlm_APPLICANT_INFORMATION_0_full_name",
-                       "vlm_NamedInsured_FullName_A")
+    vlm_name = (_pick(p1, "vlm_APPLICANT_INFORMATION_0_full_name",
+                          "vlm_NamedInsured_FullName_A")
+                or _pick_fuzzy(p1,
+                    ("vlm_", "applicant", "full_name"),
+                    ("vlm_", "applicant", "name"),
+                    ("vlm_", "namedinsured", "full"),
+                    ("vlm_", "named_insured", "name"),
+                    ("vlm_", "insured", "name")))
     if vlm_name:
         insured["Name"] = vlm_name
     elif bbox_name and not _looks_like_concat_with_address(bbox_name):
@@ -654,15 +743,23 @@ def map_acord(acord) -> dict:
     # Many submissions have a single combined 'address' field from the VLM
     # like "3625 N Hall Street, Suite 610, Dallas, TX 75219" — parse it.
     if not (addr1["Street"] and addr1["City"]):
-        combined = _pick(p1,
+        combined = (_pick(p1,
             "vlm_applicant_address",
             "vlm_APPLICANT_INFORMATION_0_full_address",
             "vlm_APPLICANT_INFORMATION_0_address")
+            or _pick_fuzzy(p1,
+                ("vlm_", "applicant", "mailing_address"),
+                ("vlm_", "applicant", "address"),
+                ("vlm_", "namedinsured", "address"),
+                ("vlm_", "named_insured", "address"),
+                ("vlm_", "insured", "address")))
         if combined and isinstance(combined, str):
+            # Strip newlines (multi-line addresses → single line)
+            combined_norm = re.sub(r"\s*\n\s*", ", ", combined.strip())
             # "Street[, Suite N], City, ST ZIP"
             m = re.match(
                 r"^(.+?),\s*([A-Za-z .'-]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\s*$",
-                combined.strip())
+                combined_norm)
             if m:
                 if not addr1["Street"]:
                     addr1["Street"] = m.group(1).strip()
@@ -707,7 +804,14 @@ def map_acord(acord) -> dict:
 
     # Agent / Producer — same VLM-prefer pattern
     bbox_agent = _pick(p1, "Producer_FullName_A[0]")
-    vlm_agent = _pick(p1, "vlm_HEADER_agency_name")
+    vlm_agent = (_pick(p1, "vlm_HEADER_agency_name", "vlm_AGENCY")
+                 or _pick_fuzzy(p1,
+                     ("vlm_", "header", "agency"),
+                     ("vlm_agency",),  # bare AGENCY key
+                     ("vlm_", "agency_name"),
+                     ("vlm_", "agent", "name"),
+                     ("vlm_", "producer_name"),
+                     ("vlm_", "broker_name")))
     if vlm_agent:
         agent["Name"] = vlm_agent
     elif bbox_agent and not _looks_like_concat_with_address(bbox_agent):
@@ -760,11 +864,24 @@ def map_acord(acord) -> dict:
 
     # PolicyInfo
     policy["EffectiveDate"] = _parse_date(
-        p1.get("Policy_EffectiveDate_A[0]", {}).get("value"))
+        _pick(p1, "Policy_EffectiveDate_A[0]")
+        or _pick_fuzzy(p1, ("vlm_", "proposed_eff"),
+                            ("vlm_", "effective_date"),
+                            ("vlm_", "policy_information", "proposed_eff"),
+                            ("vlm_", "policy", "effective"))
+    )
     policy["ExpirationDate"] = _parse_date(
-        p1.get("Policy_ExpirationDate_A[0]", {}).get("value"))
-    policy["PriorPolicyNumber"] = p1.get(
-        "Policy_PolicyNumberIdentifier_A[0]", {}).get("value")
+        _pick(p1, "Policy_ExpirationDate_A[0]")
+        or _pick_fuzzy(p1, ("vlm_", "proposed_exp"),
+                            ("vlm_", "expiration_date"),
+                            ("vlm_", "policy_information", "proposed_exp"),
+                            ("vlm_", "policy", "expiration"))
+    )
+    policy["PriorPolicyNumber"] = (
+        _pick(p1, "Policy_PolicyNumberIdentifier_A[0]")
+        or _pick_fuzzy(p1, ("vlm_", "policy_number"),
+                             ("vlm_", "policy_no"))
+    )
 
     # LOB from p1 LineOfBusinessIndicator checkboxes
     lobs = []
@@ -821,6 +938,9 @@ def map_sov(sov) -> list:
         ("location #", "street"),
         ("location#", "street"),
         ("premises", "address"),    # ACORD 823 style
+        ("entity", "address"),       # Varsity-style SOV (Entity per row)
+        ("occupancy", "address"),    # Mixed format
+        ("street address", "city"),  # Generic property table
     ]
     header_idx = None
     for i, row in enumerate(grid):
@@ -833,46 +953,91 @@ def map_sov(sov) -> list:
     # Index column → header label
     idx = {h: i for i, h in enumerate(header) if h}
 
-    # Tolerant column lookup — tries multiple possible header names per field
+    # Tolerant column lookup — tries multiple possible header names per field.
+    # Falls back to substring matching when no exact name matches (handles
+    # header variations like "Business Personal Property (RC)" vs the bare
+    # "Business Personal Property" we stored).
     def _col(row, *names):
-        """Return first non-empty cell value matching any header name."""
+        """Return first non-empty cell value matching any header name
+           (exact match preferred, substring match as fallback)."""
+        # 1. Try exact case-sensitive match
         for n in names:
             if n in idx:
                 v = row[idx[n]]
                 if v not in (None, ""):
                     return v
+        # 2. Try case-insensitive substring match — search term must be
+        # a SUBSTRING of the header (one-way). Bidirectional was too loose:
+        # "Building" header would match "Building #" search and steal the
+        # RCV column for BuildingNumber.
+        for n in names:
+            n_l = n.lower().strip()
+            for header_name, col_idx in idx.items():
+                h_l = str(header_name).lower().strip()
+                if n_l in h_l:
+                    v = row[col_idx]
+                    if v not in (None, ""):
+                        return v
         return None
 
-    LOC_COLS = ("Loc.#", "Loc #", "Location #", "Location#", "Location Number")
+    LOC_COLS = ("Loc.#", "Loc #", "Location #", "Location#", "Location Number",
+                  "Location ID", "Loc ID")
     BLDG_COLS = ("Building #", "Building#", "Bldg #", "Bldg#")
     OCCUPANCY_COLS = ("Occupancy", "Occupancy Type", "Occupancy Class")
-    NAMED_INSURED_COLS = ("Location Named Insured",)
+    NAMED_INSURED_COLS = ("Location Named Insured", "Entity",
+                            "Location Name", "Property Name")
     STREET_COLS = ("Street Address", "Address", "Premise Address",
-                    "Property Address")
+                    "Property Address", "Property Street", "Site Address")
     CITY_COLS = ("City",)
     STATE_COLS = ("State",)
-    ZIP_COLS = ("Zip", "Zip Code", "ZIP")
+    ZIP_COLS = ("Zip", "Zip Code", "ZIP", "Postal Code")
     COUNTY_COLS = ("County",)
-    YEAR_COLS = ("Year Built",)
+    YEAR_COLS = ("Year Built", "Year of Construction", "Construction Year")
     CONSTRUCTION_COLS = ("Construction Type", "Construction")
     ROOF_TYPE_COLS = ("Type of Roof", "Roof Type")
-    SQFT_COLS = ("# Sq. Ft. Bldg", "Sq Ft", "Square Feet", "Total Sq Ft")
-    STORIES_COLS = ("# of stories", "# Stories", "Stories", "No of Stories")
-    UNITS_COLS = ("# Hab Units", "# Units", "Units", "Total Units")
-    SPRINKLER_COLS = ("Sprinklered %", "Sprinkler %", "Sprinklered")
+    SQFT_COLS = ("# Sq. Ft. Bldg", "Sq Ft", "Square Feet", "Total Sq Ft",
+                   "Total Square Feet")
+    STORIES_COLS = ("# of stories", "# Stories", "Stories", "No of Stories",
+                       "Number of Stories")
+    UNITS_COLS = ("# Hab Units", "# Units", "Units", "Total Units",
+                    "Number of Units", "Unit Count")
+    SPRINKLER_COLS = ("Sprinklered %", "Sprinkler %", "Sprinklered",
+                         "Sprinkler", "Fully Sprinklered")
     RCV_COLS = ("Building RCV", "Building", "Bldg RCV", "Bldg",
-                  "Building Value")
-    BPP_COLS = ("BPP", "Contents", "Business Personal Property")
-    BI_COLS = ("Loss of Rents", "Business Income", "BI", "Loss of Rents/BI")
+                  "Building Value", "Building Value (RC)",
+                  "Building Limit", " Building Value (R", "Building (RC)")
+    BPP_COLS = ("BPP", "Contents", "Business Personal Property",
+                  "Business Personal", "Personal Property")
+    BI_COLS = ("Loss of Rents", "Business Income", "BI", "Loss of Rents/BI",
+                  " Business \nIncome ", "Business Income/Loss of Rents")
 
+    has_loc_col = any(c in idx for c in LOC_COLS)
     locs = {}  # loc_num → location dict
+    auto_loc_counter = 0
     for row in grid[header_idx + 1:]:
         if not any(str(c).strip() for c in row):
             continue
-        loc_num_raw = _col(row, *LOC_COLS)
-        loc_num = _safe_int(loc_num_raw)
-        if loc_num is None:
+        # Skip rows without enough data
+        if sum(1 for c in row if str(c).strip()) < 3:
             continue
+
+        loc_num = None
+        if has_loc_col:
+            # Loc # column exists — if the cell is empty for this row,
+            # SKIP rather than auto-number. (Otherwise we pick up section-
+            # header rows like 'Great Point Location' that have data in
+            # other columns but no Loc#.)
+            loc_num_raw = _col(row, *LOC_COLS)
+            loc_num = _safe_int(loc_num_raw)
+            if loc_num is None:
+                continue
+        else:
+            # No Loc # column at all → auto-number by row order
+            # (only if the row has a meaningful identifier)
+            if not _col(row, *NAMED_INSURED_COLS, *STREET_COLS):
+                continue
+            auto_loc_counter += 1
+            loc_num = auto_loc_counter
 
         b = {}
         b["BuildingNumber"] = _safe_int(_col(row, *BLDG_COLS)) or 1
@@ -1137,16 +1302,29 @@ def main():
 
     # Pattern-based discovery — works for any insured/broker/file naming
     acord = _find_by_pattern(extracted_dir, "Acord", "ACORD")
-    sov = _find_by_pattern(extracted_dir, "SOV", "Statement_of_Values", "Master")
-    lr = _find_by_pattern(extracted_dir, "Loss_Run", "LossRun", "_LR_", "_LR-",
-                            "CGL-Ategrity", "Loss-Run")
+    sov = _find_by_pattern(extracted_dir, "SOV", "Statement_of_Values", "Master",
+                              "Liability_Renewal_Exposures",
+                              "Renewal_Exposures", "Schedule_of_Values")
+    # Multiple loss-run files may exist (one master + per-location LRs)
+    lr_files = _find_all_by_pattern(extracted_dir,
+        "Loss_Run", "LossRun", "_LR_", "_LR-", "CGL-Ategrity",
+        "Loss-Run", "LR_", "_GL_Loss")
     email = _find_by_pattern(extracted_dir, "email", "EMAIL")
     note_doc = _find_by_pattern(extracted_dir, "_LLC", "_LP", "_Inc", "_Corp",
                                    "narrative", "note", "claude")
 
+    # Normalize once so every downstream mapper sees dict-shape pages
+    if acord:
+        acord = _normalize_acord_pages(acord)
     acord_mapped = map_acord(acord)
     locations = map_sov(sov)
-    loss_runs = map_loss_run(lr)
+    # Map ALL loss-run files (some submissions ship multiple)
+    loss_runs = []
+    for fname, lr_json in lr_files:
+        lr_mapped = map_loss_run(lr_json)
+        for entry in lr_mapped:
+            entry["_source_file"] = fname
+        loss_runs.extend(lr_mapped)
     submission_extras = map_email(email)
     attachments = list_attachments()
 

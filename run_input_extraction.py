@@ -140,6 +140,12 @@ LOSS_RUN_PATTERNS = re.compile(r"\b(loss[\s_-]?run|LR[_\s-]|claims?[\s_-]history
                                 re.IGNORECASE)
 
 
+_ACORD_FORM_NUMBERS = re.compile(
+    r"\bacord[_\s-]*(125|126|127|130|131|137|140|163|823)\b", re.IGNORECASE)
+_ACORD_APP_HINT = re.compile(r"\b(acord.+app|app.+acord|application)\b",
+                              re.IGNORECASE)
+
+
 def classify_pdf(path: Path) -> str:
     """Filename-based classification (legacy fast-path).
        Returns one of {acord_application, loss_run, supplemental, other}.
@@ -150,7 +156,7 @@ def classify_pdf(path: Path) -> str:
     name = path.name.lower()
     if LOSS_RUN_PATTERNS.search(name) or name.startswith("lr_"):
         return "loss_run"
-    if "acord" in name and "app" in name:
+    if _ACORD_FORM_NUMBERS.search(name) or _ACORD_APP_HINT.search(name):
         return "acord_application"
     if "supp" in name or "supplemental" in name:
         return "supplemental"
