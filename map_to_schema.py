@@ -326,6 +326,181 @@ def parse_quote_needed_by(email_data: dict) -> str:
     return None
 
 
+# ── Tier 2 helpers ──
+
+_PHONE_RE = re.compile(
+    r"(?:T|D|Direct|Cell|Mobile|Office|Phone|Tel)?\s*[:.]?\s*"
+    r"(\+?\d?\s*\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})", re.IGNORECASE)
+_EMAIL_RE = re.compile(r"\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b")
+_LICENSE_RE = re.compile(r"(?:CA\s+)?License\s*#?\s*([A-Z0-9]+)", re.IGNORECASE)
+_TITLE_RE = re.compile(
+    r"\b(Founder|CEO|CFO|President|Director|Manager|Broker|Underwriter|"
+    r"Producer|Specialist|Agent|Marketing|VP|Vice\s+President|Sr\.?\s*|"
+    r"Senior\s+|Owner|Partner)", re.IGNORECASE)
+
+
+def _parse_signature_block(lines: list) -> dict:
+    """Parse a list of consecutive paragraph texts that constitute a
+       signature block. Returns {Name, Title, Phone, Email, Company,
+       License, Address} — only fields detected."""
+    sig = {}
+    name = None
+    title = None
+    company = None
+    address_lines = []
+    for line in lines:
+        s = line.strip()
+        if not s:
+            continue
+        # Email
+        em = _EMAIL_RE.search(s)
+        if em and "Email" not in sig:
+            sig["Email"] = em.group(1)
+        # Phone
+        ph = _PHONE_RE.search(s)
+        if ph and "Phone" not in sig:
+            sig["Phone"] = ph.group(1).strip()
+        # License
+        lic = _LICENSE_RE.search(s)
+        if lic:
+            sig["License"] = lic.group(1)
+        # Name detection: line in form "First Last" / "First Last | Title"
+        # OR "First Last, Title"
+        if not name:
+            m = re.match(r"^([A-Z][a-z]+\s+[A-Z][a-zA-Z'-]+)(\s*[|,-]\s*(.+))?$", s)
+            if m:
+                name = m.group(1).strip()
+                if m.group(3):
+                    title = m.group(3).strip()
+        # Title detection: bare title-like line
+        if not title and _TITLE_RE.search(s) and len(s) < 80 and "@" not in s:
+            title = s
+        # Company: lines with LLC/Inc/Group/Brokerage
+        if not company and re.search(
+                r"\b(LLC|Inc\.?|Insurance|Brokerage|Group|Agency|Holdings|"
+                r"Corporation|Co\.?|Company)\b", s):
+            if "@" not in s and len(s) < 80:
+                company = s
+        # Address: lines with state abbreviation or zip
+        if (re.search(r"\b[A-Z]{2}\s+\d{5}", s)
+                or re.search(r"\d+\s+[A-Z][a-z]+\s+(Rd|Road|St|Street|Ave|"
+                              r"Avenue|Blvd|Boulevard|Way|Suite|Ste)", s)):
+            address_lines.append(s)
+
+    if name:
+        sig["Name"] = name
+    if title:
+        sig["Title"] = title
+    if company:
+        sig["Company"] = company
+    if address_lines:
+        sig["AddressLines"] = address_lines
+    return sig if sig else None
+
+
+def parse_email_signatures(email_data: dict) -> list:
+    """Walk paragraphs looking for signature blocks. A signature block
+       starts after 'Thank You' / 'Thanks' / '--' / 'Best regards' / 'Sincerely'
+       and ends at the next email-thread divider ('From:', 'Sent:', 'To:',
+       'Subject:') or at next signature."""
+    if not email_data:
+        return []
+    paragraphs = [p["text"] for p in email_data.get("paragraphs", [])
+                  if p.get("text")]
+
+    signatures = []
+    in_sig = False
+    sig_lines = []
+    SIG_START_RE = re.compile(
+        r"^(thank you|thanks|--|best regards|sincerely|kind regards|cheers|"
+        r"warm regards)[,.!]?\s*$", re.IGNORECASE)
+    SIG_END_RE = re.compile(
+        r"^(from:|sent:|to:|subject:|cc:|bcc:|date:|on\s+\w+,\s+\w+|"
+        r"this e-mail|this email|please send|to unsubscribe|"
+        r"please consider|disclaimer|confidentiality|wrote:)",
+        re.IGNORECASE)
+
+    for line in paragraphs:
+        if SIG_START_RE.match(line.strip()):
+            if in_sig and sig_lines:
+                sig = _parse_signature_block(sig_lines)
+                if sig:
+                    signatures.append(sig)
+            in_sig = True
+            sig_lines = []
+            continue
+        if in_sig:
+            if SIG_END_RE.match(line.strip()):
+                sig = _parse_signature_block(sig_lines)
+                if sig:
+                    signatures.append(sig)
+                in_sig = False
+                sig_lines = []
+                continue
+            if line.strip():
+                sig_lines.append(line)
+
+    if in_sig and sig_lines:
+        sig = _parse_signature_block(sig_lines)
+        if sig:
+            signatures.append(sig)
+
+    # Dedupe by Name primarily; merge non-conflicting fields. Two signatures
+    # with the same Name and any field overlap (or no conflicting field)
+    # are merged into one record.
+    by_name = {}
+    no_name = []
+    for s in signatures:
+        n = s.get("Name")
+        if not n:
+            no_name.append(s)
+            continue
+        if n in by_name:
+            existing = by_name[n]
+            for k, v in s.items():
+                if v and not existing.get(k):
+                    existing[k] = v
+        else:
+            by_name[n] = dict(s)
+    return list(by_name.values()) + no_name
+
+
+def parse_loss_run_policy_terms(lr) -> list:
+    """Extract per-policy-term effective/expiration dates from VLM summary
+       rows. Returns list of {effective: ISO, expiration: ISO} for each
+       policy period in the loss run."""
+    if not lr:
+        return []
+    terms = []
+    for vp in lr.get("vlm_pages", []) or []:
+        data = vp.get("data") or {}
+        summary = data.get("summary")
+        if not isinstance(summary, list):
+            continue
+        for row in summary:
+            if not isinstance(row, dict):
+                continue
+            eff_raw = row.get("effective_date") or ""
+            exp_raw = row.get("expiration_date") or ""
+            # "05/01/2025 - 05/01/2026" pattern → split
+            range_match = re.match(
+                r"(\d{1,2}/\d{1,2}/\d{2,4})\s*[-–to]+\s*(\d{1,2}/\d{1,2}/\d{2,4})",
+                eff_raw.strip())
+            if range_match:
+                eff_iso = _parse_date(range_match.group(1))
+                exp_iso = _parse_date(range_match.group(2))
+            else:
+                eff_iso = _parse_date(eff_raw)
+                exp_iso = _parse_date(exp_raw)
+            if eff_iso or exp_iso:
+                terms.append({
+                    "effective": eff_iso,
+                    "expiration": exp_iso,
+                    "claim_count": row.get("claim_count"),
+                })
+    return terms
+
+
 def map_protective_safeguards_for_page(p_fields: dict) -> list:
     """Walk all Alarm_*Indicator_* and FireProtection_*Indicator_* on a
        page. Return list of human-readable safeguard labels for any True.
@@ -607,13 +782,29 @@ def map_loss_run(lr) -> list:
     vlm_pages = lr.get("vlm_pages") or []
     h = (vlm_pages[0] or {}).get("data", {}).get("header", {}) if vlm_pages else {}
 
+    # Per-policy-term dates from VLM summary rows. Use most-recent term
+    # as the policy effective/expiration to populate the schema fields.
+    policy_terms = parse_loss_run_policy_terms(lr)
+    most_recent_eff = None
+    most_recent_exp = None
+    if policy_terms:
+        # Pick the term with the most recent expiration date
+        sorted_terms = sorted(policy_terms,
+                               key=lambda t: t.get("expiration") or "",
+                               reverse=True)
+        most_recent_eff = sorted_terms[0].get("effective")
+        most_recent_exp = sorted_terms[0].get("expiration")
+
     # Build a single LossRun entry covering this carrier
     entry = {
         "Carrier": h.get("company") or h.get("carrier") or h.get("company/carrier"),
         "PolicyNumber": h.get("policy_number"),
         "EvaluationDate": _parse_date(h.get("valuation_date")),
+        "PolicyEffectiveDate": most_recent_eff,
+        "PolicyExpirationDate": most_recent_exp,
         "LOB": "General Liability",  # Farmers LR is for GL
         "Claims": [],
+        "PolicyTerms": policy_terms if policy_terms else None,
     }
 
     # Claims from pdfplumber-parsed rows OR from VLM detail rows
@@ -762,6 +953,31 @@ def main():
     location_gl = map_location_gl_from_acord(acord)
     quote_needed_by = parse_quote_needed_by(email)
 
+    # ── Tier 2: email signatures → Agent.Contacts (broker side) ──
+    email_signatures = parse_email_signatures(email)
+    # Heuristic: signatures with broker-side companies (Insurance, Brokerage,
+    # Agency, Underwriter, Wholesale, MGA) get attached to Agent.Contacts.
+    # Signatures with insured-side companies (LLC, Properties, Holdings,
+    # Realty, etc.) optionally go to Insured.Contacts.
+    broker_signal = re.compile(
+        r"\b(insurance|brokerage|underwriter|broker|wholesale|mga|"
+        r"agency|specialty|amwins|crc|crest)\b", re.IGNORECASE)
+    agent_contacts_from_email = []
+    insured_contacts_from_email = []
+    for sig in email_signatures:
+        c = {"Type": "Producer"}
+        if sig.get("Name"): c["Name"] = sig["Name"]
+        if sig.get("Title"): c["Title"] = sig["Title"]
+        if sig.get("Email"): c["Email"] = sig["Email"]
+        if sig.get("Phone"): c["Phone"] = sig["Phone"]
+        company = (sig.get("Company") or "").lower()
+        if broker_signal.search(company) or broker_signal.search(
+                (sig.get("Title") or "").lower()):
+            agent_contacts_from_email.append(c)
+        else:
+            ic = {k: v for k, v in c.items() if k != "Type"}
+            insured_contacts_from_email.append(ic)
+
     # Per-building enrichment: Description, ProtectiveSafeguards
     if acord:
         # Get protective safeguards from ACORD 140 pages (per location).
@@ -822,6 +1038,24 @@ def main():
     if agg_bi:
         property_block["AggregateBusinessIncomeLimit"] = agg_bi
 
+    # Merge email-derived signatures into the Agent + Insured contact lists
+    agent_block = {k: v for k, v in acord_mapped.get("agent", {}).items() if v}
+    if agent_contacts_from_email:
+        existing = agent_block.get("Contacts", [])
+        existing_emails = {c.get("Email") for c in existing if c.get("Email")}
+        for c in agent_contacts_from_email:
+            if c.get("Email") not in existing_emails:
+                existing.append(c)
+        agent_block["Contacts"] = existing
+
+    if insured_contacts_from_email:
+        existing = insured.get("Contacts", []) if isinstance(insured.get("Contacts"), list) else []
+        existing_emails = {c.get("Email") for c in existing if c.get("Email")}
+        for c in insured_contacts_from_email:
+            if c.get("Email") not in existing_emails:
+                existing.append(c)
+        insured["Contacts"] = existing
+
     submission = {
         "Submission": submission_block,
         "PolicyInfo": {
@@ -830,7 +1064,7 @@ def main():
         },
         "Insured": {k: v for k, v in insured.items() if v},
         "OtherNamedInsureds": other_named,
-        "Agent": {k: v for k, v in acord_mapped.get("agent", {}).items() if v},
+        "Agent": agent_block,
         "GeneralLiability": {
             "CoverageSelected":
                 "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
