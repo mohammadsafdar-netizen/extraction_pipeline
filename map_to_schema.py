@@ -88,6 +88,270 @@ def _parse_date(s):
     return s
 
 
+# ── Tier 1 helpers (added 2026-05-08) ──
+
+# Mapping from AcroForm Interest indicator name → schema enum
+_INTEREST_NAME_MAP = {
+    "MortgageeIndicator": "Mortgagee",
+    "LossPayeeIndicator": "Loss Payee",
+    "LendersLossPayableIndicator": "Lenders Loss Payable",
+    "LienholderIndicator": "Lienholder",
+    "AdditionalInsuredIndicator": "Additional Insured",
+    "OwnerIndicator": "Owner",
+    "CoOwnerIndicator": "Co-Owner",
+    "BreachOfWarrantyIndicator": "Breach of Warranty",
+    "EmployeeAsLessorIndicator": "Employee as Lessor",
+    "LeasebackOwnerIndicator": "Leaseback Owner",
+    "RegistrantIndicator": "Registrant",
+    "TrusteeIndicator": "Trustee",
+    "OtherIndicator": "Other",
+    "BailmentIndicator": "Bailment",
+}
+
+
+def _parse_csz(line: str) -> dict:
+    """Parse 'City, ST 12345-6789' or 'City, ST 12345' → {City,State,ZipCode}."""
+    if not line:
+        return {}
+    m = re.match(r"^([A-Za-z .'-]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\s*$", line.strip())
+    if m:
+        return {"City": m.group(1).strip(),
+                "State": m.group(2),
+                "ZipCode": m.group(3)}
+    return {}
+
+
+def map_secured_parties(acord) -> list:
+    """Extract SecuredParties from AdditionalInterest_* fields across all pages.
+       Each block has: FullName + MailingAddress_LineOne + LineTwo +
+       one or more Interest indicators (Mortgagee/LossPayee/etc.)
+       Multi-property forms have separate _A and _B blocks per location."""
+    if not acord:
+        return []
+    pages = acord.get("pages", {})
+    parties = []
+
+    for pname, p in pages.items():
+        fields = p.get("fields", {})
+        # Find every AdditionalInterest block by suffix (_A, _B, _C, etc.)
+        # We look for any non-empty FullName in the block.
+        for suffix in ("_A", "_B", "_C", "_A[0]", "_B[0]", "_C[0]"):
+            name_field = fields.get(f"AdditionalInterest_FullName{suffix}")
+            if not name_field:
+                continue
+            name_val = name_field.get("value")
+            if not name_val or not isinstance(name_val, str):
+                continue
+            # Strip pdfplumber bled-address ("Berkadia Commercial Mortgage, LLC 332 Norristown R")
+            # Take only the LLC/Inc/Corp prefix as the name
+            m = re.match(r"^(.+?(?:LLC|Inc\.?|Corporation|Corp\.?|Group|Trust|Bank|"
+                          r"Mortgage[a-z]*|Holdings|Co\.?|Company))\s+\d+\s",
+                          name_val, re.IGNORECASE)
+            clean_name = m.group(1).strip() if m else name_val.strip()
+            # Try to capture trailing street if it bled (after the name part)
+            street = None
+            if m:
+                tail = name_val[m.end():].strip()
+                if tail:
+                    street = tail.split("\n")[0].strip()
+
+            # Address — LineOne is often city/state/zip; LineTwo is county
+            line1 = (fields.get(f"AdditionalInterest_MailingAddress_LineOne{suffix}") or {}).get("value")
+            line2 = (fields.get(f"AdditionalInterest_MailingAddress_LineTwo{suffix}") or {}).get("value")
+            addr = {"Type": "Mailing"}
+            if street:
+                addr["Street"] = street
+            csz = _parse_csz(line1 or "")
+            if csz:
+                addr.update(csz)
+            elif line1:
+                addr["Street2"] = line1
+            if line2:
+                addr["County"] = line2 if not csz else line2
+
+            # Determine interest type from which indicator is True
+            interest = None
+            for indicator_key, label in _INTEREST_NAME_MAP.items():
+                ind_name = f"AdditionalInterest_Interest_{indicator_key}{suffix}"
+                ind_field = fields.get(ind_name)
+                if ind_field and ind_field.get("value") in (True, "True"):
+                    interest = label
+                    break
+
+            cert_field = fields.get(f"AdditionalInterest_CertificateRequiredIndicator{suffix}")
+            cert_required = (cert_field or {}).get("value") in (True, "True")
+
+            # Parse page number for LocationNumber link
+            try:
+                pg_num = int(pname.split("_")[1])
+            except Exception:
+                pg_num = None
+
+            party = {
+                "Name": clean_name,
+                "Addresses": [{k: v for k, v in addr.items() if v}],
+            }
+            if interest:
+                party["Interest"] = interest
+            if cert_required:
+                party["CertificateRequired"] = True
+            if pg_num is not None:
+                party["_source_page"] = pg_num
+            parties.append(party)
+
+    # Dedupe by name (multi-property forms list the same mortgagee per loc)
+    seen = {}
+    for p in parties:
+        key = (p["Name"], p.get("Interest", ""))
+        if key not in seen:
+            seen[key] = p
+        else:
+            # Merge — append source pages
+            existing = seen[key]
+            existing.setdefault("_source_pages", [existing.pop("_source_page", None)])
+            sp = p.get("_source_page")
+            if sp and sp not in existing["_source_pages"]:
+                existing["_source_pages"].append(sp)
+    return list(seen.values())
+
+
+def map_other_named_insureds(acord) -> list:
+    """Look for secondary/tertiary NamedInsured blocks on p1 (the _B and
+       _C suffix blocks). Return list of {Name, Operations}."""
+    if not acord:
+        return []
+    p1 = acord.get("pages", {}).get("page_1", {}).get("fields", {})
+    others = []
+    for suffix in ("_B[0]", "_C[0]", "_D[0]"):
+        name_f = p1.get(f"NamedInsured_FullName{suffix}")
+        if not name_f:
+            continue
+        v = name_f.get("value")
+        if v and isinstance(v, str) and v.strip().upper() not in ("SECONDARY", "TERTIARY"):
+            others.append({"Name": v.strip()})
+    return others
+
+
+def map_location_gl_from_acord(acord) -> list:
+    """Extract GL hazard schedule (class code, exposure) from ACORD 126
+       pages. Returns list of {OccupancyClass, Exposure} dicts that
+       can be attached to Locations[].GeneralLiability[]."""
+    if not acord:
+        return []
+    out = []
+    for pname, p in acord.get("pages", {}).items():
+        fields = p.get("fields", {})
+        for suffix in ("_A", "_B", "_C", "_A[0]", "_B[0]"):
+            cls = fields.get(f"GeneralLiability_Hazard_Classification{suffix}")
+            exp = fields.get(f"GeneralLiability_Hazard_Exposure{suffix}")
+            if cls and exp:
+                cls_v = cls.get("value")
+                exp_v = exp.get("value")
+                if not cls_v or not exp_v:
+                    continue
+                # Parse "60010 U" → exposure 60010, type letter U (Units)
+                exp_match = re.match(r"^([\d,]+)\s*([A-Z]?)$", str(exp_v).strip())
+                exposure_num = None
+                if exp_match:
+                    try:
+                        exposure_num = float(exp_match.group(1).replace(",", ""))
+                    except ValueError:
+                        pass
+                # Parse "SWIMMING POOL 0 2 48925 T 1" — class code is the
+                # 5-digit number (ISO GL class codes are 5 digits)
+                cls_str = str(cls_v).strip()
+                code_match = re.search(r"\b(\d{5})\b", cls_str)
+                class_code = code_match.group(1) if code_match else None
+                # Description = leading text (everything before the digits)
+                desc_match = re.match(r"^([A-Z][A-Z\s/&-]+?)(?:\s+\d|\s*$)",
+                                       cls_str, re.IGNORECASE)
+                class_description = desc_match.group(1).strip() if desc_match else cls_str
+                out.append({
+                    "OccupancyClass": class_code or class_description,
+                    "OccupancyDescription": class_description,
+                    "Exposure": exposure_num,
+                    "ExposureRaw": str(exp_v),
+                    "ClassRaw": cls_str,
+                })
+    return out
+
+
+def derive_aggregate_business_income_limit(locations: list) -> float:
+    """Sum BusinessIncomeLimit across every building of every location."""
+    total = 0.0
+    for loc in locations:
+        for b in loc.get("Buildings", []):
+            v = b.get("BusinessIncomeLimit")
+            if isinstance(v, (int, float)):
+                total += v
+    return total or None
+
+
+def derive_building_description(b: dict) -> str:
+    """Synthesize a human-readable building description from structured
+       fields. E.g. 'Student Housing — 3-story Frame, built 2003 (14 units)'"""
+    bits = []
+    if b.get("OccupancyType"):
+        bits.append(b["OccupancyType"])
+    structural = []
+    if b.get("NoOfStories"):
+        structural.append(f"{b['NoOfStories']}-story")
+    if b.get("ConstructionType"):
+        structural.append(b["ConstructionType"])
+    if structural:
+        bits.append(" ".join(structural))
+    if b.get("YearOfConstruction"):
+        bits.append(f"built {b['YearOfConstruction']}")
+    if b.get("TotalUnits"):
+        bits.append(f"{b['TotalUnits']} units")
+    return " — ".join(bits[:2]) + (f" ({', '.join(bits[2:])})" if len(bits) > 2 else "")
+
+
+def parse_quote_needed_by(email_data: dict) -> str:
+    """Parse 'Need asap', 'Need by 5/15', etc. from email subject/body.
+       Returns ISO date string OR 'ASAP' / None."""
+    if not email_data:
+        return None
+    text = ""
+    for p in email_data.get("paragraphs", []):
+        text += " " + p.get("text", "")
+    text_l = text.lower()
+    if "asap" in text_l or "need asap" in text_l:
+        return "ASAP"
+    # Look for 'need by 5/15/2026' / 'by 5/15' / 'deadline 5/15'
+    m = re.search(r"(?:need\s+by|deadline|by)\s+(\d{1,2}/\d{1,2}(?:/\d{2,4})?)",
+                   text_l)
+    if m:
+        return _parse_date(m.group(1)) or m.group(1)
+    return None
+
+
+def map_protective_safeguards_for_page(p_fields: dict) -> list:
+    """Walk all Alarm_*Indicator_* and FireProtection_*Indicator_* on a
+       page. Return list of human-readable safeguard labels for any True.
+       Returns deduped list."""
+    safeguards = set()
+    label_map = {
+        "CentralStation": "Central Station Alarm",
+        "LocalGong": "Local Gong",
+        "WithKeys": "With Keys",
+        "ClockHourly": "Clock Hourly",
+        "GuardWatchman": "Guard / Watchman",
+        "FireExtinguisher": "Fire Extinguisher",
+        "Sprinkler": "Sprinkler",
+        "SmokeDetector": "Smoke Detector",
+        "Hydrant": "Hydrant Nearby",
+    }
+    for k, f in p_fields.items():
+        if (("Alarm" in k or "FireProtection" in k or "Protective" in k)
+                and f.get("type") == "checkbox" and f.get("value") is True):
+            for needle, label in label_map.items():
+                if needle in k:
+                    safeguards.add(label)
+                    break
+    return sorted(safeguards)
+
+
 # ── ACORD merged → Insured + Agent + PolicyInfo ──
 
 def _pick(p1: dict, *names) -> str | None:
@@ -492,6 +756,46 @@ def main():
     submission_extras = map_email(email)
     attachments = list_attachments()
 
+    # ── Tier 1 expansions ──
+    secured_parties = map_secured_parties(acord)
+    other_named = map_other_named_insureds(acord)
+    location_gl = map_location_gl_from_acord(acord)
+    quote_needed_by = parse_quote_needed_by(email)
+
+    # Per-building enrichment: Description, ProtectiveSafeguards
+    if acord:
+        # Get protective safeguards from ACORD 140 pages (per location).
+        # Build a list of safeguards by source page.
+        sg_by_page = {}
+        for pname, p in acord.get("pages", {}).items():
+            sg = map_protective_safeguards_for_page(p.get("fields", {}))
+            if sg:
+                try:
+                    pn = int(pname.split("_")[1])
+                except Exception:
+                    pn = None
+                if pn is not None:
+                    sg_by_page[pn] = sg
+        # Apply: union of all 140 pages' safeguards across all buildings (a
+        # form-level signal — doesn't differentiate per location yet)
+        all_sg = sorted({s for sgs in sg_by_page.values() for s in sgs})
+    else:
+        all_sg = []
+
+    for loc in locations:
+        if location_gl:
+            loc["GeneralLiability"] = location_gl
+        for b in loc.get("Buildings", []):
+            if not b.get("Description"):
+                desc = derive_building_description(b)
+                if desc:
+                    b["Description"] = desc
+            if all_sg:
+                b["ProtectiveSafeguards"] = list(all_sg)
+
+    # Property.AggregateBusinessIncomeLimit
+    agg_bi = derive_aggregate_business_income_limit(locations)
+
     # Build full submission
     insured = acord_mapped.get("insured", {})
     # Fold note_doc text into DescriptionOfOperations if present
@@ -501,32 +805,47 @@ def main():
         if text:
             insured["DescriptionOfOperations"] = text[:2000]
 
+    submission_block = {
+        "Status": "Cleared",
+        "GLSelected": "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
+        "PropertySelected": "Property" in (acord_mapped.get("policy", {}).get("LOB") or []),
+        "ProductType": "HabGen",
+        **{k: v for k, v in submission_extras.items() if v},
+    }
+    if quote_needed_by:
+        submission_block["QuoteNeededBy"] = quote_needed_by
+
+    property_block = {
+        "CoverageSelected":
+            "Property" in (acord_mapped.get("policy", {}).get("LOB") or []),
+    }
+    if agg_bi:
+        property_block["AggregateBusinessIncomeLimit"] = agg_bi
+
     submission = {
-        "Submission": {
-            "Status": "Cleared",
-            "GLSelected": "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
-            "PropertySelected": "Property" in (acord_mapped.get("policy", {}).get("LOB") or []),
-            "ProductType": "HabGen",
-            **{k: v for k, v in submission_extras.items() if v},
-        },
+        "Submission": submission_block,
         "PolicyInfo": {
             "RenewalFlag": "New",
             **{k: v for k, v in acord_mapped.get("policy", {}).items() if v},
         },
         "Insured": {k: v for k, v in insured.items() if v},
+        "OtherNamedInsureds": other_named,
         "Agent": {k: v for k, v in acord_mapped.get("agent", {}).items() if v},
         "GeneralLiability": {
             "CoverageSelected":
                 "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
         },
-        "Property": {
-            "CoverageSelected":
-                "Property" in (acord_mapped.get("policy", {}).get("LOB") or []),
-        },
+        "Property": property_block,
         "Locations": locations,
+        "SecuredParties": secured_parties,
         "LossRuns": loss_runs,
         "Attachments": attachments,
     }
+    # Drop empty arrays
+    if not submission["OtherNamedInsureds"]:
+        del submission["OtherNamedInsureds"]
+    if not submission["SecuredParties"]:
+        del submission["SecuredParties"]
 
     out_path = EXTRACTED_DIR / "submission_mapped.json"
     with open(out_path, "w") as f:
