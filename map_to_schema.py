@@ -349,19 +349,21 @@ def derive_building_description(b: dict) -> str:
 
 
 def parse_quote_needed_by(email_data: dict) -> str:
-    """Parse 'Need asap', 'Need by 5/15', etc. from email subject/body.
-       Returns ISO date string OR 'ASAP' / None."""
+    """Parse 'Need asap', 'Need by: 5/15/26', 'deadline 5/15', etc. from
+       email subject/body. Returns ISO date string OR 'ASAP' / None."""
     if not email_data:
         return None
     text = ""
     for p in email_data.get("paragraphs", []):
         text += " " + p.get("text", "")
     text_l = text.lower()
-    if "asap" in text_l or "need asap" in text_l:
+    if "asap" in text_l or "need asap" in text_l or "rush" in text_l:
         return "ASAP"
-    # Look for 'need by 5/15/2026' / 'by 5/15' / 'deadline 5/15'
-    m = re.search(r"(?:need\s+by|deadline|by)\s+(\d{1,2}/\d{1,2}(?:/\d{2,4})?)",
-                   text_l)
+    # Variants: "need by 5/15/26", "need by: 5/15/26", "deadline 5/15",
+    # "by 5/15/26", "due 5/15/26"
+    m = re.search(
+        r"(?:need\s+by|deadline|due|by)[:\s]+(\d{1,2}/\d{1,2}(?:/\d{2,4})?)",
+        text_l)
     if m:
         return _parse_date(m.group(1)) or m.group(1)
     return None
@@ -631,17 +633,49 @@ def map_acord(acord) -> dict:
         "NamedInsured_Primary_WebsiteAddress_A[0]",
         "vlm_APPLICANT_INFORMATION_0_website_address")
     insured["Addresses"] = []
+    # Collect address pieces from many possible sources, in priority order.
     addr1 = {
         "Type": "Mailing",
-        "Street": _pick(p1, "vlm_APPLICANT_INFORMATION_0_address_line1",
-                            "NamedInsured_AddressLine_StreetName_A[0]"),
-        "City": _pick(p1, "NamedInsured_AddressLine_CityName_A[0]"),
-        "State": _pick(p1, "NamedInsured_AddressLine_StateOrProvinceCode_A[0]"),
-        "ZipCode": _pick(p1, "NamedInsured_AddressLine_PostalCode_A[0]"),
+        "Street": _pick(p1,
+            "vlm_APPLICANT_INFORMATION_0_address_line1",
+            "vlm_applicant_address_line1",
+            "vlm_APPLICANT_INFORMATION_0_street",
+            "NamedInsured_AddressLine_StreetName_A[0]"),
+        "City": _pick(p1,
+            "NamedInsured_AddressLine_CityName_A[0]",
+            "vlm_APPLICANT_INFORMATION_0_city"),
+        "State": _pick(p1,
+            "NamedInsured_AddressLine_StateOrProvinceCode_A[0]",
+            "vlm_APPLICANT_INFORMATION_0_state"),
+        "ZipCode": _pick(p1,
+            "NamedInsured_AddressLine_PostalCode_A[0]",
+            "vlm_APPLICANT_INFORMATION_0_zip"),
     }
-    # Try to parse "Tucson, AZ 85705-5761" if City/State/Zip aren't separately filled
+    # Many submissions have a single combined 'address' field from the VLM
+    # like "3625 N Hall Street, Suite 610, Dallas, TX 75219" — parse it.
+    if not (addr1["Street"] and addr1["City"]):
+        combined = _pick(p1,
+            "vlm_applicant_address",
+            "vlm_APPLICANT_INFORMATION_0_full_address",
+            "vlm_APPLICANT_INFORMATION_0_address")
+        if combined and isinstance(combined, str):
+            # "Street[, Suite N], City, ST ZIP"
+            m = re.match(
+                r"^(.+?),\s*([A-Za-z .'-]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\s*$",
+                combined.strip())
+            if m:
+                if not addr1["Street"]:
+                    addr1["Street"] = m.group(1).strip()
+                if not addr1["City"]:
+                    addr1["City"] = m.group(2).strip()
+                if not addr1["State"]:
+                    addr1["State"] = m.group(3)
+                if not addr1["ZipCode"]:
+                    addr1["ZipCode"] = m.group(4)
+    # Parse single-line "City, ST 12345-6789" if needed
     if not addr1["City"]:
         line_csz = _pick(p1, "NamedInsured_MailingAddress_LineOne_A[0]",
+                              "NamedInsured_MailingAddress_LineTwo_A[0]",
                               "vlm_APPLICANT_INFORMATION_0_city_state_zip")
         if line_csz:
             m = re.match(r"([A-Za-z\s.]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)", line_csz)
@@ -649,6 +683,25 @@ def map_acord(acord) -> dict:
                 addr1["City"] = m.group(1).strip()
                 addr1["State"] = m.group(2)
                 addr1["ZipCode"] = m.group(3)
+    # Last resort: extract street from bled FullName (which we already
+    # stripped to set Insured.Name; the suffix had the address)
+    if not addr1["Street"] and bbox_name:
+        m = re.search(
+            r"\b(\d+\s+[NSEW]?\s*[A-Z][a-zA-Z .'-]+\s+"
+            r"(?:Ave|Avenue|Street|St|Rd|Road|Blvd|Boulevard|Drive|Dr|"
+            r"Lane|Ln|Way|Circle|Cir|Court|Ct|Place|Pl|Highway|Hwy|"
+            r"Parkway|Pkwy)(?:\s+(?:Suite|Ste)\s+\d+)?)",
+            bbox_name, re.IGNORECASE)
+        if m:
+            addr1["Street"] = m.group(1).strip()
+    # If LineOne has a suite/unit number and we already have a street,
+    # roll it into Street2
+    line_one = _pick(p1, "NamedInsured_MailingAddress_LineOne_A[0]")
+    if (line_one and addr1.get("Street") and not addr1.get("Street2")
+            and not re.search(r"\d{5}", str(line_one))):
+        if "suite" in str(line_one).lower() or "ste" in str(line_one).lower() \
+                or "unit" in str(line_one).lower() or "apt" in str(line_one).lower():
+            addr1["Street2"] = str(line_one).strip()
     if any(v for v in addr1.values() if v and v != "Mailing"):
         insured["Addresses"].append({k: v for k, v in addr1.items() if v})
 
@@ -877,10 +930,16 @@ def map_sov(sov) -> list:
         loc_name = _col(row, *NAMED_INSURED_COLS) or f"Location {loc_num}"
 
         if loc_num not in locs:
+            # Clean location name: split off any \n continuations, strip
+            # whitespace + trailing punctuation
+            if loc_name:
+                clean_name = str(loc_name).split("\n")[0].strip()
+                clean_name = re.sub(r"[;,\s]+$", "", clean_name)
+            else:
+                clean_name = f"Location {loc_num}"
             locs[loc_num] = {
                 "LocationNumber": loc_num,
-                "LocationName": str(loc_name).strip().split("\n")[0]
-                                  if loc_name else f"Location {loc_num}",
+                "LocationName": clean_name or f"Location {loc_num}",
                 "Address": addr if len(addr) > 1 else None,
                 "Buildings": [],
             }
@@ -1014,10 +1073,12 @@ def list_attachments() -> list:
     # Filename → Attachments.Type. Order matters: more-specific patterns first.
     # The default for .pdf is "Other", not "ACORD" — only files matching
     # ACORD-specific patterns get tagged ACORD.
+    # Defaults are conservative — files only get tagged with a specific
+    # Type when a filename pattern matches below; otherwise "Other".
     type_map_default = {
         ".pdf": "Other",
         ".docx": "Email",
-        ".xls": "SOV", ".xlsx": "SOV",
+        ".xls": "Other", ".xlsx": "Other",
     }
     LOSS_RUN_FNAME_PATS = re.compile(
         r"\b(loss[\s_-]?run|claims?[\s_-]history|lr[\s_-])", re.IGNORECASE)

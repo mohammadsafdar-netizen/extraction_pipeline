@@ -1,0 +1,593 @@
+{
+  "_metadata": {
+    "_source": "Hand-curated from Master SOV (pandas) + ACORD bbox (deterministic) + email subject regex",
+    "_documents_used": [
+      "26-27 Master SOV.xlsx (independent pandas read of 'Property & Liability SOV' sheet)",
+      "26-27 Acord 125.pdf (visual + bbox-deterministic /Tx fields)",
+      "EMAIL.docx (subject line)",
+      "19-26 CGL-Ategrity Loss Runs.pdf (header + claim count)"
+    ]
+  },
+  "Submission": {
+    "Status": "Cleared",
+    "DateReceived": "*",
+    "QuoteNeededBy": "2026-05-01",
+    "GLSelected": true,
+    "PropertySelected": true,
+    "ProductType": "HabGen",
+    "Notes": "Urban Southwest Capital LP - 5/30/26 GL and Excess Submission - Need by: 5/1/26"
+  },
+  "PolicyInfo": {
+    "RenewalFlag": "New",
+    "EffectiveDate": "2025-05-30",
+    "ExpirationDate": "2026-05-30",
+    "LOB": [
+      "General Liability",
+      "Property"
+    ]
+  },
+  "Insured": {
+    "Name": "Urban Southwest Capital LP",
+    "EntityType": "Partnership",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "*"
+      }
+    ]
+  },
+  "Agent": {
+    "Name": "The Baldwin Group Northeast LLC",
+    "Contacts": [
+      {
+        "Type": "Producer"
+      }
+    ]
+  },
+  "GeneralLiability": {
+    "CoverageSelected": true
+  },
+  "Property": {
+    "CoverageSelected": true,
+    "AggregateBusinessIncomeLimit": 37614099
+  },
+  "Locations": [
+    {
+      "LocationNumber": 1,
+      "LocationName": "Parkville Owner, LLC",
+      "Address": {
+        "Type": "Physical",
+        "Street": "11107 Northwest Lema Drive AKA 11105 Northwest Jones Drive",
+        "City": "Parkville",
+        "State": "MO",
+        "County": "Platte"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1970,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 27917892.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 2976665.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 2,
+      "LocationName": "Stonehill Terrace Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "3101 West Northgate Drive",
+        "City": "Irving",
+        "State": "TX",
+        "County": "Dallas"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1970,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 30858520.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 3785487.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 3,
+      "LocationName": "West Town Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "734 South Mesa Hills Drive",
+        "City": "El Paso",
+        "State": "TX",
+        "County": "EL Paso"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1973,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 25410875.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 2350481.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 4,
+      "LocationName": "Brittany Square Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4720 Reading Road",
+        "City": "Rosenberg",
+        "State": "TX",
+        "County": "Fort Bend"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1984,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 19339344.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 2354870.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 5,
+      "LocationName": "Trailing Vine Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "2812 Trailing Vine Rd",
+        "City": "Spring",
+        "State": "TX",
+        "County": "Harris"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1984,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 13927392.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 1184247.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 6,
+      "LocationName": "The Claridge",
+      "Address": {
+        "Type": "Physical",
+        "Street": "10027 Spice Lane",
+        "City": "Houston",
+        "State": "TX",
+        "County": "Harris"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1983,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 22332978.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 2085745.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 7,
+      "LocationName": "Briarwood Gardens",
+      "Address": {
+        "Type": "Physical",
+        "Street": "5902 E. 126th Street",
+        "City": "Grandview",
+        "State": "MO",
+        "County": "Jackson"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1972,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 35570880.0
+          },
+          "BusinessIncomeLimit": 3422345.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 8,
+      "LocationName": "Park Spring Town Homes",
+      "Address": {
+        "Type": "Physical",
+        "Street": "900 South Medalist Drive",
+        "City": "Plano",
+        "State": "TX",
+        "County": "Collin"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Townhomes",
+          "YearOfConstruction": 1985,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 18043500.0
+          },
+          "BusinessIncomeLimit": 2310482.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 9,
+      "LocationName": "Oak Tree",
+      "Address": {
+        "Type": "Physical",
+        "Street": "12820 14th Street",
+        "City": "Grandview",
+        "State": "MO",
+        "County": "Jackson"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1967,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 18448875.0
+          },
+          "Bpp": {
+            "BppLimit": 60538.0
+          },
+          "BusinessIncomeLimit": 1648970.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 10,
+      "LocationName": "La Casitas/Adelita Townhomes",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1369 North Hampton Road",
+        "City": "DeSoto",
+        "State": "TX",
+        "County": "Dallas"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1971,
+          "ConstructionType": "Joisted Masonry",
+          "Building": {
+            "BuildingLimit": 13838000.0
+          },
+          "BusinessIncomeLimit": 1913746.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 11,
+      "LocationName": "Lansing Townhome Partners, LLC",
+      "Address": {
+        "Type": "Physical",
+        "Street": "329 W Mary Street",
+        "City": "Lansing",
+        "State": "KS",
+        "County": "Kansas"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 2004,
+          "ConstructionType": "Joisted Masonry",
+          "Building": {
+            "BuildingLimit": 18415410.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 1734846.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 12,
+      "LocationName": "Urban High Point, LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "6533 E Medalist Circle",
+        "City": "Plano",
+        "State": "TX",
+        "County": "Collin"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1985,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 17227000.0
+          },
+          "BusinessIncomeLimit": 2310482.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 13,
+      "LocationName": "Cottages of Belton",
+      "Address": {
+        "Type": "Physical",
+        "Street": "16869 Cottage Circle St & DR- 16 LN",
+        "City": "Belton",
+        "State": "MO",
+        "County": "Kass"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1996,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 7631616.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 590000.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 14,
+      "LocationName": "Cottages of Kansas City East",
+      "Address": {
+        "Type": "Physical",
+        "Street": "13944 E 49th Terrace",
+        "City": "Kansas City",
+        "State": "MO",
+        "County": "Jackson"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1996,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 11569000.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 870000.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 15,
+      "LocationName": "Roseland Duplexes",
+      "Address": {
+        "Type": "Physical",
+        "Street": "8838 Flora Avenue",
+        "City": "Kansas City",
+        "State": "MO",
+        "County": "Jackson"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1959,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 12190000.0
+          },
+          "Bpp": {
+            "BppLimit": 40000.0
+          },
+          "BusinessIncomeLimit": 996800.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 16,
+      "LocationName": "The Summit Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1348 Thorpe Lane",
+        "City": "San Marcos",
+        "State": "TX",
+        "County": "Hays"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1985,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 8516808.0
+          },
+          "BusinessIncomeLimit": 1218432.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 17,
+      "LocationName": "Village 1 Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "2411 Louisiana Street",
+        "City": "Lawrence",
+        "State": "KS",
+        "County": "Douglas"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1970,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 14934360.0
+          },
+          "BusinessIncomeLimit": 1400000.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 19,
+      "LocationName": "Cedar Bluff Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "5930 Red Bluff Road",
+        "City": "Pasadena",
+        "State": "TX",
+        "County": "Harris"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1971,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 10204008.0
+          },
+          "BusinessIncomeLimit": 1175820.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 20,
+      "LocationName": "Pin Oak Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "925 Brookside Street",
+        "City": "Leavenworth",
+        "State": "KS",
+        "County": "Leavenworth"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 15375850.0
+          },
+          "BusinessIncomeLimit": 1667688.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 21,
+      "LocationName": "Overlook Apartments",
+      "Address": {
+        "Type": "Physical",
+        "Street": "213 Argonaut Dr",
+        "City": "El Paso",
+        "State": "TX",
+        "County": "EL Paso"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "YearOfConstruction": 1974,
+          "ConstructionType": "Frame",
+          "Building": {
+            "BuildingLimit": 15966335.0
+          },
+          "Bpp": {
+            "BppLimit": 10000.0
+          },
+          "BusinessIncomeLimit": 1616993.0
+        }
+      ]
+    }
+  ],
+  "LossRuns": [
+    {
+      "Carrier": "*",
+      "PolicyNumber": "*",
+      "EvaluationDate": "*",
+      "LOB": "General Liability"
+    }
+  ],
+  "Attachments": [
+    {
+      "Type": "ACORD",
+      "FileName": "26-27 Acord 125.pdf"
+    },
+    {
+      "Type": "Email",
+      "FileName": "EMAIL.docx"
+    },
+    {
+      "Type": "Email",
+      "FileName": "claude chat.docx"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "19-26 CGL-Ategrity Loss Runs Valued 12-03-2025.pdf"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "21-26 Loss Run Summary - as of 232026.xlsx"
+    },
+    {
+      "Type": "Other",
+      "FileName": "26-27 ALL Lines - Placement w Crime Scores  - Completed.xlsx"
+    },
+    {
+      "Type": "SOV",
+      "FileName": "26-27 Master SOV.xlsx"
+    },
+    {
+      "Type": "Other",
+      "FileName": "HABGEN_UrbanSouthwestCapital_GL_Workbook.xlsx"
+    }
+  ]
+}
