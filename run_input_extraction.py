@@ -214,27 +214,24 @@ def extract_pdf(path: Path, out_dir: Path) -> dict:
         shutil.copy(str(path), str(pdf_target))
 
     if doc_type == "acord_application":
-        # Auto-detect form type per page → builds page_map for any ACORD
-        # packet (any insured / broker / combination of forms). No
-        # hardcoded customer mapping needed.
-        from run_vllm_merged import (PDFS as MERGED_PDFS, process_pdf as merged_process,
+        # Always auto-detect form type per page when called from the input
+        # extractor — handles arbitrary multi-form ACORD packets correctly.
+        # The hardcoded PDFS dict in run_vllm_merged.py is for the original
+        # test-set regression fixture only; here we prefer content-based
+        # detection so submissions with the same filename but different
+        # contents (or with more ACORD pages than the legacy hardcoded
+        # 4-page map covers) get extracted correctly.
+        from run_vllm_merged import (process_pdf as merged_process,
                                        PAGE_MAP_125_ONLY)
         from detect_form_type import detect_form_type_for_pdf
-        # 1. Hardcoded mapping wins (covers our test set)
-        mapping = MERGED_PDFS.get(path.name)
-        if mapping:
-            _, page_map = mapping
-            print(f"  using hardcoded PAGE_MAP for {path.name}")
+        page_map = detect_form_type_for_pdf(pdf_target, REPO / "templates")
+        if page_map:
+            kinds = sorted({tmpl for tmpl, _ in page_map.values()})
+            print(f"  auto-detected {len(page_map)} ACORD pages: {kinds}")
         else:
-            # 2. Auto-detect per page
-            page_map = detect_form_type_for_pdf(pdf_target, REPO / "templates")
-            if page_map:
-                kinds = sorted({tmpl for tmpl, _ in page_map.values()})
-                print(f"  auto-detected {len(page_map)} ACORD pages: {kinds}")
-            else:
-                # 3. Fall back to assuming first 4 pages are ACORD 125
-                page_map = PAGE_MAP_125_ONLY
-                print(f"  no template matches; falling back to ACORD-125 1-4")
+            # Fall back to assuming first 4 pages are ACORD 125
+            page_map = PAGE_MAP_125_ONLY
+            print(f"  no template matches; falling back to ACORD-125 1-4")
         return merged_process(
             path.name, "acord_application", page_map,
             PDF_DIR, REPO / "templates", dpi=150,

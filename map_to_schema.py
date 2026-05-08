@@ -18,15 +18,35 @@ from datetime import datetime
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
-EXTRACTED_DIR = REPO / "input_extracted"
-INPUT_DIR = REPO / "input_docs" / "Input"
+EXTRACTED_DIR = REPO / "input_extracted"  # default; overridable via --extracted-dir
+INPUT_DIR = REPO / "input_docs" / "Input"  # default; overridable via --input-dir
 
 
-def _load(name: str) -> dict | None:
-    p = EXTRACTED_DIR / name
+def _load(name: str, extracted_dir: Path = None) -> dict | None:
+    base = extracted_dir or EXTRACTED_DIR
+    p = base / name
     if not p.exists():
         return None
     return json.load(open(p))
+
+
+def _find_by_pattern(extracted_dir: Path, *substrings) -> dict | None:
+    """Find an extraction JSON whose filename contains any of the given
+       substrings (case-insensitive). Returns the loaded JSON or None.
+       Used for pattern-based file discovery so the mapper doesn't need
+       to hardcode customer-specific filenames."""
+    if not extracted_dir.exists():
+        return None
+    for f in sorted(extracted_dir.iterdir()):
+        if f.suffix != ".json":
+            continue
+        name_lower = f.name.lower()
+        if any(s.lower() in name_lower for s in substrings):
+            try:
+                return json.load(open(f))
+            except Exception:
+                continue
+    return None
 
 
 def _bbox_field(acord_data: dict, page_num: int, field_name: str):
@@ -46,8 +66,10 @@ def _checkbox(acord_data: dict, page_num: int, field_name: str) -> bool:
     return f.get("value") is True
 
 
-def _entity_type_from_acord(acord_data: dict) -> str | None:
-    """Read the /Btn LegalEntity indicators on p1, return matching enum."""
+def _entity_type_from_acord(acord_data: dict, fallback_name: str = "") -> str | None:
+    """Read the /Btn LegalEntity indicators on p1, return matching enum.
+       If no checkbox is True (broker oversight or detection miss),
+       fall back to deriving from the insured Name suffix."""
     page = acord_data.get("pages", {}).get("page_1", {})
     fields = page.get("fields", {})
     mapping = {
@@ -61,6 +83,25 @@ def _entity_type_from_acord(acord_data: dict) -> str | None:
     for label, base_name in mapping.items():
         for k, f in fields.items():
             if k.startswith(base_name) and f.get("value") is True:
+                return label
+
+    # Fallback: derive from Insured Name suffix
+    if fallback_name:
+        name_norm = re.sub(r"[.,]", "", fallback_name.upper())
+        suffix_map = [
+            (r"\b(LLC|LIMITED LIABILITY (?:COMPANY|CORPORATION))\b",
+                "Limited Liability Company"),
+            (r"\b(LP|LIMITED PARTNERSHIP|L\.P)\b",         "Partnership"),
+            (r"\b(LLP|LIMITED LIABILITY PARTNERSHIP)\b",   "Partnership"),
+            (r"\b(LIMITED PARTNERS?HIP)\b",                "Partnership"),
+            (r"\b(GENERAL PARTNERSHIP|GP)\b",              "Partnership"),
+            (r"\bPARTNERSHIP\b",                            "Partnership"),
+            (r"\b(INC|INCORPORATED|CORP|CORPORATION|CO)\b","Corporation"),
+            (r"\bTRUST\b",                                  "Other"),  # schema has no Trust
+            (r"\bJOINT VENTURE\b",                          "Joint Venture"),
+        ]
+        for pat, label in suffix_map:
+            if re.search(pat, name_norm):
                 return label
     return "Other"
 
@@ -569,11 +610,14 @@ def map_acord(acord) -> dict:
         insured["Name"] = bbox_name
     elif bbox_name:
         # Strip the bled address pattern off the end
-        m = re.search(r"^(.*?)\s+\d+\s+[NSEW]?\s*\w+\s+(Ave|Street|St|Rd)",
+        m = re.search(r"^(.*?)\s+\d+\s+[NSEW]?\s*\w+\s+"
+                       r"(Ave|Avenue|Street|St|Rd|Road|Blvd|Boulevard|"
+                       r"Drive|Dr|Lane|Ln|Way|Circle|Cir|Court|Ct|"
+                       r"Place|Pl|Highway|Hwy|Parkway|Pkwy|Suite|Ste)",
                       bbox_name, re.IGNORECASE)
         insured["Name"] = m.group(1).strip() if m else bbox_name
 
-    insured["EntityType"] = _entity_type_from_acord(acord)
+    insured["EntityType"] = _entity_type_from_acord(acord, insured.get("Name", ""))
     insured["NAICSCode"] = _pick(p1, "NamedInsured_NAICSCode_A[0]")
     insured["SICCode"] = _pick(p1, "NamedInsured_SICCode_A[0]")
     insured["FEIN"] = _pick(p1, "NamedInsured_FEINOrSocSecNumberIdentifier_A[0]")
@@ -616,7 +660,10 @@ def map_acord(acord) -> dict:
     elif bbox_agent and not _looks_like_concat_with_address(bbox_agent):
         agent["Name"] = bbox_agent
     elif bbox_agent:
-        m = re.search(r"^(.*?)\s+\d+\s+[NSEW]?\s*\w+\s+(Ave|Street|St|Rd)",
+        m = re.search(r"^(.*?)\s+\d+\s+[NSEW]?\s*\w+\s+"
+                       r"(Ave|Avenue|Street|St|Rd|Road|Blvd|Boulevard|"
+                       r"Drive|Dr|Lane|Ln|Way|Circle|Cir|Court|Ct|"
+                       r"Place|Pl|Highway|Hwy|Parkway|Pkwy|Suite|Ste)",
                       bbox_agent, re.IGNORECASE)
         agent["Name"] = m.group(1).strip() if m else bbox_agent
 
@@ -689,17 +736,43 @@ def map_acord(acord) -> dict:
 # ── SOV → Locations + Buildings ──
 
 def map_sov(sov) -> list:
-    """Return list of Locations with embedded Buildings."""
+    """Return list of Locations with embedded Buildings.
+       Handles two SOV layouts:
+         (a) per-building rows with 'Loc.#' + 'Building #' columns
+         (b) per-location rows with 'Location #' + 'Street Address' + Building/
+             Contents/Business Income value columns (one row = one location
+             with a single building — common Master SOV format)"""
     if not sov or "sheets" not in sov:
         return []
-    sheet = sov["sheets"][0]
-    grid = sheet.get("raw_grid", [])
 
-    # Find header row by signature: contains "Loc" and "Building"
+    # Try every sheet — pick the one with the most building-like data
+    best_sheet = None
+    best_count = 0
+    for sheet in sov["sheets"]:
+        grid = sheet.get("raw_grid", [])
+        # Count rows that have multiple non-empty cells (data rows)
+        data_count = sum(1 for row in grid
+                          if sum(1 for c in row if str(c).strip()) >= 5)
+        if data_count > best_count:
+            best_count = data_count
+            best_sheet = sheet
+    if not best_sheet:
+        return []
+    grid = best_sheet.get("raw_grid", [])
+
+    # Find header row by signature
+    HEADER_KEYWORDS = [
+        ("loc", "building #"),     # 1800 N Stone style
+        ("loc", "building#"),
+        ("location", "address"),    # Master SOV style (per-location rows)
+        ("location #", "street"),
+        ("location#", "street"),
+        ("premises", "address"),    # ACORD 823 style
+    ]
     header_idx = None
     for i, row in enumerate(grid):
         joined = " ".join(str(c) for c in row).lower()
-        if "loc" in joined and ("building #" in joined or "building#" in joined):
+        if any(all(kw in joined for kw in pair) for pair in HEADER_KEYWORDS):
             header_idx = i; break
     if header_idx is None:
         return []
@@ -707,35 +780,68 @@ def map_sov(sov) -> list:
     # Index column → header label
     idx = {h: i for i, h in enumerate(header) if h}
 
+    # Tolerant column lookup — tries multiple possible header names per field
+    def _col(row, *names):
+        """Return first non-empty cell value matching any header name."""
+        for n in names:
+            if n in idx:
+                v = row[idx[n]]
+                if v not in (None, ""):
+                    return v
+        return None
+
+    LOC_COLS = ("Loc.#", "Loc #", "Location #", "Location#", "Location Number")
+    BLDG_COLS = ("Building #", "Building#", "Bldg #", "Bldg#")
+    OCCUPANCY_COLS = ("Occupancy", "Occupancy Type", "Occupancy Class")
+    NAMED_INSURED_COLS = ("Location Named Insured",)
+    STREET_COLS = ("Street Address", "Address", "Premise Address",
+                    "Property Address")
+    CITY_COLS = ("City",)
+    STATE_COLS = ("State",)
+    ZIP_COLS = ("Zip", "Zip Code", "ZIP")
+    COUNTY_COLS = ("County",)
+    YEAR_COLS = ("Year Built",)
+    CONSTRUCTION_COLS = ("Construction Type", "Construction")
+    ROOF_TYPE_COLS = ("Type of Roof", "Roof Type")
+    SQFT_COLS = ("# Sq. Ft. Bldg", "Sq Ft", "Square Feet", "Total Sq Ft")
+    STORIES_COLS = ("# of stories", "# Stories", "Stories", "No of Stories")
+    UNITS_COLS = ("# Hab Units", "# Units", "Units", "Total Units")
+    SPRINKLER_COLS = ("Sprinklered %", "Sprinkler %", "Sprinklered")
+    RCV_COLS = ("Building RCV", "Building", "Bldg RCV", "Bldg",
+                  "Building Value")
+    BPP_COLS = ("BPP", "Contents", "Business Personal Property")
+    BI_COLS = ("Loss of Rents", "Business Income", "BI", "Loss of Rents/BI")
+
     locs = {}  # loc_num → location dict
     for row in grid[header_idx + 1:]:
         if not any(str(c).strip() for c in row):
             continue
-        loc_num_raw = str(row[idx.get("Loc.#", 0)]).strip() if "Loc.#" in idx else ""
-        if not loc_num_raw:
-            continue
+        loc_num_raw = _col(row, *LOC_COLS)
         loc_num = _safe_int(loc_num_raw)
         if loc_num is None:
             continue
 
         b = {}
-        b["BuildingNumber"] = _safe_int(row[idx["Building #"]]) if "Building #" in idx else None
-        b["YearOfConstruction"] = _safe_int(row[idx["Year Built"]]) if "Year Built" in idx else None
-        b["ConstructionType"] = (row[idx["Construction Type"]] or None) if "Construction Type" in idx else None
-        b["RoofType"] = (row[idx["Type of Roof"]] or None) if "Type of Roof" in idx else None
-        b["TotalSqFt"] = _safe_float(row[idx["# Sq. Ft. Bldg"]]) if "# Sq. Ft. Bldg" in idx else None
-        b["NoOfStories"] = _safe_int(row[idx["# of stories"]]) if "# of stories" in idx else None
-        b["TotalUnits"] = _safe_int(row[idx["# Hab Units"]]) if "# Hab Units" in idx else None
-        b["OccupancyType"] = (row[idx["Occupancy"]] or None) if "Occupancy" in idx else None
+        b["BuildingNumber"] = _safe_int(_col(row, *BLDG_COLS)) or 1
+        b["YearOfConstruction"] = _safe_int(_col(row, *YEAR_COLS))
+        ct = _col(row, *CONSTRUCTION_COLS)
+        b["ConstructionType"] = str(ct).strip() if ct else None
+        rt = _col(row, *ROOF_TYPE_COLS)
+        b["RoofType"] = str(rt).strip() if rt else None
+        b["TotalSqFt"] = _safe_float(_col(row, *SQFT_COLS))
+        b["NoOfStories"] = _safe_int(_col(row, *STORIES_COLS))
+        b["TotalUnits"] = _safe_int(_col(row, *UNITS_COLS))
+        oc = _col(row, *OCCUPANCY_COLS)
+        b["OccupancyType"] = str(oc).strip() if oc else None
         # Sprinklered: 100% means fully sprinklered
-        spr = _safe_float(row[idx["Sprinklered %"]]) if "Sprinklered %" in idx else None
+        spr = _safe_float(_col(row, *SPRINKLER_COLS))
         if spr is not None:
             b["FullySprinklered"] = spr >= 100
         # Limits
-        rcv = _safe_float(row[idx["Building RCV"]]) if "Building RCV" in idx else None
-        bpp = _safe_float(row[idx["BPP"]]) if "BPP" in idx else None
-        bi = _safe_float(row[idx["Loss of Rents"]]) if "Loss of Rents" in idx else None
-        if rcv is not None:
+        rcv = _safe_float(_col(row, *RCV_COLS))
+        bpp = _safe_float(_col(row, *BPP_COLS))
+        bi = _safe_float(_col(row, *BI_COLS))
+        if rcv is not None and rcv > 0:
             b["Building"] = {"BuildingCoverageFlag": True, "BuildingLimit": rcv,
                              "Building100RcValue": rcv}
         if bpp is not None and bpp > 0:
@@ -746,23 +852,36 @@ def map_sov(sov) -> list:
         # Drop None values
         b = {k: v for k, v in b.items() if v is not None}
 
-        # Address (location-level, but stored on first building for now)
-        zip_raw = row[idx["Zip"]] if "Zip" in idx else None
-        addr = {
-            "Type": "Physical",
-            "Street": str(row[idx["Street Address"]]).strip() if "Street Address" in idx and row[idx["Street Address"]] else None,
-            "City": str(row[idx["City"]]).strip() if "City" in idx and row[idx["City"]] else None,
-            "State": str(row[idx["State"]]).strip() if "State" in idx and row[idx["State"]] else None,
-            "ZipCode": (str(int(float(str(zip_raw))))
-                         if zip_raw not in (None, "") else None),
-        }
-        addr = {k: v for k, v in addr.items() if v}
+        # Address per row
+        street = _col(row, *STREET_COLS)
+        city = _col(row, *CITY_COLS)
+        state = _col(row, *STATE_COLS)
+        zip_raw = _col(row, *ZIP_COLS)
+        county = _col(row, *COUNTY_COLS)
+        addr = {"Type": "Physical"}
+        if street:
+            addr["Street"] = str(street).strip()
+        if city:
+            addr["City"] = str(city).strip()
+        if state:
+            addr["State"] = str(state).strip()
+        if zip_raw not in (None, ""):
+            try:
+                addr["ZipCode"] = str(int(float(str(zip_raw))))
+            except (ValueError, TypeError):
+                addr["ZipCode"] = str(zip_raw).strip()
+        if county:
+            addr["County"] = str(county).strip()
+
+        # Location name from named insured if present
+        loc_name = _col(row, *NAMED_INSURED_COLS) or f"Location {loc_num}"
 
         if loc_num not in locs:
             locs[loc_num] = {
                 "LocationNumber": loc_num,
-                "LocationName": f"Location {loc_num}",
-                "Address": addr if addr else None,
+                "LocationName": str(loc_name).strip().split("\n")[0]
+                                  if loc_name else f"Location {loc_num}",
+                "Address": addr if len(addr) > 1 else None,
                 "Buildings": [],
             }
         locs[loc_num]["Buildings"].append(b)
@@ -941,11 +1060,28 @@ def list_attachments() -> list:
 # ── Main ──
 
 def main():
-    acord = _load("Acord_App_1800_North_Stone_LLC_2026.json")
-    sov = _load("SOV_updated_1800_North_Stone_LLC_2026.04.23.json")
-    lr = _load("Farmers_LR_2020-26_1800_North_Stone_LLC_VAL_2026.04.03.json")
-    email = _load("email.json")
-    note_doc = _load("1800_North_Stone_LLC.json")
+    global INPUT_DIR
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--extracted-dir", default=str(EXTRACTED_DIR),
+                     help="Per-doc JSONs from run_input_extraction.py")
+    ap.add_argument("--input-dir", default=str(INPUT_DIR),
+                     help="Original input docs (for Attachments listing)")
+    ap.add_argument("--out", default=None,
+                     help="Output path for submission_mapped.json (default: <extracted_dir>/submission_mapped.json)")
+    args = ap.parse_args()
+
+    extracted_dir = Path(args.extracted_dir)
+    INPUT_DIR = Path(args.input_dir)
+
+    # Pattern-based discovery — works for any insured/broker/file naming
+    acord = _find_by_pattern(extracted_dir, "Acord", "ACORD")
+    sov = _find_by_pattern(extracted_dir, "SOV", "Statement_of_Values", "Master")
+    lr = _find_by_pattern(extracted_dir, "Loss_Run", "LossRun", "_LR_", "_LR-",
+                            "CGL-Ategrity", "Loss-Run")
+    email = _find_by_pattern(extracted_dir, "email", "EMAIL")
+    note_doc = _find_by_pattern(extracted_dir, "_LLC", "_LP", "_Inc", "_Corp",
+                                   "narrative", "note", "claude")
 
     acord_mapped = map_acord(acord)
     locations = map_sov(sov)
@@ -1087,7 +1223,7 @@ def main():
     if not submission["SecuredParties"]:
         del submission["SecuredParties"]
 
-    out_path = EXTRACTED_DIR / "submission_mapped.json"
+    out_path = Path(args.out) if args.out else (extracted_dir / "submission_mapped.json")
     with open(out_path, "w") as f:
         json.dump(submission, f, indent=2, default=str)
     print(f"Wrote {out_path}")
