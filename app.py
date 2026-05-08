@@ -265,6 +265,84 @@ def overlay_image(pdf_name, page_num, merged_fields):
     return img
 
 
+def get_all_template_fields(tmpl_file, tmpl_page):
+    """Return list of every AcroForm field on this template page (Btn + Tx)
+       with name, type, bbox, tooltip — for the field inspector dropdown."""
+    reader = pypdf.PdfReader(str(TEMPLATES_DIR / tmpl_file))
+    annots = reader.pages[tmpl_page].get("/Annots", []) or []
+    out = []
+    for annot in annots:
+        obj = annot.get_object()
+        rect = obj.get("/Rect", [])
+        bbox = [float(r) for r in rect] if rect else None
+        name = str(obj.get("/T", ""))
+        ft = str(obj.get("/FT", ""))
+        if name and bbox and bbox != [0.0, 1.0, 0.0, 1.0]:
+            out.append({
+                "name": name, "type": ft, "bbox": bbox,
+                "tooltip": str(obj.get("/TU", ""))
+            })
+    return out
+
+
+def inspector_image(pdf_name, page_num, focus_field_name):
+    """Render page with ONE field's bbox highlighted in magenta — the
+       'inspector' view for verifying which spot on the form a value
+       came from."""
+    img = render_pdf_page(pdf_name, page_num).copy()
+    if pdf_name not in PAGE_MAPS or page_num not in PAGE_MAPS[pdf_name]:
+        return img, None
+
+    tmpl_file, tmpl_page = PAGE_MAPS[pdf_name][page_num]
+    dy, _ = compute_dy_for_page(pdf_name, page_num, tmpl_file, tmpl_page)
+    all_fields = get_all_template_fields(tmpl_file, tmpl_page)
+    field = next((f for f in all_fields if f["name"] == focus_field_name), None)
+    if not field:
+        return img, None
+
+    draw = ImageDraw.Draw(img, "RGBA")
+    try:
+        font = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 13)
+    except Exception:
+        font = ImageFont.load_default()
+
+    # Dim the page slightly so the highlight pops
+    overlay = Image.new("RGBA", img.size, (0, 0, 0, 50))
+    img.paste(Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB"))
+    draw = ImageDraw.Draw(img, "RGBA")
+
+    x0, y0_pdf, x1, y1_pdf = field["bbox"]
+    top = PAGE_HEIGHT - y1_pdf + dy
+    bot = PAGE_HEIGHT - y0_pdf + dy
+    rect = (x0 * SCALE, top * SCALE, x1 * SCALE, bot * SCALE)
+
+    # Bright magenta highlight, thick border
+    draw.rectangle(rect, outline=(255, 0, 200, 255), width=4)
+    # Cross-hair lines extending out for visibility
+    cx = (rect[0] + rect[2]) / 2
+    cy = (rect[1] + rect[3]) / 2
+    draw.line([(0, cy), (rect[0] - 4, cy)], fill=(255, 0, 200, 80), width=1)
+    draw.line([(rect[2] + 4, cy), (img.width, cy)], fill=(255, 0, 200, 80), width=1)
+    draw.line([(cx, 0), (cx, rect[1] - 4)], fill=(255, 0, 200, 80), width=1)
+    draw.line([(cx, rect[3] + 4), (cx, img.height)], fill=(255, 0, 200, 80), width=1)
+
+    # Label
+    label = short_label(field["name"])
+    tx = min(rect[2] + 6, img.width - 200)
+    ty = max(0, rect[1] - 18)
+    try:
+        bb = draw.textbbox((tx, ty), label, font=font)
+    except AttributeError:
+        bb = (tx, ty, tx + len(label) * 7, ty + 14)
+    draw.rectangle((bb[0] - 3, bb[1] - 1, bb[2] + 3, bb[3] + 1),
+                   fill=(255, 255, 255, 240),
+                   outline=(255, 0, 200, 255), width=1)
+    draw.text((tx, ty), label, fill=(180, 0, 140), font=font)
+
+    return img, field
+
+
 def main():
     st.title("Insurance Document Extractor — Visual Verifier")
 
@@ -282,6 +360,9 @@ def main():
     st.sidebar.header("Display")
     show_overlay = st.sidebar.checkbox("Bbox checkbox overlay", True)
     compare_mode = st.sidebar.checkbox("Compare two models", False)
+    inspector_mode = st.sidebar.checkbox(
+        "🔍 Field Inspector (highlight one field)", False,
+        help="Pick a field to see exactly where on the page its value came from.")
 
     available = [m for m in MODEL_RUNS if (BASE / MODEL_RUNS[m]["dir"]).exists()]
     if not available:
@@ -355,6 +436,87 @@ def main():
                 mime="application/zip",
                 key="dl_all_zip",
             )
+
+    # ── FIELD INSPECTOR MODE ──
+    # Pick a field, see its bbox highlighted on the page + its extracted value.
+    if inspector_mode:
+        if pdf_name not in PAGE_MAPS or page_num not in PAGE_MAPS[pdf_name]:
+            st.warning("Field Inspector requires a page with an AcroForm "
+                       "template. This page has none.")
+            return
+
+        tmpl_file, tmpl_page = PAGE_MAPS[pdf_name][page_num]
+        all_fields = get_all_template_fields(tmpl_file, tmpl_page)
+
+        # Pull merged extraction so we can show the extracted value
+        merged_label = "merged_qwen3vl8b (bbox+VLM)"
+        merged_ext = load_extraction(pdf_name, merged_label)
+        merged_page = page_data_from_extraction(merged_ext, page_num, merged_label)
+        merged_fields = (merged_page or {}).get("fields") if merged_page else {}
+
+        # Build human-readable options: "Btn ✓ NamedInsured_LegalEntity_LLC..."
+        def _opt(f):
+            ext = merged_fields.get(f["name"])
+            if ext is None:
+                marker = "—"; val_preview = "(no extracted value)"
+            else:
+                v = ext.get("value")
+                if v is True:
+                    marker = "✓"
+                elif v is False:
+                    marker = "·"
+                else:
+                    marker = "📝"
+                val_preview = "✓ true" if v is True else "✗ false" if v is False \
+                    else (str(v)[:50] + "…" if len(str(v)) > 50 else str(v))
+            kind = "Btn" if f["type"] == "/Btn" else "Tx "
+            return f"[{kind}] {marker} {f['name']}  →  {val_preview}"
+
+        sorted_fields = sorted(all_fields, key=lambda f: (
+            0 if merged_fields.get(f["name"]) and
+                 merged_fields[f["name"]].get("value") not in (False, None) else 1,
+            f["name"]))
+        labels = [_opt(f) for f in sorted_fields]
+        idx = st.sidebar.selectbox(
+            f"Field on page {page_num} ({len(sorted_fields)} total)",
+            range(len(labels)),
+            format_func=lambda i: labels[i],
+        )
+        focus_field = sorted_fields[idx]
+        img, _ = inspector_image(pdf_name, page_num, focus_field["name"])
+
+        ext = merged_fields.get(focus_field["name"])
+        c1, c2 = st.columns([3, 2])
+        c1.image(img, caption=f"{pdf_name} — page {page_num} · "
+                              f"highlight: {focus_field['name']}",
+                 use_container_width=True)
+        with c2:
+            st.subheader("Field details")
+            st.markdown(f"**Field name:** `{focus_field['name']}`")
+            st.markdown(f"**Type:** `{focus_field['type']}` "
+                        f"({'checkbox' if focus_field['type']=='/Btn' else 'text'})")
+            st.markdown(f"**Tooltip:** {focus_field.get('tooltip','(none)')[:200]}")
+            st.markdown(f"**Template bbox (PDF coords):** `{focus_field['bbox']}`")
+            st.markdown("---")
+            if ext is None:
+                st.info("This field is in the template but not in the merged "
+                        "JSON. For a /Btn this means it's the unchecked default "
+                        "(was filtered out before the explicit-false fix). "
+                        "For a /Tx this means pdfplumber found no text inside "
+                        "the bbox AND VLM didn't gap-fill it.")
+            else:
+                v = ext.get("value")
+                src = ext.get("source", "?")
+                st.markdown(f"**Extracted value:** `{v!r}`")
+                st.markdown(f"**Source:** `{src}`")
+                if focus_field["type"] == "/Btn":
+                    st.caption("Source 'bbox' = X-glyph or pixel-density at the "
+                               "bbox center. 'bbox:pixel:0.42' = pixel-density "
+                               "fallback (no X-glyph but >18% dark pixels).")
+                else:
+                    st.caption("Source 'bbox' = pdfplumber word-extraction inside "
+                               "the bbox. 'vlm' = VLM gap-fill (no spatial provenance).")
+        return  # skip the normal flow
 
     overlay_supported = (show_overlay and pdf_name in PAGE_MAPS
                          and page_num in PAGE_MAPS[pdf_name])
