@@ -121,15 +121,31 @@ def bbox_extract_text(fwords, bbox_pdf, dy):
 
 
 def bbox_check_checkbox(fwords, bbox_pdf, dy):
+    """An X is treated as belonging to a checkbox only when its CENTER is
+       inside the RAW (dy-shifted) bbox — no BBOX_EXPAND padding.
+
+       Earlier had two compounding bugs:
+         1. tol=5 boundary padding let an X at the edge of one bbox also
+            satisfy an adjacent bbox 5pt away.
+         2. BBOX_EXPAND=5 extended every bbox's bottom by 5pt for text
+            extraction; for checkboxes this made vertically-adjacent
+            checkbox bboxes overlap by 5pt, so a single X glyph could
+            land inside both. Confirmed on 1800 N Stone p1 entity_type
+            row: JV (top 561.1, bot 578.1 with expand) and LLC (top
+            573.1, bot 590.1 with expand) both claimed the same X
+            at y=577.7.
+
+       Center-in-RAW-bbox eliminates both bleeds."""
     x0, y0_pdf, x1, y1_pdf = bbox_pdf
     top = PAGE_HEIGHT - y1_pdf + dy
-    bottom = PAGE_HEIGHT - y0_pdf + dy + BBOX_EXPAND
-    tol = 5
+    bottom = PAGE_HEIGHT - y0_pdf + dy
     for w in fwords:
-        if w["text"].strip() == "X":
-            if (w["x0"] >= x0 - tol and w["x1"] <= x1 + tol
-                    and w["top"] >= top - tol and w["bottom"] <= bottom + tol):
-                return True
+        if w["text"].strip() != "X":
+            continue
+        cx = (w["x0"] + w["x1"]) / 2.0
+        cy = (w["top"] + w["bottom"]) / 2.0
+        if x0 <= cx <= x1 and top <= cy <= bottom:
+            return True
     return False
 
 
@@ -304,6 +320,53 @@ def _norm_for_dedup(v) -> str:
                   str(v).lower().replace("$", "").replace(",", "")).strip()
 
 
+# VLM commonly emits these exact strings when no real data exists in a field
+# (it's reading the form's template/placeholder text and treating it as the
+# value). We drop any VLM gap-fill whose normalized value matches.
+_VLM_TEMPLATE_GARBAGE = {
+    # Signature page placeholders
+    "signature", "producer's signature", "applicant's signature",
+    "producer's name (please print)", "producer's name", "applicant's name",
+    "national producer number", "state producer license no",
+    "state producer license no (required in florida)",
+    "agency customer id", "policy number", "date",
+    # Field-type labels captured as values
+    "y/n", "[ ]", "[x]", "x", "yes/no",
+    # Choice-field labels (these belong as boolean checkboxes, not values)
+    "accept coverage", "reject coverage", "accept", "reject",
+    "per claim", "per occurrence", "per claim per occurrence",
+    "prem / ops", "prem/ops", "premium / operations", "products / completed operations",
+    "claims made", "occurrence",
+    # Phone-type / contact-type label leaks
+    "home", "bus", "cell", "primary", "secondary",
+    # Premises label leaks
+    "inside", "outside", "owner", "tenant",
+    # Heating/improvements label leaks
+    "boiler", "solid fuel", "wood-fired", "wood fired",
+    "resistive", "semi-resistive", "non-resistive", "combustible",
+    "central station", "local gong", "with keys", "clock hourly",
+    # Status of transaction label leaks
+    "quote", "issue policy", "renew", "change", "cancel", "bound",
+    # Misc form template
+    "see attached", "see attached additional coverages overflow.",
+}
+
+
+def _is_vlm_template_garbage(v) -> bool:
+    """True if the VLM-emitted value is just form template text (not real data)."""
+    if v is None or isinstance(v, bool):
+        return False
+    s = _norm_for_dedup(v)
+    if not s:
+        return True  # empty / whitespace-only
+    if s in _VLM_TEMPLATE_GARBAGE:
+        return True
+    # Empty-checkbox glyphs in many encodings
+    if s in ("☐", "☑", "□", "■", "◯"):
+        return True
+    return False
+
+
 _BUSINESS_SUFFIXES = re.compile(
     r"\b(LLC|L\.?L\.?C|LP|L\.?P|INC|CORP|CO|LTD|GROUP|HOLDINGS|"
     r"PROPERTIES|APARTMENTS|PARTNERS|TRUST|ASSOCIATES|MANAGEMENT|"
@@ -413,7 +476,8 @@ def merge_extractions(bbox_result, vlm_result, total_pages):
             for vkey, vval in vlm_pg.items():
                 if isinstance(vval, dict):
                     for nk, nv in vval.items():
-                        if nv and not _vlm_already_has(nv):
+                        if (nv and not _is_vlm_template_garbage(nv)
+                                and not _vlm_already_has(nv)):
                             page_out["fields"][f"vlm_{vkey}_{nk}"] = {
                                 "value": nv, "tooltip": f"{vkey}.{nk}",
                                 "type": "text", "source": "vlm",
@@ -422,13 +486,15 @@ def merge_extractions(bbox_result, vlm_result, total_pages):
                     for i, item in enumerate(vval):
                         if isinstance(item, dict):
                             for nk, nv in item.items():
-                                if nv and str(nv) not in ("", "0", "0.0", "$0.00"):
-                                    if not _vlm_already_has(nv):
-                                        page_out["fields"][f"vlm_{vkey}_{i}_{nk}"] = {
-                                            "value": nv, "tooltip": f"{vkey}[{i}].{nk}",
-                                            "type": "text", "source": "vlm",
-                                        }
-                elif vval and str(vval) not in ("", "None", "null"):
+                                if (nv and str(nv) not in ("", "0", "0.0", "$0.00")
+                                        and not _is_vlm_template_garbage(nv)
+                                        and not _vlm_already_has(nv)):
+                                    page_out["fields"][f"vlm_{vkey}_{i}_{nk}"] = {
+                                        "value": nv, "tooltip": f"{vkey}[{i}].{nk}",
+                                        "type": "text", "source": "vlm",
+                                    }
+                elif (vval and str(vval) not in ("", "None", "null")
+                        and not _is_vlm_template_garbage(vval)):
                     if not _vlm_already_has(vval):
                         page_out["fields"][f"vlm_{vkey}"] = {
                             "value": vval, "tooltip": vkey,
