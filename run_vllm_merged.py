@@ -352,17 +352,53 @@ _VLM_TEMPLATE_GARBAGE = {
 }
 
 
+def _is_all_none_dict(v) -> bool:
+    """True if v is a (possibly nested) dict whose every leaf is None/empty."""
+    if v is None:
+        return True
+    if isinstance(v, dict):
+        return all(_is_all_none_dict(x) for x in v.values()) and len(v) > 0
+    if isinstance(v, list):
+        return all(_is_all_none_dict(x) for x in v) and len(v) > 0
+    if isinstance(v, str):
+        return v.strip() == ""
+    return False
+
+
 def _is_vlm_template_garbage(v) -> bool:
     """True if the VLM-emitted value is just form template text (not real data)."""
     if v is None or isinstance(v, bool):
         return False
+
+    # All-None nested dicts/lists: VLM emitted a structural placeholder
+    # without extracting any actual data.
+    if isinstance(v, (dict, list)) and _is_all_none_dict(v):
+        return True
+
     s = _norm_for_dedup(v)
     if not s:
-        return True  # empty / whitespace-only
+        return True
     if s in _VLM_TEMPLATE_GARBAGE:
         return True
-    # Empty-checkbox glyphs in many encodings
+    # Empty-checkbox glyphs
     if s in ("☐", "☑", "□", "■", "◯"):
+        return True
+
+    # Form-question text patterns: VLM read printed questions as values
+    s_str = str(v).strip()
+    # Numbered question: "1. DOES APPLICANT..." / "12. HAS APPLICANT..."
+    if re.match(r"^\d+\.\s+[A-Z]", s_str):
+        return True
+    # Ends with question mark: "ARE PASSENGERS CARRIED FOR A FEE?"
+    if s_str.endswith("?") and len(s_str) > 12:
+        return True
+    # All-caps long phrase that looks like a question/instruction (no digits)
+    if (s_str.isupper() and len(s_str) > 25
+            and not any(c.isdigit() for c in s_str)
+            and ":" not in s_str):
+        return True
+    # "I SELECT ..." / "I HAVE SELECTED ..." style choice option labels
+    if re.match(r"^I\s+(SELECT|HAVE\s+SELECTED|REJECT|ACCEPT)\b", s_str, re.IGNORECASE):
         return True
     return False
 
