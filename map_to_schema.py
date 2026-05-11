@@ -1253,31 +1253,30 @@ def map_acord(acord) -> dict:
         if ebl:
             break
 
-    # Refine NPN: standard AcroForm field name first, then regex fallback
-    # for state-specific producer license numbers embedded in
-    # Producer_AuthorizedRepresentative_FullName. Generalized regex
-    # accepts FL (P\d{6}), CA (8 digits), or NY-style alphanumeric.
+    # NPN: standard AcroForm field name only. Brokers often leave the NPN
+    # field blank on ACORD applications; do NOT fall back to other fields
+    # like Producer_AuthorizedRepresentative_FullName, which contains the
+    # FL State Producer License (e.g. "P084907") — a different number from
+    # the NPN. Capture state-license separately if present.
     if not agent.get("NationalProducerNumber"):
         for pname, pg in acord.get("pages", {}).items():
-            for k in ("Producer_NationalProducerNumber_A[0]",
-                      "Producer_AuthorizedRepresentative_FullName_A[0]"):
-                v = (pg.get("fields") or {}).get(k)
-                if not v:
-                    continue
-                val = v.get("value")
-                if not val:
-                    continue
-                if k == "Producer_NationalProducerNumber_A[0]":
-                    agent["NationalProducerNumber"] = str(val).strip()
-                    break
-                # Regex fallback: P\d{6} | 8-digit number | alphanumeric W/L prefix
-                m = re.search(
-                    r"\b([A-Z]\d{6}|\d{8}|[A-Z]{2}-?[A-Z0-9]{5,10})\b",
-                    str(val))
-                if m:
-                    agent["NationalProducerNumber"] = m.group(1)
-                    break
-            if agent.get("NationalProducerNumber"):
+            v = (pg.get("fields") or {}).get("Producer_NationalProducerNumber_A[0]")
+            if v and v.get("value"):
+                agent["NationalProducerNumber"] = str(v.get("value")).strip()
+                break
+
+    # State Producer License (separate from NPN) — pulled from
+    # Producer_AuthorizedRepresentative_FullName ("Evan Seacat P084907/RRUIZ")
+    # when present. Goes to its own field so it doesn't masquerade as NPN.
+    if not agent.get("StateProducerLicense"):
+        for pname, pg in acord.get("pages", {}).items():
+            v = (pg.get("fields") or {}).get(
+                "Producer_AuthorizedRepresentative_FullName_A[0]")
+            if not v or not v.get("value"):
+                continue
+            m = re.search(r"\b([A-Z]\d{6})\b", str(v.get("value")))
+            if m:
+                agent["StateProducerLicense"] = m.group(1)
                 break
 
     return {"insured": insured, "agent": agent, "policy": policy,
