@@ -442,19 +442,60 @@ def map_secured_parties(acord) -> list:
                             addr["City"] = rest[1]
                     else:
                         addr["City"] = rest[1]
+            # Split "P.O. Box NNNN" out of Street into a separate POBox field
+            if addr.get("Street") and isinstance(addr["Street"], str):
+                pb = re.match(r"^P\.?\s*O\.?\s*Box\s+(\S+)\s*$",
+                                addr["Street"], re.IGNORECASE)
+                if pb:
+                    addr["POBox"] = pb.group(1)
+                    del addr["Street"]
             try:
                 pg_num = int(pname.split("_")[1])
             except Exception:
                 pg_num = None
+            # Look for a reference / loan number near this block. Pattern:
+            #   vlm_ADDITIONAL_INTEREST_<i>_REFERENCE_LOAN
+            #   AdditionalInterest_ReferenceNumber_<suffix>
+            #   Text12[0] (generic Text12 in the AdditionalInterest box)
+            ref_num = None
+            for ref_key in ("vlm_ADDITIONAL_INTEREST_0_REFERENCE_LOAN",
+                              "vlm_additional_interest_certificate_recipient_reference_loan",
+                              "vlm_ADDITIONAL_INTEREST_reference_loan"):
+                rv = (pg.get("fields") or {}).get(ref_key)
+                if rv and rv.get("value"):
+                    ref_num = str(rv.get("value")).strip()
+                    break
+            # Fallback: Text12[0] on the same page is the reference-number slot
+            # in ACORD 45 generic textbox layout — but only treat as ref-num
+            # when it's a numeric/alphanumeric token (not a label).
+            if not ref_num:
+                t12 = (pg.get("fields") or {}).get("Text12[0]")
+                if t12 and t12.get("value"):
+                    v12 = str(t12.get("value")).strip()
+                    if re.match(r"^[A-Z0-9-]{5,}$", v12, re.IGNORECASE):
+                        ref_num = v12
             party = {
                 "Name": name,
                 "Interest": "Mortgagee",  # most common; ACORD 125 default
                 "Addresses": [{k: v for k, v in addr.items() if v}],
             }
+            if ref_num:
+                party["ReferenceNumber"] = ref_num
             if pg_num is not None:
                 party["_source_page"] = pg_num
             parties.append(party)
             seen_names.add(name.lower())
+
+    # Post-process the AcroForm-derived parties (the ones added before the
+    # VLM fallback) — split P.O. Box and parse refs.
+    for party in parties:
+        for addr in (party.get("Addresses") or []):
+            if addr.get("Street") and isinstance(addr["Street"], str):
+                pb = re.match(r"^P\.?\s*O\.?\s*Box\s+(\S+)\s*$",
+                                addr["Street"], re.IGNORECASE)
+                if pb:
+                    addr["POBox"] = pb.group(1)
+                    del addr["Street"]
 
     return parties
 
@@ -1115,6 +1156,22 @@ def map_acord(acord) -> dict:
                 a_addr["City"] = m.group(1).strip()
                 a_addr["State"] = m.group(2)
                 a_addr["ZipCode"] = m.group(3)
+    # When CityName is blank but Street ends with "City, ST ZIP" (some
+    # ACORD AcroForm layouts put the city/state/zip on LineOne instead of
+    # the dedicated fields — sub 2's Hyannis case), split it out.
+    if not a_addr["City"] and a_addr.get("Street") and isinstance(a_addr["Street"], str):
+        m = re.search(r"^(?:(.+?),\s+)?([A-Za-z][A-Za-z .'-]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\s*$",
+                       a_addr["Street"])
+        if m:
+            street_prefix = m.group(1)
+            if street_prefix:
+                a_addr["Street"] = street_prefix.strip()
+            else:
+                # Whole Street was just "City, ST ZIP" — clear Street (no actual street)
+                a_addr["Street"] = None
+            a_addr["City"] = m.group(2).strip()
+            a_addr["State"] = m.group(3)
+            a_addr["ZipCode"] = m.group(4)
     if any(v for v in a_addr.values() if v and v != "Mailing"):
         agent["Addresses"].append({k: v for k, v in a_addr.items() if v})
 
@@ -1222,36 +1279,48 @@ def map_acord(acord) -> dict:
             if not any(x.get("Name") == clean_name for x in insured_contacts):
                 insured_contacts.append(c)
 
-    # EmployeeBenefitsLiability flag from ACORD 126 (or supplemental).
-    # Triggered by either:
-    #   - vlm_EMPLOYEE_BENEFITS / vlm_employee_benefits_indicator = "Included"
-    #     / True / non-empty
-    #   - vlm_limits_employee_benefits with a numeric limit
-    #   - bbox checkbox CommercialGeneralLiability_EmployeeBenefitsLiability*
-    ebl = None
+    # EmployeeBenefitsLiability — ONLY set Included=True when we have
+    # corroborating evidence (a numeric limit, deductible, or retro date).
+    # The "vlm_EMPLOYEE BENEFITS=Included" key alone is unreliable —
+    # the VLM often reads a blank EBL section header as "Included" when
+    # the actual sub-fields (Deductible/Limit/Employees) are empty.
+    # (Sub 4: form blank → no EBL; Sub 5: $250K limit → EBL Included.)
+    ebl_limit = None
+    ebl_deductible = None
+    ebl_retro = None
+    vlm_says_included = False
     for pname, pg in acord.get("pages", {}).items():
         for k, v in (pg.get("fields") or {}).items():
             val = v.get("value")
             if not val:
                 continue
             kl = k.lower()
-            if "employee" in kl and "benefit" in kl:
-                if "limit" in kl:
-                    # Limit value → EBL with the limit
-                    try:
-                        ebl = {"Included": True,
-                                "Limit": float(str(val).replace(",", "").replace("$", ""))}
-                    except (ValueError, TypeError):
-                        ebl = {"Included": True}
-                elif isinstance(val, str) and val.strip().lower() in (
-                        "included", "yes", "true", "y"):
-                    ebl = {"Included": True}
-                elif val is True:
-                    ebl = {"Included": True}
-                if ebl:
-                    break
-        if ebl:
-            break
+            if "employee" not in kl or "benefit" not in kl:
+                continue
+            try:
+                if "limit" in kl and ebl_limit is None:
+                    ebl_limit = float(str(val).replace(",", "").replace("$", ""))
+                elif "deductible" in kl and ebl_deductible is None:
+                    ebl_deductible = float(str(val).replace(",", "").replace("$", ""))
+                elif ("retro" in kl or "retroactive" in kl) and not ebl_retro:
+                    ebl_retro = str(val).strip()
+            except (ValueError, TypeError):
+                pass
+            if isinstance(val, str) and val.strip().lower() in (
+                    "included", "yes", "true", "y"):
+                vlm_says_included = True
+    ebl = None
+    if ebl_limit and ebl_limit > 0:
+        ebl = {"Included": True, "Limit": ebl_limit}
+        if ebl_deductible: ebl["Deductible"] = ebl_deductible
+        if ebl_retro: ebl["RetroactiveDate"] = ebl_retro
+    elif ebl_deductible and ebl_deductible > 0:
+        ebl = {"Included": True, "Deductible": ebl_deductible}
+    elif vlm_says_included and (ebl_retro or ebl_deductible is not None):
+        ebl = {"Included": True}
+    # If VLM alone says "Included" with no supporting numbers → ignore
+    # (false positive on Prism: VLM read section header as "Included"
+    #  but Deductible/Limit/Employees/Retro all blank)
 
     # NPN: standard AcroForm field name only. Brokers often leave the NPN
     # field blank on ACORD applications; do NOT fall back to other fields

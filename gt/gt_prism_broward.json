@@ -819,15 +819,15 @@
   ],
   "SecuredParties": [
     {
-      "Name": "Santander Bank, N.A. ISAOA/ATIMA",
+      "Name": "Santander Bank. N.A. ISAOA/ATIMA",
       "Interest": "Mortgagee",
       "Addresses": [
         {
           "Type": "Mailing",
-          "Street": "P.O. Box 2526",
           "City": "Coppell",
           "State": "TX",
-          "ZipCode": "75019"
+          "ZipCode": "75019",
+          "POBox": "2526"
         }
       ]
     },
@@ -837,10 +837,10 @@
       "Addresses": [
         {
           "Type": "Mailing",
-          "Street": "P.O. Box 5070",
           "City": "Troy",
           "State": "MI",
-          "ZipCode": "48007"
+          "ZipCode": "48007",
+          "POBox": "5070"
         }
       ]
     }
