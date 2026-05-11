@@ -460,19 +460,44 @@ def map_secured_parties(acord) -> list:
 
 
 def map_other_named_insureds(acord) -> list:
-    """Look for secondary/tertiary NamedInsured blocks on p1 (the _B and
-       _C suffix blocks). Return list of {Name, Operations}."""
+    """Look for secondary/tertiary NamedInsured blocks:
+       - page 1 _B/_C/_D suffix (bbox AcroForm — primary form)
+       - vlm_other_named_insureds_N_name on any page (VLM-extracted from
+         continuation pages — submissions with 20+ named insureds spill
+         onto pages 5-13 with non-standard AcroForm names)
+       Returns deduped list of {Name, Operations}."""
     if not acord:
         return []
-    p1 = acord.get("pages", {}).get("page_1", {}).get("fields", {})
     others = []
+    seen = set()
+
+    def _add(name):
+        if not name or not isinstance(name, str):
+            return
+        cleaned = name.strip()
+        if cleaned.upper() in ("SECONDARY", "TERTIARY", "OTHER"):
+            return
+        key = cleaned.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        others.append({"Name": cleaned})
+
+    # 1) page 1 _B/_C/_D bbox blocks
+    p1 = acord.get("pages", {}).get("page_1", {}).get("fields", {})
     for suffix in ("_B[0]", "_C[0]", "_D[0]"):
         name_f = p1.get(f"NamedInsured_FullName{suffix}")
-        if not name_f:
-            continue
-        v = name_f.get("value")
-        if v and isinstance(v, str) and v.strip().upper() not in ("SECONDARY", "TERTIARY"):
-            others.append({"Name": v.strip()})
+        if name_f:
+            _add(name_f.get("value"))
+
+    # 2) vlm_other_named_insureds_N_name across all pages
+    for pname, pg in acord.get("pages", {}).items():
+        for k, v in (pg.get("fields") or {}).items():
+            m = re.match(r"vlm_other_named_insureds?_(\d+)_name", k,
+                            re.IGNORECASE)
+            if m:
+                _add(v.get("value"))
+
     return others
 
 
@@ -1197,8 +1222,67 @@ def map_acord(acord) -> dict:
             if not any(x.get("Name") == clean_name for x in insured_contacts):
                 insured_contacts.append(c)
 
+    # EmployeeBenefitsLiability flag from ACORD 126 (or supplemental).
+    # Triggered by either:
+    #   - vlm_EMPLOYEE_BENEFITS / vlm_employee_benefits_indicator = "Included"
+    #     / True / non-empty
+    #   - vlm_limits_employee_benefits with a numeric limit
+    #   - bbox checkbox CommercialGeneralLiability_EmployeeBenefitsLiability*
+    ebl = None
+    for pname, pg in acord.get("pages", {}).items():
+        for k, v in (pg.get("fields") or {}).items():
+            val = v.get("value")
+            if not val:
+                continue
+            kl = k.lower()
+            if "employee" in kl and "benefit" in kl:
+                if "limit" in kl:
+                    # Limit value → EBL with the limit
+                    try:
+                        ebl = {"Included": True,
+                                "Limit": float(str(val).replace(",", "").replace("$", ""))}
+                    except (ValueError, TypeError):
+                        ebl = {"Included": True}
+                elif isinstance(val, str) and val.strip().lower() in (
+                        "included", "yes", "true", "y"):
+                    ebl = {"Included": True}
+                elif val is True:
+                    ebl = {"Included": True}
+                if ebl:
+                    break
+        if ebl:
+            break
+
+    # Refine NPN: standard AcroForm field name first, then regex fallback
+    # for state-specific producer license numbers embedded in
+    # Producer_AuthorizedRepresentative_FullName. Generalized regex
+    # accepts FL (P\d{6}), CA (8 digits), or NY-style alphanumeric.
+    if not agent.get("NationalProducerNumber"):
+        for pname, pg in acord.get("pages", {}).items():
+            for k in ("Producer_NationalProducerNumber_A[0]",
+                      "Producer_AuthorizedRepresentative_FullName_A[0]"):
+                v = (pg.get("fields") or {}).get(k)
+                if not v:
+                    continue
+                val = v.get("value")
+                if not val:
+                    continue
+                if k == "Producer_NationalProducerNumber_A[0]":
+                    agent["NationalProducerNumber"] = str(val).strip()
+                    break
+                # Regex fallback: P\d{6} | 8-digit number | alphanumeric W/L prefix
+                m = re.search(
+                    r"\b([A-Z]\d{6}|\d{8}|[A-Z]{2}-?[A-Z0-9]{5,10})\b",
+                    str(val))
+                if m:
+                    agent["NationalProducerNumber"] = m.group(1)
+                    break
+            if agent.get("NationalProducerNumber"):
+                break
+
     return {"insured": insured, "agent": agent, "policy": policy,
-             "insured_contacts": insured_contacts}
+             "insured_contacts": insured_contacts,
+             "ebl": ebl}
 
 
 def _extract_acord_premises(acord) -> list:
@@ -1405,8 +1489,11 @@ def map_sov(sov) -> list:
                        "Number of Stories")
     UNITS_COLS = ("# Hab Units", "# Units", "Units", "Total Units",
                     "Number of Units", "Unit Count")
+    BEDS_COLS = ("Beds", "# Beds", "Bed Count", "Total Beds",
+                   "Number of Beds")
     SPRINKLER_COLS = ("Sprinklered %", "Sprinkler %", "Sprinklered",
-                         "Sprinkler", "Fully Sprinklered")
+                         "Sprinkler", "Fully Sprinklered",
+                         "Sprinkler Information")
     RCV_COLS = ("Building RCV", "Building", "Bldg RCV", "Bldg",
                   "Building Value", "Building Value (RC)", "Bldg Value",
                   "Building Limit", " Building Value (R", "Building (RC)",
@@ -1476,21 +1563,30 @@ def map_sov(sov) -> list:
         b["TotalSqFt"] = _safe_float(_col(row, *SQFT_COLS))
         b["NoOfStories"] = _safe_int(_col(row, *STORIES_COLS))
         b["TotalUnits"] = _safe_int(_col(row, *UNITS_COLS))
+        b["BedCount"] = _safe_int(_col(row, *BEDS_COLS))
         oc = _col(row, *OCCUPANCY_COLS)
         b["OccupancyType"] = str(oc).strip() if oc else None
-        # Sprinklered: handle both percent ("100", "100%") and Y/N forms.
-        # When SOV has both "Percent Sprinklered" AND "Sprinklered (Y/N)"
-        # columns, prefer the Y/N column (more reliable — percent is often
-        # left as 0 even when sprinklers exist).
+        # Sprinklered: handle Y/N, percent, and free-text forms.
+        # Free-text "100%, fully sprinklered" → True via keyword detection.
         spr_yn = _col(row, "Sprinklered (Y/N)", "Sprinklered Y/N",
                         "Fully Sprinklered (Y/N)")
         if spr_yn is not None and str(spr_yn).strip().upper() in ("Y", "N",
                                                                      "YES", "NO"):
             b["FullySprinklered"] = str(spr_yn).strip().upper() in ("Y", "YES")
         else:
-            spr = _safe_float(_col(row, *SPRINKLER_COLS))
-            if spr is not None:
-                b["FullySprinklered"] = spr >= 100
+            spr_val = _col(row, *SPRINKLER_COLS)
+            spr_num = _safe_float(spr_val)
+            if spr_num is not None:
+                b["FullySprinklered"] = spr_num >= 100
+            elif isinstance(spr_val, str):
+                # Free-text: "100%, fully sprinklered", "fully sprinklered", etc.
+                spr_lower = spr_val.lower()
+                if ("fully sprinkler" in spr_lower
+                        or "100%" in spr_lower
+                        or re.search(r"\b100\s*%", spr_lower)):
+                    b["FullySprinklered"] = True
+                elif spr_lower.strip() in ("none", "no", "n/a", "na"):
+                    b["FullySprinklered"] = False
         # Limits
         rcv = _safe_float(_col(row, *RCV_COLS))
         bpp = _safe_float(_col(row, *BPP_COLS))
@@ -2046,6 +2142,8 @@ def main():
         "GeneralLiability": {
             "CoverageSelected":
                 "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
+            **({"EmployeeBenefitsLiability": acord_mapped["ebl"]}
+                if acord_mapped.get("ebl") else {}),
         },
         "Property": property_block,
         "Locations": locations,
