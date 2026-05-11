@@ -1810,10 +1810,10 @@ def map_loss_run(lr) -> list:
                 desc = re.sub(r"\s*/\s*", "/", desc)
             entry["Claims"].append({
                 "ClaimNumber": c.get("claim_no") or c.get("claim_number"),
-                "Status": _norm_status(c.get("status")),
-                "DateOfLoss": _parse_date(c.get("loss_date") or c.get("date_of_loss")),
+                "ClaimStatus": _norm_status(c.get("status")),
+                "LossDate": _parse_date(c.get("loss_date") or c.get("date_of_loss")),
                 "Description": desc,
-                "TotalPaid": paid,
+                "AmountPaid": paid,
                 "TotalIncurred": incurred,
                 "ReserveAmount": reserves,
                 "ReserveAmountProvided": (reserves is not None),
@@ -1832,10 +1832,10 @@ def map_loss_run(lr) -> list:
                     incurred = (paid or 0) + (reserves or 0)
                 entry["Claims"].append({
                     "ClaimNumber": c.get("claim_number"),
-                    "Status": _norm_status(c.get("status")),
-                    "DateOfLoss": _parse_date(c.get("date_of_loss")),
+                    "ClaimStatus": _norm_status(c.get("status")),
+                    "LossDate": _parse_date(c.get("date_of_loss")),
                     "Description": c.get("type_cause") or c.get("description"),
-                    "TotalPaid": paid,
+                    "AmountPaid": paid,
                     "TotalIncurred": incurred,
                     "ReserveAmount": reserves,
                     "ReserveAmountProvided": (reserves is not None),
@@ -1848,7 +1848,7 @@ def map_loss_run(lr) -> list:
         {k: v for k, v in c.items() if v is not None} for c in entry["Claims"]
     ]
     entry["Claims"] = [c for c in entry["Claims"]
-                        if c.get("ClaimNumber") or c.get("DateOfLoss")]
+                        if c.get("ClaimNumber") or c.get("LossDate")]
     entry["NoKnownLossesLast5Years"] = (len(entry["Claims"]) == 0)
     entry = {k: v for k, v in entry.items() if v is not None}
     return [entry]
@@ -2210,7 +2210,7 @@ def main():
         "GeneralLiability": {
             "CoverageSelected":
                 "General Liability" in (acord_mapped.get("policy", {}).get("LOB") or []),
-            **({"EmployeeBenefitsLiability": acord_mapped["ebl"]}
+            **({"EmployeeBenefitsLiability": bool(acord_mapped["ebl"].get("Included"))}
                 if acord_mapped.get("ebl") else {}),
         },
         "Property": property_block,
