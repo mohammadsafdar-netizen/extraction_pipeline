@@ -1,0 +1,985 @@
+{
+  "_metadata": {
+    "_source": "Hand-curated 2026-05-08 from direct read of source documents",
+    "_documents_used": [
+      "26 GL Application for Prism Broward.pdf (visible page text via fitz; ACORD 125 + 126 + 823 + 45)",
+      "26 XS Application for Prism Broward.pdf (ACORD 125 + 131)",
+      "SOV_20260427_BrowardTamarac.xls (pandas/xlrd, 'SOV to be Signed by Client' sheet, 32 rows)",
+      "Prism_20260424.xlsx (HazardHub crime scores, 32 rows)",
+      "HABGEN_PrismBroward_Tamarac_GL_UW_Workbook.xlsx (ExecSummary; for context only \u2014 NOT used for any extracted-value claim)",
+      "LR_25-26_Kinsale GL_3-19-26.PDF (1 open claim)",
+      "LR_21-23 CIBA GL Loss Run 03-18-26.PDF (rendered to image; CIBA fonts are obfuscated in raw text)",
+      "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF (4 claims across 23-24 + 24-25 terms)",
+      "Email.docx (subject + body)",
+      "NREPG Questionnaire (01-26).pdf (named insured, property name, occupancy)",
+      "claude_chat.docx \u2014 explicitly NOT used"
+    ],
+    "_unverifiable_fields": "marked '*' for any-non-empty, null for absent",
+    "_notes": "32-row SOV \u2192 32 building records. Tamarac is 1 physical campus (8650 NW 61st St) with 9 apartment buildings + 1 pool house. Plantation NW 10th and NW 46th are separate addresses each. We follow the existing extraction's 1-location-per-row convention for direct comparability.",
+    "_locations_consolidated": "Consolidated from 32 SOV-row-locations to N physical-address-locations on 2026-05-08; same-address SOV rows now group as multiple buildings under a single location."
+  },
+  "Submission": {
+    "Status": "Cleared",
+    "DateReceived": "2026-04-24",
+    "QuoteNeededBy": null,
+    "GLSelected": true,
+    "PropertySelected": false,
+    "ProductType": "HabGen",
+    "Notes": "Re: Prism Broward, LP - 5-26 - GL",
+    "TargetPremium": null
+  },
+  "PolicyInfo": {
+    "RenewalFlag": "Renewal",
+    "EffectiveDate": "2026-05-26",
+    "ExpirationDate": "2027-05-26",
+    "PriorPolicyNumber": "R/O 01003716780",
+    "LOB": [
+      "General Liability"
+    ]
+  },
+  "Insured": {
+    "Name": "Prism Broward, LP",
+    "EntityType": "Partnership",
+    "BusinessPhone": "844716625",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "333 SE 2nd Avenue",
+        "Street2": "Ste 4400",
+        "City": "Miami",
+        "State": "FL",
+        "ZipCode": "33131"
+      }
+    ]
+  },
+  "OtherNamedInsureds": [
+    {
+      "Name": "Prism Tamarac LP"
+    }
+  ],
+  "Agent": {
+    "Name": "Franklin Street Insurance Services, LLC",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "1311 N Westshore Blvd",
+        "Street2": "Suite 200",
+        "City": "Tampa",
+        "State": "FL",
+        "ZipCode": "33607"
+      }
+    ],
+    "Contacts": [
+      {
+        "Type": "Producer",
+        "Name": "Rina Ruiz",
+        "Phone": "(813) 839-7300",
+        "Email": "Rina.Ruiz@franklinst.com"
+      }
+    ]
+  },
+  "GeneralLiability": {
+    "CoverageSelected": true
+  },
+  "Property": {
+    "CoverageSelected": false
+  },
+  "Locations": [
+    {
+      "LocationNumber": 1,
+      "LocationName": "Prism Tamarac LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "8650 NW 61st Street",
+        "City": "Tamarac",
+        "State": "FL",
+        "ZipCode": "33321",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 34313,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 3935878.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 34313,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 3935878.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 3,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 15,
+          "TotalSqFt": 13785,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 1585275.0
+          },
+          "BusinessIncomeLimit": 283860.0
+        },
+        {
+          "BuildingNumber": 4,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 15,
+          "TotalSqFt": 13785,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 1585275.0
+          },
+          "BusinessIncomeLimit": 283860.0
+        },
+        {
+          "BuildingNumber": 5,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 9,
+          "TotalSqFt": 8271,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 951165.0
+          },
+          "BusinessIncomeLimit": 170316.0
+        },
+        {
+          "BuildingNumber": 6,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 36591,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 4207965.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 7,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 36591,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 4207965.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 8,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 36591,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 4207965.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 9,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalUnits": 42,
+          "TotalSqFt": 36591,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 4207965.0
+          },
+          "BusinessIncomeLimit": 794808.0
+        },
+        {
+          "BuildingNumber": 10,
+          "OccupancyType": "Pool house",
+          "ConstructionType": "Joisted Masonry",
+          "NoOfStories": 3,
+          "TotalSqFt": 8465,
+          "YearOfConstruction": 1987,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 973475.0
+          },
+          "Bpp": {
+            "BppLimit": 5000.0
+          }
+        }
+      ]
+    },
+    {
+      "LocationNumber": 2,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4561-4581 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 16,
+          "TotalSqFt": 11840,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 1361600.0
+          },
+          "BusinessIncomeLimit": 290276.32
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 21,
+          "TotalSqFt": 18180,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 2090700.0
+          },
+          "BusinessIncomeLimit": 380987.67
+        }
+      ]
+    },
+    {
+      "LocationNumber": 3,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4650-4660 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 12,
+          "TotalSqFt": 8208,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 943920.0
+          },
+          "BusinessIncomeLimit": 217707.24
+        }
+      ]
+    },
+    {
+      "LocationNumber": 4,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4640 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 191106.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 5,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4681 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Club House",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalSqFt": 900,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 103500.0
+          },
+          "Bpp": {
+            "BppLimit": 5000.0
+          }
+        }
+      ]
+    },
+    {
+      "LocationNumber": 6,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4641-4651-4661 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 16,
+          "TotalSqFt": 14616,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 1680840.0
+          },
+          "BusinessIncomeLimit": 290276.32
+        }
+      ]
+    },
+    {
+      "LocationNumber": 7,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4580 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        }
+      ]
+    },
+    {
+      "LocationNumber": 8,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4540-4560 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 24,
+          "TotalSqFt": 19278,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 2216970.0
+          },
+          "BusinessIncomeLimit": 435414.48
+        }
+      ]
+    },
+    {
+      "LocationNumber": 9,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4541 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        }
+      ]
+    },
+    {
+      "LocationNumber": 10,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4400-4430 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 22,
+          "TotalSqFt": 18576,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 2136240.0
+          },
+          "BusinessIncomeLimit": 399129.94
+        }
+      ]
+    },
+    {
+      "LocationNumber": 11,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4360 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        }
+      ]
+    },
+    {
+      "LocationNumber": 12,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4300-4330 N.W. 10th Place",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 24,
+          "TotalSqFt": 19278,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 2216970.0
+          },
+          "BusinessIncomeLimit": 435414.48
+        }
+      ]
+    },
+    {
+      "LocationNumber": 13,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4301 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        }
+      ]
+    },
+    {
+      "LocationNumber": 14,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4331-4361 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 24,
+          "TotalSqFt": 19278,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 2216970.0
+          },
+          "BusinessIncomeLimit": 435414.48
+        }
+      ]
+    },
+    {
+      "LocationNumber": 15,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4401-4431 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments/Rental Office",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 16,
+          "TotalSqFt": 11840,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 1361600.0
+          },
+          "Bpp": {
+            "BppLimit": 5000.0
+          },
+          "BusinessIncomeLimit": 290276.32
+        }
+      ]
+    },
+    {
+      "LocationNumber": 16,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "4461 N.W. 10th Court",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 8,
+          "TotalSqFt": 6726,
+          "YearOfConstruction": 1969,
+          "FullySprinklered": false,
+          "Building": {
+            "BuildingLimit": 773490.0
+          },
+          "BusinessIncomeLimit": 145138.16
+        }
+      ]
+    },
+    {
+      "LocationNumber": 17,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1751 N.W. 46th Avenue",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 42,
+          "TotalSqFt": 35197,
+          "YearOfConstruction": 1970,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingLimit": 4047655.0
+          },
+          "BusinessIncomeLimit": 761975.34
+        }
+      ]
+    },
+    {
+      "LocationNumber": 18,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1761 N.W. 46th Avenue",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 42,
+          "TotalSqFt": 35197,
+          "YearOfConstruction": 1970,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingLimit": 4047655.0
+          },
+          "BusinessIncomeLimit": 963350.0
+        }
+      ]
+    },
+    {
+      "LocationNumber": 19,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1861 N.W. 46th Avenue",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 42,
+          "TotalSqFt": 35197,
+          "YearOfConstruction": 1970,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingLimit": 4047655.0
+          },
+          "BusinessIncomeLimit": 761975.34
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Rec Room",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalSqFt": 1156,
+          "YearOfConstruction": 1970,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingLimit": 132940.0
+          }
+        }
+      ]
+    },
+    {
+      "LocationNumber": 20,
+      "LocationName": "Prism Broward LP",
+      "Address": {
+        "Type": "Physical",
+        "Street": "1851 N.W. 46th Avenue",
+        "City": "Plantation",
+        "State": "FL",
+        "ZipCode": "33313",
+        "County": "Broward"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartments",
+          "ConstructionType": "Josited Masonry",
+          "NoOfStories": 2,
+          "TotalUnits": 42,
+          "TotalSqFt": 35197,
+          "YearOfConstruction": 1970,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingLimit": 4047655.0
+          },
+          "BusinessIncomeLimit": 761975.34
+        }
+      ]
+    }
+  ],
+  "SecuredParties": [
+    {
+      "Name": "Santander Bank, N.A. ISAOA/ATIMA",
+      "Interest": "Mortgagee",
+      "Addresses": [
+        {
+          "Type": "Mailing",
+          "Street": "P.O. Box 2526",
+          "City": "Coppell",
+          "State": "TX",
+          "ZipCode": "75019"
+        }
+      ]
+    },
+    {
+      "Name": "Flagstar Bank, N.A. ISAOA/ATIMA",
+      "Interest": "Mortgagee",
+      "Addresses": [
+        {
+          "Type": "Mailing",
+          "Street": "P.O. Box 5070",
+          "City": "Troy",
+          "State": "MI",
+          "ZipCode": "48007"
+        }
+      ]
+    }
+  ],
+  "LossRuns": [
+    {
+      "Carrier": "CIBA Insurance Services",
+      "PolicyNumber": "P00095389",
+      "EvaluationDate": "2026-03-18",
+      "PolicyEffectiveDate": "2021-05-26",
+      "PolicyExpirationDate": "2023-05-26",
+      "LOB": "General Liability",
+      "NoKnownLossesLast5Years": false,
+      "Claims": [
+        {
+          "ClaimNumber": "GLF21-251",
+          "DateOfLoss": "2021-11-05",
+          "Status": "Closed w/Payment",
+          "TotalPaid": 25000.0,
+          "TotalIncurred": 25000.0,
+          "Description": "General Liability/Slip & Fall"
+        },
+        {
+          "ClaimNumber": "GLF22-040",
+          "DateOfLoss": "2022-09-21",
+          "Status": "Closed w/Payment",
+          "TotalPaid": 90000.0,
+          "TotalIncurred": 90000.0,
+          "Description": "General Liability/Slip & Fall"
+        }
+      ]
+    },
+    {
+      "Carrier": "Richmond National Insurance Company",
+      "PolicyNumber": "RN-7-0500493",
+      "EvaluationDate": "2026-03-19",
+      "PolicyEffectiveDate": "2023-05-26",
+      "PolicyExpirationDate": "2025-05-26",
+      "LOB": "General Liability",
+      "NoKnownLossesLast5Years": false,
+      "Claims": [
+        {
+          "ClaimNumber": "RN-9-0000504",
+          "DateOfLoss": "2023-06-26",
+          "Status": "Open",
+          "TotalPaid": 41578.97,
+          "TotalIncurred": 167484.42,
+          "Description": "Premises/Slip/Trip/fall"
+        },
+        {
+          "ClaimNumber": "RN-9-0001039",
+          "DateOfLoss": "2024-05-21",
+          "Status": "Closed",
+          "TotalPaid": 50000.0,
+          "TotalIncurred": 50000.0,
+          "Description": "Premises/injury by object"
+        },
+        {
+          "ClaimNumber": "RN-9-0001655",
+          "DateOfLoss": "2024-10-09",
+          "Status": "Closed",
+          "TotalPaid": 41585.56,
+          "TotalIncurred": 41585.56,
+          "Description": "Premises/injury by object"
+        },
+        {
+          "ClaimNumber": "RN-9-0002360",
+          "DateOfLoss": "2025-03-13",
+          "Status": "Open",
+          "TotalPaid": 6959.0,
+          "TotalIncurred": 57000.0,
+          "Description": "Bodily Injury"
+        }
+      ]
+    },
+    {
+      "Carrier": "Kinsale Insurance Company",
+      "PolicyNumber": "0100371678",
+      "EvaluationDate": "2026-03-19",
+      "PolicyEffectiveDate": "2025-05-26",
+      "PolicyExpirationDate": "2026-05-26",
+      "LOB": "General Liability",
+      "NoKnownLossesLast5Years": false,
+      "Claims": [
+        {
+          "ClaimNumber": "00060543",
+          "DateOfLoss": "2025-09-13",
+          "Status": "Open",
+          "TotalPaid": 0.0,
+          "TotalIncurred": 5000.0,
+          "Description": "Slip/Trip and Fall"
+        }
+      ]
+    }
+  ],
+  "Attachments": [
+    {
+      "Type": "ACORD",
+      "FileName": "26 GL Application for Prism Broward.pdf"
+    },
+    {
+      "Type": "ACORD",
+      "FileName": "26 XS Application for Prism Broward.pdf"
+    },
+    {
+      "Type": "Email",
+      "FileName": "Email.docx"
+    },
+    {
+      "Type": "Email",
+      "FileName": "claude_chat.docx"
+    },
+    {
+      "Type": "SOV",
+      "FileName": "SOV_20260427_BrowardTamarac.xls"
+    },
+    {
+      "Type": "Other",
+      "FileName": "Prism_20260424.xlsx"
+    },
+    {
+      "Type": "Other",
+      "FileName": "HABGEN_PrismBroward_Tamarac_GL_UW_Workbook.xlsx"
+    },
+    {
+      "Type": "Other",
+      "FileName": "NREPG Questionnaire (01-26).pdf"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "LR_25-26_Kinsale GL_3-19-26.PDF"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "LR_21-23 CIBA GL Loss Run 03-18-26.PDF"
+    },
+    {
+      "Type": "LossRun",
+      "FileName": "LR_23-25 Richmond GL Loss Runs 3-19-2026.PDF"
+    }
+  ]
+}

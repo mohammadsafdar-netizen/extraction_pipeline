@@ -99,6 +99,12 @@ def _compare_leaf(gt_val, out_val) -> str:
     # String — case-insensitive, whitespace-collapsed
     if _norm_str(gt_val) == _norm_str(out_val):
         return "CORRECT"
+    # Phone-style: compare digits-only (so "(763)957-9617" == "(763) 957-9617")
+    gt_digits = re.sub(r"\D", "", str(gt_val))
+    out_digits = re.sub(r"\D", "", str(out_val))
+    if (gt_digits and out_digits and 7 <= len(gt_digits) <= 15
+            and gt_digits == out_digits):
+        return "CORRECT"
     # Substring tolerance for long descriptions
     if (len(str(gt_val)) > 30
             and _norm_str(gt_val) in _norm_str(out_val)):

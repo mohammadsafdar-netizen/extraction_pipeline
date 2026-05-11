@@ -28,7 +28,8 @@ PDF_DIR = REPO / "pdfs"
 DEFAULT_OUT = REPO / "vllm_qwen3vl8b"
 
 VLLM_URL = "http://127.0.0.1:8000/v1/chat/completions"
-MODEL = "qwen3-vl-8b"
+DEFAULT_MODEL = "qwen3-vl-8b"
+MODEL = DEFAULT_MODEL  # overridden by --model
 
 PDFS = {
     "Acord App (1800 North Stone LLC) 2026.pdf": "acord_application",
@@ -142,14 +143,17 @@ def process_pdf(fname: str, doc_type: str, use_targeted: bool, dpi: int) -> dict
 
 
 def main() -> int:
+    global MODEL
     ap = argparse.ArgumentParser()
     ap.add_argument("target", nargs="?", help="Specific PDF filename to run (default: all 12)")
     ap.add_argument("--out", default=str(DEFAULT_OUT), help="Output directory")
+    ap.add_argument("--model", default=DEFAULT_MODEL, help="vLLM served-model-name to call")
     ap.add_argument("--dpi", type=int, default=150, help="Render DPI (default: 150)")
     ap.add_argument("--only-targeted", action="store_true", help="Skip generalized run")
     ap.add_argument("--only-generalized", action="store_true", help="Skip targeted run")
     ap.add_argument("--overwrite", action="store_true", help="Re-run even if output exists")
     args = ap.parse_args()
+    MODEL = args.model
 
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)

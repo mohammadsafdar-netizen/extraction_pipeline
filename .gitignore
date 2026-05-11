@@ -7,6 +7,13 @@ verification/
 # Unzipped source PDFs (use ALL_Docs.zip)
 pdfs/
 
+# Per-submission unpacked customer data (PDFs / xlsx / docx containing
+# named insureds, claims, addresses, FEINs etc). Source zips are tracked.
+input_docs/
+input_docs_*/
+input_extracted/
+input_extracted_*/
+
 # Per-model raw JSON output dirs — committed via the *_extractions.zip files
 vllm_qwen3vl8b/
 vllm_qwen2_5vl_32b/

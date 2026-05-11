@@ -10,8 +10,11 @@ What it shows:
   - Extracted JSON from any of the model runs
   - Comparison mode: two models side-by-side
 """
+import io
 import json
 import os
+import subprocess
+import zipfile
 from pathlib import Path
 
 import fitz
@@ -100,6 +103,110 @@ def _file_mtime(path: Path) -> float:
         return path.stat().st_mtime
     except Exception:
         return 0.0
+
+
+# Map of submission folders → (extraction_dir, gt_filename_stem) for the
+# all-submissions bundle. Add new submissions here as they're processed.
+SUBMISSIONS_BUNDLE = [
+    ("sub1_1800_north_stone",       "input_extracted",   "gt_1800_north_stone"),
+    ("sub2_urban_southwest",        "input_extracted_2", "gt_urban_southwest"),
+    ("sub3_varsity_campus",         "input_extracted_3", "gt_varsity_campus"),
+    ("sub4_prism_broward",          "input_extracted_4", "gt_prism_broward"),
+    ("sub5_rise_campus_quarters",   "input_extracted_5", "gt_rise_campus_quarters"),
+]
+
+
+def _bundle_cache_key() -> tuple:
+    """Tuple of mtimes across mapped, GT, and every per-doc JSON in each
+       extraction dir — cache busts when any source changes."""
+    mtimes = []
+    for _, ext_dir, gt_stem in SUBMISSIONS_BUNDLE:
+        ext_path = BASE / ext_dir
+        if ext_path.exists():
+            for f in sorted(ext_path.iterdir()):
+                if f.is_file():
+                    mtimes.append((f.name, _file_mtime(f)))
+        mtimes.append(("gt/" + gt_stem,
+                        _file_mtime(BASE / "gt" / f"{gt_stem}.json")))
+    return tuple(mtimes)
+
+
+@st.cache_data
+def _build_submissions_bundle_cached(cache_key: tuple):
+    """Build a zip bundle of all submissions' full extraction trees +
+       mapped JSON + GT + compare reports, in-memory. Returns
+       (bytes, summary_string) or (None, "")."""
+    py = (BASE.parent.parent / ".venv/bin/python")
+    if not py.exists():
+        py = "python"
+    rows = []
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        for sub_name, ext_dir, gt_stem in SUBMISSIONS_BUNDLE:
+            mapped = BASE / ext_dir / "submission_mapped.json"
+            gt = BASE / "gt" / f"{gt_stem}.json"
+            ext_path = BASE / ext_dir
+            if not (mapped.exists() and gt.exists() and ext_path.exists()):
+                continue
+            # Per-doc extraction JSONs (everything in input_extracted_*/)
+            for f in sorted(ext_path.iterdir()):
+                if not f.is_file():
+                    continue
+                zf.write(f, f"{sub_name}/extracted/{f.name}")
+            # GT + mapped at the submission root for quick access
+            zf.write(gt, f"{sub_name}/{gt.name}")
+            # Run gt_compare to produce a fresh report
+            try:
+                proc = subprocess.run(
+                    [str(py), str(BASE / "gt_compare.py"), str(gt), str(mapped)],
+                    capture_output=True, text=True, timeout=30, cwd=str(BASE),
+                )
+                report = proc.stdout + ("\n" + proc.stderr if proc.stderr else "")
+            except Exception as e:
+                report = f"(gt_compare failed: {e})"
+            zf.writestr(f"{sub_name}/gt_compare_report.txt", report)
+            import re as _re
+            m = _re.search(r"CORRECT\s*:\s*(\d+)\s*/\s*(\d+)\s*\(([\d.]+)%\)", report)
+            if m:
+                rows.append((sub_name, int(m.group(1)), int(m.group(2)),
+                              float(m.group(3))))
+            else:
+                rows.append((sub_name, 0, 0, 0.0))
+        # README with accuracy table
+        if rows:
+            tot_c = sum(r[1] for r in rows)
+            tot_t = sum(r[2] for r in rows)
+            tot_pct = (tot_c / tot_t * 100) if tot_t else 0.0
+            lines = [
+                "# Insurance Submission Extraction — Bundle",
+                "",
+                "## Contents",
+                "Each `sub*/` folder contains:",
+                "- `extracted/` — per-document extraction JSONs (one per",
+                "  source PDF / xlsx / docx) plus `submission_mapped.json` and",
+                "  `ALL.json` master",
+                "- `gt_*.json` — hand-curated ground truth from source documents",
+                "- `gt_compare_report.txt` — field-by-field comparison",
+                "",
+                "## Accuracy",
+                "| Submission | CORRECT | TOTAL | Accuracy |",
+                "|---|---|---|---|",
+            ]
+            for name, c, t, pct in rows:
+                lines.append(f"| {name} | {c} | {t} | {pct:.1f}% |")
+            lines.append(f"| **Overall** | **{tot_c}** | **{tot_t}** | **{tot_pct:.1f}%** |")
+            zf.writestr("README.md", "\n".join(lines) + "\n")
+    if not rows:
+        return None, ""
+    summary = f"{len(rows)} subs, overall " + (
+        f"{sum(r[1] for r in rows)}/{sum(r[2] for r in rows)} "
+        f"({sum(r[1] for r in rows) / max(sum(r[2] for r in rows), 1) * 100:.1f}%)"
+    )
+    return buf.getvalue(), summary
+
+
+def _build_submissions_bundle():
+    return _build_submissions_bundle_cached(_bundle_cache_key())
 
 
 @st.cache_data
@@ -398,6 +505,27 @@ def inspector_image(pdf_name, page_num, focus_field_name):
 def main():
     st.title("Insurance Document Extractor — Visual Verifier")
 
+    # Top-of-page bundle download — per-source-file extractions for all
+    # submissions + GT + compare reports.
+    bundle_bytes, bundle_summary = _build_submissions_bundle()
+    if bundle_bytes:
+        c1, c2 = st.columns([3, 1])
+        c1.markdown(
+            f"**📦 All submissions extraction bundle** "
+            f"&nbsp;·&nbsp; {bundle_summary} "
+            f"&nbsp;·&nbsp; per-source-file JSONs + mapped + GT + reports"
+        )
+        c2.download_button(
+            "Download zip",
+            data=bundle_bytes,
+            file_name="all_submissions_extraction.zip",
+            mime="application/zip",
+            key="dl_submissions_bundle_top",
+            type="primary",
+            use_container_width=True,
+        )
+        st.markdown("---")
+
     pdfs = list_pdfs()
     if not pdfs:
         st.error(f"No PDFs found under {PDF_DIR}. Unzip ALL_Docs.zip first.")
@@ -492,6 +620,21 @@ def main():
                 mime="application/zip",
                 key="dl_all_zip",
             )
+
+    # ── All-submissions extraction bundle (mapped + GT + reports) ──
+    bundle_bytes, bundle_summary = _build_submissions_bundle()
+    if bundle_bytes:
+        st.sidebar.markdown("---")
+        st.sidebar.markdown("**All submissions (mapped + GT + reports)**")
+        if bundle_summary:
+            st.sidebar.caption(bundle_summary)
+        st.sidebar.download_button(
+            "📦 all_submissions_extraction.zip",
+            data=bundle_bytes,
+            file_name="all_submissions_extraction.zip",
+            mime="application/zip",
+            key="dl_submissions_bundle",
+        )
 
     # ── FIELD INSPECTOR MODE ──
     # Pick a field, see its bbox highlighted on the page + its extracted value.

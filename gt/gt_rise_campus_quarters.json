@@ -1,0 +1,215 @@
+{
+  "_metadata": {
+    "_source": "Manually curated 2026-05-08 by direct read of source documents",
+    "_documents_used": [
+      "input_docs_5/.../ACORD_113199143_Rise Campus Quarters Submission.pdf (visual inspection of pages 1-2, 5, 8, 10, 12, 15, 18; pdfplumber text + fitz pixmap render of checkboxes)",
+      "input_docs_5/.../SOV_113199145_Rise Campus Quarters.xlsx (raw cells via pandas)",
+      "input_docs_5/.../LR_113199144_Rise Campus Quarters Loss Run.pdf (raw text via pdfplumber)",
+      "input_docs_5/.../Email.docx (subject + body + signature via python-docx)",
+      "input_docs_5/.../HABGEN_Rise_Campus_Quarters_UW_Workbook.xlsx (used only for cross-check, not as authoritative source)"
+    ],
+    "_unverifiable_fields": "marked '*' (any non-empty acceptable) or null (should be absent)",
+    "_notes": [
+      "All 7 SOV rows are at SAME physical address (1773 Ennis Joslin Rd, Corpus Christi TX 78412) -> 1 Location, 7 Buildings.",
+      "ACORD page 1 LLC checkbox is X-marked (verified by pixmap render). Insured.Name on form is 'Rise Campus Quarters' (no LLC suffix).",
+      "ACORD page 2 NAICS=531; SIC blank; Website blank.",
+      "SOV rows 6-7 have $0 values, occupancy='?', sprinklered/heat blank — likely placeholder/extra rows for unidentified small structures (Email mentions '7 Buildings' and 'Roof original'). Kept in GT as buildings 6-7 with placeholder occupancy.",
+      "Email LOSS INFO: 'No recent losses.' Marsh letter (4/16/2026) confirms NO known losses 4/16/2023-current — but only 3-yr coverage, not 5-yr. UW workbook flags this gap. Kept LossRuns entry as GL with NoKnownLossesLast5Years=true (the available evidence supports zero losses in the covered window).",
+      "DO NOT use Claude_chat.docx for any GT field per spec.",
+      "Genstar Apartment Supplement is a BLANK template (no values filled) — not used for GT data."
+    ]
+  },
+
+  "Submission": {
+    "Status": "Cleared",
+    "DateReceived": "2026-04-23",
+    "GLSelected": true,
+    "PropertySelected": true,
+    "ProductType": "HabGen",
+    "Notes": "Rise Campus Quarters - Submission"
+  },
+
+  "PolicyInfo": {
+    "RenewalFlag": "New",
+    "EffectiveDate": "2026-06-09",
+    "ExpirationDate": "2027-06-09",
+    "LOB": ["General Liability", "Property"]
+  },
+
+  "Insured": {
+    "Name": "Rise Campus Quarters",
+    "EntityType": "Limited Liability Company",
+    "NAICSCode": "531",
+    "BusinessPhone": "(763)957-9617",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "1005 Mainstreet",
+        "City": "Hopkins",
+        "State": "MN",
+        "ZipCode": "55343"
+      }
+    ],
+    "Contacts": [
+      {
+        "Name": "Girijaa Doraiswamy",
+        "Email": "girijaa@riseselect.com",
+        "Phone": "(763)957-9617"
+      }
+    ]
+  },
+
+  "Agent": {
+    "Name": "North Risk Partners",
+    "Addresses": [
+      {
+        "Type": "Mailing",
+        "Street": "100 Warren St., Suite 204",
+        "City": "Mankato",
+        "State": "MN",
+        "ZipCode": "56001"
+      }
+    ],
+    "Contacts": [
+      {
+        "Type": "Producer",
+        "Name": "Tara Tierney",
+        "Phone": "(507) 386-9222",
+        "Email": "tara.tierney@northriskpartners.com"
+      },
+      {
+        "Type": "Producer",
+        "Name": "Danny Clarke",
+        "Title": "Vice President",
+        "Email": "danny.clarke@amwins.com",
+        "Phone": "708.638.6826"
+      }
+    ]
+  },
+
+  "GeneralLiability": {
+    "CoverageSelected": true
+  },
+
+  "Property": {
+    "CoverageSelected": true,
+    "AggregateBusinessIncomeLimit": 2983104
+  },
+
+  "Locations": [
+    {
+      "LocationNumber": 1,
+      "Address": {
+        "Type": "Physical",
+        "Street": "1773 Ennis Joslin Rd",
+        "City": "Corpus Christi",
+        "State": "TX",
+        "County": "Nueces",
+        "ZipCode": "78412"
+      },
+      "Buildings": [
+        {
+          "BuildingNumber": 1,
+          "OccupancyType": "Apartment",
+          "ConstructionType": "Frame",
+          "TotalSqFt": 34797,
+          "NoOfStories": 3,
+          "TotalUnits": 27,
+          "YearOfConstruction": 2011,
+          "FullySprinklered": true,
+          "Building": {
+            "BuildingCoverageFlag": true,
+            "BuildingLimit": 6282250.38
+          },
+          "Bpp": {
+            "BppCoverageFlag": true,
+            "BppLimit": 135000
+          },
+          "BusinessIncomeLimit": 745776
+        },
+        {
+          "BuildingNumber": 2,
+          "OccupancyType": "Apartment",
+          "ConstructionType": "Frame",
+          "TotalSqFt": 34797,
+          "NoOfStories": 3,
+          "TotalUnits": 27,
+          "YearOfConstruction": 2011,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 6282250.38},
+          "Bpp": {"BppLimit": 135000},
+          "BusinessIncomeLimit": 745776
+        },
+        {
+          "BuildingNumber": 3,
+          "OccupancyType": "Apartment",
+          "ConstructionType": "Frame",
+          "TotalSqFt": 34797,
+          "NoOfStories": 3,
+          "TotalUnits": 27,
+          "YearOfConstruction": 2011,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 6282250.38},
+          "Bpp": {"BppLimit": 135000},
+          "BusinessIncomeLimit": 745776
+        },
+        {
+          "BuildingNumber": 4,
+          "OccupancyType": "Apartment",
+          "ConstructionType": "Frame",
+          "TotalSqFt": 34797,
+          "NoOfStories": 3,
+          "TotalUnits": 27,
+          "YearOfConstruction": 2011,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 6282250.38},
+          "Bpp": {"BppLimit": 135000},
+          "BusinessIncomeLimit": 745776
+        },
+        {
+          "BuildingNumber": 5,
+          "OccupancyType": "Club House",
+          "ConstructionType": "Frame",
+          "TotalSqFt": 7143,
+          "NoOfStories": 1,
+          "YearOfConstruction": 2011,
+          "FullySprinklered": true,
+          "Building": {"BuildingLimit": 1289597.22},
+          "Bpp": {"BppLimit": 500000}
+        },
+        {
+          "BuildingNumber": 6,
+          "ConstructionType": "Frame",
+          "NoOfStories": 1,
+          "YearOfConstruction": 2011
+        },
+        {
+          "BuildingNumber": 7,
+          "ConstructionType": "Frame",
+          "NoOfStories": 1,
+          "YearOfConstruction": 2011
+        }
+      ]
+    }
+  ],
+
+  "LossRuns": [
+    {
+      "Carrier": "Marsh USA, Inc.",
+      "EvaluationDate": "2026-04-16",
+      "LOB": "General Liability",
+      "NoKnownLossesLast5Years": true,
+      "Claims": []
+    }
+  ],
+
+  "Attachments": [
+    {"Type": "ACORD", "FileName": "ACORD_113199143_Rise Campus Quarters Submission.pdf"},
+    {"Type": "Supplemental", "FileName": "113199142_Genstar Apartment Supp (8).pdf"},
+    {"Type": "Email", "FileName": "Claude_chat.docx"},
+    {"Type": "Email", "FileName": "Email.docx"},
+    {"Type": "Other", "FileName": "HABGEN_Rise_Campus_Quarters_UW_Workbook.xlsx"},
+    {"Type": "LossRun", "FileName": "LR_113199144_Rise Campus Quarters Loss Run.pdf"},
+    {"Type": "SOV", "FileName": "SOV_113199145_Rise Campus Quarters.xlsx"}
+  ]
+}
