@@ -164,6 +164,10 @@ def _build_submissions_bundle_cached(cache_key: tuple):
             audit_md = Path(f"/tmp/field_audits/{sub_name.split('_',1)[0]}_audit.md")
             if audit_md.exists():
                 zf.write(audit_md, f"{sub_name}/field_audit.md")
+            # Triple-check verification (mapped JSON / extraction / source)
+            triple_md = Path(f"/tmp/verify_v2/{sub_name.split('_',1)[0]}_triple.md")
+            if triple_md.exists():
+                zf.write(triple_md, f"{sub_name}/triple_check.md")
             # GT + mapped at the submission root for quick access
             zf.write(gt, f"{sub_name}/{gt.name}")
             # Run gt_compare to produce a fresh report
