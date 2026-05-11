@@ -932,6 +932,27 @@ def map_acord(acord) -> dict:
         "NamedInsured_WebsiteAddressUrl_A[0]",
         "NamedInsured_Primary_WebsiteAddress_A[0]",
         "vlm_APPLICANT_INFORMATION_0_website_address")
+
+    # DescriptionOfOperations from ACORD 125 page 2 "DESCRIPTION OF PRIMARY
+    # OPERATIONS" (standard ACORD AcroForm field) OR the NATURE OF BUSINESS
+    # nature-checkbox + secondary description. Walk every page so we find
+    # it regardless of which ACORD packet page lands at page_2.
+    desc_ops = None
+    for pname, pg in acord.get("pages", {}).items():
+        pf = pg.get("fields", {})
+        for key in ("CommercialPolicy_OperationsDescription_A[0]",
+                     "CommercialPolicy_OperationsDescription_Primary_A[0]",
+                     "vlm_NATURE_OF_BUSINESS_description_of_primary_operations",
+                     "vlm_description_of_primary_operations"):
+            v = (pf.get(key) or {}).get("value")
+            if v and isinstance(v, str) and v.strip():
+                desc_ops = v.strip()
+                break
+        if desc_ops:
+            break
+    if desc_ops:
+        insured["DescriptionOfOperations"] = desc_ops
+
     insured["Addresses"] = []
     # Collect address pieces from many possible sources, in priority order.
     addr1 = {
@@ -1178,6 +1199,100 @@ def map_acord(acord) -> dict:
 
     return {"insured": insured, "agent": agent, "policy": policy,
              "insured_contacts": insured_contacts}
+
+
+def _extract_acord_premises(acord) -> list:
+    """Walk every ACORD page and return premise blocks captured as
+       {street, city, state, zip, county, ...}. Pulls from both:
+         - bbox AcroForm: CommercialStructure_PhysicalAddress_*_<A|B|C|D>[0]
+         - vlm extraction: vlm_premises_N_<street|city|state|zip|county>
+       Used to enrich SOV-derived Locations with ZIP/County data that the
+       SOV may have omitted.
+       Returns list of dicts; caller matches by street/city to fill gaps."""
+    if not acord:
+        return []
+    import re as _re
+    blocks = {}  # key -> attrs
+    for pname, pg in acord.get("pages", {}).items():
+        fields = pg.get("fields", {}) or {}
+        for k, v in fields.items():
+            val = v.get("value")
+            if not val:
+                continue
+            m = _re.match(r"CommercialStructure_PhysicalAddress_(\w+?)_"
+                            r"([A-Z])\[0\]", k)
+            if m:
+                field, letter = m.groups()
+                key = ("bbox", pname, letter)
+                blocks.setdefault(key, {})[field] = val
+                continue
+            m = _re.match(r"vlm_premises_(\d+)_(\w+)", k)
+            if m:
+                idx, field = m.groups()
+                key = ("vlm", pname, int(idx))
+                blocks.setdefault(key, {})[field] = val
+    # Normalize attribute names
+    out = []
+    NORM = {
+        "PostalCode": "zip", "Zip": "zip", "ZipCode": "zip", "zip": "zip",
+        "StreetName": "street", "Street": "street", "street": "street",
+        "CityName": "city", "City": "city", "city": "city",
+        "StateOrProvinceCode": "state", "State": "state", "state": "state",
+        "CountyName": "county", "County": "county", "county": "county",
+    }
+    for key, attrs in blocks.items():
+        norm = {}
+        for fname, fv in attrs.items():
+            slot = NORM.get(fname)
+            if slot:
+                norm[slot] = str(fv).strip()
+        if norm:
+            out.append(norm)
+    return out
+
+
+def enrich_locations_with_acord(locations: list, acord) -> list:
+    """For each SOV-derived Location, fill in missing ZipCode / County /
+       State by matching street + city against ACORD PREMISES blocks."""
+    if not locations or not acord:
+        return locations
+    blocks = _extract_acord_premises(acord)
+    if not blocks:
+        return locations
+
+    def _norm(s):
+        return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+    for loc in locations:
+        addr = loc.get("Address") or {}
+        if not addr:
+            continue
+        loc_street = _norm(addr.get("Street"))
+        loc_city = _norm(addr.get("City"))
+        if not (loc_street or loc_city):
+            continue
+        # Find best matching ACORD block — prefer exact street+city, then
+        # street-startswith match, then city-only
+        best = None
+        for b in blocks:
+            b_street = _norm(b.get("street"))
+            b_city = _norm(b.get("city"))
+            if loc_street and b_street and (
+                    b_street.startswith(loc_street[:20]) or
+                    loc_street.startswith(b_street[:20])):
+                if not loc_city or not b_city or loc_city == b_city:
+                    best = b
+                    break
+        # Merge missing fields only
+        if best:
+            if not addr.get("ZipCode") and best.get("zip"):
+                addr["ZipCode"] = best["zip"]
+            if not addr.get("County") and best.get("county"):
+                addr["County"] = best["county"]
+            if not addr.get("State") and best.get("state"):
+                addr["State"] = best["state"]
+            loc["Address"] = addr
+    return locations
 
 
 # ── SOV → Locations + Buildings ──
@@ -1536,6 +1651,8 @@ def map_loss_run(lr) -> list:
                 "Description": desc,
                 "TotalPaid": paid,
                 "TotalIncurred": incurred,
+                "ReserveAmount": reserves,
+                "ReserveAmountProvided": (reserves is not None),
             })
     else:
         # Fall back to VLM claims
@@ -1556,13 +1673,18 @@ def map_loss_run(lr) -> list:
                     "Description": c.get("type_cause") or c.get("description"),
                     "TotalPaid": paid,
                     "TotalIncurred": incurred,
+                    "ReserveAmount": reserves,
+                    "ReserveAmountProvided": (reserves is not None),
                 })
 
-    # Drop None values from each claim, then drop entirely-empty claims
+    # Drop None values from each claim, then drop claims with no real content.
+    # A claim must have at least ClaimNumber or DateOfLoss to count —
+    # ReserveAmountProvided=False alone is metadata, not a real claim.
     entry["Claims"] = [
         {k: v for k, v in c.items() if v is not None} for c in entry["Claims"]
     ]
-    entry["Claims"] = [c for c in entry["Claims"] if c]
+    entry["Claims"] = [c for c in entry["Claims"]
+                        if c.get("ClaimNumber") or c.get("DateOfLoss")]
     entry["NoKnownLossesLast5Years"] = (len(entry["Claims"]) == 0)
     entry = {k: v for k, v in entry.items() if v is not None}
     return [entry]
@@ -1745,6 +1867,9 @@ def main():
         acord = _normalize_acord_pages(acord)
     acord_mapped = map_acord(acord)
     locations = map_sov(sov)
+    # Enrich SOV-derived Locations with ZIP/County/State from ACORD page 2
+    # PREMISES INFO when the SOV omits them.
+    locations = enrich_locations_with_acord(locations, acord)
     # Map ALL loss-run files (some submissions ship multiple)
     loss_runs = []
     for fname, lr_json in lr_files:
