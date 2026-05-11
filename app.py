@@ -142,6 +142,13 @@ def _build_submissions_bundle_cached(cache_key: tuple):
     rows = []
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        # Include any field-audit reports + stakeholder report at top level
+        # so the bundle is a complete stakeholder deliverable.
+        reports_dir = BASE / "reports"
+        if reports_dir.exists():
+            for rf in sorted(reports_dir.iterdir()):
+                if rf.is_file():
+                    zf.write(rf, rf.name)
         for sub_name, ext_dir, gt_stem in SUBMISSIONS_BUNDLE:
             mapped = BASE / ext_dir / "submission_mapped.json"
             gt = BASE / "gt" / f"{gt_stem}.json"
@@ -153,6 +160,10 @@ def _build_submissions_bundle_cached(cache_key: tuple):
                 if not f.is_file():
                     continue
                 zf.write(f, f"{sub_name}/extracted/{f.name}")
+            # Per-sub field-audit report from /tmp/field_audits/ (if present)
+            audit_md = Path(f"/tmp/field_audits/{sub_name.split('_',1)[0]}_audit.md")
+            if audit_md.exists():
+                zf.write(audit_md, f"{sub_name}/field_audit.md")
             # GT + mapped at the submission root for quick access
             zf.write(gt, f"{sub_name}/{gt.name}")
             # Run gt_compare to produce a fresh report
@@ -506,14 +517,14 @@ def main():
     st.title("Insurance Document Extractor — Visual Verifier")
 
     # Top-of-page bundle download — per-source-file extractions for all
-    # submissions + GT + compare reports.
+    # submissions + GT + compare reports + stakeholder report.
     bundle_bytes, bundle_summary = _build_submissions_bundle()
     if bundle_bytes:
-        c1, c2 = st.columns([3, 1])
+        c1, c2, c3 = st.columns([3, 1, 1])
         c1.markdown(
             f"**📦 All submissions extraction bundle** "
             f"&nbsp;·&nbsp; {bundle_summary} "
-            f"&nbsp;·&nbsp; per-source-file JSONs + mapped + GT + reports"
+            f"&nbsp;·&nbsp; per-source-file JSONs + mapped + GT + audit + report"
         )
         c2.download_button(
             "Download zip",
@@ -524,6 +535,18 @@ def main():
             type="primary",
             use_container_width=True,
         )
+        # Standalone stakeholder report download (HTML, viewable in browser)
+        report_html = BASE / "reports" / "STAKEHOLDER_REPORT.html"
+        if report_html.exists():
+            with open(report_html, "rb") as f:
+                c3.download_button(
+                    "📄 Report (HTML)",
+                    data=f.read(),
+                    file_name="STAKEHOLDER_REPORT.html",
+                    mime="text/html",
+                    key="dl_stakeholder_report",
+                    use_container_width=True,
+                )
         st.markdown("---")
 
     pdfs = list_pdfs()

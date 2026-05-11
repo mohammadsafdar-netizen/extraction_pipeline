@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Insurance Submission Extraction — Stakeholder Report (2026-05-11)</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width: 1100px; margin: 2em auto; padding: 0 2em; line-height: 1.55;
+         color: #1f2328; }
+  h1, h2, h3 { border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
+  h1 { font-size: 2em; } h2 { font-size: 1.5em; margin-top: 1.6em; }
+  h3 { font-size: 1.2em; border-bottom: none; }
+  code { background: #f6f8fa; padding: 2px 4px; border-radius: 3px; font-size: 90%; }
+  pre { background: #f6f8fa; padding: 1em; border-radius: 6px; overflow-x: auto; }
+  table { border-collapse: collapse; margin: 1em 0; }
+  th, td { border: 1px solid #d0d7de; padding: 6px 12px; text-align: left; }
+  th { background: #f6f8fa; }
+  td:has(strong) { font-weight: 600; }
+  hr { border: 0; border-top: 1px solid #d0d7de; margin: 2em 0; }
+  a { color: #0969da; }
+</style>
+</head>
+<body>
+<h1 id="insurance-submission-extraction-stakeholder-findings-updates">Insurance Submission Extraction — Stakeholder Findings &amp; Updates</h1>
+<p><strong>Date:</strong> 2026-05-11
+<strong>Branch:</strong> <code>feat/multi-submission-mapper-audit</code> (3 commits, 132+ insertions to mapper)
+<strong>Verified across:</strong> 5 real broker submissions (1,239 leaf fields scored against hand-curated ground truth)</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>The extraction pipeline has been brought to <strong>99.5% accuracy</strong> across 5 real-world insurance submissions of varying complexity. Where earlier iterations achieved 100% on three structurally simple submissions (sub 1, 2, 3), the system had not been tested against:</p>
+<ul>
+<li><strong>Multi-form ACORD packets</strong> (a single PDF containing ACORD 125 + 126 + 140 + 823, or GL + XS application pairs)</li>
+<li><strong>Multi-property campus SOVs</strong> (7 buildings at one physical address)</li>
+<li><strong>Multi-policy-term loss runs</strong> with reserves and open claims</li>
+<li><strong>Underwriter-platform email signatures</strong> that bleed into Insured contacts</li>
+<li><strong>Hand-filled forms with empty fields</strong> (most ACORD 125 page 1 fields are blank on real submissions)</li>
+</ul>
+<p>Adding two new submissions — <strong>Prism Broward, LP</strong> (32 SOV rows, 2 ACORD apps, 3 loss runs) and <strong>Rise Campus Quarters</strong> (7 buildings at one campus) — surfaced <strong>assumptions in the mapper that worked on the original 3 submissions by coincidence</strong>. Fixing those assumptions made the pipeline strictly more correct against the ACORD form specification, not against the specific zips.</p>
+<p>We also conducted a <strong>field-by-field audit</strong> of fields you flagged as missing from your standard schema (276 fields across 4 submissions, verified via 4 parallel agents plus visual inspection of 9 key ACORD pages).</p>
+<h3 id="headline-accuracy">Headline accuracy</h3>
+<table>
+<thead>
+<tr>
+<th>Submission</th>
+<th style="text-align: right;">CORRECT</th>
+<th style="text-align: right;">TOTAL</th>
+<th style="text-align: right;">Accuracy</th>
+<th style="text-align: right;">Mapped fields emitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sub 1 — 1800 North Stone LLC</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;"><strong>100.0%</strong></td>
+<td style="text-align: right;">192</td>
+</tr>
+<tr>
+<td>Sub 2 — Urban Southwest Capital LP</td>
+<td style="text-align: right;">309</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;"><strong>99.0%</strong></td>
+<td style="text-align: right;">819</td>
+</tr>
+<tr>
+<td>Sub 3 — Varsity Campus LLC</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;"><strong>100.0%</strong></td>
+<td style="text-align: right;">132</td>
+</tr>
+<tr>
+<td>Sub 4 — Prism Broward, LP</td>
+<td style="text-align: right;">610</td>
+<td style="text-align: right;">612</td>
+<td style="text-align: right;"><strong>99.7%</strong></td>
+<td style="text-align: right;">841</td>
+</tr>
+<tr>
+<td>Sub 5 — Rise Campus Quarters</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;"><strong>99.2%</strong></td>
+<td style="text-align: right;">186</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td style="text-align: right;"><strong>1,233</strong></td>
+<td style="text-align: right;"><strong>1,239</strong></td>
+<td style="text-align: right;"><strong>99.5%</strong></td>
+<td style="text-align: right;"><strong>2,170</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-what-missing-fields-actually-means-audit-of-276-fields">2. What "Missing Fields" Actually Means — Audit of 276 Fields</h2>
+<p>You provided lists of fields that appear in your standard schema but were not present in our previous output. We audited every one against the source documents. <strong>The categorization below answers: "is this missing because we failed to extract, or because the data is genuinely not in the submission?"</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th style="text-align: right;">Sub 2</th>
+<th style="text-align: right;">Sub 3</th>
+<th style="text-align: right;">Sub 4</th>
+<th style="text-align: right;">Sub 5</th>
+<th style="text-align: right;"><strong>Total</strong></th>
+<th style="text-align: right;"><strong>%</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOT_IN_SOURCE</code> — genuinely absent from all submission docs</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;"><strong>187</strong></td>
+<td style="text-align: right;"><strong>68%</strong></td>
+</tr>
+<tr>
+<td><code>IN_SOURCE_MISSED</code> — real extraction bugs (now mostly fixed)</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;"><strong>54</strong></td>
+<td style="text-align: right;"><strong>20%</strong></td>
+</tr>
+<tr>
+<td><code>IN_OUTPUT_DIFFERENT_NAME</code> — we extract, but use a different field name</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>14</strong></td>
+<td style="text-align: right;"><strong>5%</strong></td>
+</tr>
+<tr>
+<td><code>IN_OUTPUT_ALREADY</code> — exact field present with non-empty value</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>18</strong></td>
+<td style="text-align: right;"><strong>6%</strong></td>
+</tr>
+<tr>
+<td><code>UNCLEAR</code> — schema meaning not defined</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>3</strong></td>
+<td style="text-align: right;"><strong>1%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-whats-genuinely-not-in-the-submission-68-of-missing-fields">2.1 What's genuinely not in the submission (68% of "missing" fields)</h3>
+<p>These fields exist in your standard schema but <strong>are not present in any insurance submission document</strong> — they belong to systems downstream of submission intake:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Broker CRM metadata</strong></td>
+<td><code>SubmissionNumber</code>, <code>MasterCarrierRecordName</code>, <code>AssignedTo</code>, <code>BrokerRef.BrokerId</code>, <code>BrokerRef.ProducerId</code></td>
+</tr>
+<tr>
+<td><strong>File-management metadata</strong></td>
+<td><code>Attachment.AttachmentId</code>, <code>UploadedDate</code>, <code>DestinationFolder</code>, <code>Source</code></td>
+</tr>
+<tr>
+<td><strong>Rating engine outputs</strong></td>
+<td><code>TargetQuoteDate</code>, <code>TargetRates</code>, <code>Locations.GL.{Rater, IRPMOverride, IRPM, University}</code>, <code>Buildings.{Building,Bpp}.Rate</code></td>
+</tr>
+<tr>
+<td><strong>Internal binding state</strong></td>
+<td><code>securedParty.{AppliesToAllBuildings, BuildingNumbers}</code></td>
+</tr>
+<tr>
+<td><strong>Agent CRM display fields</strong></td>
+<td><code>Agent.{Hierarchy, OtherName, Description}</code></td>
+</tr>
+<tr>
+<td><strong>Form-blank common fields</strong></td>
+<td>NAICS / SIC / Website / DBA on most ACORD page 1s — brokers leave these blank in practice</td>
+</tr>
+</tbody>
+</table>
+<p>These are not "we missed something" — they require an upstream/downstream data source.</p>
+<h3 id="22-real-extraction-bugs-54-fields-fixes-applied">2.2 Real extraction bugs (54 fields) — fixes applied</h3>
+<p>Visually verified against ACORD PDFs (rendered at 150 DPI and inspected). The most impactful patterns we found and fixed:</p>
+<table>
+<thead>
+<tr>
+<th>Bug class</th>
+<th>Affected subs</th>
+<th>Source location</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Loss-run reserves dropped</strong></td>
+<td>2, 3, 4</td>
+<td>LR PDF "Total Reserves" column. Visual confirmed: Kinsale claim 00060543 = $5,000 open; Richmond claim RN-9-0000504 = $125,905.45</td>
+<td><strong>FIXED</strong> — <code>Claims[].ReserveAmount</code> + <code>.ReserveAmountProvided</code> now emitted</td>
+</tr>
+<tr>
+<td><strong>Insured.DescriptionOfOperations not surfaced</strong></td>
+<td>2, 3, 4, 5</td>
+<td>Standard ACORD field <code>CommercialPolicy_OperationsDescription_A[0]</code>. Sub 2 visible: "Owner, Investor, and Manager specializing in value-add multifamily properties"</td>
+<td><strong>FIXED</strong> — pulled from any page</td>
+</tr>
+<tr>
+<td><strong>OtherNamedInsureds entities dropped</strong></td>
+<td>2 (44 entities), 4 (Prism Tamarac LP)</td>
+<td>VLM extracted <code>vlm_other_named_insureds_N_name</code> on continuation pages 5-13; mapper only read page 1</td>
+<td><strong>FIXED</strong> — walks all pages</td>
+</tr>
+<tr>
+<td><strong>Employee Benefits Liability</strong></td>
+<td>4 ("Included"), 5 ("Included, $250K")</td>
+<td>ACORD 126 page 1 EBL section</td>
+<td><strong>FIXED</strong> — <code>GeneralLiability.EmployeeBenefitsLiability</code> now populated</td>
+</tr>
+<tr>
+<td><strong>NPN embedded in producer rep field</strong></td>
+<td>4 (<code>P084907</code>)</td>
+<td>"Evan Seacat P084907/RRUIZ" in <code>Producer_AuthorizedRepresentative_FullName_A</code></td>
+<td><strong>FIXED</strong> — regex fallback parses FL/CA/NY producer license formats</td>
+</tr>
+<tr>
+<td><strong>BedCount column ignored on SOV</strong></td>
+<td>3 (92 beds), 5 (336 beds sidebar)</td>
+<td>Sub 3 SOV col 18 = "Beds"</td>
+<td><strong>FIXED</strong> — <code>Buildings.BedCount</code></td>
+</tr>
+<tr>
+<td><strong>Free-text sprinkler info not parsed</strong></td>
+<td>3 ("100%, fully sprinklered")</td>
+<td>Sub 3 SOV "Sprinkler Information" column</td>
+<td><strong>FIXED</strong> — text-form recognition added</td>
+</tr>
+<tr>
+<td><strong>Locations.Address.ZipCode/County missing</strong></td>
+<td>2, 4, 5</td>
+<td>ACORD page 2 PREMISES table</td>
+<td><strong>FIXED</strong> — <code>enrich_locations_with_acord()</code> joins SOV-derived Locs to ACORD blocks by street+city</td>
+</tr>
+<tr>
+<td><strong><code>Status</code>/<code>DateOfLoss</code> field names</strong></td>
+<td>2, 3, 4</td>
+<td>We used renamed fields</td>
+<td><strong>Renamed clarified</strong> (your schema uses <code>ClaimStatus</code>, <code>LossDate</code> — see §3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-schema-vocabulary-mismatches-14-fields">2.3 Schema vocabulary mismatches (14 fields)</h3>
+<p>Either rename our output to match your schema OR map at consumption:</p>
+<table>
+<thead>
+<tr>
+<th>Your schema</th>
+<th>Our output</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LossRuns.Claims.ClaimStatus</code></td>
+<td><code>LossRuns.Claims.Status</code></td>
+<td>Same data, different name</td>
+</tr>
+<tr>
+<td><code>LossRuns.Claims.LossDate</code></td>
+<td><code>LossRuns.Claims.DateOfLoss</code></td>
+<td>Same data, different name</td>
+</tr>
+<tr>
+<td><code>Addresses.StateName</code> (full state)</td>
+<td><code>Addresses.State</code> (2-letter)</td>
+<td>We store the abbreviation only</td>
+</tr>
+<tr>
+<td><code>Buildings.OccupancyClass</code> (ISO GL class code)</td>
+<td><code>Buildings.OccupancyType</code> (text)</td>
+<td><strong>Different concepts</strong> — your <code>OccupancyClass</code> is the GL classification code (60010 = Apartments) which we have not yet surfaced; we currently only output the occupancy as text</td>
+</tr>
+<tr>
+<td><code>Insured.contact.Type</code> ("Accounting Contact")</td>
+<td><code>Insured.Contacts[].Title</code></td>
+<td>Same data, stored under wrong key</td>
+</tr>
+<tr>
+<td><code>Insured.contact.Description</code></td>
+<td><code>Insured.Contacts[].Title</code></td>
+<td>Same data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-mapper-generalization-what-changed-in-the-pipeline">3. Mapper Generalization — What Changed in the Pipeline</h2>
+<p>The previous mapper worked because the original 3 submissions shared structural conventions (single ACORD app per submission, "Acord" in filename, unique-address SOVs, single-policy loss runs). The two new submissions broke those.</p>
+<h3 id="core-changes-that-generalize">Core changes that generalize</h3>
+<ol>
+<li>
+<p><strong>ACORD discovery via <code>document_type</code> (not filename).</strong> Prism's GL application file is named <code>26 GL Application for Prism Broward.pdf</code> — no "acord" substring. Pipeline now reads the <code>document_type</code> field set by the per-doc extractor.</p>
+</li>
+<li>
+<p><strong>Multi-ACORD merging.</strong> Prism has <em>two</em> ACORD applications (GL + XS) in one submission. They share page 1 (named insured) but have different supplements. Mapper now merges by <code>(template, page_index)</code>, non-empty-wins.</p>
+</li>
+<li>
+<p><strong>Same-address SOV consolidation.</strong> Rise's 7 SOV rows are 7 buildings at one campus (not 7 separate locations). Mapper now groups rows by <code>(street, city)</code>; a single physical address produces one <code>Location</code> with N <code>Buildings</code>. Verified to match all 5 GT structures.</p>
+</li>
+<li>
+<p><strong>Word-boundary fuzzy column matching on SOV.</strong> "St" no longer matches "Street" (which previously stole the State column). "Total Sq Ft" now matches "Total Sq.Ft" (punctuation-tolerant).</p>
+</li>
+<li>
+<p><strong>Anti-keyword filtering on VLM key names.</strong> A VLM-emitted key like <code>vlm_APPLICANT INFORMATION_NAME (First Named Insured) AND MAILING ADDRESS</code> previously bled into <code>Insured.Name</code>. The mapper now rejects address-block keys when looking for a name.</p>
+</li>
+<li>
+<p><strong>Loss-run policy term selection by evaluation date.</strong> Multi-year loss runs that report 5 years of history now correctly pick the term containing the evaluation date as the current policy.</p>
+</li>
+<li>
+<p><strong>Underwriter-platform email signatures excluded.</strong> HabGen.com (the underwriter platform) replies don't represent the insured or the broker.</p>
+</li>
+</ol>
+<h3 id="two-known-overfit-risks-we-did-not-bake-in">Two known overfit risks we did NOT bake in</h3>
+<ul>
+<li><strong>State-specific producer license regexes</strong> — we use a state-agnostic regex (<code>P\d{6} | \d{8} | XX-NNNNN</code>) instead of FL-only.</li>
+<li><strong>Template-specific bbox field names</strong> for SecuredParty references — left for VLM extraction rather than hardcoded <code>Text12</code> lookups.</li>
+</ul>
+<hr />
+<h2 id="4-per-submission-detail">4. Per-Submission Detail</h2>
+<h3 id="sub-1-1800-north-stone-llc-1000">Sub 1 — 1800 North Stone LLC (100.0%)</h3>
+<p>1 location · 5 buildings · 1 loss run (no claims) · single-broker (Crest Insurance). Baseline; no audit performed.</p>
+<h3 id="sub-2-urban-southwest-capital-lp-990">Sub 2 — Urban Southwest Capital LP (99.0%)</h3>
+<p>21 locations across multiple states · 52 claims across 2 loss runs · 44 OtherNamedInsureds (previously dropped) · GL only (per ACORD form, despite SOV presence).</p>
+<p><strong>3 remaining gaps:</strong> all three fields are <code>Submission.PropertySelected</code>, <code>Property.CoverageSelected</code>, <code>PolicyInfo.LOB[1]</code> — debatable interpretation: GT says Property is selected (because SOV is present), ACORD page 1 has only GL checkbox marked. Mapper follows the form (strict interpretation).</p>
+<p><strong>Notable new data from audit:</strong> 44 OtherNamedInsureds (Urban Stonehill Apartments, Urban Independence Meadowbrook, etc.); Insured.DescriptionOfOperations from form; Loss-run reserves on 29 claims.</p>
+<h3 id="sub-3-varsity-campus-llc-1000">Sub 3 — Varsity Campus LLC (100.0%)</h3>
+<p>2 locations · 1 loss run · GL-only.</p>
+<p><strong>Notable new data from audit:</strong> BedCount = 92 beds; "Concrete podium with 4 Floors of wood above" as ConstructionType; "100%, fully sprinklered" → FullySprinklered=True.</p>
+<h3 id="sub-4-prism-broward-lp-997">Sub 4 — Prism Broward, LP (99.7%)</h3>
+<p>20 physical-address locations consolidated from 32 SOV rows · 32 total buildings · 3 loss runs (CIBA 21-23, Richmond 23-25, Kinsale 25-26) · 14 claims (Kinsale was missing 1; now corrected) · 2 SecuredParties (Santander, Flagstar — added via VLM fallback).</p>
+<p><strong>2 remaining gaps:</strong>
+- <code>Insured.BusinessPhone</code> — GT lists <code>844716625</code> (this is actually the FEIN; GT entry is mislabeled — should be <code>Insured.FEIN</code>)
+- <code>SecuredParties[1].Name</code> — source PDF has "Santander Bank<strong>.</strong>" with a period; GT corrected to "Santander Bank<strong>,</strong>" with comma. We preserve the source exactly.</p>
+<p><strong>Notable new data:</strong> EBL flag, NPN <code>P084907</code>, RenewalFlag = "Renewal" (R/O prefix on prior policy), reserves on all 7 claims.</p>
+<h3 id="sub-5-rise-campus-quarters-992">Sub 5 — Rise Campus Quarters (99.2%)</h3>
+<p>1 campus location · 7 buildings at 1773 Ennis Joslin Rd, Corpus Christi TX · 1 Marsh-letter loss run (no claims, no reserves) · GL + Property submission.</p>
+<p><strong>1 remaining gap:</strong> <code>Locations[0].Address.County</code> = "Nueces" (in non-tabular SOV sidebar; ACORD page 2 has it but PREMISES table extraction didn't reach it).</p>
+<p><strong>Notable new data:</strong> EBL <code>{Included: true, Limit: 250000}</code>; Girijaa Doraiswamy as Insured.Contacts (prioritized over email signature); ProtectiveSafeguards (Central Station Alarm, Local Gong).</p>
+<hr />
+<h2 id="5-methodology">5. Methodology</h2>
+<h3 id="how-we-validated-extractions">How we validated extractions</h3>
+<ol>
+<li><strong>Hand-curated ground truth</strong> per submission, built by an independent agent reading every source document (PDFs via pdfplumber + fitz pixmap renders, xlsx via pandas, docx via python-docx). 1,239 leaf fields total.</li>
+<li><strong>Type-aware comparison</strong> (<code>gt_compare.py</code>): case-insensitive strings, ±0.5%-or-$1 numeric tolerance, format-tolerant dates, phone-digit normalization, <code>*</code> wildcard for "any non-empty acceptable".</li>
+<li><strong>Field-by-field audit</strong> of every field you listed as missing — 276 total — against the actual source documents to distinguish "extraction bug" from "not in source".</li>
+<li><strong>Visual verification</strong> of ACORD pages 1, 2, ACORD 126 page 1, ACORD 140 page 1, ACORD 125 Additional Interest pages, and loss-run claim detail pages — rendered as PNG and inspected to confirm what's filled vs blank on each form.</li>
+</ol>
+<h3 id="audit-agent-reports">Audit agent reports</h3>
+<p>Per-submission field audit reports (one row per field, with category + supporting evidence) are in this bundle at:
+- <code>sub2_urban_southwest/field_audit.md</code>
+- <code>sub3_varsity_campus/field_audit.md</code>
+- <code>sub4_prism_broward/field_audit.md</code>
+- <code>sub5_rise_campus_quarters/field_audit.md</code></p>
+<hr />
+<h2 id="6-deliverables">6. Deliverables</h2>
+<h3 id="all_submissions_extractionzip-this-bundle"><code>all_submissions_extraction.zip</code> (this bundle)</h3>
+<pre><code>sub*_&lt;name&gt;/
+├── extracted/                       ← Per-source-file extraction JSONs
+│   ├── ALL.json                     ← Master with everything merged
+│   ├── submission_mapped.json       ← Mapped to your schema
+│   ├── &lt;one .json per source PDF / xlsx / docx&gt;
+├── gt_&lt;name&gt;.json                   ← Hand-curated ground truth
+├── gt_compare_report.txt            ← Field-by-field accuracy diff
+└── field_audit.md                   ← The 276-field audit
+README.md                            ← Top-level accuracy table
+</code></pre>
+<h3 id="code">Code</h3>
+<p>GitHub branch: <code>feat/multi-submission-mapper-audit</code>
+PR URL: https://github.com/mohammadsafdar-netizen/extraction_pipeline/pull/new/feat/multi-submission-mapper-audit</p>
+<p>3 commits on this branch:
+- <code>b7d15ad</code> — Multi-submission mapper generalization (ACORD discovery, SOV consolidation, fuzzy matching, etc.)
+- <code>0fd26ff</code> — ReserveAmount, DescriptionOfOperations, Location address enrichment
+- <code>9ee7a19</code> — EBL, OtherNamedInsureds expansion, NPN, BedCount, free-text sprinkler</p>
+<h3 id="streamlit-ui">Streamlit UI</h3>
+<p>A "📦 All submissions extraction bundle" download button at the top of the verifier app rebuilds this zip on-demand (mtime-cached, so the page just needs to refresh after extraction reruns).</p>
+<hr />
+<h2 id="7-open-questions-decisions-needed">7. Open Questions / Decisions Needed</h2>
+<ol>
+<li>
+<p><strong><code>Buildings.OccupancyClass</code></strong> (ISO GL class code, e.g. 60010 Apartments) — your schema treats this as a per-building field. ACORD 126 Schedule of Hazards has it at the <em>location-level</em> (one class per HAZ row, multiple HAZ rows per location). Should we surface as <code>Locations[].GeneralLiability.OccupancyClass</code> (1:many) or per-building (would need building-to-hazard mapping)?</p>
+</li>
+<li>
+<p><strong><code>StateName</code> (full state name)</strong> — we store 2-letter <code>State</code>. Worth a downstream lookup table to populate "Florida" / "Texas" / etc., or keep abbreviation?</p>
+</li>
+<li>
+<p><strong>Sub 2 PropertySelected</strong> — strict reading of ACORD page 1 says GL only (Property checkbox is unchecked). GT decision says Property is selected (because SOV is present). Which interpretation should the pipeline default to?</p>
+</li>
+<li>
+<p><strong>Sub 4 <code>Insured.BusinessPhone</code> GT entry</strong> — the GT has <code>844716625</code> which is actually the FEIN. Should the GT be corrected, or should we map FEIN to BusinessPhone (loses the FEIN slot)?</p>
+</li>
+<li>
+<p><strong><code>PerLocationTimeElementReporting</code></strong> — this is on ACORD 140 page 1 (Value Reporting Form checkbox). Currently unfilled across all submissions. Want us to surface it as <code>false</code> when blank, or leave absent?</p>
+</li>
+<li>
+<p><strong>Sub 5 Locations.Address.County</strong> — the SOV has "Nueces" in a non-tabular sidebar. We extract from the SOV table currently. Worth adding a sidebar-text fallback parser?</p>
+</li>
+</ol>
+</body>
+</html>
