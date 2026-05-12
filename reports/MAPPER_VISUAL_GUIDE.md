@@ -4,6 +4,177 @@ Visualization of `map_to_schema.py` — the file that turns messy per-submission
 
 ---
 
+## 🦴 HOW MAPPER ACTUALLY WORKS — 5 caveman points
+
+Use **one real example throughout: how `Insured.Name` ends up in the final JSON.**
+
+---
+
+### 1️⃣ TWO PILES
+
+```
+   LEFT PILE                       RIGHT PILE
+   (raw extraction)                (schema shape)
+
+   ┌────────────────────┐          ┌──────────────────┐
+   │ Pebbles with names │          │ Empty pots with  │
+   │                    │          │ labels           │
+   │ "NamedInsured_     │          │                  │
+   │  FullName_A[0]"    │          │ Insured.Name     │
+   │ = "1800 N Stone"   │          │ = ???            │
+   │                    │          │                  │
+   │ "vlm_applicant_    │          │ Insured.Address  │
+   │  name"             │          │ = ???            │
+   │ = "1800 N Stone"   │          │                  │
+   │                    │          │ Locations[0].    │
+   │ "NamedInsured_     │          │  Buildings[0].   │
+   │  Primary_Phone_A"  │          │  TotalSqFt = ??? │
+   │ = "(520)..."       │          │                  │
+   │                    │          │ ... 100 more pots│
+   │ ... 500 pebbles    │          │                  │
+   └────────────────────┘          └──────────────────┘
+
+   LEFT  = what robots dumped from PDFs/xlsx/docx
+   RIGHT = what underwriter want (the schema)
+```
+
+**Caveman:** Robots dump rocks with weird names. Schema is empty pots with clean labels. **Mapper job = move rocks into right pots.**
+
+---
+
+### 2️⃣ MAPPER HAS A CHEAT SHEET
+
+For every pot, the mapper has a **list of possible pebble names** to try, in priority order.
+
+```
+   POT: "Insured.Name"
+
+   CHEAT SHEET says:
+     1. First try pebble named "NamedInsured_FullName_A[0]"
+     2. If empty, try "vlm_APPLICANT_INFORMATION_0_full_name"
+     3. If empty, try "vlm_applicant_name"
+     4. If empty, try "vlm_insured_name"
+     5. If still empty → leave pot empty
+```
+
+In code this is one line:
+
+```python
+insured["Name"] = _pick(p1,
+    "NamedInsured_FullName_A[0]",                  # try first
+    "vlm_APPLICANT_INFORMATION_0_full_name",       # then this
+    "vlm_applicant_name",                          # then this
+    "vlm_insured_name")                            # last resort
+```
+
+**Caveman:** Mapper try door 1, door 2, door 3. First door that opens, grab pebble. Drop in pot.
+
+---
+
+### 3️⃣ DIFFERENT POTS, DIFFERENT PILES
+
+Not every pot eats from the same pile. Each section of the schema has its **own pile to dig in**:
+
+| POT GROUP | PILE TO DIG IN |
+|---|---|
+| `Insured.*` / `Agent.*` | ACORD app JSON (page 1+2) |
+| `PolicyInfo.*` | ACORD app JSON (page 1) |
+| `Locations[]` / `Buildings[]` | SOV xlsx JSON (grid rows) |
+| `LossRuns[]` / `Claims[]` | Loss-run PDF JSONs |
+| `Submission.DateReceived` | `email.docx` JSON |
+| `SecuredParties[]` | ACORD Additional Interest pages |
+| `Attachments[]` | scan `input_docs_N/` folder filenames |
+
+**Caveman:** Insured info lives in ACORD pile. Building info lives in SOV pile. Claims live in LossRun pile. Mapper know which pile to dig.
+
+---
+
+### 4️⃣ FILL ONE POT AT A TIME, ROW BY ROW
+
+The mapper goes pot by pot. For each pot, follow the cheat sheet, pick a pebble, drop it in. Repeat.
+
+**Trace one submission (1800 North Stone):**
+
+```
+   POT                            ← PEBBLE FOUND HERE
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Insured.Name                   ← NamedInsured_FullName_A[0]
+                                    = "1800 North Stone LLC"
+
+   Insured.SICCode                ← NamedInsured_SICCode_A[0]
+                                    = "6513"
+
+   Insured.Website                ← NamedInsured_Primary_WebsiteAddress_A[0]
+                                    = "stoneavenuestandard.com"
+
+   Insured.Addresses[0].Street    ← NamedInsured_MailingAddress_LineOne_A[0]
+                                    = "1800 N Stone Ave"
+
+   PolicyInfo.EffectiveDate       ← Policy_EffectiveDate_A[0]
+                                    = "2026-05-01"
+
+   Locations[0].Buildings[0].     ← SOV row 1, column "Building Value (RC)"
+   Building.BuildingLimit            = 2774731
+
+   Locations[0].Buildings[0].     ← SOV row 1, column "Total Sq Ft"
+   TotalSqFt                         = 21836
+
+   LossRuns[0].Carrier            ← LR JSON vlm_pages[0].data.header.company
+                                    = "Truck Insurance Exchange"
+
+   ... 130 more pots filled this way
+```
+
+**Caveman:** Pot by pot. Cheat sheet say where to look. Found pebble? Drop in pot. Next pot. Until all pots done.
+
+---
+
+### 5️⃣ HAND OVER FINAL JSON
+
+After all pots are filled, the mapper **stacks them in schema order** and saves as one JSON file.
+
+```python
+output = {
+    "Submission":         submission_block,    # filled in Phase D
+    "PolicyInfo":         policy_block,        # filled in Phase A
+    "Insured":            insured_block,       # filled in Phase A
+    "OtherNamedInsureds": other_named,         # filled in Phase A
+    "Agent":              agent_block,         # filled in Phase A
+    "GeneralLiability":   gl_block,            # filled in Phase A
+    "Property":           property_block,      # filled in Phase A
+    "Locations":          locations,           # filled in Phase B
+    "SecuredParties":     secured_parties,     # filled in Phase E
+    "LossRuns":           loss_runs,           # filled in Phase C
+    "Attachments":        attachments,         # filled in Phase F
+}
+
+json.dump(output, open("submission_mapped.json", "w"))
+```
+
+That's the file. Schema-shaped. Same every time.
+
+**Caveman:** All pots filled? Stack pots in right order. Wrap in one big bowl. Hand to underwriter. Done.
+
+---
+
+### ⚡ THE WHOLE THING IN 30 SECONDS
+
+```
+1. ROBOTS dump messy pebbles (raw extractions)
+2. MAPPER has cheat sheet: "for pot X, try pebbles A, B, C in order"
+3. MAPPER goes pot by pot, picks first non-empty pebble
+4. Different pots come from different piles (ACORD / SOV / LR / email)
+5. All pots filled → stacked into schema shape → JSON file written
+```
+
+**That's it. That's the whole mapper.** Everything else (multi-form ACORDs, campus SOVs, bbox-bleed, VLM fallback) is just edge cases layered on top of this single pattern.
+
+---
+
+## 📐 Detailed visual reference (for engineers / PMs)
+
+---
+
 ## 1. The Big Picture (one image, the whole pipeline)
 
 ```
